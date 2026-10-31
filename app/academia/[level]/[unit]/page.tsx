@@ -268,8 +268,8 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
       <div className="kicker">PRACTICE · UNIT 18 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo hablar de una dieta equilibrada, identificar alimentos y nutrientes, utilizar cuantificadores y dar consejos para mantener hábitos saludables. El listening utiliza voz sintética del navegador, no una grabación original.</p>
       {([["GRAMMAR",a2Unit18Exercises.grammar],["VOCABULARY",a2Unit18Exercises.vocabulary],["LISTENING",a2Unit18Exercises.listening],["READING",a2Unit18Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
-    </section>
-        <div className="unit-next"><Link className="academy-button" href={`/academia/${level.toLowerCase()}`}>Volver al temario</Link></div>
+    </section>}
+    <div className="unit-next"><Link className="academy-button" href={`/academia/${level.toLowerCase()}`}>Volver al temario</Link></div>
   </main>;
 }
 export default async function AcademyUnitPage({ params }: { params: Promise<{ level: string; unit: string }> }) {
