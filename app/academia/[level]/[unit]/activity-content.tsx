@@ -45,10 +45,10 @@ function SpeakButton({ text, label }: { text: string; label: string }) {
 
 function getVocabularyPair(activity: Activity): { english: string; spanish: string } | null {
   const source = activity.stimulus_en ?? "";
-  const pairs = [...source.matchAll(/\\[\\[([^|]+)\\|([^\\]]+)\\]\\]/g)];
+  const pairs = [...source.matchAll(/\[\[([^|]+)\|([^\]]+)\]\]/g)];
   if (!pairs.length) return null;
-  const english = source.replace(/\\[\\[([^|]+)\\|([^\\]]+)\\]\\]/g, "$1").replace(/\\s+/g, " ").trim();
-  const spanish = source.replace(/\\[\\[([^|]+)\\|([^\\]]+)\\]\\]/g, "$2").replace(/\\s+/g, " ").trim();
+  const english = source.replace(/\[\[([^|]+)\|([^\]]+)\]\]/g, "$1").replace(/\s+/g, " ").trim();
+  const spanish = source.replace(/\[\[([^|]+)\|([^\]]+)\]\]/g, "$2").replace(/\s+/g, " ").trim();
   if (!english || !spanish || english === spanish || /_{2,}/.test(english)) return null;
   return { english, spanish };
 }
@@ -58,7 +58,7 @@ function VocabularyTranslationCard({ activity }: { activity: Activity }) {
   const [answer, setAnswer] = useState("");
   const [checked, setChecked] = useState(false);
   if (!pair) return <div className="activity-card"><p className="activity-prompt">Este ejercicio de vocabulario necesita revisión editorial.</p></div>;
-  const accepted = pair.spanish.split(/\\s*[/;]\\s*/).map(value => value.trim().toLocaleLowerCase("es"));
+  const accepted = pair.spanish.split(/\s*[/;]\s*/).map(value => value.trim().toLocaleLowerCase("es"));
   const isCorrect = accepted.includes(answer.trim().replace(/[.!?]+$/, "").toLocaleLowerCase("es"));
   return <div className="activity-card vocabulary-translation-card">
     <div className="activity-type">TRADUCCIÓN · INGLÉS → CASTELLANO</div>
