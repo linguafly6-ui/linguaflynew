@@ -32,7 +32,7 @@ export default async function AcademyUnitPage({ params }: { params: Promise<{ le
       <div className="lesson-blocks">{blocks.map((block, index) => <article className="lesson-block" key={block.block_id ?? index}>
         <div className="lesson-block-head"><span className="lesson-block-number">BLOQUE {String(index + 1).padStart(2,"0")}</span><span>{block.duration_minutes ? `${block.duration_minutes} min` : `${block.content?.length ?? 0} actividades`}</span></div>
         <h3>{block.title ?? `Bloque ${index + 1}`}</h3>
-        <ActivityContent activities={block.content ?? []} />
+        <ActivityContent activities={block.content ?? []} mode={/vocabulario|vocabulary/i.test(block.title ?? "") ? "vocabulary" : "standard"} />
       </article>)}</div>
       <div className="unit-next"><Link className="academy-button" href={`/academia/${level.toLowerCase()}`}>Volver al temario</Link></div>
     </section>
