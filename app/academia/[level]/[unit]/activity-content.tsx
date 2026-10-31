@@ -60,23 +60,29 @@ function ActivityCard({ activity, index }: { activity: Activity; index: number }
   </article>;
 }
 
-export default function ActivityContent({ activities, mode: _mode }: { activities: Activity[]; mode?: "vocabulary" | "standard" }) {
-  const listeningText = activities.find(item => item.transcript)?.transcript;
-  const readingText = activities.find(item => item.main_text)?.main_text;
-  return <>
-    {listeningText && <section className="passage-card listening-card">
-      <div className="passage-kicker">LISTENING · COMPRENSIÓN ORAL</div>
-      <h4>Escucha el diálogo</h4>
-      <p>Escucha el diálogo y responde a las preguntas. La voz se genera en tu navegador; no es una grabación de hablante nativo.</p>
-      <SpeakButton text={listeningText} label="Reproducir audio en inglés" />
-      <details className="transcript-details"><summary>Ver transcripción</summary><p style={{whiteSpace:"pre-line"}}>{listeningText}</p></details>
-    </section>}
-    {readingText && <section className="passage-card reading-card">
+function Passage({ text, kind }: { text: string; kind: "reading" | "listening" }) {
+  if (kind === "reading") {
+    const parts = text.split("\\n");
+    return <section className="passage-card reading-card">
       <div className="passage-kicker">READING · COMPRENSIÓN LECTORA</div>
-      <h4>{readingText.split("\n")[0]}</h4>
-      <div className="reading-passage" style={{whiteSpace:"pre-line"}}>{readingText.split("\n").slice(1).join("\n").trim() || readingText}</div>
-      <SpeakButton text={readingText} label="Escuchar lectura" />
-    </section>}
-    <div className="activity-list">{activities.map((activity,index)=><ActivityCard activity={activity} index={index} key={activity.interaction_id ?? index}/>)}</div>
-  </>;
+      <h4>{parts[0]}</h4>
+      <div className="reading-passage" style={{whiteSpace:"pre-line"}}>{parts.slice(1).join("\\n").trim() || text}</div>
+      <SpeakButton text={text} label="Escuchar lectura" />
+    </section>;
+  }
+  return <section className="passage-card listening-card">
+    <div className="passage-kicker">LISTENING · COMPRENSIÓN ORAL</div>
+    <h4>Escucha el diálogo</h4>
+    <p>Escucha el diálogo y responde a las preguntas. La voz se genera en tu navegador; no es una grabación de hablante nativo.</p>
+    <SpeakButton text={text} label="Reproducir audio en inglés" />
+    <details className="transcript-details"><summary>Ver transcripción</summary><p style={{whiteSpace:"pre-line"}}>{text}</p></details>
+  </section>;
+}
+
+export default function ActivityContent({ activities, mode: _mode }: { activities: Activity[]; mode?: "vocabulary" | "standard" }) {
+  return <div className="activity-list">{activities.map((activity,index)=><div key={activity.interaction_id ?? index}>
+    {activity.transcript && <Passage text={activity.transcript} kind="listening" />}
+    {activity.main_text && <Passage text={activity.main_text} kind="reading" />}
+    <ActivityCard activity={activity} index={index}/>
+  </div>)}</div>;
 }
