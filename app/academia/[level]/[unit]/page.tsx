@@ -14,6 +14,7 @@ import { a2Unit9Exercises } from "./a2-unit-009-exercises";
 import { a2Unit10Exercises } from "./a2-unit-010-exercises";
 import { a2Unit11Exercises } from "./a2-unit-011-exercises";
 import { a2Unit12Exercises } from "./a2-unit-012-exercises";
+import { a2Unit13Exercises } from "./a2-unit-013-exercises";
 
 export const dynamic = "force-dynamic";
 type Block = { block_id?: string; title?: string; duration_minutes?: number; content?: Activity[] };
@@ -38,6 +39,7 @@ const spanishGrammarGuides: Record<number, { explanation: string; examples: stri
   10: { explanation: "Esta unidad integra estructuras esenciales del nivel A2. Usa el presente simple para rutinas y hechos: I work in a library (Trabajo en una biblioteca). Para describir identidad, estado o características utiliza be: Are your neighbours friendly? (¿Son simpáticos tus vecinos?). Para preguntar por acciones y rutinas usa do/does: Where does your brother live? (¿Dónde vive tu hermano?). Recuerda que does va seguido del verbo en forma base y que la -s aparece en el verbo de la afirmativa: She lives, pero Does she live? Los adverbios de frecuencia suelen ir antes del verbo principal (I usually walk) y después de be (She is usually busy). Usa because para explicar motivos y but para contrastar ideas.", examples: ["What do you do? I work in a library. = ¿A qué te dedicas? Trabajo en una biblioteca.", "Where does your brother live? He lives in Cardiff. = ¿Dónde vive tu hermano? Vive en Cardiff.", "Are your neighbours friendly? Yes, they are. = ¿Son simpáticos tus vecinos? Sí.", "I usually walk to work, but I sometimes take the bus because it rains. = Normalmente voy andando al trabajo, pero a veces cojo el autobús porque llueve."] },
   11: { explanation: "Esta unidad combina vocabulario de alimentos y comidas con estructuras para comprar y cocinar. Usa sustantivos contables e incontables: an apple / some rice. Many y how many acompañan a contables; much y how much, a incontables. Some aparece en afirmativas y peticiones; any, normalmente en preguntas y negativas. Para pedir con educación, utiliza would like: I'd like a sandwich (Quisiera un sándwich). El imperativo da instrucciones: Chop the onions (Pica las cebollas). Should y shouldn't sirven para aconsejar: You should eat more vegetables (Deberías comer más verduras). Para comparar, añade -er o usa more: cheaper (más barato), more expensive (más caro).", examples: ["How many tomatoes do we need? = ¿Cuántos tomates necesitamos?", "How much rice would you like? = ¿Cuánto arroz quieres?", "I'd like some water, please. = Quisiera un poco de agua, por favor.", "Fry the onions for five minutes. = Fríe las cebollas durante cinco minutos.", "You should eat more fruit. = Deberías comer más fruta.", "This shop is cheaper than the supermarket. = Esta tienda es más barata que el supermercado."] },
   12: { explanation: "Para seguir una receta en inglés, combina los nombres de ingredientes con cuantificadores y verbos en imperativo. Usa a/an con un ingrediente contable singular (an onion), some con cantidades no especificadas (some flour) y much/many o how much/how many para preguntar por cantidades. Los verbos de cocina suelen aparecer en imperativo: chop (pica), mix (mezcla), pour (vierte), add (añade), stir (remueve), bake (hornea) y boil (hierve). Usa first, next, then y finally para ordenar los pasos. Should sirve para dar consejos y comparativos para elegir ingredientes o métodos: Fresh herbs are better than dried herbs.", examples: ["First, chop the onion. = Primero, pica la cebolla.", "Add 200 grams of flour. = Añade 200 gramos de harina.", "How much oil do we need? = ¿Cuánto aceite necesitamos?", "Mix the eggs with some milk. = Mezcla los huevos con un poco de leche.", "You should wash the vegetables. = Deberías lavar las verduras.", "This recipe is easier than the other one. = Esta receta es más fácil que la otra."] },
+  13: { explanation: "Para pedir comida y bebida con educación, utiliza would like: I'd like a coffee, please (Quisiera un café, por favor). Para ofrecer algo, pregunta Would you like...? y responde Yes, please o No, thank you. Usa some en peticiones y ofrecimientos: Could I have some water? (¿Me podría traer agua?). How much pregunta por cantidades incontables y how many por unidades contables. Para pedir aclaraciones puedes decir Could you repeat that, please? o What does this dish come with? Utiliza comparativos para elegir entre opciones y should para dar recomendaciones.", examples: ["I'd like the chicken, please. = Quisiera el pollo, por favor.", "Could I have a glass of water? = ¿Me podría traer un vaso de agua?", "Would you like some dessert? = ¿Le apetece postre?", "How much is the soup? = ¿Cuánto cuesta la sopa?", "Could you repeat that, please? = ¿Podría repetirlo, por favor?", "The salad is cheaper than the pasta. = La ensalada es más barata que la pasta."] },
 };
 function Questions({ items }: { items: string[][] }) {
   return <ol className="theory-question-list">{items.map((q,i)=><li key={i}><span className="question-number">{String(i+1).padStart(2,"0")}</span><div><p>{q[0]}</p>{q.length>1&&<small>Opciones: {q.slice(1,4).join(" · ")}</small>}{q[4]&&<p className="question-answer"><strong>Respuesta: {q[4]}</strong></p>}</div></li>)}</ol>;
@@ -209,6 +211,17 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
       {([
         ["GRAMMAR",a2Unit12Exercises.grammar],["VOCABULARY",a2Unit12Exercises.vocabulary],
         ["LISTENING",a2Unit12Exercises.listening],["READING",a2Unit12Exercises.reading],
+      ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/>
+      </section>)}
+    </section>}
+
+    {number === 13 && <section className="lesson-block" style={{marginTop:32}}>
+      <div className="kicker">PRACTICE · UNIT 13 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
+      <p>Practica cómo pedir comida y bebida, preguntar por ingredientes y precios, expresar preferencias y solicitar aclaraciones. El listening utiliza voz sintética del navegador, no una grabación original.</p>
+      {([
+        ["GRAMMAR",a2Unit13Exercises.grammar],["VOCABULARY",a2Unit13Exercises.vocabulary],
+        ["LISTENING",a2Unit13Exercises.listening],["READING",a2Unit13Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/>
       </section>)}
