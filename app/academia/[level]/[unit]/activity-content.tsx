@@ -16,6 +16,7 @@ export type Activity = {
   correct_answer?: string | string[] | boolean;
   example?: string;
   explanation?: string;
+  mastery_tag?: string;
 };
 type Props = { activities: Activity[] };
 
@@ -43,16 +44,13 @@ function SpeakButton({ text, label }: { text: string; label: string }) {
 }
 
 function getVocabularyPair(activity: Activity): { english: string; spanish: string } | null {
-  const stimulus = activity.stimulus_en ?? "";
-  const marked = [...stimulus.matchAll(/\[\[(.+?)\|(.+?)\]\]/g)];
-  const first = marked.find(match => !/^[_ .-]+$/.test(match[1].trim()));
-  if (first) return { english: first[1].trim(), spanish: first[2].trim() };
-  const spanishMarked = marked.find(match => /^[_ .-]+$/.test(match[1].trim()));
-  const answer = Array.isArray(activity.correct_answer) ? activity.correct_answer[0] : activity.correct_answer;
-  if (spanishMarked && typeof answer === "string") {
-    return { english: answer.trim(), spanish: spanishMarked[2].trim() };
-  }
-  return null;
+  const source = activity.stimulus_en ?? "";
+  const pairs = [...source.matchAll(/\\[\\[([^|]+)\\|([^\\]]+)\\]\\]/g)];
+  if (!pairs.length) return null;
+  const english = source.replace(/\\[\\[([^|]+)\\|([^\\]]+)\\]\\]/g, "$1").replace(/\\s+/g, " ").trim();
+  const spanish = source.replace(/\\[\\[([^|]+)\\|([^\\]]+)\\]\\]/g, "$2").replace(/\\s+/g, " ").trim();
+  if (!english || !spanish || english === spanish || /_{2,}/.test(english)) return null;
+  return { english, spanish };
 }
 
 function VocabularyTranslationCard({ activity }: { activity: Activity }) {
