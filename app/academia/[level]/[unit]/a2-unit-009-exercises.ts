@@ -1,6 +1,6 @@
 import type { Activity } from "./activity-content";
 type Row=[string,string,string,string[],string,string];
-const make=(rows:Row[],extra:(i:number)=>Partial<Activity>={}):Activity[]=>rows.map((r,i)=>({interaction_id:r[0],type:"multiple_choice",prompt_es:r[1],question_en:r[2],options:r[3].map((text,j)=>({id:String.fromCharCode(65+j),text})),correct_answer:r[4],explanation:r[5],...extra(i)}));
+const make=(rows:Row[],extra:(i:number)=>Partial<Activity>=()=>({})):Activity[]=>rows.map((r,i)=>({interaction_id:r[0],type:"multiple_choice",prompt_es:r[1],question_en:r[2],options:r[3].map((text,j)=>({id:String.fromCharCode(65+j),text})),correct_answer:r[4],explanation:r[5],...extra(i)}));
 const G:Row[]=[
 ["g901","Elige la forma correcta.","I was ___ after the long journey.",["tiring","tired","tire"],"tired","-ed describe sentimientos."],
 ["g902","Completa.","The journey was really ___.",["tired","tiring","tire"],"tiring","-ing describe la causa de la sensación."],
