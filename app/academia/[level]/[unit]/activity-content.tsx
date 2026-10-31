@@ -80,9 +80,19 @@ function Passage({ text, kind }: { text: string; kind: "reading" | "listening" }
 }
 
 export default function ActivityContent({ activities, mode: _mode }: { activities: Activity[]; mode?: "vocabulary" | "standard" }) {
-  return <div className="activity-list">{activities.map((activity,index)=><div key={activity.interaction_id ?? index}>
-    {activity.transcript && <Passage text={activity.transcript} kind="listening" />}
-    {activity.main_text && <Passage text={activity.main_text} kind="reading" />}
-    <ActivityCard activity={activity} index={index}/>
-  </div>)}</div>;
+  // Older unit data repeats the same passage on every question in a reading set.
+  // Render each distinct passage once per activity section, while keeping every question.
+  const seenReadings = new Set<string>();
+  const seenTranscripts = new Set<string>();
+  return <div className="activity-list">{activities.map((activity,index)=>{
+    const readingIsNew = !!activity.main_text && !seenReadings.has(activity.main_text.trim());
+    const listeningIsNew = !!activity.transcript && !seenTranscripts.has(activity.transcript.trim());
+    if (activity.main_text) seenReadings.add(activity.main_text.trim());
+    if (activity.transcript) seenTranscripts.add(activity.transcript.trim());
+    return <div key={activity.interaction_id ?? index}>
+      {listeningIsNew && activity.transcript && <Passage text={activity.transcript} kind="listening" />}
+      {readingIsNew && activity.main_text && <Passage text={activity.main_text} kind="reading" />}
+      <ActivityCard activity={activity} index={index}/>
+    </div>;
+  })}</div>;
 }
