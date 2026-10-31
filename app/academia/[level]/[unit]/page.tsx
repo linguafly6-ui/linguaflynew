@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAcademyUnit, isCefrLevel } from "@/lib/academy";
 import ActivityContent, { type Activity } from "./activity-content";
+import { a2Unit1Exercises } from "./a2-unit-001-exercises";
 
 export const dynamic = "force-dynamic";
 type Block = { block_id?: string; title?: string; duration_minutes?: number; content?: Activity[] };
@@ -27,6 +28,19 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
     {!!data.vocabulary?.length&&<section className="lesson-block" style={{marginTop:24}}><div className="kicker">VOCABULARY · {data.vocabulary.length} ITEMS</div><div className="unit-list">{data.vocabulary.map(x=><article className="unit-row" key={x.term}><span className="unit-title"><strong>{x.term}</strong><br/><small>{x.part_of_speech} · {x.translation_es}</small><br/><em>{x.example}</em></span></article>)}</div></section>}
     {data.reading&&<section className="lesson-block" style={{marginTop:24}}><div className="kicker">READING</div><h2>{data.reading.title}</h2><p>{data.reading.text}</p><h3>Comprehension questions</h3><Questions items={data.reading.questions??[]}/></section>}
     {data.listening&&<section className="lesson-block" style={{marginTop:24}}><div className="kicker">LISTENING · TRANSCRIPT AVAILABLE</div><h2>{data.listening.title}</h2><p>{data.listening.transcript}</p><p><small>Estado del audio: {data.listening.audio_asset_status??"No verificado"}. Se muestra el guion; no se incluye archivo de audio.</small></p><h3>Comprehension questions</h3><Questions items={data.listening.questions??[]}/></section>}
+    {number === 1 && <section className="lesson-block" style={{marginTop:32}}>
+      <div className="kicker">PRACTICE · UNIT 1 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
+      <p>Completa las actividades y comprueba cada respuesta. El audio de listening se reproduce mediante voz sintética del navegador.</p>
+      {([
+        ["GRAMMAR",a2Unit1Exercises.grammar],
+        ["VOCABULARY",a2Unit1Exercises.vocabulary],
+        ["LISTENING",a2Unit1Exercises.listening],
+        ["READING",a2Unit1Exercises.reading],
+      ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div>
+        <ActivityContent activities={activities} mode="standard"/>
+      </section>)}
+    </section>}
     {data.speaking_task&&<section className="lesson-block" style={{marginTop:24}}><div className="kicker">SPEAKING</div><h2>Speaking task</h2><p>{data.speaking_task}</p></section>}
     {data.writing_task&&<section className="lesson-block" style={{marginTop:24}}><div className="kicker">WRITING</div><h2>Writing task</h2><p>{data.writing_task}</p></section>}
     {!!data.review_checklist?.length&&<section className="outcomes-card" style={{marginTop:24}}><div className="kicker">RETRIEVAL REVIEW</div><ul>{data.review_checklist.map((x,i)=><li key={i}>{x}</li>)}</ul></section>}
