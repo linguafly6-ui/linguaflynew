@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAcademyUnit, isCefrLevel } from "@/lib/academy";
 import ActivityContent, { type Activity } from "./activity-content";
 import { a2Unit1Exercises } from "./a2-unit-001-exercises";
+import { a2Unit2Exercises } from "./a2-unit-002-exercises";
 
 export const dynamic = "force-dynamic";
 type Block = { block_id?: string; title?: string; duration_minutes?: number; content?: Activity[] };
@@ -31,6 +32,19 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["VOCABULARY",a2Unit1Exercises.vocabulary],
         ["LISTENING",a2Unit1Exercises.listening],
         ["READING",a2Unit1Exercises.reading],
+      ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div>
+        <ActivityContent activities={activities} mode="standard"/>
+      </section>)}
+    </section>}
+    {number === 2 && <section className="lesson-block" style={{marginTop:32}}>
+      <div className="kicker">PRACTICE · UNIT 2 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
+      <p>Practica los posesivos, have got, las relaciones familiares y la comprensión oral y lectora. El listening utiliza voz sintética del navegador, no una grabación original.</p>
+      {([
+        ["GRAMMAR",a2Unit2Exercises.grammar],
+        ["VOCABULARY",a2Unit2Exercises.vocabulary],
+        ["LISTENING",a2Unit2Exercises.listening],
+        ["READING",a2Unit2Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
         <ActivityContent activities={activities} mode="standard"/>
