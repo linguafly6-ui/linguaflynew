@@ -1,17 +1,35 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 export type Article = {
-  id: number; slug: string; title: string; description: string | null;
-  excerpt: string | null; content: string; category: string | null;
-  level: string | null; created_at: string; updated_at: string | null;
-  views: number | null; author: string | null; read_time: number | null;
-  featured: number | null; image: string | null; alt: string | null;
+  id: number;
+  slug: string;
+  title: string;
+  description: string | null;
+  excerpt: string | null;
+  content: string;
+  category: string | null;
+  level: string | null;
+  created_at: string;
+  updated_at: string | null;
+  views: number | null;
+  author: string | null;
+  read_time: number | null;
+  featured: number | null;
+  image: string | null;
+  alt: string | null;
   canonical: string | null;
 };
 
-async function database() {
+type D1StatementLike = {
+  bind(...values: (string | number)[]): D1StatementLike;
+  all<T>(): Promise<{ results?: T[] }>;
+  first<T>(): Promise<T | null>;
+};
+type D1DatabaseLike = { prepare(sql: string): D1StatementLike };
+
+async function database(): Promise<D1DatabaseLike> {
   const { env } = await getCloudflareContext();
-  return (env as CloudflareEnv & { DB: D1Database }).DB;
+  return (env as unknown as { DB: D1DatabaseLike }).DB;
 }
 
 export async function getArticles(limit = 18): Promise<Article[]> {
