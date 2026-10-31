@@ -10,6 +10,7 @@ import { a2Unit5Exercises } from "./a2-unit-005-exercises";
 import { a2Unit6Exercises } from "./a2-unit-006-exercises";
 import { a2Unit7Exercises } from "./a2-unit-007-exercises";
 import { a2Unit8Exercises } from "./a2-unit-008-exercises";
+import { a2Unit9Exercises } from "./a2-unit-009-exercises";
 
 export const dynamic = "force-dynamic";
 type Block = { block_id?: string; title?: string; duration_minutes?: number; content?: Activity[] };
@@ -30,6 +31,7 @@ const spanishGrammarGuides: Record<number, { explanation: string; examples: stri
   6: { explanation: "En inglés, los sustantivos contables se pueden contar y tienen singular y plural: an apple / two apples. Los incontables nombran sustancias o conceptos que normalmente no contamos por unidades: water, rice, bread. Usa many con contables en plural y much con incontables. Some suele aparecer en afirmativas y también en ofrecimientos o peticiones; any es habitual en negativas y preguntas. A few significa «unos pocos» y acompaña a contables; a little significa «un poco de» y acompaña a incontables. Para preguntar la cantidad, usa How many...? con contables y How much...? con incontables.", examples: ["There are a few apples. = Hay unas pocas manzanas.", "There isn't much milk. = No hay mucha leche.", "Would you like some water? = ¿Te apetece un poco de agua?"] },
   7: { explanation: "Para hablar de los lugares y servicios de un barrio, es importante distinguir los sustantivos contables de los incontables. Los contables tienen singular y plural (a shop / two shops); los incontables normalmente no llevan -s (traffic, information). Usa many con contables plurales y much con incontables. Some suele aparecer en afirmativas; any, en preguntas y negativas. A lot of sirve con ambos tipos. Recuerda que there is acompaña al singular o a incontable y there are al plural.", examples: ["There are many cafés near my home. = Hay muchas cafeterías cerca de mi casa.", "There isn't much traffic at night. = No hay mucho tráfico por la noche.", "Are there any parks? Yes, there are some. = ¿Hay parques? Sí, hay algunos.", "There is a lot of information online. = Hay mucha información en internet."] },
   8: { explanation: "Usa this (este/esta) y these (estos/estas) para señalar algo cercano; that (ese/esa/aquel/aquella) y those (esos/esas/aquellos/aquellas) para algo más lejano. This y that acompañan a nombres singulares; these y those, a plurales. Los pronombres posesivos mine, yours, his, hers, ours y theirs sustituyen al nombre y evitan repetirlo: This is my bag. That one is yours. Para preguntar por el propietario usamos whose: Whose phone is this? (¿De quién es este teléfono?). Recuerda la diferencia entre adjetivo posesivo + nombre (my keys) y pronombre posesivo sin nombre (the keys are mine).", examples: ["This is my bag. That one is yours. = Esta es mi bolsa. Aquella es tuya.", "These keys are ours. = Estas llaves son nuestras.", "Whose phone is this? It's hers. = ¿De quién es este teléfono? Es suyo (de ella).", "Those seats are theirs. = Aquellos asientos son suyos (de ellos)."] },
+  9: { explanation: "Los adjetivos terminados en -ed describen cómo se siente una persona: bored (aburrido/a), excited (ilusionado/a), worried (preocupado/a). Los terminados en -ing describen aquello que causa esa emoción: boring (que aburre), exciting (emocionante), worrying (que preocupa). Compara: I'm bored because the film is boring (Estoy aburrido porque la película es aburrida). Usa because para introducir una razón y so para presentar un resultado. No combines ambos conectores en la misma estructura: Because I was tired, I went home / I was tired, so I went home.", examples: ["I'm excited about the trip. = Estoy ilusionado/a con el viaje.", "The journey was tiring, so we stayed at home. = El viaje fue agotador, así que nos quedamos en casa.", "She was surprised by the news. = Ella se sorprendió con la noticia.", "The lesson was interesting, and the students were interested. = La clase era interesante y los estudiantes estaban interesados."] },
 };
 function Questions({ items }: { items: string[][] }) {
   return <ol className="theory-question-list">{items.map((q,i)=><li key={i}><span className="question-number">{String(i+1).padStart(2,"0")}</span><div><p>{q[0]}</p>{q.length>1&&<small>Opciones: {q.slice(1,4).join(" · ")}</small>}{q[4]&&<p className="question-answer"><strong>Respuesta: {q[4]}</strong></p>}</div></li>)}</ol>;
@@ -150,6 +152,19 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["VOCABULARY",a2Unit8Exercises.vocabulary],
         ["LISTENING",a2Unit8Exercises.listening],
         ["READING",a2Unit8Exercises.reading],
+      ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div>
+        <ActivityContent activities={activities} mode="standard"/>
+      </section>)}
+    </section>}
+    {number === 9 && <section className="lesson-block" style={{marginTop:32}}>
+      <div className="kicker">PRACTICE · UNIT 9 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
+      <p>Practica los adjetivos terminados en -ed y -ing para expresar sentimientos y causas, y los conectores because y so. El listening utiliza voz sintética del navegador, no una grabación original.</p>
+      {([
+        ["GRAMMAR",a2Unit9Exercises.grammar],
+        ["VOCABULARY",a2Unit9Exercises.vocabulary],
+        ["LISTENING",a2Unit9Exercises.listening],
+        ["READING",a2Unit9Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
         <ActivityContent activities={activities} mode="standard"/>
