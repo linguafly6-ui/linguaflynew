@@ -26,6 +26,7 @@ import { a2Unit21Exercises } from "./a2-unit-021-exercises";
 import { a2Unit22Exercises } from "./a2-unit-022-exercises";
 import { a2Unit23Exercises } from "./a2-unit-023-exercises";
 import { a2Unit24Exercises } from "./a2-unit-024-exercises";
+import { a2Unit25Exercises } from "./a2-unit-025-exercises";
 
 export const dynamic = "force-dynamic";
 type Block = { block_id?: string; title?: string; duration_minutes?: number; content?: Activity[] };
@@ -324,6 +325,11 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
       <div className="kicker">PRACTICE · UNIT 23 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo organizar viajes, reservar alojamiento, facturar vuelos, comprender confirmaciones y modificar planes. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
       {([["GRAMMAR",a2Unit23Exercises.grammar],["VOCABULARY",a2Unit23Exercises.vocabulary],["LISTENING",a2Unit23Exercises.listening],["READING",a2Unit23Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+    </section>}
+    {number === 25 && <section className="lesson-block" style={{marginTop:32}}>
+      <div className="kicker">PRACTICE · UNIT 25 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
+      <p>Practica cómo registrarte en un hotel, pedir servicios, resolver problemas con la habitación y comprender normas y horarios. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
+      {([["GRAMMAR",a2Unit25Exercises.grammar],["VOCABULARY",a2Unit25Exercises.vocabulary],["LISTENING",a2Unit25Exercises.listening],["READING",a2Unit25Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
     </section>}
     <div className="unit-next"><Link className="academy-button" href={`/academia/${level.toLowerCase()}`}>Volver al temario</Link></div>
   </main>;
