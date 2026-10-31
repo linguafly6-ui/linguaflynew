@@ -42,13 +42,9 @@ function SpeakButton({ text, label }: { text: string; label: string }) {
   </button>;
 }
 
-function unmark(value: string) {
-  return value.replace(/\\[\\[([^|\\]]+)\\|([^\\]]+)\\]\\]/g, "$1").trim();
-}
-
 function getVocabularyPair(activity: Activity): { english: string; spanish: string } | null {
   const stimulus = activity.stimulus_en ?? "";
-  const marked = [...stimulus.matchAll(/\\[\\[([^|\\]]+)\\|([^\\]]+)\\]\\]/g)];
+  const marked = [...stimulus.matchAll(/\[\[(.+?)\|(.+?)\]\]/g)];
   const first = marked.find(match => !/^[_ .-]+$/.test(match[1].trim()));
   if (first) return { english: first[1].trim(), spanish: first[2].trim() };
   const spanishMarked = marked.find(match => /^[_ .-]+$/.test(match[1].trim()));
