@@ -12,6 +12,7 @@ import { a2Unit7Exercises } from "./a2-unit-007-exercises";
 import { a2Unit8Exercises } from "./a2-unit-008-exercises";
 import { a2Unit9Exercises } from "./a2-unit-009-exercises";
 import { a2Unit10Exercises } from "./a2-unit-010-exercises";
+import { a2Unit11Exercises } from "./a2-unit-011-exercises";
 
 export const dynamic = "force-dynamic";
 type Block = { block_id?: string; title?: string; duration_minutes?: number; content?: Activity[] };
@@ -34,6 +35,7 @@ const spanishGrammarGuides: Record<number, { explanation: string; examples: stri
   8: { explanation: "Usa this (este/esta) y these (estos/estas) para señalar algo cercano; that (ese/esa/aquel/aquella) y those (esos/esas/aquellos/aquellas) para algo más lejano. This y that acompañan a nombres singulares; these y those, a plurales. Los pronombres posesivos mine, yours, his, hers, ours y theirs sustituyen al nombre y evitan repetirlo: This is my bag. That one is yours. Para preguntar por el propietario usamos whose: Whose phone is this? (¿De quién es este teléfono?). Recuerda la diferencia entre adjetivo posesivo + nombre (my keys) y pronombre posesivo sin nombre (the keys are mine).", examples: ["This is my bag. That one is yours. = Esta es mi bolsa. Aquella es tuya.", "These keys are ours. = Estas llaves son nuestras.", "Whose phone is this? It's hers. = ¿De quién es este teléfono? Es suyo (de ella).", "Those seats are theirs. = Aquellos asientos son suyos (de ellos)."] },
   9: { explanation: "Los adjetivos terminados en -ed describen cómo se siente una persona: bored (aburrido/a), excited (ilusionado/a), worried (preocupado/a). Los terminados en -ing describen aquello que causa esa emoción: boring (que aburre), exciting (emocionante), worrying (que preocupa). Compara: I'm bored because the film is boring (Estoy aburrido porque la película es aburrida). Usa because para introducir una razón y so para presentar un resultado. No combines ambos conectores en la misma estructura: Because I was tired, I went home / I was tired, so I went home.", examples: ["I'm excited about the trip. = Estoy ilusionado/a con el viaje.", "The journey was tiring, so we stayed at home. = El viaje fue agotador, así que nos quedamos en casa.", "She was surprised by the news. = Ella se sorprendió con la noticia.", "The lesson was interesting, and the students were interested. = La clase era interesante y los estudiantes estaban interesados."] },
   10: { explanation: "Esta unidad integra estructuras esenciales del nivel A2. Usa el presente simple para rutinas y hechos: I work in a library (Trabajo en una biblioteca). Para describir identidad, estado o características utiliza be: Are your neighbours friendly? (¿Son simpáticos tus vecinos?). Para preguntar por acciones y rutinas usa do/does: Where does your brother live? (¿Dónde vive tu hermano?). Recuerda que does va seguido del verbo en forma base y que la -s aparece en el verbo de la afirmativa: She lives, pero Does she live? Los adverbios de frecuencia suelen ir antes del verbo principal (I usually walk) y después de be (She is usually busy). Usa because para explicar motivos y but para contrastar ideas.", examples: ["What do you do? I work in a library. = ¿A qué te dedicas? Trabajo en una biblioteca.", "Where does your brother live? He lives in Cardiff. = ¿Dónde vive tu hermano? Vive en Cardiff.", "Are your neighbours friendly? Yes, they are. = ¿Son simpáticos tus vecinos? Sí.", "I usually walk to work, but I sometimes take the bus because it rains. = Normalmente voy andando al trabajo, pero a veces cojo el autobús porque llueve."] },
+  11: { explanation: "El pasado simple sirve para hablar de acciones terminadas en un momento pasado. En afirmativa, los verbos regulares suelen terminar en -ed (visit → visited); los irregulares tienen formas propias (go → went, see → saw, have → had). Para negar usamos didn't + verbo en forma base: I didn't go (No fui). Para preguntar usamos Did + sujeto + verbo base: Did you enjoy it? (¿Te gustó?). El verbo be tiene formas propias: was con I/he/she/it y were con you/we/they; sus preguntas y negativas no necesitan did. Expresiones como yesterday, last weekend, in 2022 y three days ago ayudan a situar la acción.", examples: ["We visited the castle yesterday. = Visitamos el castillo ayer.", "She went to Edinburgh last month. = Ella fue a Edimburgo el mes pasado.", "Did you enjoy the trip? = ¿Disfrutaste del viaje?", "They didn't take the bus. = No cogieron el autobús.", "I was tired, but the holiday was amazing. = Estaba cansado/a, pero las vacaciones fueron increíbles."] },
 };
 function Questions({ items }: { items: string[][] }) {
   return <ol className="theory-question-list">{items.map((q,i)=><li key={i}><span className="question-number">{String(i+1).padStart(2,"0")}</span><div><p>{q[0]}</p>{q.length>1&&<small>Opciones: {q.slice(1,4).join(" · ")}</small>}{q[4]&&<p className="question-answer"><strong>Respuesta: {q[4]}</strong></p>}</div></li>)}</ol>;
@@ -180,6 +182,19 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["VOCABULARY",a2Unit10Exercises.vocabulary],
         ["LISTENING",a2Unit10Exercises.listening],
         ["READING",a2Unit10Exercises.reading],
+      ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div>
+        <ActivityContent activities={activities} mode="standard"/>
+      </section>)}
+    </section>}
+    {number === 11 && <section className="lesson-block" style={{marginTop:32}}>
+      <div className="kicker">PRACTICE · UNIT 11 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
+      <p>Aprende a contar experiencias pasadas con el pasado simple: verbos regulares e irregulares, was/were, preguntas y negativas con did, y expresiones de tiempo. El listening utiliza voz sintética del navegador, no una grabación original.</p>
+      {([
+        ["GRAMMAR",a2Unit11Exercises.grammar],
+        ["VOCABULARY",a2Unit11Exercises.vocabulary],
+        ["LISTENING",a2Unit11Exercises.listening],
+        ["READING",a2Unit11Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
         <ActivityContent activities={activities} mode="standard"/>
