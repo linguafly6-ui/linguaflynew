@@ -3,22 +3,12 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 export type CefrLevel = typeof LEVELS[number];
 export type AcademyUnit = {
-  course_key: string;
-  level: string;
-  unit_number: number;
-  unit_id: string;
-  title: string;
-  content_json?: string;
+  course_key: string; level: string; unit_number: number; unit_id: string; title: string; content_json?: string;
 };
 export type AcademyLevel = {
-  level: CefrLevel;
-  course_key: string;
-  units: number;
-  first_title: string;
-  description: string;
+  level: CefrLevel; course_key: string; units: number; first_title: string; description: string;
   status: "published" | "content" | "in_progress";
 };
-
 type Statement = {
   bind(...values: (string | number)[]): Statement;
   all<T>(): Promise<{ results?: T[] }>;
@@ -34,7 +24,6 @@ const descriptions: Record<CefrLevel, string> = {
   C2: "Perfecciona la precisión, la naturalidad y los matices propios de un dominio avanzado."
 };
 const validLevel = (value: string): value is CefrLevel => LEVELS.includes(value.toUpperCase() as CefrLevel);
-
 async function database(): Promise<Database> {
   const { env } = await getCloudflareContext();
   return (env as unknown as { COURSE_DB: Database }).COURSE_DB;
@@ -43,16 +32,21 @@ async function database(): Promise<Database> {
 export async function getAcademyLevels(): Promise<AcademyLevel[]> {
   const db = await database();
   const result = await db.prepare(
-    "SELECT l.level, l.course_key, COUNT(*) AS units, MIN(l.title) AS first_title, c.status AS course_status FROM learning_course_json_units l LEFT JOIN courses c ON c.cefr_level = l.level AND c.language_code = 'en' WHERE l.level IN ('A1','A2','B1','B2','C1','C2') GROUP BY l.level, l.course_key, c.status"
+    "SELECT l.level, l.course_key, COUNT(*) AS units, MIN(l.title) AS first_title, c.status AS course_status FROM learning_course_json_units l LEFT JOIN courses c ON c.cefr_level = l.level AND c.language_code = 'en' WHERE l.level IN ('A1','B1','B2','C1','C2') GROUP BY l.level, l.course_key, c.status"
   ).all<Omit<AcademyLevel, "description" | "status">>();
   const rows = result.results ?? [];
+  const a2 = await db.prepare(
+    "SELECT COUNT(*) AS units, MIN(u.title) AS first_title FROM unit_content_blueprints b JOIN units u ON u.id = b.unit_id WHERE b.unit_id LIKE 'a2-unit-%' AND b.status IN ('draft','review','approved')"
+  ).first<{ units: number; first_title: string }>();
   return LEVELS.map(level => {
     const row = rows.find(item => item.level === level) as (typeof rows[number] & { course_status?: string }) | undefined;
+    if (level === "A2") return {
+      level, course_key: "ingles-a2", units: a2?.units ?? 0,
+      first_title: a2?.first_title ?? "Contenido en preparación", description: descriptions[level], status: "content"
+    };
     return {
-      level,
-      course_key: row?.course_key ?? `ingles-${level.toLowerCase()}`,
-      units: row?.units ?? 0,
-      first_title: row?.first_title ?? "Contenido en preparación",
+      level, course_key: row?.course_key ?? `ingles-${level.toLowerCase()}`,
+      units: row?.units ?? 0, first_title: row?.first_title ?? "Contenido en preparación",
       description: descriptions[level],
       status: row?.course_status === "published" ? "published" : row && row.units > 0 ? "content" : "in_progress"
     };
@@ -62,6 +56,12 @@ export async function getAcademyLevels(): Promise<AcademyLevel[]> {
 export async function getAcademyUnits(levelValue: string): Promise<AcademyUnit[]> {
   if (!validLevel(levelValue)) return [];
   const db = await database();
+  if (levelValue.toUpperCase() === "A2") {
+    const result = await db.prepare(
+      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title FROM unit_content_blueprints b JOIN units u ON u.id = b.unit_id WHERE b.unit_id LIKE 'a2-unit-%' AND b.status IN ('draft','review','approved') ORDER BY u.unit_number"
+    ).all<AcademyUnit>();
+    return result.results ?? [];
+  }
   const result = await db.prepare(
     "SELECT course_key, level, unit_number, unit_id, title FROM learning_course_json_units WHERE level = ? AND course_key = ? ORDER BY unit_number"
   ).bind(levelValue.toUpperCase(), `ingles-${levelValue.toLowerCase()}`).all<AcademyUnit>();
@@ -71,17 +71,20 @@ export async function getAcademyUnits(levelValue: string): Promise<AcademyUnit[]
 export async function getAcademyUnit(levelValue: string, unitNumber: number): Promise<AcademyUnit & { content: Record<string, any> } | null> {
   if (!validLevel(levelValue) || !Number.isInteger(unitNumber) || unitNumber < 1 || unitNumber > 100) return null;
   const db = await database();
+  if (levelValue.toUpperCase() === "A2") {
+    const row = await db.prepare(
+      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title, b.content_json FROM unit_content_blueprints b JOIN units u ON u.id = b.unit_id WHERE b.unit_id = ? AND b.status IN ('draft','review','approved') LIMIT 1"
+    ).bind(`a2-unit-${String(unitNumber).padStart(3, "0")}`).first<AcademyUnit>();
+    if (!row?.content_json) return null;
+    try { return { ...row, content: JSON.parse(row.content_json) as Record<string, any> }; }
+    catch { return null; }
+  }
   const row = await db.prepare(
     "SELECT course_key, level, unit_number, unit_id, title, content_json FROM learning_course_json_units WHERE level = ? AND course_key = ? AND unit_number = ? LIMIT 1"
   ).bind(levelValue.toUpperCase(), `ingles-${levelValue.toLowerCase()}`, unitNumber).first<AcademyUnit>();
   if (!row?.content_json) return null;
-  try {
-    return { ...row, content: JSON.parse(row.content_json) as Record<string, any> };
-  } catch {
-    return null;
-  }
+  try { return { ...row, content: JSON.parse(row.content_json) as Record<string, any> }; }
+  catch { return null; }
 }
 
-export function isCefrLevel(value: string): value is CefrLevel {
-  return validLevel(value);
-}
+export function isCefrLevel(value: string): value is CefrLevel { return validLevel(value); }
