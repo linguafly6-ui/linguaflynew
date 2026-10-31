@@ -21,7 +21,7 @@ export default async function AcademyPage() {
       <div className="academy-heading"><div><div className="kicker">ENCUENTRA TU PUNTO DE PARTIDA</div><h2>Seis niveles. Un camino para avanzar.</h2></div><p>Elige tu nivel para descubrir el contenido, las unidades y las actividades disponibles.</p></div>
       <div className="level-grid">
         {levels.map((item, index) => <Link className={`level-card level-${item.level.toLowerCase()}`} href={`/academia/${item.level.toLowerCase()}`} key={item.level}>
-          <div className="level-card-top"><span className="level-index">0{index + 1} / 06</span><span className={item.status === "available" ? "level-status ready" : "level-status"}>{item.status === "available" ? "Contenido disponible" : "En preparación"}</span></div>
+          <div className="level-card-top"><span className="level-index">0{index + 1} / 06</span><span className={item.status === "published" ? "level-status ready" : "level-status"}>{item.status === "published" ? "Curso publicado" : item.status === "content" ? "Contenido en desarrollo" : "En preparación"}</span></div>
           <div className="level-code">{item.level}</div>
           <h3>{({A1:"Principiante",A2:"Elemental",B1:"Intermedio",B2:"Intermedio alto",C1:"Avanzado",C2:"Maestría"} as Record<string,string>)[item.level]}</h3>
           <p>{item.description}</p>
