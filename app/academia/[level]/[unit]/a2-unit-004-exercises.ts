@@ -7,7 +7,7 @@ const G:R[]=[
 ["g403","Elige la posición correcta.","",["He goes always to bed early.","He always goes to bed early.","He goes to bed early always."],"He always goes to bed early.","El adverbio suele ir antes del verbo principal."],
 ["g404","Completa con do o does.","___ your brother work on Saturdays?",["Do","Does","Is"],"Does","Con he/she/it usamos does."],
 ["g405","Elige la negativa correcta.","Maya ___ coffee in the evening.",["don't drink","doesn't drinks","doesn't drink"],"doesn't drink","Después de doesn't usamos el verbo en forma base."],
-["g406","¿Dónde colocamos sometimes con be?","","",["She sometimes is tired.","She is sometimes tired.","Sometimes she tired is."],"She is sometimes tired.","Los adverbios de frecuencia van después de be."],
+["g406","¿Dónde colocamos sometimes con be?","",["She sometimes is tired.","She is sometimes tired.","Sometimes she tired is."],"She is sometimes tired.","Los adverbios de frecuencia van después de be."],
 ["g407","Completa la pregunta.","How often ___ you exercise?",["are","do","does"],"do","Para preguntar por hábitos usamos do + sujeto."],
 ["g408","Elige la expresión correcta.","I visit my grandparents ___.",["twice a week","two time week","twice in week"],"twice a week","La expresión es twice a week."],
 ["g409","Corrige el error.","He ___ to work by train.",["go","goes","going"],"goes","Con he el verbo lleva -es en goes."],
