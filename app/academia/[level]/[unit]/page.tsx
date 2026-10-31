@@ -13,6 +13,7 @@ import { a2Unit8Exercises } from "./a2-unit-008-exercises";
 import { a2Unit9Exercises } from "./a2-unit-009-exercises";
 import { a2Unit10Exercises } from "./a2-unit-010-exercises";
 import { a2Unit11Exercises } from "./a2-unit-011-exercises";
+import { a2Unit12Exercises } from "./a2-unit-012-exercises";
 
 export const dynamic = "force-dynamic";
 type Block = { block_id?: string; title?: string; duration_minutes?: number; content?: Activity[] };
@@ -36,6 +37,7 @@ const spanishGrammarGuides: Record<number, { explanation: string; examples: stri
   9: { explanation: "Los adjetivos terminados en -ed describen cómo se siente una persona: bored (aburrido/a), excited (ilusionado/a), worried (preocupado/a). Los terminados en -ing describen aquello que causa esa emoción: boring (que aburre), exciting (emocionante), worrying (que preocupa). Compara: I'm bored because the film is boring (Estoy aburrido porque la película es aburrida). Usa because para introducir una razón y so para presentar un resultado. No combines ambos conectores en la misma estructura: Because I was tired, I went home / I was tired, so I went home.", examples: ["I'm excited about the trip. = Estoy ilusionado/a con el viaje.", "The journey was tiring, so we stayed at home. = El viaje fue agotador, así que nos quedamos en casa.", "She was surprised by the news. = Ella se sorprendió con la noticia.", "The lesson was interesting, and the students were interested. = La clase era interesante y los estudiantes estaban interesados."] },
   10: { explanation: "Esta unidad integra estructuras esenciales del nivel A2. Usa el presente simple para rutinas y hechos: I work in a library (Trabajo en una biblioteca). Para describir identidad, estado o características utiliza be: Are your neighbours friendly? (¿Son simpáticos tus vecinos?). Para preguntar por acciones y rutinas usa do/does: Where does your brother live? (¿Dónde vive tu hermano?). Recuerda que does va seguido del verbo en forma base y que la -s aparece en el verbo de la afirmativa: She lives, pero Does she live? Los adverbios de frecuencia suelen ir antes del verbo principal (I usually walk) y después de be (She is usually busy). Usa because para explicar motivos y but para contrastar ideas.", examples: ["What do you do? I work in a library. = ¿A qué te dedicas? Trabajo en una biblioteca.", "Where does your brother live? He lives in Cardiff. = ¿Dónde vive tu hermano? Vive en Cardiff.", "Are your neighbours friendly? Yes, they are. = ¿Son simpáticos tus vecinos? Sí.", "I usually walk to work, but I sometimes take the bus because it rains. = Normalmente voy andando al trabajo, pero a veces cojo el autobús porque llueve."] },
   11: { explanation: "Esta unidad combina vocabulario de alimentos y comidas con estructuras para comprar y cocinar. Usa sustantivos contables e incontables: an apple / some rice. Many y how many acompañan a contables; much y how much, a incontables. Some aparece en afirmativas y peticiones; any, normalmente en preguntas y negativas. Para pedir con educación, utiliza would like: I'd like a sandwich (Quisiera un sándwich). El imperativo da instrucciones: Chop the onions (Pica las cebollas). Should y shouldn't sirven para aconsejar: You should eat more vegetables (Deberías comer más verduras). Para comparar, añade -er o usa more: cheaper (más barato), more expensive (más caro).", examples: ["How many tomatoes do we need? = ¿Cuántos tomates necesitamos?", "How much rice would you like? = ¿Cuánto arroz quieres?", "I'd like some water, please. = Quisiera un poco de agua, por favor.", "Fry the onions for five minutes. = Fríe las cebollas durante cinco minutos.", "You should eat more fruit. = Deberías comer más fruta.", "This shop is cheaper than the supermarket. = Esta tienda es más barata que el supermercado."] },
+  12: { explanation: "Para seguir una receta en inglés, combina los nombres de ingredientes con cuantificadores y verbos en imperativo. Usa a/an con un ingrediente contable singular (an onion), some con cantidades no especificadas (some flour) y much/many o how much/how many para preguntar por cantidades. Los verbos de cocina suelen aparecer en imperativo: chop (pica), mix (mezcla), pour (vierte), add (añade), stir (remueve), bake (hornea) y boil (hierve). Usa first, next, then y finally para ordenar los pasos. Should sirve para dar consejos y comparativos para elegir ingredientes o métodos: Fresh herbs are better than dried herbs.", examples: ["First, chop the onion. = Primero, pica la cebolla.", "Add 200 grams of flour. = Añade 200 gramos de harina.", "How much oil do we need? = ¿Cuánto aceite necesitamos?", "Mix the eggs with some milk. = Mezcla los huevos con un poco de leche.", "You should wash the vegetables. = Deberías lavar las verduras.", "This recipe is easier than the other one. = Esta receta es más fácil que la otra."] },
 };
 function Questions({ items }: { items: string[][] }) {
   return <ol className="theory-question-list">{items.map((q,i)=><li key={i}><span className="question-number">{String(i+1).padStart(2,"0")}</span><div><p>{q[0]}</p>{q.length>1&&<small>Opciones: {q.slice(1,4).join(" · ")}</small>}{q[4]&&<p className="question-answer"><strong>Respuesta: {q[4]}</strong></p>}</div></li>)}</ol>;
@@ -198,6 +200,17 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
         <ActivityContent activities={activities} mode="standard"/>
+      </section>)}
+    </section>}
+
+    {number === 12 && <section className="lesson-block" style={{marginTop:32}}>
+      <div className="kicker">PRACTICE · UNIT 12 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
+      <p>Practica el vocabulario de cocina, los ingredientes, las cantidades y las instrucciones de una receta. El listening utiliza voz sintética del navegador, no una grabación original.</p>
+      {([
+        ["GRAMMAR",a2Unit12Exercises.grammar],["VOCABULARY",a2Unit12Exercises.vocabulary],
+        ["LISTENING",a2Unit12Exercises.listening],["READING",a2Unit12Exercises.reading],
+      ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/>
       </section>)}
     </section>}
         <div className="unit-next"><Link className="academy-button" href={`/academia/${level.toLowerCase()}`}>Volver al temario</Link></div>
