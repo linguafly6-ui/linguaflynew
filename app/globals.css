@@ -102,3 +102,7 @@
 .answer-feedback{grid-column:1/-1;font-size:12px;margin:2px 0 0}
 .answer-feedback.correct{color:#427a32}.answer-feedback.incorrect{color:#a15a36}
 @media(max-width:600px){.answer-entry{grid-template-columns:1fr}.answer-entry label{grid-column:auto}.check-answer{justify-content:center}}
+
+.vocabulary-source{display:inline-flex;align-items:center;min-height:64px;margin:8px 0 12px;padding:14px 22px;border:1px solid var(--line);border-radius:12px;background:#f7f8f3;color:#193e32;font-size:25px;font-weight:750;letter-spacing:-.3px}
+.vocabulary-translation-card .activity-type{color:#6b944c}
+.vocabulary-translation-card .answer-entry{max-width:650px}
