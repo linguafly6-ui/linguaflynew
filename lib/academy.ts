@@ -16,7 +16,7 @@ export type AcademyLevel = {
   units: number;
   first_title: string;
   description: string;
-  status: "available" | "in_progress";
+  status: "published" | "content" | "in_progress";
 };
 
 type Statement = {
@@ -43,18 +43,18 @@ async function database(): Promise<Database> {
 export async function getAcademyLevels(): Promise<AcademyLevel[]> {
   const db = await database();
   const result = await db.prepare(
-    "SELECT level, course_key, COUNT(*) AS units, MIN(title) AS first_title FROM learning_course_json_units WHERE level IN ('A1','A2','B1','B2','C1','C2') GROUP BY level, course_key"
+    "SELECT l.level, l.course_key, COUNT(*) AS units, MIN(l.title) AS first_title, c.status AS course_status FROM learning_course_json_units l LEFT JOIN courses c ON c.cefr_level = l.level AND c.language_code = 'en' WHERE l.level IN ('A1','A2','B1','B2','C1','C2') GROUP BY l.level, l.course_key, c.status"
   ).all<Omit<AcademyLevel, "description" | "status">>();
   const rows = result.results ?? [];
   return LEVELS.map(level => {
-    const row = rows.find(item => item.level === level);
+    const row = rows.find(item => item.level === level) as (typeof rows[number] & { course_status?: string }) | undefined;
     return {
       level,
       course_key: row?.course_key ?? `ingles-${level.toLowerCase()}`,
       units: row?.units ?? 0,
       first_title: row?.first_title ?? "Contenido en preparación",
       description: descriptions[level],
-      status: row && row.units > 0 ? "available" : "in_progress"
+      status: row?.course_status === "published" ? "published" : row && row.units > 0 ? "content" : "in_progress"
     };
   });
 }
