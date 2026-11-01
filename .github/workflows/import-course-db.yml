@@ -3,7 +3,7 @@ name: Import course content into Cloudflare D1
 on:
   push:
     paths:
-      - 'migrations/course-db/a2_046_050.sql'
+      - 'migrations/course-db/a2_046_050_publish.sql'
       - '.github/workflows/import-course-db.yml'
   workflow_dispatch:
     inputs:
@@ -29,7 +29,7 @@ jobs:
       - name: Validate import file
         shell: bash
         env:
-          SQL_FILE: ${{ inputs.sql_file || 'migrations/course-db/a2_046_050.sql' }}
+          SQL_FILE: ${{ inputs.sql_file || 'migrations/course-db/*.sql' }}
         run: |
           set -euo pipefail
           case "$SQL_FILE" in
