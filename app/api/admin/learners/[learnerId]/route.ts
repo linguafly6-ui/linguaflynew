@@ -36,8 +36,15 @@ export async function GET(_request:Request,{params}:{params:Promise<{learnerId:s
    db.prepare("SELECT r.exercise_id,r.due_at,r.interval_days,r.ease_factor,r.repetitions,r.lapses,r.last_quality,r.updated_at,e.exercise_code,e.title AS exercise_title,u.id AS unit_id,u.unit_number,c.cefr_level FROM spaced_repetition_items r LEFT JOIN exercises e ON e.id=r.exercise_id LEFT JOIN sections s ON s.id=e.section_id LEFT JOIN units u ON u.id=s.unit_id LEFT JOIN courses c ON c.id=u.course_id WHERE r.learner_id=? ORDER BY r.due_at").bind(learnerId).all<Record<string,unknown>>(),
    db.prepare("SELECT p.competency_id,p.evidence_count,p.correct_count,p.mastery_score,p.last_evidence_at,cp.title AS competency_title,cp.skill,cp.cefr_level FROM learner_competency_progress p LEFT JOIN competencies cp ON cp.id=p.competency_id WHERE p.learner_id=? ORDER BY cp.cefr_level,cp.skill").bind(learnerId).all<Record<string,unknown>>()
   ]);
-  const rows=attempts.results||[];
-  const normalized=rows.map(row=>({...row,response:parseJson(row.response_json),feedback:parseJson(row.feedback_json),error_detail:parseJson(row.error_detail_json),expected_answer:expectedFromConfig(row.answer_config_json)}));
+  type AttemptRow = Record<string, any>;
+  const rows: AttemptRow[] = attempts.results || [];
+  const normalized: AttemptRow[] = rows.map((row: AttemptRow) => ({
+   ...row,
+   response: parseJson(row.response_json),
+   feedback: parseJson(row.feedback_json),
+   error_detail: parseJson(row.error_detail_json),
+   expected_answer: expectedFromConfig(row.answer_config_json)
+  }));
   const mistakes=normalized.filter(row=>Number(row.is_correct)===0);
   const byCourse=new Map<string,{course_key:string;attempts:number;correct:number;failed:number;units:Set<string>}>();
   for(const row of normalized){const key="ingles-"+String(row.cefr_level||"").toLowerCase();const item=byCourse.get(key)||{course_key:key,attempts:0,correct:0,failed:0,units:new Set<string>()};item.attempts++;if(Number(row.is_correct)===1)item.correct++;else item.failed++;if(row.unit_id)item.units.add(String(row.unit_id));byCourse.set(key,item);}
