@@ -128,7 +128,7 @@ function BlueprintPractice({ data }: { data: Blueprint }) {
   ];
   return <section className="lesson-block" style={{marginTop:32}}>
     <div className="kicker">PRACTICE · ACTIVIDADES INTERACTIVAS</div>
-    <h2>60 interactive exercises</h2>
+    <h2>Practica y comprueba tus respuestas</h2>
     <p>Practica con el mismo formato de actividades de las unidades A2 anteriores: gramática, vocabulario, listening y reading. El audio se reproduce con la voz sintética del navegador.</p>
     {sections.filter(section => section.activities.length > 0).map(section => <section key={section.title} style={{marginTop:28}}>
       <div className="kicker">{section.title} · {section.activities.length} ACTIVITIES</div>
