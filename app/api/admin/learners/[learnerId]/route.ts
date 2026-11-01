@@ -34,7 +34,8 @@ export async function GET(_request:Request,{params}:{params:Promise<{learnerId:s
   const rows=attempts.results||[];
   const mistakes=await Promise.all(rows.filter(row=>Number(row.is_correct)===0).map(async row=>{
    let expectedAnswer:string|string[]|boolean|null=null;
-   const normalizedUnit=String(row.unit_id||"").toUpperCase().replace("-UNIT-","-");\n   const match=normalizedUnit.match(/^([A-C][1-2])-(\\d+)$/);
+   const normalizedUnit=String(row.unit_id||"").toUpperCase().replace("-UNIT-","-");
+   const match=normalizedUnit.match(/^([A-C][1-2])-(\d+)$/);
    if(match){
     try{const unit=await getAcademyUnit(match[1].toUpperCase(),Number(match[2]));if(unit){const exercise=findExercise(unit.content,row.interaction_id);expectedAnswer=exercise?.correct_answer??null;}}catch{}
    }
