@@ -76,6 +76,66 @@ const spanishGrammarGuides: Record<number, { explanation: string; examples: stri
 function Questions({ items }: { items: string[][] }) {
   return <ol className="theory-question-list">{items.map((q,i)=><li key={i}><span className="question-number">{String(i+1).padStart(2,"0")}</span><div><p>{q[0]}</p>{q.length>1&&<small>Opciones: {q.slice(1,4).join(" · ")}</small>}{q[4]&&<p className="question-answer"><strong>Respuesta: {q[4]}</strong></p>}</div></li>)}</ol>;
 }
+function BlueprintPractice({ data }: { data: Blueprint }) {
+  const toActivities = (kind: "reading" | "listening", items?: string[][]): Activity[] =>
+    (items ?? []).map((item, index) => {
+      const options = item.slice(1, 4).filter(Boolean);
+      const answer = item[4] ?? options[0] ?? "";
+      return {
+        interaction_id: `${kind}-${index + 1}`,
+        type: "multiple_choice",
+        prompt_es: kind === "reading" ? "Según el texto, elige la respuesta correcta." : "Según el diálogo, elige la respuesta correcta.",
+        question_en: item[0],
+        options: options.map((text, optionIndex) => ({ id: `${kind}-${index}-${optionIndex}`, text })),
+        correct_answer: answer,
+        explanation: "Vuelve al texto o escucha el diálogo para localizar la información."
+      };
+    });
+  const vocabulary = (data.vocabulary ?? []).filter(item => item.term && item.translation_es);
+  const vocabularyActivities: Activity[] = vocabulary.map((item, index) => {
+    const distractors = vocabulary.filter(other => other.term !== item.term).slice((index * 3) % Math.max(1, vocabulary.length - 1), (index * 3) % Math.max(1, vocabulary.length - 1) + 3);
+    const choices = [item, ...distractors].map(other => other.translation_es ?? "");
+    return {
+      interaction_id: `vocabulary-${index + 1}`,
+      type: "multiple_choice",
+      prompt_es: "Selecciona la traducción correcta.",
+      question_en: item.term,
+      options: choices.map((text, optionIndex) => ({ id: `vocab-${index}-${optionIndex}`, text })),
+      correct_answer: item.translation_es,
+      explanation: item.example ? `Ejemplo: ${item.example}` : "Repasa la lista de vocabulario."
+    };
+  });
+  const grammarActivities: Activity[] = (data.grammar_lesson?.commonErrors ?? []).map((error, index) => {
+    const parts = error.split("→");
+    const correction = parts[1]?.split(":")[0]?.trim() ?? "";
+    const incorrect = parts[0]?.trim() ?? "";
+    if (!correction || !incorrect) return null;
+    return {
+      interaction_id: `grammar-${index + 1}`,
+      type: "multiple_choice",
+      prompt_es: "Elige la frase correcta en inglés.",
+      question_en: error.split(":")[1]?.trim() ?? "Choose the correct sentence.",
+      options: [{ id: `grammar-${index}-a`, text: correction }, { id: `grammar-${index}-b`, text: incorrect }],
+      correct_answer: correction,
+      explanation: "La opción correcta aplica la regla gramatical explicada en esta unidad."
+    } satisfies Activity;
+  }).filter((item): item is Activity => item !== null);
+  const sections = [
+    { title: "GRAMMAR · GRAMÁTICA", activities: grammarActivities },
+    { title: "VOCABULARY · VOCABULARIO", activities: vocabularyActivities },
+    { title: "READING · COMPRENSIÓN LECTORA", activities: toActivities("reading", data.reading?.questions) },
+    { title: "LISTENING · COMPRENSIÓN ORAL", activities: toActivities("listening", data.listening?.questions) }
+  ];
+  return <section className="lesson-block" style={{marginTop:32}}>
+    <div className="kicker">PRACTICE · ACTIVIDADES INTERACTIVAS</div>
+    <h2>Practica y comprueba tus respuestas</h2>
+    <p>Las actividades se generan con el contenido de esta unidad guardado en la base de datos del curso.</p>
+    {sections.filter(section => section.activities.length > 0).map(section => <section key={section.title} style={{marginTop:28}}>
+      <div className="kicker">{section.title} · {section.activities.length} ACTIVITIES</div>
+      <ActivityContent activities={section.activities} mode="standard"/>
+    </section>)}
+  </section>;
+}
 function BlueprintView({ data, title, level, number }: { data: Blueprint; title: string; level: string; number: number }) {
   const readingExerciseSets: Activity[][] = [
     a2Unit1Exercises.reading, a2Unit2Exercises.reading, a2Unit3Exercises.reading,
@@ -106,6 +166,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
       {!!data.review_checklist?.length&&<section className="theory-card review-theory"><div className="theory-section-label"><span className="theory-icon">✓</span><span>REPASO · AL FINAL DE LA UNIDAD</span></div><h2>¿Ya lo tienes?</h2><p className="theory-intro">Utiliza esta lista para comprobar qué sabes hacer antes de continuar.</p><ul>{data.review_checklist.map((x,i)=><li key={i}><span>{String(i+1).padStart(2,"0")}</span>{x}</li>)}</ul></section>}
       {!!data.editorial_notes?.length&&<section className="theory-card editorial-notes"><div className="theory-section-label"><span className="theory-icon">✦</span><span>NOTAS EDITORIALES · BORRADOR</span></div><ul>{data.editorial_notes.map((x,i)=><li key={i}>{x}</li>)}</ul></section>}
     </section>
+    <BlueprintPractice data={data}/>
     {number === 1 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 1 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Completa las actividades y comprueba cada respuesta. El audio de listening se reproduce mediante voz sintética del navegador.</p>
