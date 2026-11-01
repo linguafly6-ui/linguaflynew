@@ -56,6 +56,27 @@ export async function getAcademyLevels(): Promise<AcademyLevel[]> {
 export async function getAcademyUnits(levelValue: string): Promise<AcademyUnit[]> {
   if (!validLevel(levelValue)) return [];
   const db = await database();
+  if (levelValue.toUpperCase() === "A1" && unitNumber === 1) {
+    const unit = await db.prepare("SELECT c.id AS course_key, c.cefr_level AS level, u.unit_number, u.id AS unit_id, u.title, u.learning_objectives_json FROM courses c JOIN units u ON u.course_id=c.id WHERE c.id='course-en-a1' AND u.id='a1-unit-001' AND u.status IN ('draft','review','approved') LIMIT 1").first<AcademyUnit & { learning_objectives_json?: string }>();
+    if (!unit) return null;
+    const rows = await db.prepare("SELECT s.id AS section_id, s.section_type, s.title AS section_title, e.id AS exercise_id, e.title AS exercise_title, e.instructions, e.content_json, e.position, o.id AS option_id, o.option_key, o.content AS option_content FROM sections s JOIN exercises e ON e.section_id=s.id LEFT JOIN exercise_options o ON o.exercise_id=e.id WHERE s.unit_id=? AND s.status IN ('draft','review','approved') AND e.status='published' ORDER BY s.position,e.position,o.position").bind(unit.unit_id).all<{section_id:string;section_type:string;section_title:string;exercise_id:string;exercise_title:string;instructions:string;content_json:string;position:number;option_id:string|null;option_key:string|null;option_content:string|null}>();
+    const grouped = new Map<string, any>();
+    for (const row of rows.results ?? []) {
+      if (!grouped.has(row.section_id)) grouped.set(row.section_id, { block_id: row.section_type, title: row.section_title, duration_minutes: 18, content: [] });
+      const block = grouped.get(row.section_id);
+      let activity = block.content.find((item: any) => item.interaction_id === row.exercise_id);
+      if (!activity) {
+        let authored: Record<string, any> = {};
+        try { authored = JSON.parse(row.content_json || "{}"); } catch {}
+        activity = { interaction_id: row.exercise_id, type: "multiple_choice", prompt_es: authored.prompt_es || row.instructions, stimulus_en: authored.stimulus_en || "", explanation: authored.explanation_es || "", options: [] };
+        block.content.push(activity);
+      }
+      if (row.option_id) activity.options.push({ id: row.option_id, text: row.option_content || row.option_key });
+    }
+    let objectives: string[] = [];
+    try { objectives = JSON.parse(unit.learning_objectives_json || "[]"); } catch {}
+    return { ...unit, course_key: "ingles-a1", content: { course: { total_duration_minutes: 75 }, learning_outcomes: objectives, blocks: Array.from(grouped.values()) } };
+  }
   if (levelValue.toUpperCase() === "A2") {
     const result = await db.prepare(
       "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title FROM unit_content_blueprints b JOIN units u ON u.id = b.unit_id WHERE b.unit_id LIKE 'a2-unit-%' AND b.status IN ('draft','review','approved') ORDER BY u.unit_number"
