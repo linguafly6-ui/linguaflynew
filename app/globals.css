@@ -190,3 +190,14 @@
 .article-level{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:6px 8px;background:#edf5e7;color:#557a39;border-radius:999px;font:800 10px Manrope}
 .article-card .article-category{letter-spacing:1px}
 @media(max-width:600px){.blog-browser{padding:19px;border-radius:15px}.blog-browser-heading{align-items:flex-start}.blog-result-count{padding-top:4px}.blog-level-note{width:100%;margin:5px 0 0}.blog-filter-options button{font-size:10px;padding:8px 10px}}
+
+
+/* Academy promotion on every blog article */
+.article-course-promo{position:relative;overflow:hidden;margin:54px 0 0;padding:clamp(26px,5vw,48px);border-radius:22px;background:#173d32;color:#fff}
+.article-course-promo:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff24;border-radius:50%;right:-75px;top:-105px;box-shadow:0 0 0 32px #ffffff08,0 0 0 64px #ffffff06;pointer-events:none}
+.article-course-promo-kicker{position:relative;z-index:1;color:#b8f36b;font-size:10px;font-weight:800;letter-spacing:1.6px}
+.article-course-promo h2{position:relative;z-index:1;max-width:610px;margin:16px 0 12px;color:#fff;font:800 clamp(26px,4vw,38px)/1.12 Manrope;letter-spacing:-1.3px}
+.article-course-promo p{position:relative;z-index:1;max-width:610px;margin:0;color:#d0ddd6;font-size:14px;line-height:1.8}
+.article-course-promo-cta{position:relative;z-index:1;display:inline-flex;align-items:center;gap:18px;margin-top:23px;padding:14px 19px;border-radius:999px;background:#b8f36b;color:#173d32;font-size:12px;font-weight:800}
+.article-course-promo-cta span{font-size:17px}
+.article-course-promo-note{position:relative;z-index:1;display:block;margin-top:18px;color:#b9cbbf;font-size:10px;letter-spacing:.8px}
