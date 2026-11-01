@@ -29,7 +29,7 @@ jobs:
       - name: Validate import file
         shell: bash
         env:
-          SQL_FILE: ${{ inputs.sql_file }}
+          SQL_FILE: ${{ inputs.sql_file || 'migrations/course-db/a2_046_050.sql' }}
         run: |
           set -euo pipefail
           case "$SQL_FILE" in
