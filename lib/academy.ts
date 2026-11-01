@@ -90,7 +90,7 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
         activity = { interaction_id: row.exercise_id, type: "multiple_choice", prompt_es: authored.prompt_es || row.instructions, stimulus_en: authored.stimulus_en || "", explanation: authored.explanation_es || "", options: [] };
         block.content.push(activity);
       }
-      if (row.option_id) activity.options.push({ id: row.option_id, text: row.option_content || row.option_key });
+      if (row.option_id) activity.options.push({ id: row.option_id, value: row.option_key || row.option_id, text: row.option_content || row.option_key });
     }
     let objectives: string[] = [];
     try { objectives = JSON.parse(unit.learning_objectives_json || "[]"); } catch {}
