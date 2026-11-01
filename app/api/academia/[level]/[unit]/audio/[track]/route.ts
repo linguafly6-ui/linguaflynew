@@ -26,15 +26,13 @@ export async function GET(
 
   const { env } = await getCloudflareContext({ async: true });
   const bucket = (env as unknown as { LINGUAFLY_MEDIA: MediaBucket }).LINGUAFLY_MEDIA;
-  const extension = unit >= 46 ? "wav" : "mp3";
-  const contentType = unit >= 46 ? "audio/wav" : "audio/mpeg";
-  const key = `a2/unit-${String(unit).padStart(3, "0")}/listening-${track}.${extension}`;
+  const key = `a2/unit-${String(unit).padStart(3, "0")}/listening-${track}.mp3`;
   const object = await bucket.get(key);
   if (!object) return new Response("Audio no encontrado.", { status: 404 });
 
   const headers = new Headers();
   object.writeHttpMetadata(headers);
-  headers.set("Content-Type", contentType);
+  headers.set("Content-Type", "audio/mpeg");
   headers.set("Cache-Control", "public, max-age=31536000, immutable");
   headers.set("ETag", object.httpEtag);
   headers.set("Accept-Ranges", "bytes");
