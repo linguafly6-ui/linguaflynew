@@ -286,3 +286,6 @@
  .blog-image-monogram{right:9px;bottom:10px;font-size:34px}
  .blog-image-frame.article-cover{aspect-ratio:16/9;margin:5px -19px 34px;border-radius:0}
 }
+
+.article-content .article-inline-image{width:min(100%,680px);aspect-ratio:16/9;margin:30px auto;border-radius:15px}
+.article-content .article-inline-image .blog-image-fallback{align-items:center;justify-content:center;text-align:center;padding:28px}
