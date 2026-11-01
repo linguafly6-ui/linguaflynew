@@ -1,5 +1,5 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-type StripeEnv = { STRIPE_SECRET_KEY?: string; STRIPE_WEBHOOK_SECRET?: string; STRIPE_PRICE_MONTHLY?: string; STRIPE_PRICE_ANUAL?: string; NEXT_PUBLIC_SITE_URL?: string; };
+type StripeEnv = { STRIPE_SECRET_KEY?: string; STRIPE_WEBHOOK_SECRET?: string; STRIPE_PRICE_MONTHLY?: string; STRIPE_PRICE_ANUAL?: string; SUPPORT_ADMIN_KEY?: string; NEXT_PUBLIC_SITE_URL?: string; };
 export type StripeContext = { env: StripeEnv };
 export async function getStripeContext(): Promise<StripeContext> { const { env } = await getCloudflareContext(); return { env: env as unknown as StripeEnv }; }
 export function getPriceId(env: StripeEnv, billingPeriod: string): string {
