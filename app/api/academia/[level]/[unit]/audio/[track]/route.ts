@@ -10,6 +10,7 @@ type StoredAudio = {
 };
 type MediaBucket = {
   get(key: string, options?: { range?: { offset: number; length: number } }): Promise<StoredAudio | null>;
+  head(key: string): Promise<{ size: number } | null>;
 };
 
 export async function GET(
@@ -34,7 +35,7 @@ export async function GET(
     const match = /^bytes=(\d*)-(\d*)$/.exec(rangeHeader.trim());
     if (!match) return new Response(null, { status: 416, headers: { "Content-Range": "bytes */*" } });
     // Read the object metadata first so suffix and open-ended ranges are bounded.
-    const metadata = await bucket.get(key);
+    const metadata = await bucket.head(key);
     if (!metadata) return new Response("Audio no encontrado.", { status: 404 });
     const start = match[1] ? Number(match[1]) : Math.max(0, metadata.size - Number(match[2]));
     const end = match[1] ? (match[2] ? Number(match[2]) : metadata.size - 1) : metadata.size - 1;
