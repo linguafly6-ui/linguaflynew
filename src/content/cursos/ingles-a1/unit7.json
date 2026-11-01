@@ -693,6 +693,29 @@
           "correct_answer": "club",
           "explanation": "club significa «club».",
           "mastery_tag": "a1-u7-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "concert",
+          "options": [
+            {
+              "id": "A",
+              "text": "concierto"
+            },
+            {
+              "id": "B",
+              "text": "película"
+            },
+            {
+              "id": "C",
+              "text": "clase"
+            }
+          ],
+          "correct_answer": "concierto",
+          "explanation": "concert significa «concierto».",
+          "mastery_tag": "a1-u7-v15"
         }
       ]
     },
