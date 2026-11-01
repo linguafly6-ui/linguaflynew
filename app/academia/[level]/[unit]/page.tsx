@@ -419,6 +419,7 @@ export default async function AcademyUnitPage({ params }: { params: Promise<{ le
   if (!student) redirect("/acceso");
   const level = rawLevel.toUpperCase(), unitNumber = Number(rawUnit);
   if (!isCefrLevel(level)) notFound();
+  if (!(await hasCourseAccess(student.learner_id, `ingles-${level.toLowerCase()}`))) redirect("/suscripcion");
   const unit = await getAcademyUnit(level, unitNumber);
   if (!unit) notFound();
   if (level === "A2" && unit.content.lesson_sequence) return <BlueprintView data={unit.content as Blueprint} title={unit.title} level={level} number={unitNumber}/>;
