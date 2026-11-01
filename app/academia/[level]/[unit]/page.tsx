@@ -105,7 +105,7 @@ function BlueprintPractice({ data }: { data: Blueprint }) {
       explanation: item.example ? `Ejemplo: ${item.example}` : "Repasa la lista de vocabulario."
     };
   });
-  const grammarActivities: Activity[] = (data.grammar_lesson?.commonErrors ?? []).map((error, index) => {
+  const grammarActivities: Activity[] = (data.grammar_lesson?.commonErrors ?? []).map((error, index): Activity | null => {
     const parts = error.split("→");
     const correction = parts[1]?.split(":")[0]?.trim() ?? "";
     const incorrect = parts[0]?.trim() ?? "";
@@ -118,7 +118,7 @@ function BlueprintPractice({ data }: { data: Blueprint }) {
       options: [{ id: `grammar-${index}-a`, text: correction }, { id: `grammar-${index}-b`, text: incorrect }],
       correct_answer: correction,
       explanation: "La opción correcta aplica la regla gramatical explicada en esta unidad."
-    } satisfies Activity;
+    };
   }).filter((item): item is Activity => item !== null);
   const sections = [
     { title: "GRAMMAR · GRAMÁTICA", activities: grammarActivities },
