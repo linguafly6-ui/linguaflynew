@@ -77,6 +77,10 @@ export async function getAcademyUnits(levelValue: string): Promise<AcademyUnit[]
     try { objectives = JSON.parse(unit.learning_objectives_json || "[]"); } catch {}
     return { ...unit, course_key: "ingles-a1", content: { course: { total_duration_minutes: 75 }, learning_outcomes: objectives, blocks: Array.from(grouped.values()) } };
   }
+  if (levelValue.toUpperCase() === "A1") {
+    const result = await db.prepare("SELECT 'ingles-a1' AS course_key, c.cefr_level AS level, u.unit_number, u.id AS unit_id, u.title FROM courses c JOIN units u ON u.course_id=c.id WHERE c.id='course-en-a1' AND u.status IN ('draft','review','approved') ORDER BY u.unit_number").all<AcademyUnit>();
+    return result.results ?? [];
+  }
   if (levelValue.toUpperCase() === "A2") {
     const result = await db.prepare(
       "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title FROM unit_content_blueprints b JOIN units u ON u.id = b.unit_id WHERE b.unit_id LIKE 'a2-unit-%' AND b.status IN ('draft','review','approved') ORDER BY u.unit_number"
