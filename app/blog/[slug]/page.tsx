@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticle } from "@/lib/blog";
 import BlogMarkdown from "./BlogMarkdown";
+import BlogImage from "../BlogImage";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ slug: string }> };
@@ -51,11 +52,7 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </header>
 
-      {article.image && (
-        <figure className="article-cover">
-          <img src={article.image} alt={article.alt || article.title} fetchPriority="high" />
-        </figure>
-      )}
+      <BlogImage className="article-cover" src={article.image} alt={article.alt} category={article.category} title={article.title} />
 
       <div className="article-reading-layout">
         <BlogMarkdown content={article.content || ""} />
