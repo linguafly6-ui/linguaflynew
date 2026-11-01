@@ -21,7 +21,7 @@ export async function GET(
   const level = rawLevel.toLowerCase();
   const unit = Number(rawUnit);
   const track = Number(rawTrack);
-  if (level !== "a2" || !Number.isInteger(unit) || unit < 2 || unit > 50 ||
+  if (level !== "a2" || !Number.isInteger(unit) || unit < 2 || unit > 100 ||
       !Number.isInteger(track) || track < 1 || track > 3) {
     return new Response("Audio no encontrado.", { status: 404 });
   }
