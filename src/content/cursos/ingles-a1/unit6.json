@@ -1,0 +1,1457 @@
+{
+  "course": {
+    "unit_id": "unit6",
+    "unit_title": "Clothes and the weather",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Describir la ropa que llevamos puesta.",
+    "Hablar del tiempo y las estaciones.",
+    "Usar el presente continuo para acciones que ocurren ahora.",
+    "Distinguir entre present simple y present continuous en contextos básicos.",
+    "Preguntar por tallas, colores y prendas."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Look! She ___ a red coat.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is wearing"
+            },
+            {
+              "id": "B",
+              "text": "wears"
+            },
+            {
+              "id": "C",
+              "text": "wear"
+            }
+          ],
+          "correct_answer": "is wearing",
+          "explanation": "Look! indica una acción que ocurre ahora.",
+          "mastery_tag": "a1-u6-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "It ___ raining at the moment.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "does"
+            }
+          ],
+          "correct_answer": "is",
+          "explanation": "It is + verbo en -ing.",
+          "mastery_tag": "a1-u6-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I usually ___ jeans to school.",
+          "options": [
+            {
+              "id": "A",
+              "text": "wear"
+            },
+            {
+              "id": "B",
+              "text": "am wearing"
+            },
+            {
+              "id": "C",
+              "text": "wears"
+            }
+          ],
+          "correct_answer": "wear",
+          "explanation": "Una rutina habitual usa present simple.",
+          "mastery_tag": "a1-u6-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "They ___ playing football now.",
+          "options": [
+            {
+              "id": "A",
+              "text": "are"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "do"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "Con they usamos are.",
+          "mastery_tag": "a1-u6-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What ___ you wearing today?",
+          "options": [
+            {
+              "id": "A",
+              "text": "are"
+            },
+            {
+              "id": "B",
+              "text": "do"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "Pregunta en present continuous: are you wearing.",
+          "mastery_tag": "a1-u6-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He ___ a jacket because it's cold.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is wearing"
+            },
+            {
+              "id": "B",
+              "text": "wear"
+            },
+            {
+              "id": "C",
+              "text": "wearing"
+            }
+          ],
+          "correct_answer": "is wearing",
+          "explanation": "He is + wearing.",
+          "mastery_tag": "a1-u6-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "It is ___ today. Take your umbrella.",
+          "options": [
+            {
+              "id": "A",
+              "text": "rainy"
+            },
+            {
+              "id": "B",
+              "text": "sunny"
+            },
+            {
+              "id": "C",
+              "text": "hot"
+            }
+          ],
+          "correct_answer": "rainy",
+          "explanation": "Rainy significa lluvioso.",
+          "mastery_tag": "a1-u6-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "We ___ coats in summer.",
+          "options": [
+            {
+              "id": "A",
+              "text": "don't usually wear"
+            },
+            {
+              "id": "B",
+              "text": "aren't usually wearing"
+            },
+            {
+              "id": "C",
+              "text": "doesn't wear"
+            }
+          ],
+          "correct_answer": "don't usually wear",
+          "explanation": "Un hábito negativo usa don't + verbo.",
+          "mastery_tag": "a1-u6-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ she wearing a blue dress?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Is"
+            },
+            {
+              "id": "B",
+              "text": "Are"
+            },
+            {
+              "id": "C",
+              "text": "Does"
+            }
+          ],
+          "correct_answer": "Is",
+          "explanation": "Con she usamos Is.",
+          "mastery_tag": "a1-u6-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The children ___ playing outside now.",
+          "options": [
+            {
+              "id": "A",
+              "text": "are"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "am"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "Children es plural.",
+          "mastery_tag": "a1-u6-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I ___ a T-shirt today, but I usually wear a shirt.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am wearing"
+            },
+            {
+              "id": "B",
+              "text": "wear"
+            },
+            {
+              "id": "C",
+              "text": "wears"
+            }
+          ],
+          "correct_answer": "am wearing",
+          "explanation": "Today describe la situación actual.",
+          "mastery_tag": "a1-u6-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "In winter, it often ___.",
+          "options": [
+            {
+              "id": "A",
+              "text": "snows"
+            },
+            {
+              "id": "B",
+              "text": "is snowing"
+            },
+            {
+              "id": "C",
+              "text": "snow"
+            }
+          ],
+          "correct_answer": "snows",
+          "explanation": "Often expresa frecuencia habitual.",
+          "mastery_tag": "a1-u6-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "These shoes ___ too small.",
+          "options": [
+            {
+              "id": "A",
+              "text": "are"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "be"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "Shoes es plural.",
+          "mastery_tag": "a1-u6-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What ___ the weather like today?",
+          "options": [
+            {
+              "id": "A",
+              "text": "is"
+            },
+            {
+              "id": "B",
+              "text": "does"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "is",
+          "explanation": "La expresión es What is the weather like?",
+          "mastery_tag": "a1-u6-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Choose the correct sentence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "She is wearing a scarf."
+            },
+            {
+              "id": "B",
+              "text": "She wearing a scarf."
+            },
+            {
+              "id": "C",
+              "text": "She are wearing a scarf."
+            }
+          ],
+          "correct_answer": "She is wearing a scarf.",
+          "explanation": "La estructura es sujeto + be + verbo en -ing.",
+          "mastery_tag": "a1-u6-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "coat",
+          "options": [
+            {
+              "id": "A",
+              "text": "abrigo"
+            },
+            {
+              "id": "B",
+              "text": "falda"
+            },
+            {
+              "id": "C",
+              "text": "camiseta"
+            }
+          ],
+          "correct_answer": "abrigo",
+          "explanation": "coat significa «abrigo».",
+          "mastery_tag": "a1-u6-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "dress",
+          "options": [
+            {
+              "id": "A",
+              "text": "vestido"
+            },
+            {
+              "id": "B",
+              "text": "pantalones"
+            },
+            {
+              "id": "C",
+              "text": "zapatos"
+            }
+          ],
+          "correct_answer": "vestido",
+          "explanation": "dress significa «vestido».",
+          "mastery_tag": "a1-u6-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "shirt",
+          "options": [
+            {
+              "id": "A",
+              "text": "camisa"
+            },
+            {
+              "id": "B",
+              "text": "jersey"
+            },
+            {
+              "id": "C",
+              "text": "gorra"
+            }
+          ],
+          "correct_answer": "camisa",
+          "explanation": "shirt significa «camisa».",
+          "mastery_tag": "a1-u6-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "skirt",
+          "options": [
+            {
+              "id": "A",
+              "text": "falda"
+            },
+            {
+              "id": "B",
+              "text": "chaqueta"
+            },
+            {
+              "id": "C",
+              "text": "bufanda"
+            }
+          ],
+          "correct_answer": "falda",
+          "explanation": "skirt significa «falda».",
+          "mastery_tag": "a1-u6-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "trousers",
+          "options": [
+            {
+              "id": "A",
+              "text": "pantalones"
+            },
+            {
+              "id": "B",
+              "text": "calcetines"
+            },
+            {
+              "id": "C",
+              "text": "guantes"
+            }
+          ],
+          "correct_answer": "pantalones",
+          "explanation": "trousers significa «pantalones».",
+          "mastery_tag": "a1-u6-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "shoes",
+          "options": [
+            {
+              "id": "A",
+              "text": "zapatos"
+            },
+            {
+              "id": "B",
+              "text": "sombrero"
+            },
+            {
+              "id": "C",
+              "text": "camiseta"
+            }
+          ],
+          "correct_answer": "zapatos",
+          "explanation": "shoes significa «zapatos».",
+          "mastery_tag": "a1-u6-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "scarf",
+          "options": [
+            {
+              "id": "A",
+              "text": "bufanda"
+            },
+            {
+              "id": "B",
+              "text": "cinturón"
+            },
+            {
+              "id": "C",
+              "text": "vestido"
+            }
+          ],
+          "correct_answer": "bufanda",
+          "explanation": "scarf significa «bufanda».",
+          "mastery_tag": "a1-u6-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "sunny",
+          "options": [
+            {
+              "id": "A",
+              "text": "soleado"
+            },
+            {
+              "id": "B",
+              "text": "nublado"
+            },
+            {
+              "id": "C",
+              "text": "ventoso"
+            }
+          ],
+          "correct_answer": "soleado",
+          "explanation": "sunny significa «soleado».",
+          "mastery_tag": "a1-u6-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "cloudy",
+          "options": [
+            {
+              "id": "A",
+              "text": "nublado"
+            },
+            {
+              "id": "B",
+              "text": "nevado"
+            },
+            {
+              "id": "C",
+              "text": "caluroso"
+            }
+          ],
+          "correct_answer": "nublado",
+          "explanation": "cloudy significa «nublado».",
+          "mastery_tag": "a1-u6-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "windy",
+          "options": [
+            {
+              "id": "A",
+              "text": "ventoso"
+            },
+            {
+              "id": "B",
+              "text": "lluvioso"
+            },
+            {
+              "id": "C",
+              "text": "frío"
+            }
+          ],
+          "correct_answer": "ventoso",
+          "explanation": "windy significa «ventoso».",
+          "mastery_tag": "a1-u6-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "rainy",
+          "options": [
+            {
+              "id": "A",
+              "text": "lluvioso"
+            },
+            {
+              "id": "B",
+              "text": "soleado"
+            },
+            {
+              "id": "C",
+              "text": "seco"
+            }
+          ],
+          "correct_answer": "lluvioso",
+          "explanation": "rainy significa «lluvioso».",
+          "mastery_tag": "a1-u6-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "snowy",
+          "options": [
+            {
+              "id": "A",
+              "text": "nevado"
+            },
+            {
+              "id": "B",
+              "text": "húmedo"
+            },
+            {
+              "id": "C",
+              "text": "caluroso"
+            }
+          ],
+          "correct_answer": "nevado",
+          "explanation": "snowy significa «nevado».",
+          "mastery_tag": "a1-u6-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "boots",
+          "options": [
+            {
+              "id": "A",
+              "text": "botas"
+            },
+            {
+              "id": "B",
+              "text": "sandalias"
+            },
+            {
+              "id": "C",
+              "text": "guantes"
+            }
+          ],
+          "correct_answer": "botas",
+          "explanation": "boots significa «botas».",
+          "mastery_tag": "a1-u6-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "T-shirt",
+          "options": [
+            {
+              "id": "A",
+              "text": "camiseta"
+            },
+            {
+              "id": "B",
+              "text": "camisa"
+            },
+            {
+              "id": "C",
+              "text": "abrigo"
+            }
+          ],
+          "correct_answer": "camiseta",
+          "explanation": "T-shirt significa «camiseta».",
+          "mastery_tag": "a1-u6-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "size",
+          "options": [
+            {
+              "id": "A",
+              "text": "talla"
+            },
+            {
+              "id": "B",
+              "text": "precio"
+            },
+            {
+              "id": "C",
+              "text": "color"
+            }
+          ],
+          "correct_answer": "talla",
+          "explanation": "size significa «talla».",
+          "mastery_tag": "a1-u6-v15"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A blue dress"
+            },
+            {
+              "id": "B",
+              "text": "A red coat"
+            },
+            {
+              "id": "C",
+              "text": "Black shoes"
+            }
+          ],
+          "correct_answer": "A blue dress",
+          "explanation": "Lucy busca un vestido azul.",
+          "mastery_tag": "a1-u6-l01",
+          "transcript": "SHOP ASSISTANT: Can I help you?\\nLUCY: Yes, I'm looking for a blue dress.\\nSHOP ASSISTANT: What size are you?\\nLUCY: I'm a small."
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A blue dress"
+            },
+            {
+              "id": "B",
+              "text": "A red coat"
+            },
+            {
+              "id": "C",
+              "text": "Black shoes"
+            }
+          ],
+          "correct_answer": "A blue dress",
+          "explanation": "Lucy busca un vestido azul.",
+          "mastery_tag": "a1-u6-l02",
+          "transcript": "SHOP ASSISTANT: Can I help you?\\nLUCY: Yes, I'm looking for a blue dress.\\nSHOP ASSISTANT: What size are you?\\nLUCY: I'm a small."
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A blue dress"
+            },
+            {
+              "id": "B",
+              "text": "A red coat"
+            },
+            {
+              "id": "C",
+              "text": "Black shoes"
+            }
+          ],
+          "correct_answer": "A blue dress",
+          "explanation": "Lucy busca un vestido azul.",
+          "mastery_tag": "a1-u6-l03",
+          "transcript": "SHOP ASSISTANT: Can I help you?\\nLUCY: Yes, I'm looking for a blue dress.\\nSHOP ASSISTANT: What size are you?\\nLUCY: I'm a small."
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cold and windy"
+            },
+            {
+              "id": "B",
+              "text": "Hot and sunny"
+            },
+            {
+              "id": "C",
+              "text": "Warm and rainy"
+            }
+          ],
+          "correct_answer": "Cold and windy",
+          "explanation": "Hace frío y viento.",
+          "mastery_tag": "a1-u6-l04",
+          "transcript": "DAN: What's the weather like?\\nMIA: It's cold and windy.\\nDAN: Let's stay inside.\\nMIA: Good idea!"
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cold and windy"
+            },
+            {
+              "id": "B",
+              "text": "Hot and sunny"
+            },
+            {
+              "id": "C",
+              "text": "Warm and rainy"
+            }
+          ],
+          "correct_answer": "Cold and windy",
+          "explanation": "Hace frío y viento.",
+          "mastery_tag": "a1-u6-l05",
+          "transcript": "DAN: What's the weather like?\\nMIA: It's cold and windy.\\nDAN: Let's stay inside.\\nMIA: Good idea!"
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cold and windy"
+            },
+            {
+              "id": "B",
+              "text": "Hot and sunny"
+            },
+            {
+              "id": "C",
+              "text": "Warm and rainy"
+            }
+          ],
+          "correct_answer": "Cold and windy",
+          "explanation": "Hace frío y viento.",
+          "mastery_tag": "a1-u6-l06",
+          "transcript": "DAN: What's the weather like?\\nMIA: It's cold and windy.\\nDAN: Let's stay inside.\\nMIA: Good idea!"
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Because it's snowing."
+            },
+            {
+              "id": "B",
+              "text": "Because it's sunny."
+            },
+            {
+              "id": "C",
+              "text": "Because it's hot."
+            }
+          ],
+          "correct_answer": "Because it's snowing.",
+          "explanation": "Está nevando.",
+          "mastery_tag": "a1-u6-l07",
+          "transcript": "MUM: Put on your coat, Ben.\\nBEN: Why?\\nMUM: It's snowing outside.\\nBEN: OK. Where are my gloves?"
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Because it's snowing."
+            },
+            {
+              "id": "B",
+              "text": "Because it's sunny."
+            },
+            {
+              "id": "C",
+              "text": "Because it's hot."
+            }
+          ],
+          "correct_answer": "Because it's snowing.",
+          "explanation": "Está nevando.",
+          "mastery_tag": "a1-u6-l08",
+          "transcript": "MUM: Put on your coat, Ben.\\nBEN: Why?\\nMUM: It's snowing outside.\\nBEN: OK. Where are my gloves?"
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Because it's snowing."
+            },
+            {
+              "id": "B",
+              "text": "Because it's sunny."
+            },
+            {
+              "id": "C",
+              "text": "Because it's hot."
+            }
+          ],
+          "correct_answer": "Because it's snowing.",
+          "explanation": "Está nevando.",
+          "mastery_tag": "a1-u6-l09",
+          "transcript": "MUM: Put on your coat, Ben.\\nBEN: Why?\\nMUM: It's snowing outside.\\nBEN: OK. Where are my gloves?"
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jeans and a green jumper"
+            },
+            {
+              "id": "B",
+              "text": "Shorts and a white shirt"
+            },
+            {
+              "id": "C",
+              "text": "A suit and black shoes"
+            }
+          ],
+          "correct_answer": "Jeans and a green jumper",
+          "explanation": "Jack lleva vaqueros y un jersey verde.",
+          "mastery_tag": "a1-u6-l10",
+          "transcript": "EMMA: What are you wearing today?\\nJACK: I'm wearing jeans and a green jumper.\\nEMMA: Nice!\\nJACK: Thanks."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jeans and a green jumper"
+            },
+            {
+              "id": "B",
+              "text": "Shorts and a white shirt"
+            },
+            {
+              "id": "C",
+              "text": "A suit and black shoes"
+            }
+          ],
+          "correct_answer": "Jeans and a green jumper",
+          "explanation": "Jack lleva vaqueros y un jersey verde.",
+          "mastery_tag": "a1-u6-l11",
+          "transcript": "EMMA: What are you wearing today?\\nJACK: I'm wearing jeans and a green jumper.\\nEMMA: Nice!\\nJACK: Thanks."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jeans and a green jumper"
+            },
+            {
+              "id": "B",
+              "text": "Shorts and a white shirt"
+            },
+            {
+              "id": "C",
+              "text": "A suit and black shoes"
+            }
+          ],
+          "correct_answer": "Jeans and a green jumper",
+          "explanation": "Jack lleva vaqueros y un jersey verde.",
+          "mastery_tag": "a1-u6-l12",
+          "transcript": "EMMA: What are you wearing today?\\nJACK: I'm wearing jeans and a green jumper.\\nEMMA: Nice!\\nJACK: Thanks."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A white shirt and black trousers"
+            },
+            {
+              "id": "B",
+              "text": "A blue dress"
+            },
+            {
+              "id": "C",
+              "text": "A red T-shirt"
+            }
+          ],
+          "correct_answer": "A white shirt and black trousers",
+          "explanation": "Sara lleva camisa blanca y pantalones negros.",
+          "mastery_tag": "a1-u6-l13",
+          "transcript": "TOM: Do you wear a uniform at work?\\nSARA: Yes, I do. I wear a white shirt and black trousers.\\nTOM: Do you like it?\\nSARA: Yes, it's comfortable."
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A white shirt and black trousers"
+            },
+            {
+              "id": "B",
+              "text": "A blue dress"
+            },
+            {
+              "id": "C",
+              "text": "A red T-shirt"
+            }
+          ],
+          "correct_answer": "A white shirt and black trousers",
+          "explanation": "Sara lleva camisa blanca y pantalones negros.",
+          "mastery_tag": "a1-u6-l14",
+          "transcript": "TOM: Do you wear a uniform at work?\\nSARA: Yes, I do. I wear a white shirt and black trousers.\\nTOM: Do you like it?\\nSARA: Yes, it's comfortable."
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A white shirt and black trousers"
+            },
+            {
+              "id": "B",
+              "text": "A blue dress"
+            },
+            {
+              "id": "C",
+              "text": "A red T-shirt"
+            }
+          ],
+          "correct_answer": "A white shirt and black trousers",
+          "explanation": "Sara lleva camisa blanca y pantalones negros.",
+          "mastery_tag": "a1-u6-l15",
+          "transcript": "TOM: Do you wear a uniform at work?\\nSARA: Yes, I do. I wear a white shirt and black trousers.\\nTOM: Do you like it?\\nSARA: Yes, it's comfortable."
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cold and rainy"
+            },
+            {
+              "id": "B",
+              "text": "Hot and sunny"
+            },
+            {
+              "id": "C",
+              "text": "Warm and windy"
+            }
+          ],
+          "correct_answer": "Cold and rainy",
+          "explanation": "Hace frío y llueve.",
+          "mastery_tag": "a1-u6-r01",
+          "main_text": "A COLD DAY\\nToday is very cold in Manchester. It is raining, too. I am wearing my warm coat, a scarf and boots. My brother is wearing a hat and gloves. We are walking to the bus stop because our bicycles are at home."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cold and rainy"
+            },
+            {
+              "id": "B",
+              "text": "Hot and sunny"
+            },
+            {
+              "id": "C",
+              "text": "Warm and windy"
+            }
+          ],
+          "correct_answer": "Cold and rainy",
+          "explanation": "Hace frío y llueve.",
+          "mastery_tag": "a1-u6-r02",
+          "main_text": "A COLD DAY\\nToday is very cold in Manchester. It is raining, too. I am wearing my warm coat, a scarf and boots. My brother is wearing a hat and gloves. We are walking to the bus stop because our bicycles are at home."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 1.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cold and rainy"
+            },
+            {
+              "id": "B",
+              "text": "Hot and sunny"
+            },
+            {
+              "id": "C",
+              "text": "Warm and windy"
+            }
+          ],
+          "correct_answer": "Cold and rainy",
+          "explanation": "Hace frío y llueve.",
+          "mastery_tag": "a1-u6-r03",
+          "main_text": "A COLD DAY\\nToday is very cold in Manchester. It is raining, too. I am wearing my warm coat, a scarf and boots. My brother is wearing a hat and gloves. We are walking to the bus stop because our bicycles are at home."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Shorts and T-shirts"
+            },
+            {
+              "id": "B",
+              "text": "Coats and boots"
+            },
+            {
+              "id": "C",
+              "text": "Jeans and jumpers"
+            }
+          ],
+          "correct_answer": "Shorts and T-shirts",
+          "explanation": "En verano suele llevar pantalones cortos y camisetas.",
+          "mastery_tag": "a1-u6-r04",
+          "main_text": "SUMMER CLOTHES\\nIn summer, I usually wear shorts and T-shirts. My favourite T-shirt is yellow. Today the sun is shining, and I am wearing sunglasses. My sister is wearing a light blue dress. We are going to the beach."
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Shorts and T-shirts"
+            },
+            {
+              "id": "B",
+              "text": "Coats and boots"
+            },
+            {
+              "id": "C",
+              "text": "Jeans and jumpers"
+            }
+          ],
+          "correct_answer": "Shorts and T-shirts",
+          "explanation": "En verano suele llevar pantalones cortos y camisetas.",
+          "mastery_tag": "a1-u6-r05",
+          "main_text": "SUMMER CLOTHES\\nIn summer, I usually wear shorts and T-shirts. My favourite T-shirt is yellow. Today the sun is shining, and I am wearing sunglasses. My sister is wearing a light blue dress. We are going to the beach."
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 2.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Shorts and T-shirts"
+            },
+            {
+              "id": "B",
+              "text": "Coats and boots"
+            },
+            {
+              "id": "C",
+              "text": "Jeans and jumpers"
+            }
+          ],
+          "correct_answer": "Shorts and T-shirts",
+          "explanation": "En verano suele llevar pantalones cortos y camisetas.",
+          "mastery_tag": "a1-u6-r06",
+          "main_text": "SUMMER CLOTHES\\nIn summer, I usually wear shorts and T-shirts. My favourite T-shirt is yellow. Today the sun is shining, and I am wearing sunglasses. My sister is wearing a light blue dress. We are going to the beach."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Brown shoes"
+            },
+            {
+              "id": "B",
+              "text": "Black shoes"
+            },
+            {
+              "id": "C",
+              "text": "White shoes"
+            }
+          ],
+          "correct_answer": "Brown shoes",
+          "explanation": "Compra los zapatos marrones.",
+          "mastery_tag": "a1-u6-r07",
+          "main_text": "AT THE CLOTHES SHOP\\nNina needs new shoes for school. She likes the black shoes, but they are too expensive. The brown shoes are cheaper and comfortable. She buys the brown shoes in size 37."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Brown shoes"
+            },
+            {
+              "id": "B",
+              "text": "Black shoes"
+            },
+            {
+              "id": "C",
+              "text": "White shoes"
+            }
+          ],
+          "correct_answer": "Brown shoes",
+          "explanation": "Compra los zapatos marrones.",
+          "mastery_tag": "a1-u6-r08",
+          "main_text": "AT THE CLOTHES SHOP\\nNina needs new shoes for school. She likes the black shoes, but they are too expensive. The brown shoes are cheaper and comfortable. She buys the brown shoes in size 37."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 3.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Brown shoes"
+            },
+            {
+              "id": "B",
+              "text": "Black shoes"
+            },
+            {
+              "id": "C",
+              "text": "White shoes"
+            }
+          ],
+          "correct_answer": "Brown shoes",
+          "explanation": "Compra los zapatos marrones.",
+          "mastery_tag": "a1-u6-r09",
+          "main_text": "AT THE CLOTHES SHOP\\nNina needs new shoes for school. She likes the black shoes, but they are too expensive. The brown shoes are cheaper and comfortable. She buys the brown shoes in size 37."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rainy"
+            },
+            {
+              "id": "B",
+              "text": "Sunny"
+            },
+            {
+              "id": "C",
+              "text": "Windy"
+            }
+          ],
+          "correct_answer": "Rainy",
+          "explanation": "El miércoles llueve.",
+          "mastery_tag": "a1-u6-r10",
+          "main_text": "THE WEATHER IN BRISTOL\\nMonday is sunny and warm. On Tuesday it is cloudy. Wednesday is rainy, so I stay at home and read. On Thursday it is windy, but Friday is sunny again. I love spring weather."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rainy"
+            },
+            {
+              "id": "B",
+              "text": "Sunny"
+            },
+            {
+              "id": "C",
+              "text": "Windy"
+            }
+          ],
+          "correct_answer": "Rainy",
+          "explanation": "El miércoles llueve.",
+          "mastery_tag": "a1-u6-r11",
+          "main_text": "THE WEATHER IN BRISTOL\\nMonday is sunny and warm. On Tuesday it is cloudy. Wednesday is rainy, so I stay at home and read. On Thursday it is windy, but Friday is sunny again. I love spring weather."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 4.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rainy"
+            },
+            {
+              "id": "B",
+              "text": "Sunny"
+            },
+            {
+              "id": "C",
+              "text": "Windy"
+            }
+          ],
+          "correct_answer": "Rainy",
+          "explanation": "El miércoles llueve.",
+          "mastery_tag": "a1-u6-r12",
+          "main_text": "THE WEATHER IN BRISTOL\\nMonday is sunny and warm. On Tuesday it is cloudy. Wednesday is rainy, so I stay at home and read. On Thursday it is windy, but Friday is sunny again. I love spring weather."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Because the weather is warm."
+            },
+            {
+              "id": "B",
+              "text": "Because it is raining."
+            },
+            {
+              "id": "C",
+              "text": "Because it is new."
+            }
+          ],
+          "correct_answer": "Because the weather is warm.",
+          "explanation": "Hoy hace calor y no necesita la chaqueta.",
+          "mastery_tag": "a1-u6-r13",
+          "main_text": "MY FAVOURITE JACKET\\nMy favourite jacket is dark green. It is old, but it is very comfortable. I wear it when it is cool. Today I am not wearing it because the weather is warm. I am wearing a white shirt instead."
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Because the weather is warm."
+            },
+            {
+              "id": "B",
+              "text": "Because it is raining."
+            },
+            {
+              "id": "C",
+              "text": "Because it is new."
+            }
+          ],
+          "correct_answer": "Because the weather is warm.",
+          "explanation": "Hoy hace calor y no necesita la chaqueta.",
+          "mastery_tag": "a1-u6-r14",
+          "main_text": "MY FAVOURITE JACKET\\nMy favourite jacket is dark green. It is old, but it is very comfortable. I wear it when it is cool. Today I am not wearing it because the weather is warm. I am wearing a white shirt instead."
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 5.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Because the weather is warm."
+            },
+            {
+              "id": "B",
+              "text": "Because it is raining."
+            },
+            {
+              "id": "C",
+              "text": "Because it is new."
+            }
+          ],
+          "correct_answer": "Because the weather is warm.",
+          "explanation": "Hoy hace calor y no necesita la chaqueta.",
+          "mastery_tag": "a1-u6-r15",
+          "main_text": "MY FAVOURITE JACKET\\nMy favourite jacket is dark green. It is old, but it is very comfortable. I wear it when it is cool. Today I am not wearing it because the weather is warm. I am wearing a white shirt instead."
+        }
+      ]
+    }
+  ]
+}
