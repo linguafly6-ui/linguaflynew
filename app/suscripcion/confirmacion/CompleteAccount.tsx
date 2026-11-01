@@ -1,0 +1,7 @@
+"use client";
+import {useState} from "react";
+export function CompleteAccount({sessionId}:{sessionId:string}){
+ const [name,setName]=useState(""),[password,setPassword]=useState(""),[error,setError]=useState(""),[busy,setBusy]=useState(false);
+ async function submit(event:React.FormEvent){event.preventDefault();setBusy(true);setError("");try{const response=await fetch("/api/student/complete-registration",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({sessionId,name,password})});const data=await response.json() as {redirect?:string;error?:string};if(!response.ok||!data.redirect)throw new Error(data.error||"No se pudo completar el registro.");window.location.assign(data.redirect);}catch(e){setError(e instanceof Error?e.message:"No se pudo completar el registro.");setBusy(false);}}
+ return <form onSubmit={submit} className="student-form"><label>Nombre completo<input required minLength={2} maxLength={80} autoComplete="name" value={name} onChange={e=>setName(e.target.value)}/></label><label>Contraseña para tu cuenta<input required type="password" minLength={10} maxLength={128} autoComplete="new-password" value={password} onChange={e=>setPassword(e.target.value)}/><small>Mínimo 10 caracteres, con letras y números.</small></label>{error&&<p className="student-error" role="alert">{error}</p>}<button disabled={busy}>{busy?"Verificando pago y creando cuenta…":"Crear mi cuenta y acceder ↗"}</button></form>;
+}
