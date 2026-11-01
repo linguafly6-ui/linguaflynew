@@ -56,6 +56,21 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
   // while getAcademyUnit returns only its lesson blueprint from D1.
   // Resolve against the exact same bank used by the page.
   let exercise: Exercise | undefined;
+  if (level === "A1" && unitNumber === 1) {
+    try {
+      const { env } = await getCloudflareContext({ async: true });
+      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
+      const rows = await db.prepare("SELECT o.option_key, o.content AS option_content, k.answer_config_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id JOIN exercise_options o ON o.exercise_id=e.id JOIN exercise_answer_keys k ON k.exercise_id=e.id WHERE e.id=? AND u.id='a1-unit-001' AND e.status='published'").bind(interactionId).all<{option_key:string;option_content:string;answer_config_json:string}>();
+      const options = rows.results ?? [];
+      if (options.length) {
+        const config = JSON.parse(options[0].answer_config_json || "{}") as {correctOptionKeys?:string[]};
+        const correct = options.filter(option => (config.correctOptionKeys ?? []).includes(option.option_key)).map(option => option.option_content);
+        exercise = { interaction_id: interactionId, correct_answer: correct };
+      }
+    } catch (error) {
+      console.error("Unable to resolve relational A1 answer from D1:", error);
+    }
+  }
   if (level === "A2" && unitNumber === 2) {
     exercise = Object.values(a2Unit2Exercises).flat().find(item => item.interaction_id === interactionId);
     // BlueprintPractice also renders a legacy generated set before the 60
