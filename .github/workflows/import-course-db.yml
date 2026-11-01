@@ -1,0 +1,62 @@
+name: Import course content into Cloudflare D1
+
+on:
+  workflow_dispatch:
+    inputs:
+      sql_file:
+        description: "SQL file inside migrations/course-db/"
+        required: true
+        type: string
+      publish:
+        description: "Publish the imported units after validation"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: linguafly-course-db-import
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate import file
+        shell: bash
+        env:
+          SQL_FILE: ${{ inputs.sql_file }}
+        run: |
+          set -euo pipefail
+          case "$SQL_FILE" in
+            migrations/course-db/*.sql) ;;
+            *) echo "SQL file must be inside migrations/course-db/"; exit 1 ;;
+          esac
+          test -f "$SQL_FILE"
+          test -s "$SQL_FILE"
+          echo "Import file: $SQL_FILE"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Wrangler
+        run: npm install --no-save wrangler
+
+      - name: Apply SQL to production COURSE_DB
+        run: npx wrangler d1 execute linguafly-learning --remote --file="$SQL_FILE"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Verify course database responds
+        run: npx wrangler d1 execute linguafly-learning --remote --command="SELECT COUNT(*) AS units FROM units;"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
