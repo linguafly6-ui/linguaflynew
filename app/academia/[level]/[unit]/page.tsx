@@ -105,12 +105,12 @@ function BlueprintPractice({ data }: { data: Blueprint }) {
       explanation: item.example ? `Ejemplo: ${item.example}` : "Repasa la lista de vocabulario."
     };
   });
-  const grammarActivities: Activity[] = (data.grammar_lesson?.commonErrors ?? []).map((error, index) => {
+  const grammarActivities: Activity[] = (data.grammar_lesson?.commonErrors ?? []).flatMap((error, index): Activity[] => {
     const parts = error.split("→");
     const incorrect = parts[0]?.trim() ?? "";
     const correction = parts[1]?.split(":")[0]?.trim() ?? "";
-    if (!correction || !incorrect) return null;
-    return {
+    if (!correction || !incorrect) return [];
+    return [{
       interaction_id: `a2ugrammar-${index + 1}`,
       type: "multiple_choice",
       prompt_es: "Elige la frase correcta en inglés.",
@@ -118,8 +118,8 @@ function BlueprintPractice({ data }: { data: Blueprint }) {
       options: [{ id: "A", text: correction }, { id: "B", text: incorrect }],
       correct_answer: correction,
       explanation: error.split(":").slice(1).join(":").trim() || "La opción correcta aplica la regla gramatical de esta unidad."
-    } satisfies Activity;
-  }).filter((item): item is Activity => item !== null);
+    }];
+  });
   const sections = [
     { title: "GRAMMAR · GRAMÁTICA", activities: grammarActivities },
     { title: "VOCABULARY · VOCABULARIO", activities: vocabularyActivities },
