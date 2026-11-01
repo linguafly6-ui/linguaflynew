@@ -89,7 +89,11 @@ function BlueprintPractice({ data, level, number }: { data: Blueprint; level: st
       correct_answer: item[1] ?? "",
       explanation: item[4] ?? "Vuelve al texto o escucha el diálogo para localizar la información.",
       ...(kind === "reading" && passages?.length ? { main_text: passages[Math.floor(index / 5)] ?? passages[0] } : {}),
-      ...(kind === "listening" && passages?.length ? { transcript: passages[Math.floor(index / 5)] ?? passages[0] } : {})
+      ...(kind === "listening" && passages?.length ? {
+        transcript: passages[Math.floor(index / 5)] ?? passages[0],
+        audio_group: Math.floor(index / 5) + 1,
+        audio_url: `/api/academia/${level.toLowerCase()}/${number}/audio/${Math.floor(index / 5) + 1}`
+      } : {})
     }));
   const toStandardActivities = (prefix: string, rows?: string[][]): Activity[] =>
     (rows ?? []).map((item, index) => ({
