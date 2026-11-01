@@ -6,7 +6,7 @@ type Option = { id: string; text: string };
 export type Activity = {
   interaction_id?: string; type?: string; prompt_es?: string; question_en?: string;
   stimulus_en?: string; stimulus_es?: string; main_text?: string; transcript?: string;
-  options?: Option[];
+  options?: Option[]; correct_answer?: string | string[] | boolean;
   example?: string; explanation?: string; mastery_tag?: string;
 };
 
@@ -93,7 +93,9 @@ function Passage({ text, kind }: { text: string; kind: "reading" | "listening" }
   </section>;
 }
 
-export default function ActivityContent({ activities, mode: _mode, level, unit }: { activities: Activity[]; mode?: "vocabulary" | "standard"; level: string; unit: number }) {
+export type ClientActivity = Omit<Activity, "correct_answer">;
+
+export default function ActivityContent({ activities, mode: _mode, level, unit }: { activities: ClientActivity[]; mode?: "vocabulary" | "standard"; level: string; unit: number }) {
   // Older unit data repeats the same passage on every question in a reading set.
   // Render each distinct passage once per activity section, while keeping every question.
   const seenReadings = new Set<string>();
