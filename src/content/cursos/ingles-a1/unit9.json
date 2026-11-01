@@ -1,0 +1,1434 @@
+{
+  "course": {
+    "unit_id": "unit9",
+    "unit_title": "Jobs and workplaces",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Nombrar profesiones y lugares de trabajo.",
+    "Preguntar y responder sobre el trabajo de otras personas.",
+    "Usar present simple para describir tareas habituales.",
+    "Hablar de habilidades y herramientas básicas de distintas profesiones.",
+    "Distinguir entre he/she y sus formas verbales."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "My mother is a doctor. She ___ in a hospital.",
+          "options": [
+            {
+              "id": "A",
+              "text": "works"
+            },
+            {
+              "id": "B",
+              "text": "work"
+            },
+            {
+              "id": "C",
+              "text": "working"
+            }
+          ],
+          "correct_answer": "works",
+          "explanation": "Con she añadimos -s.",
+          "mastery_tag": "a1-u9-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What ___ your father do?",
+          "options": [
+            {
+              "id": "A",
+              "text": "does"
+            },
+            {
+              "id": "B",
+              "text": "do"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "does",
+          "explanation": "Pregunta con he/she: does.",
+          "mastery_tag": "a1-u9-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "A teacher ___ in a school.",
+          "options": [
+            {
+              "id": "A",
+              "text": "works"
+            },
+            {
+              "id": "B",
+              "text": "work"
+            },
+            {
+              "id": "C",
+              "text": "working"
+            }
+          ],
+          "correct_answer": "works",
+          "explanation": "A teacher es tercera persona singular.",
+          "mastery_tag": "a1-u9-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "They ___ in an office.",
+          "options": [
+            {
+              "id": "A",
+              "text": "work"
+            },
+            {
+              "id": "B",
+              "text": "works"
+            },
+            {
+              "id": "C",
+              "text": "working"
+            }
+          ],
+          "correct_answer": "work",
+          "explanation": "They usa work.",
+          "mastery_tag": "a1-u9-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Does he work at night? No, he ___.",
+          "options": [
+            {
+              "id": "A",
+              "text": "doesn't"
+            },
+            {
+              "id": "B",
+              "text": "don't"
+            },
+            {
+              "id": "C",
+              "text": "isn't"
+            }
+          ],
+          "correct_answer": "doesn't",
+          "explanation": "Respuesta negativa con does.",
+          "mastery_tag": "a1-u9-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She ___ help people every day.",
+          "options": [
+            {
+              "id": "A",
+              "text": "helps"
+            },
+            {
+              "id": "B",
+              "text": "help"
+            },
+            {
+              "id": "C",
+              "text": "helping"
+            }
+          ],
+          "correct_answer": "helps",
+          "explanation": "Tercera persona singular.",
+          "mastery_tag": "a1-u9-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "A chef ___ food.",
+          "options": [
+            {
+              "id": "A",
+              "text": "cooks"
+            },
+            {
+              "id": "B",
+              "text": "cook"
+            },
+            {
+              "id": "C",
+              "text": "cooking"
+            }
+          ],
+          "correct_answer": "cooks",
+          "explanation": "Un chef cocina.",
+          "mastery_tag": "a1-u9-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Where ___ nurses work?",
+          "options": [
+            {
+              "id": "A",
+              "text": "do"
+            },
+            {
+              "id": "B",
+              "text": "does"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "do",
+          "explanation": "Nurses es plural.",
+          "mastery_tag": "a1-u9-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He doesn't ___ in a shop.",
+          "options": [
+            {
+              "id": "A",
+              "text": "work"
+            },
+            {
+              "id": "B",
+              "text": "works"
+            },
+            {
+              "id": "C",
+              "text": "working"
+            }
+          ],
+          "correct_answer": "work",
+          "explanation": "Después de doesn't usamos verbo base.",
+          "mastery_tag": "a1-u9-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I ___ a student. I study at college.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "am",
+          "explanation": "Con I usamos am.",
+          "mastery_tag": "a1-u9-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "My uncle ___ a taxi driver.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "does"
+            }
+          ],
+          "correct_answer": "is",
+          "explanation": "Estructura: he is a...",
+          "mastery_tag": "a1-u9-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What time ___ the shop open?",
+          "options": [
+            {
+              "id": "A",
+              "text": "does"
+            },
+            {
+              "id": "B",
+              "text": "do"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "does",
+          "explanation": "The shop es singular.",
+          "mastery_tag": "a1-u9-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Firefighters ___ fires.",
+          "options": [
+            {
+              "id": "A",
+              "text": "fight"
+            },
+            {
+              "id": "B",
+              "text": "fights"
+            },
+            {
+              "id": "C",
+              "text": "fighting"
+            }
+          ],
+          "correct_answer": "fight",
+          "explanation": "Firefighters es plural.",
+          "mastery_tag": "a1-u9-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "A dentist looks ___ people's teeth.",
+          "options": [
+            {
+              "id": "A",
+              "text": "after"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "for"
+            }
+          ],
+          "correct_answer": "after",
+          "explanation": "Look after significa cuidar; aquí se acepta como expresión básica.",
+          "mastery_tag": "a1-u9-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Choose the correct sentence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "She works in a school."
+            },
+            {
+              "id": "B",
+              "text": "She work in a school."
+            },
+            {
+              "id": "C",
+              "text": "She working in a school."
+            }
+          ],
+          "correct_answer": "She works in a school.",
+          "explanation": "Present simple con she lleva -s.",
+          "mastery_tag": "a1-u9-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "teacher",
+          "options": [
+            {
+              "id": "A",
+              "text": "profesor/a"
+            },
+            {
+              "id": "B",
+              "text": "médico/a"
+            },
+            {
+              "id": "C",
+              "text": "cocinero/a"
+            }
+          ],
+          "correct_answer": "profesor/a",
+          "explanation": "teacher significa «profesor/a».",
+          "mastery_tag": "a1-u9-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "doctor",
+          "options": [
+            {
+              "id": "A",
+              "text": "médico/a"
+            },
+            {
+              "id": "B",
+              "text": "conductor/a"
+            },
+            {
+              "id": "C",
+              "text": "policía"
+            }
+          ],
+          "correct_answer": "médico/a",
+          "explanation": "doctor significa «médico/a».",
+          "mastery_tag": "a1-u9-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "nurse",
+          "options": [
+            {
+              "id": "A",
+              "text": "enfermero/a"
+            },
+            {
+              "id": "B",
+              "text": "dentista"
+            },
+            {
+              "id": "C",
+              "text": "bombero/a"
+            }
+          ],
+          "correct_answer": "enfermero/a",
+          "explanation": "nurse significa «enfermero/a».",
+          "mastery_tag": "a1-u9-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "chef",
+          "options": [
+            {
+              "id": "A",
+              "text": "cocinero/a"
+            },
+            {
+              "id": "B",
+              "text": "profesor/a"
+            },
+            {
+              "id": "C",
+              "text": "mecánico/a"
+            }
+          ],
+          "correct_answer": "cocinero/a",
+          "explanation": "chef significa «cocinero/a».",
+          "mastery_tag": "a1-u9-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "pilot",
+          "options": [
+            {
+              "id": "A",
+              "text": "piloto"
+            },
+            {
+              "id": "B",
+              "text": "camarero/a"
+            },
+            {
+              "id": "C",
+              "text": "artista"
+            }
+          ],
+          "correct_answer": "piloto",
+          "explanation": "pilot significa «piloto».",
+          "mastery_tag": "a1-u9-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "driver",
+          "options": [
+            {
+              "id": "A",
+              "text": "conductor/a"
+            },
+            {
+              "id": "B",
+              "text": "agricultor/a"
+            },
+            {
+              "id": "C",
+              "text": "dentista"
+            }
+          ],
+          "correct_answer": "conductor/a",
+          "explanation": "driver significa «conductor/a».",
+          "mastery_tag": "a1-u9-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "dentist",
+          "options": [
+            {
+              "id": "A",
+              "text": "dentista"
+            },
+            {
+              "id": "B",
+              "text": "enfermero/a"
+            },
+            {
+              "id": "C",
+              "text": "policía"
+            }
+          ],
+          "correct_answer": "dentista",
+          "explanation": "dentist significa «dentista».",
+          "mastery_tag": "a1-u9-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "firefighter",
+          "options": [
+            {
+              "id": "A",
+              "text": "bombero/a"
+            },
+            {
+              "id": "B",
+              "text": "médico/a"
+            },
+            {
+              "id": "C",
+              "text": "profesor/a"
+            }
+          ],
+          "correct_answer": "bombero/a",
+          "explanation": "firefighter significa «bombero/a».",
+          "mastery_tag": "a1-u9-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "office",
+          "options": [
+            {
+              "id": "A",
+              "text": "oficina"
+            },
+            {
+              "id": "B",
+              "text": "hospital"
+            },
+            {
+              "id": "C",
+              "text": "escuela"
+            }
+          ],
+          "correct_answer": "oficina",
+          "explanation": "office significa «oficina».",
+          "mastery_tag": "a1-u9-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "hospital",
+          "options": [
+            {
+              "id": "A",
+              "text": "hospital"
+            },
+            {
+              "id": "B",
+              "text": "aeropuerto"
+            },
+            {
+              "id": "C",
+              "text": "restaurante"
+            }
+          ],
+          "correct_answer": "hospital",
+          "explanation": "hospital significa «hospital».",
+          "mastery_tag": "a1-u9-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "uniform",
+          "options": [
+            {
+              "id": "A",
+              "text": "uniforme"
+            },
+            {
+              "id": "B",
+              "text": "herramienta"
+            },
+            {
+              "id": "C",
+              "text": "horario"
+            }
+          ],
+          "correct_answer": "uniforme",
+          "explanation": "uniform significa «uniforme».",
+          "mastery_tag": "a1-u9-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "patient",
+          "options": [
+            {
+              "id": "A",
+              "text": "paciente"
+            },
+            {
+              "id": "B",
+              "text": "alumno"
+            },
+            {
+              "id": "C",
+              "text": "cliente"
+            }
+          ],
+          "correct_answer": "paciente",
+          "explanation": "patient significa «paciente».",
+          "mastery_tag": "a1-u9-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "customer",
+          "options": [
+            {
+              "id": "A",
+              "text": "cliente"
+            },
+            {
+              "id": "B",
+              "text": "profesor"
+            },
+            {
+              "id": "C",
+              "text": "piloto"
+            }
+          ],
+          "correct_answer": "cliente",
+          "explanation": "customer significa «cliente».",
+          "mastery_tag": "a1-u9-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "job",
+          "options": [
+            {
+              "id": "A",
+              "text": "trabajo"
+            },
+            {
+              "id": "B",
+              "text": "afición"
+            },
+            {
+              "id": "C",
+              "text": "vacaciones"
+            }
+          ],
+          "correct_answer": "trabajo",
+          "explanation": "job significa «trabajo».",
+          "mastery_tag": "a1-u9-v14"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Firefighter"
+            },
+            {
+              "id": "B",
+              "text": "Doctor"
+            },
+            {
+              "id": "C",
+              "text": "Teacher"
+            }
+          ],
+          "correct_answer": "Firefighter",
+          "explanation": "Es bombero.",
+          "mastery_tag": "a1-u9-l01",
+          "transcript": "EMMA: What does your dad do?\\nNOAH: He's a firefighter.\\nEMMA: Does he work in a fire station?\\nNOAH: Yes, he does."
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Firefighter"
+            },
+            {
+              "id": "B",
+              "text": "Doctor"
+            },
+            {
+              "id": "C",
+              "text": "Teacher"
+            }
+          ],
+          "correct_answer": "Firefighter",
+          "explanation": "Es bombero.",
+          "mastery_tag": "a1-u9-l02",
+          "transcript": "EMMA: What does your dad do?\\nNOAH: He's a firefighter.\\nEMMA: Does he work in a fire station?\\nNOAH: Yes, he does."
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Firefighter"
+            },
+            {
+              "id": "B",
+              "text": "Doctor"
+            },
+            {
+              "id": "C",
+              "text": "Teacher"
+            }
+          ],
+          "correct_answer": "Firefighter",
+          "explanation": "Es bombero.",
+          "mastery_tag": "a1-u9-l03",
+          "transcript": "EMMA: What does your dad do?\\nNOAH: He's a firefighter.\\nEMMA: Does he work in a fire station?\\nNOAH: Yes, he does."
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a hospital"
+            },
+            {
+              "id": "B",
+              "text": "In a school"
+            },
+            {
+              "id": "C",
+              "text": "In a restaurant"
+            }
+          ],
+          "correct_answer": "In a hospital",
+          "explanation": "Trabaja en un hospital.",
+          "mastery_tag": "a1-u9-l04",
+          "transcript": "LUCY: Where does your aunt work?\\nMAX: She works in a hospital. She's a nurse.\\nLUCY: Does she like her job?\\nMAX: Yes, she loves helping people."
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a hospital"
+            },
+            {
+              "id": "B",
+              "text": "In a school"
+            },
+            {
+              "id": "C",
+              "text": "In a restaurant"
+            }
+          ],
+          "correct_answer": "In a hospital",
+          "explanation": "Trabaja en un hospital.",
+          "mastery_tag": "a1-u9-l05",
+          "transcript": "LUCY: Where does your aunt work?\\nMAX: She works in a hospital. She's a nurse.\\nLUCY: Does she like her job?\\nMAX: Yes, she loves helping people."
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a hospital"
+            },
+            {
+              "id": "B",
+              "text": "In a school"
+            },
+            {
+              "id": "C",
+              "text": "In a restaurant"
+            }
+          ],
+          "correct_answer": "In a hospital",
+          "explanation": "Trabaja en un hospital.",
+          "mastery_tag": "a1-u9-l06",
+          "transcript": "LUCY: Where does your aunt work?\\nMAX: She works in a hospital. She's a nurse.\\nLUCY: Does she like her job?\\nMAX: Yes, she loves helping people."
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At eleven"
+            },
+            {
+              "id": "B",
+              "text": "At ten"
+            },
+            {
+              "id": "C",
+              "text": "At midnight"
+            }
+          ],
+          "correct_answer": "At eleven",
+          "explanation": "Cierra a las once.",
+          "mastery_tag": "a1-u9-l07",
+          "transcript": "CUSTOMER: Can I have the menu, please?\\nWAITER: Of course.\\nCUSTOMER: What time does the restaurant close?\\nWAITER: At eleven tonight."
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At eleven"
+            },
+            {
+              "id": "B",
+              "text": "At ten"
+            },
+            {
+              "id": "C",
+              "text": "At midnight"
+            }
+          ],
+          "correct_answer": "At eleven",
+          "explanation": "Cierra a las once.",
+          "mastery_tag": "a1-u9-l08",
+          "transcript": "CUSTOMER: Can I have the menu, please?\\nWAITER: Of course.\\nCUSTOMER: What time does the restaurant close?\\nWAITER: At eleven tonight."
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At eleven"
+            },
+            {
+              "id": "B",
+              "text": "At ten"
+            },
+            {
+              "id": "C",
+              "text": "At midnight"
+            }
+          ],
+          "correct_answer": "At eleven",
+          "explanation": "Cierra a las once.",
+          "mastery_tag": "a1-u9-l09",
+          "transcript": "CUSTOMER: Can I have the menu, please?\\nWAITER: Of course.\\nCUSTOMER: What time does the restaurant close?\\nWAITER: At eleven tonight."
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A pilot"
+            },
+            {
+              "id": "B",
+              "text": "A doctor"
+            },
+            {
+              "id": "C",
+              "text": "A teacher"
+            }
+          ],
+          "correct_answer": "A pilot",
+          "explanation": "Quiere ser piloto.",
+          "mastery_tag": "a1-u9-l10",
+          "transcript": "TOM: Is your sister a pilot?\\nANA: No, she's a student. She wants to be a pilot.\\nTOM: Where does she study?\\nANA: At the college near our house."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A pilot"
+            },
+            {
+              "id": "B",
+              "text": "A doctor"
+            },
+            {
+              "id": "C",
+              "text": "A teacher"
+            }
+          ],
+          "correct_answer": "A pilot",
+          "explanation": "Quiere ser piloto.",
+          "mastery_tag": "a1-u9-l11",
+          "transcript": "TOM: Is your sister a pilot?\\nANA: No, she's a student. She wants to be a pilot.\\nTOM: Where does she study?\\nANA: At the college near our house."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A pilot"
+            },
+            {
+              "id": "B",
+              "text": "A doctor"
+            },
+            {
+              "id": "C",
+              "text": "A teacher"
+            }
+          ],
+          "correct_answer": "A pilot",
+          "explanation": "Quiere ser piloto.",
+          "mastery_tag": "a1-u9-l12",
+          "transcript": "TOM: Is your sister a pilot?\\nANA: No, she's a student. She wants to be a pilot.\\nTOM: Where does she study?\\nANA: At the college near our house."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a hotel"
+            },
+            {
+              "id": "B",
+              "text": "In a school"
+            },
+            {
+              "id": "C",
+              "text": "In a hospital"
+            }
+          ],
+          "correct_answer": "In a hotel",
+          "explanation": "Trabaja en un hotel.",
+          "mastery_tag": "a1-u9-l13",
+          "transcript": "JACK: What does your uncle do?\\nSARA: He's a chef. He works in a hotel.\\nJACK: Does he cook every day?\\nSARA: Yes, he does."
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a hotel"
+            },
+            {
+              "id": "B",
+              "text": "In a school"
+            },
+            {
+              "id": "C",
+              "text": "In a hospital"
+            }
+          ],
+          "correct_answer": "In a hotel",
+          "explanation": "Trabaja en un hotel.",
+          "mastery_tag": "a1-u9-l14",
+          "transcript": "JACK: What does your uncle do?\\nSARA: He's a chef. He works in a hotel.\\nJACK: Does he cook every day?\\nSARA: Yes, he does."
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a hotel"
+            },
+            {
+              "id": "B",
+              "text": "In a school"
+            },
+            {
+              "id": "C",
+              "text": "In a hospital"
+            }
+          ],
+          "correct_answer": "In a hotel",
+          "explanation": "Trabaja en un hotel.",
+          "mastery_tag": "a1-u9-l15",
+          "transcript": "JACK: What does your uncle do?\\nSARA: He's a chef. He works in a hotel.\\nJACK: Does he cook every day?\\nSARA: Yes, he does."
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At seven"
+            },
+            {
+              "id": "B",
+              "text": "At eight"
+            },
+            {
+              "id": "C",
+              "text": "At three"
+            }
+          ],
+          "correct_answer": "At seven",
+          "explanation": "Empieza a las siete.",
+          "mastery_tag": "a1-u9-r01",
+          "main_text": "A DAY AT THE HOSPITAL\\nMaria is a nurse. She works at a large hospital in the city. She starts work at seven in the morning. She helps doctors and looks after patients. She finishes at three in the afternoon and goes home by bus."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At seven"
+            },
+            {
+              "id": "B",
+              "text": "At eight"
+            },
+            {
+              "id": "C",
+              "text": "At three"
+            }
+          ],
+          "correct_answer": "At seven",
+          "explanation": "Empieza a las siete.",
+          "mastery_tag": "a1-u9-r02",
+          "main_text": "A DAY AT THE HOSPITAL\\nMaria is a nurse. She works at a large hospital in the city. She starts work at seven in the morning. She helps doctors and looks after patients. She finishes at three in the afternoon and goes home by bus."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 1.",
+          "options": [
+            {
+              "id": "A",
+              "text": "At seven"
+            },
+            {
+              "id": "B",
+              "text": "At eight"
+            },
+            {
+              "id": "C",
+              "text": "At three"
+            }
+          ],
+          "correct_answer": "At seven",
+          "explanation": "Empieza a las siete.",
+          "mastery_tag": "a1-u9-r03",
+          "main_text": "A DAY AT THE HOSPITAL\\nMaria is a nurse. She works at a large hospital in the city. She starts work at seven in the morning. She helps doctors and looks after patients. She finishes at three in the afternoon and goes home by bus."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A teacher"
+            },
+            {
+              "id": "B",
+              "text": "A nurse"
+            },
+            {
+              "id": "C",
+              "text": "A chef"
+            }
+          ],
+          "correct_answer": "A teacher",
+          "explanation": "Su madre es profesora.",
+          "mastery_tag": "a1-u9-r04",
+          "main_text": "MY FAMILY'S JOBS\\nMy father is a bus driver and my mother is a teacher. Dad starts work early and drives around the city. Mum works at a primary school. My brother wants to be a chef because he loves cooking."
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A teacher"
+            },
+            {
+              "id": "B",
+              "text": "A nurse"
+            },
+            {
+              "id": "C",
+              "text": "A chef"
+            }
+          ],
+          "correct_answer": "A teacher",
+          "explanation": "Su madre es profesora.",
+          "mastery_tag": "a1-u9-r05",
+          "main_text": "MY FAMILY'S JOBS\\nMy father is a bus driver and my mother is a teacher. Dad starts work early and drives around the city. Mum works at a primary school. My brother wants to be a chef because he loves cooking."
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 2.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A teacher"
+            },
+            {
+              "id": "B",
+              "text": "A nurse"
+            },
+            {
+              "id": "C",
+              "text": "A chef"
+            }
+          ],
+          "correct_answer": "A teacher",
+          "explanation": "Su madre es profesora.",
+          "mastery_tag": "a1-u9-r06",
+          "main_text": "MY FAMILY'S JOBS\\nMy father is a bus driver and my mother is a teacher. Dad starts work early and drives around the city. Mum works at a primary school. My brother wants to be a chef because he loves cooking."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Two"
+            },
+            {
+              "id": "B",
+              "text": "Three"
+            },
+            {
+              "id": "C",
+              "text": "Four"
+            }
+          ],
+          "correct_answer": "Two",
+          "explanation": "Hay dos camareros.",
+          "mastery_tag": "a1-u9-r07",
+          "main_text": "THE NEW RESTAURANT\\nA new restaurant opens in our town today. It has a chef, two waiters and a manager. The chef prepares lunch and dinner. The waiters serve food and drinks. The restaurant is open from midday until ten at night."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Two"
+            },
+            {
+              "id": "B",
+              "text": "Three"
+            },
+            {
+              "id": "C",
+              "text": "Four"
+            }
+          ],
+          "correct_answer": "Two",
+          "explanation": "Hay dos camareros.",
+          "mastery_tag": "a1-u9-r08",
+          "main_text": "THE NEW RESTAURANT\\nA new restaurant opens in our town today. It has a chef, two waiters and a manager. The chef prepares lunch and dinner. The waiters serve food and drinks. The restaurant is open from midday until ten at night."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 3.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Two"
+            },
+            {
+              "id": "B",
+              "text": "Three"
+            },
+            {
+              "id": "C",
+              "text": "Four"
+            }
+          ],
+          "correct_answer": "Two",
+          "explanation": "Hay dos camareros.",
+          "mastery_tag": "a1-u9-r09",
+          "main_text": "THE NEW RESTAURANT\\nA new restaurant opens in our town today. It has a chef, two waiters and a manager. The chef prepares lunch and dinner. The waiters serve food and drinks. The restaurant is open from midday until ten at night."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a fire station"
+            },
+            {
+              "id": "B",
+              "text": "In a police station"
+            },
+            {
+              "id": "C",
+              "text": "In a school"
+            }
+          ],
+          "correct_answer": "In a fire station",
+          "explanation": "Trabajan en una estación de bomberos.",
+          "mastery_tag": "a1-u9-r10",
+          "main_text": "A FIREFIGHTER'S WORK\\nFirefighters help people when there is a fire or an accident. They work in a fire station and wear special clothes. They use a fire engine to travel to emergencies. Their job is sometimes dangerous, but very important."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a fire station"
+            },
+            {
+              "id": "B",
+              "text": "In a police station"
+            },
+            {
+              "id": "C",
+              "text": "In a school"
+            }
+          ],
+          "correct_answer": "In a fire station",
+          "explanation": "Trabajan en una estación de bomberos.",
+          "mastery_tag": "a1-u9-r11",
+          "main_text": "A FIREFIGHTER'S WORK\\nFirefighters help people when there is a fire or an accident. They work in a fire station and wear special clothes. They use a fire engine to travel to emergencies. Their job is sometimes dangerous, but very important."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 4.",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a fire station"
+            },
+            {
+              "id": "B",
+              "text": "In a police station"
+            },
+            {
+              "id": "C",
+              "text": "In a school"
+            }
+          ],
+          "correct_answer": "In a fire station",
+          "explanation": "Trabajan en una estación de bomberos.",
+          "mastery_tag": "a1-u9-r12",
+          "main_text": "A FIREFIGHTER'S WORK\\nFirefighters help people when there is a fire or an accident. They work in a fire station and wear special clothes. They use a fire engine to travel to emergencies. Their job is sometimes dangerous, but very important."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Vet"
+            },
+            {
+              "id": "B",
+              "text": "Teacher"
+            },
+            {
+              "id": "C",
+              "text": "Pilot"
+            }
+          ],
+          "correct_answer": "Vet",
+          "explanation": "Quiere ser veterinaria.",
+          "mastery_tag": "a1-u9-r13",
+          "main_text": "CHOOSING A JOB\\nElla likes animals, so she wants to work with them. She doesn't want to be a doctor for people. She wants to be a vet. She studies science at school and reads books about animals in her free time."
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Vet"
+            },
+            {
+              "id": "B",
+              "text": "Teacher"
+            },
+            {
+              "id": "C",
+              "text": "Pilot"
+            }
+          ],
+          "correct_answer": "Vet",
+          "explanation": "Quiere ser veterinaria.",
+          "mastery_tag": "a1-u9-r14",
+          "main_text": "CHOOSING A JOB\\nElla likes animals, so she wants to work with them. She doesn't want to be a doctor for people. She wants to be a vet. She studies science at school and reads books about animals in her free time."
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 5.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Vet"
+            },
+            {
+              "id": "B",
+              "text": "Teacher"
+            },
+            {
+              "id": "C",
+              "text": "Pilot"
+            }
+          ],
+          "correct_answer": "Vet",
+          "explanation": "Quiere ser veterinaria.",
+          "mastery_tag": "a1-u9-r15",
+          "main_text": "CHOOSING A JOB\\nElla likes animals, so she wants to work with them. She doesn't want to be a doctor for people. She wants to be a vet. She studies science at school and reads books about animals in her free time."
+        }
+      ]
+    }
+  ]
+}
