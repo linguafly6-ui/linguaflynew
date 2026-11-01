@@ -1,0 +1,1457 @@
+{
+  "course": {
+    "unit_id": "unit5",
+    "unit_title": "My home and my town",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Describir las habitaciones y los muebles de una vivienda.",
+    "Usar there is y there are en afirmativa, negativa y preguntas.",
+    "Preguntar y responder sobre lugares de una ciudad.",
+    "Utilizar preposiciones de lugar como in, on, under, next to, between y opposite.",
+    "Comprender indicaciones sencillas sobre la ubicación de lugares y objetos."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "There is a sofa ___ the living room.",
+          "options": [
+            {
+              "id": "A",
+              "text": "in"
+            },
+            {
+              "id": "B",
+              "text": "on"
+            },
+            {
+              "id": "C",
+              "text": "under"
+            }
+          ],
+          "correct_answer": "in",
+          "explanation": "Usamos in para indicar que algo está dentro de una habitación.",
+          "mastery_tag": "a1-u5-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The books are ___ the table.",
+          "options": [
+            {
+              "id": "A",
+              "text": "on"
+            },
+            {
+              "id": "B",
+              "text": "in"
+            },
+            {
+              "id": "C",
+              "text": "between"
+            }
+          ],
+          "correct_answer": "on",
+          "explanation": "On significa encima de.",
+          "mastery_tag": "a1-u5-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The cat is ___ the chair.",
+          "options": [
+            {
+              "id": "A",
+              "text": "under"
+            },
+            {
+              "id": "B",
+              "text": "between"
+            },
+            {
+              "id": "C",
+              "text": "behind"
+            }
+          ],
+          "correct_answer": "under",
+          "explanation": "Under significa debajo de.",
+          "mastery_tag": "a1-u5-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "There ___ a bathroom upstairs.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "am"
+            }
+          ],
+          "correct_answer": "is",
+          "explanation": "Bathroom es singular: there is.",
+          "mastery_tag": "a1-u5-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "There ___ two bedrooms in my flat.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "be"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "Bedrooms es plural: there are.",
+          "mastery_tag": "a1-u5-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ there a garden?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Is"
+            },
+            {
+              "id": "B",
+              "text": "Are"
+            },
+            {
+              "id": "C",
+              "text": "Do"
+            }
+          ],
+          "correct_answer": "Is",
+          "explanation": "Con un nombre singular usamos Is there...?",
+          "mastery_tag": "a1-u5-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Are there any shops near here? Yes, ___.",
+          "options": [
+            {
+              "id": "A",
+              "text": "there are"
+            },
+            {
+              "id": "B",
+              "text": "there is"
+            },
+            {
+              "id": "C",
+              "text": "they is"
+            }
+          ],
+          "correct_answer": "there are",
+          "explanation": "Respuesta corta en plural: there are.",
+          "mastery_tag": "a1-u5-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "There isn't ___ lift in this building.",
+          "options": [
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "B",
+              "text": "some"
+            },
+            {
+              "id": "C",
+              "text": "any"
+            }
+          ],
+          "correct_answer": "a",
+          "explanation": "Lift es un sustantivo contable singular.",
+          "mastery_tag": "a1-u5-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The bank is ___ the café and the library.",
+          "options": [
+            {
+              "id": "A",
+              "text": "between"
+            },
+            {
+              "id": "B",
+              "text": "under"
+            },
+            {
+              "id": "C",
+              "text": "on"
+            }
+          ],
+          "correct_answer": "between",
+          "explanation": "Between indica entre dos lugares.",
+          "mastery_tag": "a1-u5-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The school is ___ the park. They are opposite each other.",
+          "options": [
+            {
+              "id": "A",
+              "text": "opposite"
+            },
+            {
+              "id": "B",
+              "text": "inside"
+            },
+            {
+              "id": "C",
+              "text": "under"
+            }
+          ],
+          "correct_answer": "opposite",
+          "explanation": "Opposite significa enfrente.",
+          "mastery_tag": "a1-u5-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "My bedroom is ___ the kitchen. It is one floor higher.",
+          "options": [
+            {
+              "id": "A",
+              "text": "above"
+            },
+            {
+              "id": "B",
+              "text": "next to"
+            },
+            {
+              "id": "C",
+              "text": "in front of"
+            }
+          ],
+          "correct_answer": "above",
+          "explanation": "Above significa encima, en una posición superior.",
+          "mastery_tag": "a1-u5-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The bus stop is ___ the supermarket.",
+          "options": [
+            {
+              "id": "A",
+              "text": "next to"
+            },
+            {
+              "id": "B",
+              "text": "under"
+            },
+            {
+              "id": "C",
+              "text": "in"
+            }
+          ],
+          "correct_answer": "next to",
+          "explanation": "Next to significa al lado de.",
+          "mastery_tag": "a1-u5-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ a supermarket near your house?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Is there"
+            },
+            {
+              "id": "B",
+              "text": "Are there"
+            },
+            {
+              "id": "C",
+              "text": "There are"
+            }
+          ],
+          "correct_answer": "Is there",
+          "explanation": "Pregunta por un lugar singular.",
+          "mastery_tag": "a1-u5-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "There ___ any chairs in the kitchen.",
+          "options": [
+            {
+              "id": "A",
+              "text": "aren't"
+            },
+            {
+              "id": "B",
+              "text": "isn't"
+            },
+            {
+              "id": "C",
+              "text": "don't"
+            }
+          ],
+          "correct_answer": "aren't",
+          "explanation": "Chairs es plural; usamos aren't.",
+          "mastery_tag": "a1-u5-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Choose the correct sentence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "There are three rooms."
+            },
+            {
+              "id": "B",
+              "text": "There is three rooms."
+            },
+            {
+              "id": "C",
+              "text": "There are a room."
+            }
+          ],
+          "correct_answer": "There are three rooms.",
+          "explanation": "Three rooms es plural.",
+          "mastery_tag": "a1-u5-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "kitchen",
+          "options": [
+            {
+              "id": "A",
+              "text": "cocina"
+            },
+            {
+              "id": "B",
+              "text": "dormitorio"
+            },
+            {
+              "id": "C",
+              "text": "salón"
+            }
+          ],
+          "correct_answer": "cocina",
+          "explanation": "kitchen significa «cocina».",
+          "mastery_tag": "a1-u5-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "bedroom",
+          "options": [
+            {
+              "id": "A",
+              "text": "baño"
+            },
+            {
+              "id": "B",
+              "text": "dormitorio"
+            },
+            {
+              "id": "C",
+              "text": "jardín"
+            }
+          ],
+          "correct_answer": "dormitorio",
+          "explanation": "bedroom significa «dormitorio».",
+          "mastery_tag": "a1-u5-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "bathroom",
+          "options": [
+            {
+              "id": "A",
+              "text": "baño"
+            },
+            {
+              "id": "B",
+              "text": "cocina"
+            },
+            {
+              "id": "C",
+              "text": "garaje"
+            }
+          ],
+          "correct_answer": "baño",
+          "explanation": "bathroom significa «baño».",
+          "mastery_tag": "a1-u5-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "living room",
+          "options": [
+            {
+              "id": "A",
+              "text": "salón"
+            },
+            {
+              "id": "B",
+              "text": "pasillo"
+            },
+            {
+              "id": "C",
+              "text": "comedor"
+            }
+          ],
+          "correct_answer": "salón",
+          "explanation": "living room significa «salón».",
+          "mastery_tag": "a1-u5-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "garden",
+          "options": [
+            {
+              "id": "A",
+              "text": "jardín"
+            },
+            {
+              "id": "B",
+              "text": "balcón"
+            },
+            {
+              "id": "C",
+              "text": "tejado"
+            }
+          ],
+          "correct_answer": "jardín",
+          "explanation": "garden significa «jardín».",
+          "mastery_tag": "a1-u5-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "sofa",
+          "options": [
+            {
+              "id": "A",
+              "text": "sofá"
+            },
+            {
+              "id": "B",
+              "text": "armario"
+            },
+            {
+              "id": "C",
+              "text": "espejo"
+            }
+          ],
+          "correct_answer": "sofá",
+          "explanation": "sofa significa «sofá».",
+          "mastery_tag": "a1-u5-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "wardrobe",
+          "options": [
+            {
+              "id": "A",
+              "text": "armario"
+            },
+            {
+              "id": "B",
+              "text": "cama"
+            },
+            {
+              "id": "C",
+              "text": "silla"
+            }
+          ],
+          "correct_answer": "armario",
+          "explanation": "wardrobe significa «armario».",
+          "mastery_tag": "a1-u5-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "stairs",
+          "options": [
+            {
+              "id": "A",
+              "text": "escaleras"
+            },
+            {
+              "id": "B",
+              "text": "ventanas"
+            },
+            {
+              "id": "C",
+              "text": "puertas"
+            }
+          ],
+          "correct_answer": "escaleras",
+          "explanation": "stairs significa «escaleras».",
+          "mastery_tag": "a1-u5-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "window",
+          "options": [
+            {
+              "id": "A",
+              "text": "ventana"
+            },
+            {
+              "id": "B",
+              "text": "pared"
+            },
+            {
+              "id": "C",
+              "text": "suelo"
+            }
+          ],
+          "correct_answer": "ventana",
+          "explanation": "window significa «ventana».",
+          "mastery_tag": "a1-u5-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "fridge",
+          "options": [
+            {
+              "id": "A",
+              "text": "nevera"
+            },
+            {
+              "id": "B",
+              "text": "horno"
+            },
+            {
+              "id": "C",
+              "text": "lavadora"
+            }
+          ],
+          "correct_answer": "nevera",
+          "explanation": "fridge significa «nevera».",
+          "mastery_tag": "a1-u5-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "supermarket",
+          "options": [
+            {
+              "id": "A",
+              "text": "supermercado"
+            },
+            {
+              "id": "B",
+              "text": "hospital"
+            },
+            {
+              "id": "C",
+              "text": "museo"
+            }
+          ],
+          "correct_answer": "supermercado",
+          "explanation": "supermarket significa «supermercado».",
+          "mastery_tag": "a1-u5-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "library",
+          "options": [
+            {
+              "id": "A",
+              "text": "biblioteca"
+            },
+            {
+              "id": "B",
+              "text": "estación"
+            },
+            {
+              "id": "C",
+              "text": "farmacia"
+            }
+          ],
+          "correct_answer": "biblioteca",
+          "explanation": "library significa «biblioteca».",
+          "mastery_tag": "a1-u5-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "opposite",
+          "options": [
+            {
+              "id": "A",
+              "text": "enfrente de"
+            },
+            {
+              "id": "B",
+              "text": "detrás de"
+            },
+            {
+              "id": "C",
+              "text": "debajo de"
+            }
+          ],
+          "correct_answer": "enfrente de",
+          "explanation": "opposite significa «enfrente de».",
+          "mastery_tag": "a1-u5-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "between",
+          "options": [
+            {
+              "id": "A",
+              "text": "entre"
+            },
+            {
+              "id": "B",
+              "text": "al lado de"
+            },
+            {
+              "id": "C",
+              "text": "dentro de"
+            }
+          ],
+          "correct_answer": "entre",
+          "explanation": "between significa «entre».",
+          "mastery_tag": "a1-u5-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "near",
+          "options": [
+            {
+              "id": "A",
+              "text": "cerca de"
+            },
+            {
+              "id": "B",
+              "text": "lejos de"
+            },
+            {
+              "id": "C",
+              "text": "encima de"
+            }
+          ],
+          "correct_answer": "cerca de",
+          "explanation": "near significa «cerca de».",
+          "mastery_tag": "a1-u5-v15"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Where is the TV?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the living room"
+            },
+            {
+              "id": "B",
+              "text": "In the kitchen"
+            },
+            {
+              "id": "C",
+              "text": "In the bedroom"
+            }
+          ],
+          "correct_answer": "In the living room",
+          "explanation": "In the living room",
+          "mastery_tag": "a1-u5-l01",
+          "transcript": "MAYA: Where's the TV?\\nLEO: It's in the living room, next to the sofa.\\nMAYA: And the remote control?\\nLEO: It's on the small table."
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Where is the remote control?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On the small table"
+            },
+            {
+              "id": "B",
+              "text": "Under the sofa"
+            },
+            {
+              "id": "C",
+              "text": "In the kitchen"
+            }
+          ],
+          "correct_answer": "On the small table",
+          "explanation": "In the living room",
+          "mastery_tag": "a1-u5-l02",
+          "transcript": "MAYA: Where's the TV?\\nLEO: It's in the living room, next to the sofa.\\nMAYA: And the remote control?\\nLEO: It's on the small table."
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is the TV in the kitchen?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "No",
+          "explanation": "In the living room",
+          "mastery_tag": "a1-u5-l03",
+          "transcript": "MAYA: Where's the TV?\\nLEO: It's in the living room, next to the sofa.\\nMAYA: And the remote control?\\nLEO: It's on the small table."
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Where is the garden?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In front of the house"
+            },
+            {
+              "id": "B",
+              "text": "Behind the house"
+            },
+            {
+              "id": "C",
+              "text": "Next to the garage"
+            }
+          ],
+          "correct_answer": "Behind the house",
+          "explanation": "Behind the house",
+          "mastery_tag": "a1-u5-l04",
+          "transcript": "DAD: Is there a garden?\\nEMMA: Yes, there is. It's behind the house.\\nDAD: Is it big?\\nEMMA: No, it's quite small."
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is the garden big?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, it is."
+            },
+            {
+              "id": "B",
+              "text": "No, it's quite small."
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "No, it's quite small.",
+          "explanation": "Behind the house",
+          "mastery_tag": "a1-u5-l05",
+          "transcript": "DAD: Is there a garden?\\nEMMA: Yes, there is. It's behind the house.\\nDAD: Is it big?\\nEMMA: No, it's quite small."
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is there a garden?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, there is."
+            },
+            {
+              "id": "B",
+              "text": "No, there isn't."
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes, there is.",
+          "explanation": "Behind the house",
+          "mastery_tag": "a1-u5-l06",
+          "transcript": "DAD: Is there a garden?\\nEMMA: Yes, there is. It's behind the house.\\nDAD: Is it big?\\nEMMA: No, it's quite small."
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is opposite the library?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The bank"
+            },
+            {
+              "id": "B",
+              "text": "The school"
+            },
+            {
+              "id": "C",
+              "text": "The café"
+            }
+          ],
+          "correct_answer": "The bank",
+          "explanation": "The bank",
+          "mastery_tag": "a1-u5-l07",
+          "transcript": "TOM: Excuse me, where's the library?\\nWOMAN: It's opposite the bank.\\nTOM: Is it near here?\\nWOMAN: Yes, it's two minutes away."
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is the library near here?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "The bank",
+          "mastery_tag": "a1-u5-l08",
+          "transcript": "TOM: Excuse me, where's the library?\\nWOMAN: It's opposite the bank.\\nTOM: Is it near here?\\nWOMAN: Yes, it's two minutes away."
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "How far away is it?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Two minutes"
+            },
+            {
+              "id": "B",
+              "text": "Ten minutes"
+            },
+            {
+              "id": "C",
+              "text": "Twenty minutes"
+            }
+          ],
+          "correct_answer": "Two minutes",
+          "explanation": "The bank",
+          "mastery_tag": "a1-u5-l09",
+          "transcript": "TOM: Excuse me, where's the library?\\nWOMAN: It's opposite the bank.\\nTOM: Is it near here?\\nWOMAN: Yes, it's two minutes away."
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "How many bedrooms are there?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Two"
+            },
+            {
+              "id": "B",
+              "text": "Three"
+            },
+            {
+              "id": "C",
+              "text": "Four"
+            }
+          ],
+          "correct_answer": "Three",
+          "explanation": "Three",
+          "mastery_tag": "a1-u5-l10",
+          "transcript": "SARA: How many bedrooms are there?\\nJACK: There are three.\\nSARA: Is there a bathroom upstairs?\\nJACK: Yes, there are two bathrooms upstairs."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is there a bathroom upstairs?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, there is."
+            },
+            {
+              "id": "B",
+              "text": "No, there isn't."
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes, there is.",
+          "explanation": "Three",
+          "mastery_tag": "a1-u5-l11",
+          "transcript": "SARA: How many bedrooms are there?\\nJACK: There are three.\\nSARA: Is there a bathroom upstairs?\\nJACK: Yes, there are two bathrooms upstairs."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "How many bathrooms are upstairs?",
+          "options": [
+            {
+              "id": "A",
+              "text": "One"
+            },
+            {
+              "id": "B",
+              "text": "Two"
+            },
+            {
+              "id": "C",
+              "text": "Three"
+            }
+          ],
+          "correct_answer": "Two",
+          "explanation": "Three",
+          "mastery_tag": "a1-u5-l12",
+          "transcript": "SARA: How many bedrooms are there?\\nJACK: There are three.\\nSARA: Is there a bathroom upstairs?\\nJACK: Yes, there are two bathrooms upstairs."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Where is the bus stop?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Next to the supermarket"
+            },
+            {
+              "id": "B",
+              "text": "Behind the supermarket"
+            },
+            {
+              "id": "C",
+              "text": "Opposite the station"
+            }
+          ],
+          "correct_answer": "Next to the supermarket",
+          "explanation": "Next to the supermarket",
+          "mastery_tag": "a1-u5-l13",
+          "transcript": "ANNA: Is there a bus stop near your flat?\\nMARK: Yes, it's next to the supermarket.\\nANNA: Great. And where's the station?\\nMARK: It's behind the supermarket."
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Where is the station?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Next to the supermarket"
+            },
+            {
+              "id": "B",
+              "text": "Behind the supermarket"
+            },
+            {
+              "id": "C",
+              "text": "Inside the station"
+            }
+          ],
+          "correct_answer": "Behind the supermarket",
+          "explanation": "Next to the supermarket",
+          "mastery_tag": "a1-u5-l14",
+          "transcript": "ANNA: Is there a bus stop near your flat?\\nMARK: Yes, it's next to the supermarket.\\nANNA: Great. And where's the station?\\nMARK: It's behind the supermarket."
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is the bus stop near the flat?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Next to the supermarket",
+          "mastery_tag": "a1-u5-l15",
+          "transcript": "ANNA: Is there a bus stop near your flat?\\nMARK: Yes, it's next to the supermarket.\\nANNA: Great. And where's the station?\\nMARK: It's behind the supermarket."
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "How many bedrooms are there?",
+          "options": [
+            {
+              "id": "A",
+              "text": "One"
+            },
+            {
+              "id": "B",
+              "text": "Two"
+            },
+            {
+              "id": "C",
+              "text": "Three"
+            }
+          ],
+          "correct_answer": "Two",
+          "explanation": "Two",
+          "mastery_tag": "a1-u5-r01",
+          "main_text": "MY NEW FLAT\\nHello, I'm Ben. I live in a small flat with my parents and my sister. There are two bedrooms, a bathroom and a living room. The kitchen is next to the living room. My favourite place is my bedroom because I have a big desk and a comfortable bed."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where is the kitchen?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Next to the living room"
+            },
+            {
+              "id": "B",
+              "text": "Upstairs"
+            },
+            {
+              "id": "C",
+              "text": "Behind the flat"
+            }
+          ],
+          "correct_answer": "Next to the living room",
+          "explanation": "Two",
+          "mastery_tag": "a1-u5-r02",
+          "main_text": "MY NEW FLAT\\nHello, I'm Ben. I live in a small flat with my parents and my sister. There are two bedrooms, a bathroom and a living room. The kitchen is next to the living room. My favourite place is my bedroom because I have a big desk and a comfortable bed."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Why does Ben like his bedroom?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It has a big desk and a comfortable bed."
+            },
+            {
+              "id": "B",
+              "text": "It is very large."
+            },
+            {
+              "id": "C",
+              "text": "It has a television."
+            }
+          ],
+          "correct_answer": "It has a big desk and a comfortable bed.",
+          "explanation": "Two",
+          "mastery_tag": "a1-u5-r03",
+          "main_text": "MY NEW FLAT\\nHello, I'm Ben. I live in a small flat with my parents and my sister. There are two bedrooms, a bathroom and a living room. The kitchen is next to the living room. My favourite place is my bedroom because I have a big desk and a comfortable bed."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where is the garden?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In front of the house"
+            },
+            {
+              "id": "B",
+              "text": "Behind the house"
+            },
+            {
+              "id": "C",
+              "text": "Next to the kitchen"
+            }
+          ],
+          "correct_answer": "Behind the house",
+          "explanation": "Behind the house",
+          "mastery_tag": "a1-u5-r04",
+          "main_text": "A HOUSE IN THE COUNTRY\\nMy grandparents live in a house in the country. There is a large garden behind the house. There are many flowers and two trees. The kitchen is downstairs and their bedroom is upstairs. I love visiting them at weekends."
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where is the kitchen?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Downstairs"
+            },
+            {
+              "id": "B",
+              "text": "Upstairs"
+            },
+            {
+              "id": "C",
+              "text": "In the garden"
+            }
+          ],
+          "correct_answer": "Downstairs",
+          "explanation": "Behind the house",
+          "mastery_tag": "a1-u5-r05",
+          "main_text": "A HOUSE IN THE COUNTRY\\nMy grandparents live in a house in the country. There is a large garden behind the house. There are many flowers and two trees. The kitchen is downstairs and their bedroom is upstairs. I love visiting them at weekends."
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "When does the writer visit the grandparents?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At weekends"
+            },
+            {
+              "id": "B",
+              "text": "Every morning"
+            },
+            {
+              "id": "C",
+              "text": "On Mondays"
+            }
+          ],
+          "correct_answer": "At weekends",
+          "explanation": "Behind the house",
+          "mastery_tag": "a1-u5-r06",
+          "main_text": "A HOUSE IN THE COUNTRY\\nMy grandparents live in a house in the country. There is a large garden behind the house. There are many flowers and two trees. The kitchen is downstairs and their bedroom is upstairs. I love visiting them at weekends."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is opposite the park?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The library"
+            },
+            {
+              "id": "B",
+              "text": "The bank"
+            },
+            {
+              "id": "C",
+              "text": "The bus station"
+            }
+          ],
+          "correct_answer": "The library",
+          "explanation": "The library",
+          "mastery_tag": "a1-u5-r07",
+          "main_text": "AROUND MY TOWN\\nI live in Greenford. There is a library opposite the park. The supermarket is next to the bank, and the bus station is behind the supermarket. There are two cafés near my school. My town is small, but it is a nice place to live."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where is the bus station?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Behind the supermarket"
+            },
+            {
+              "id": "B",
+              "text": "Next to the school"
+            },
+            {
+              "id": "C",
+              "text": "Opposite the park"
+            }
+          ],
+          "correct_answer": "Behind the supermarket",
+          "explanation": "The library",
+          "mastery_tag": "a1-u5-r08",
+          "main_text": "AROUND MY TOWN\\nI live in Greenford. There is a library opposite the park. The supermarket is next to the bank, and the bus station is behind the supermarket. There are two cafés near my school. My town is small, but it is a nice place to live."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "How many cafés are near the school?",
+          "options": [
+            {
+              "id": "A",
+              "text": "One"
+            },
+            {
+              "id": "B",
+              "text": "Two"
+            },
+            {
+              "id": "C",
+              "text": "Three"
+            }
+          ],
+          "correct_answer": "Two",
+          "explanation": "The library",
+          "mastery_tag": "a1-u5-r09",
+          "main_text": "AROUND MY TOWN\\nI live in Greenford. There is a library opposite the park. The supermarket is next to the bank, and the bus station is behind the supermarket. There are two cafés near my school. My town is small, but it is a nice place to live."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where is the desk?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Next to the window"
+            },
+            {
+              "id": "B",
+              "text": "Opposite the bed"
+            },
+            {
+              "id": "C",
+              "text": "Behind the door"
+            }
+          ],
+          "correct_answer": "Opposite the bed",
+          "explanation": "Opposite the bed",
+          "mastery_tag": "a1-u5-r10",
+          "main_text": "MY BEDROOM\\nMy bedroom is not very big, but I like it. There is a bed next to the window and a desk opposite the bed. My books are on the desk. There is a wardrobe behind the door. I haven't got a television in my room."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where are the books?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On the desk"
+            },
+            {
+              "id": "B",
+              "text": "Under the bed"
+            },
+            {
+              "id": "C",
+              "text": "In the wardrobe"
+            }
+          ],
+          "correct_answer": "On the desk",
+          "explanation": "Opposite the bed",
+          "mastery_tag": "a1-u5-r11",
+          "main_text": "MY BEDROOM\\nMy bedroom is not very big, but I like it. There is a bed next to the window and a desk opposite the bed. My books are on the desk. There is a wardrobe behind the door. I haven't got a television in my room."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Is there a television in the bedroom?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, there is."
+            },
+            {
+              "id": "B",
+              "text": "No, there isn't."
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "No, there isn't.",
+          "explanation": "Opposite the bed",
+          "mastery_tag": "a1-u5-r12",
+          "main_text": "MY BEDROOM\\nMy bedroom is not very big, but I like it. There is a bed next to the window and a desk opposite the bed. My books are on the desk. There is a wardrobe behind the door. I haven't got a television in my room."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where is the park?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Between the shops and the cinema"
+            },
+            {
+              "id": "B",
+              "text": "Opposite the library"
+            },
+            {
+              "id": "C",
+              "text": "Behind the station"
+            }
+          ],
+          "correct_answer": "Between the shops and the cinema",
+          "explanation": "Between the shops and the cinema",
+          "mastery_tag": "a1-u5-r13",
+          "main_text": "A DAY IN TOWN\\nOn Saturday, I go into town with my friend. First, we visit the library. Then we have lunch in a café near the station. After lunch, we go to the shops. There is a small park between the shops and the cinema. We go home at five o'clock."
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where do they have lunch?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In a café near the station"
+            },
+            {
+              "id": "B",
+              "text": "At the library"
+            },
+            {
+              "id": "C",
+              "text": "At the cinema"
+            }
+          ],
+          "correct_answer": "In a café near the station",
+          "explanation": "Between the shops and the cinema",
+          "mastery_tag": "a1-u5-r14",
+          "main_text": "A DAY IN TOWN\\nOn Saturday, I go into town with my friend. First, we visit the library. Then we have lunch in a café near the station. After lunch, we go to the shops. There is a small park between the shops and the cinema. We go home at five o'clock."
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What time do they go home?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Four o'clock"
+            },
+            {
+              "id": "B",
+              "text": "Five o'clock"
+            },
+            {
+              "id": "C",
+              "text": "Six o'clock"
+            }
+          ],
+          "correct_answer": "Five o'clock",
+          "explanation": "Between the shops and the cinema",
+          "mastery_tag": "a1-u5-r15",
+          "main_text": "A DAY IN TOWN\\nOn Saturday, I go into town with my friend. First, we visit the library. Then we have lunch in a café near the station. After lunch, we go to the shops. There is a small park between the shops and the cinema. We go home at five o'clock."
+        }
+      ]
+    }
+  ]
+}
