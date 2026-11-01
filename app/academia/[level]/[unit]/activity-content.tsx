@@ -76,17 +76,13 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
 
 function Passage({ text, kind }: { text: string; kind: "reading" | "listening" }) {
   if (kind === "reading") {
-    // Support both real line breaks and legacy data containing the literal "\
-" sequence.
-    const parts = text.split(/\\r?\
-|\\\
-/);
+    // Support both real line breaks and legacy data containing the literal "\\n" sequence.
+    const parts = text.split(/\\r?\\n|\\\\n/);
     const hasHeading = parts.length > 1;
     return <section className="passage-card reading-card">
       <div className="passage-kicker">READING · COMPRENSIÓN LECTORA</div>
       <h4>{hasHeading ? parts[0] : "Texto de lectura"}</h4>
-      <div className="reading-passage" style={{whiteSpace:"pre-line"}}>{hasHeading ? parts.slice(1).join("\
-").trim() : text}</div>
+      <div className="reading-passage" style={{whiteSpace:"pre-line"}}>{hasHeading ? parts.slice(1).join("\\n").trim() : text}</div>
       <SpeakButton text={text} label="Escuchar lectura" />
     </section>;
   }
