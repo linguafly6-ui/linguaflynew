@@ -1,0 +1,12 @@
+{
+  "course": {
+    "unit_id": "unit2",
+    "unit_title": "My family and people around me",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [],
+  "blocks": []
+}
