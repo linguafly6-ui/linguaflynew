@@ -1,0 +1,1434 @@
+{
+  "course": {
+    "unit_id": "unit8",
+    "unit_title": "Getting around town",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Nombrar medios de transporte habituales.",
+    "Preguntar cómo llegar a lugares y dar indicaciones sencillas.",
+    "Usar imperativos para instrucciones básicas.",
+    "Hablar de desplazamientos con by, on foot y get.",
+    "Preguntar y responder sobre distancias y horarios sencillos."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Go straight ___ at the traffic lights.",
+          "options": [
+            {
+              "id": "A",
+              "text": "on"
+            },
+            {
+              "id": "B",
+              "text": "in"
+            },
+            {
+              "id": "C",
+              "text": "under"
+            }
+          ],
+          "correct_answer": "on",
+          "explanation": "La expresión es go straight on.",
+          "mastery_tag": "a1-u8-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Turn left ___ the bank.",
+          "options": [
+            {
+              "id": "A",
+              "text": "at"
+            },
+            {
+              "id": "B",
+              "text": "on"
+            },
+            {
+              "id": "C",
+              "text": "between"
+            }
+          ],
+          "correct_answer": "at",
+          "explanation": "Usamos at para un punto de referencia.",
+          "mastery_tag": "a1-u8-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The station is ___ the museum and the bank.",
+          "options": [
+            {
+              "id": "A",
+              "text": "between"
+            },
+            {
+              "id": "B",
+              "text": "opposite"
+            },
+            {
+              "id": "C",
+              "text": "under"
+            }
+          ],
+          "correct_answer": "between",
+          "explanation": "Between indica entre dos lugares.",
+          "mastery_tag": "a1-u8-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I go to work ___ bus.",
+          "options": [
+            {
+              "id": "A",
+              "text": "by"
+            },
+            {
+              "id": "B",
+              "text": "on"
+            },
+            {
+              "id": "C",
+              "text": "with"
+            }
+          ],
+          "correct_answer": "by",
+          "explanation": "El transporte se expresa con by bus.",
+          "mastery_tag": "a1-u8-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She goes to school ___ foot.",
+          "options": [
+            {
+              "id": "A",
+              "text": "on"
+            },
+            {
+              "id": "B",
+              "text": "by"
+            },
+            {
+              "id": "C",
+              "text": "in"
+            }
+          ],
+          "correct_answer": "on",
+          "explanation": "La expresión es on foot.",
+          "mastery_tag": "a1-u8-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ the second street on the right.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Take"
+            },
+            {
+              "id": "B",
+              "text": "Takes"
+            },
+            {
+              "id": "C",
+              "text": "Taking"
+            }
+          ],
+          "correct_answer": "Take",
+          "explanation": "Imperativo: verbo base.",
+          "mastery_tag": "a1-u8-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Don't ___ here. It's dangerous.",
+          "options": [
+            {
+              "id": "A",
+              "text": "cross"
+            },
+            {
+              "id": "B",
+              "text": "crosses"
+            },
+            {
+              "id": "C",
+              "text": "crossing"
+            }
+          ],
+          "correct_answer": "cross",
+          "explanation": "Don't + verbo base.",
+          "mastery_tag": "a1-u8-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "How ___ is the station?",
+          "options": [
+            {
+              "id": "A",
+              "text": "far"
+            },
+            {
+              "id": "B",
+              "text": "many"
+            },
+            {
+              "id": "C",
+              "text": "much"
+            }
+          ],
+          "correct_answer": "far",
+          "explanation": "La pregunta es How far...?",
+          "mastery_tag": "a1-u8-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "You can ___ the number 10 bus.",
+          "options": [
+            {
+              "id": "A",
+              "text": "take"
+            },
+            {
+              "id": "B",
+              "text": "takes"
+            },
+            {
+              "id": "C",
+              "text": "taking"
+            }
+          ],
+          "correct_answer": "take",
+          "explanation": "Después de can va el verbo base.",
+          "mastery_tag": "a1-u8-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The bus stop is ___ the supermarket.",
+          "options": [
+            {
+              "id": "A",
+              "text": "opposite"
+            },
+            {
+              "id": "B",
+              "text": "between"
+            },
+            {
+              "id": "C",
+              "text": "under"
+            }
+          ],
+          "correct_answer": "opposite",
+          "explanation": "Opposite significa enfrente.",
+          "mastery_tag": "a1-u8-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Walk ___ the street until the park.",
+          "options": [
+            {
+              "id": "A",
+              "text": "along"
+            },
+            {
+              "id": "B",
+              "text": "between"
+            },
+            {
+              "id": "C",
+              "text": "above"
+            }
+          ],
+          "correct_answer": "along",
+          "explanation": "Walk along the street.",
+          "mastery_tag": "a1-u8-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The train leaves ___ 8:15.",
+          "options": [
+            {
+              "id": "A",
+              "text": "at"
+            },
+            {
+              "id": "B",
+              "text": "on"
+            },
+            {
+              "id": "C",
+              "text": "in"
+            }
+          ],
+          "correct_answer": "at",
+          "explanation": "At se usa con horas.",
+          "mastery_tag": "a1-u8-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ is the nearest bus stop?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Where"
+            },
+            {
+              "id": "B",
+              "text": "When"
+            },
+            {
+              "id": "C",
+              "text": "Who"
+            }
+          ],
+          "correct_answer": "Where",
+          "explanation": "Where pregunta por lugar.",
+          "mastery_tag": "a1-u8-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Turn right, then ___ straight ahead.",
+          "options": [
+            {
+              "id": "A",
+              "text": "go"
+            },
+            {
+              "id": "B",
+              "text": "goes"
+            },
+            {
+              "id": "C",
+              "text": "going"
+            }
+          ],
+          "correct_answer": "go",
+          "explanation": "Imperativo con verbo base.",
+          "mastery_tag": "a1-u8-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Choose the correct instruction.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cross the road carefully."
+            },
+            {
+              "id": "B",
+              "text": "Crosses the road carefully."
+            },
+            {
+              "id": "C",
+              "text": "Crossing the road carefully."
+            }
+          ],
+          "correct_answer": "Cross the road carefully.",
+          "explanation": "El imperativo usa el verbo base.",
+          "mastery_tag": "a1-u8-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "bus stop",
+          "options": [
+            {
+              "id": "A",
+              "text": "parada de autobús"
+            },
+            {
+              "id": "B",
+              "text": "estación de tren"
+            },
+            {
+              "id": "C",
+              "text": "aeropuerto"
+            }
+          ],
+          "correct_answer": "parada de autobús",
+          "explanation": "bus stop significa «parada de autobús».",
+          "mastery_tag": "a1-u8-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "train station",
+          "options": [
+            {
+              "id": "A",
+              "text": "estación de tren"
+            },
+            {
+              "id": "B",
+              "text": "parada de taxi"
+            },
+            {
+              "id": "C",
+              "text": "puerto"
+            }
+          ],
+          "correct_answer": "estación de tren",
+          "explanation": "train station significa «estación de tren».",
+          "mastery_tag": "a1-u8-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "traffic lights",
+          "options": [
+            {
+              "id": "A",
+              "text": "semáforos"
+            },
+            {
+              "id": "B",
+              "text": "paso de peatones"
+            },
+            {
+              "id": "C",
+              "text": "rotonda"
+            }
+          ],
+          "correct_answer": "semáforos",
+          "explanation": "traffic lights significa «semáforos».",
+          "mastery_tag": "a1-u8-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "crossroads",
+          "options": [
+            {
+              "id": "A",
+              "text": "cruce"
+            },
+            {
+              "id": "B",
+              "text": "acera"
+            },
+            {
+              "id": "C",
+              "text": "puente"
+            }
+          ],
+          "correct_answer": "cruce",
+          "explanation": "crossroads significa «cruce».",
+          "mastery_tag": "a1-u8-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "bridge",
+          "options": [
+            {
+              "id": "A",
+              "text": "puente"
+            },
+            {
+              "id": "B",
+              "text": "túnel"
+            },
+            {
+              "id": "C",
+              "text": "calle"
+            }
+          ],
+          "correct_answer": "puente",
+          "explanation": "bridge significa «puente».",
+          "mastery_tag": "a1-u8-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "ticket",
+          "options": [
+            {
+              "id": "A",
+              "text": "billete"
+            },
+            {
+              "id": "B",
+              "text": "maleta"
+            },
+            {
+              "id": "C",
+              "text": "mapa"
+            }
+          ],
+          "correct_answer": "billete",
+          "explanation": "ticket significa «billete».",
+          "mastery_tag": "a1-u8-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "platform",
+          "options": [
+            {
+              "id": "A",
+              "text": "andén"
+            },
+            {
+              "id": "B",
+              "text": "asiento"
+            },
+            {
+              "id": "C",
+              "text": "vagón"
+            }
+          ],
+          "correct_answer": "andén",
+          "explanation": "platform significa «andén».",
+          "mastery_tag": "a1-u8-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "underground",
+          "options": [
+            {
+              "id": "A",
+              "text": "metro"
+            },
+            {
+              "id": "B",
+              "text": "autobús"
+            },
+            {
+              "id": "C",
+              "text": "bicicleta"
+            }
+          ],
+          "correct_answer": "metro",
+          "explanation": "underground significa «metro».",
+          "mastery_tag": "a1-u8-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "on foot",
+          "options": [
+            {
+              "id": "A",
+              "text": "a pie"
+            },
+            {
+              "id": "B",
+              "text": "en coche"
+            },
+            {
+              "id": "C",
+              "text": "en tren"
+            }
+          ],
+          "correct_answer": "a pie",
+          "explanation": "on foot significa «a pie».",
+          "mastery_tag": "a1-u8-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "turn left",
+          "options": [
+            {
+              "id": "A",
+              "text": "girar a la izquierda"
+            },
+            {
+              "id": "B",
+              "text": "girar a la derecha"
+            },
+            {
+              "id": "C",
+              "text": "seguir recto"
+            }
+          ],
+          "correct_answer": "girar a la izquierda",
+          "explanation": "turn left significa «girar a la izquierda».",
+          "mastery_tag": "a1-u8-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "turn right",
+          "options": [
+            {
+              "id": "A",
+              "text": "girar a la derecha"
+            },
+            {
+              "id": "B",
+              "text": "girar a la izquierda"
+            },
+            {
+              "id": "C",
+              "text": "parar"
+            }
+          ],
+          "correct_answer": "girar a la derecha",
+          "explanation": "turn right significa «girar a la derecha».",
+          "mastery_tag": "a1-u8-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "go straight on",
+          "options": [
+            {
+              "id": "A",
+              "text": "seguir recto"
+            },
+            {
+              "id": "B",
+              "text": "dar la vuelta"
+            },
+            {
+              "id": "C",
+              "text": "cruzar"
+            }
+          ],
+          "correct_answer": "seguir recto",
+          "explanation": "go straight on significa «seguir recto».",
+          "mastery_tag": "a1-u8-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "near",
+          "options": [
+            {
+              "id": "A",
+              "text": "cerca"
+            },
+            {
+              "id": "B",
+              "text": "lejos"
+            },
+            {
+              "id": "C",
+              "text": "detrás"
+            }
+          ],
+          "correct_answer": "cerca",
+          "explanation": "near significa «cerca».",
+          "mastery_tag": "a1-u8-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "map",
+          "options": [
+            {
+              "id": "A",
+              "text": "mapa"
+            },
+            {
+              "id": "B",
+              "text": "billete"
+            },
+            {
+              "id": "C",
+              "text": "horario"
+            }
+          ],
+          "correct_answer": "mapa",
+          "explanation": "map significa «mapa».",
+          "mastery_tag": "a1-u8-v14"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The station"
+            },
+            {
+              "id": "B",
+              "text": "The museum"
+            },
+            {
+              "id": "C",
+              "text": "The bank"
+            }
+          ],
+          "correct_answer": "The station",
+          "explanation": "Quiere ir a la estación.",
+          "mastery_tag": "a1-u8-l01",
+          "transcript": "TOURIST: Excuse me, how do I get to the station?\\nLOCAL: Go straight on and turn left at the bank.\\nTOURIST: Is it far?\\nLOCAL: No, it's about five minutes."
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The station"
+            },
+            {
+              "id": "B",
+              "text": "The museum"
+            },
+            {
+              "id": "C",
+              "text": "The bank"
+            }
+          ],
+          "correct_answer": "The station",
+          "explanation": "Quiere ir a la estación.",
+          "mastery_tag": "a1-u8-l02",
+          "transcript": "TOURIST: Excuse me, how do I get to the station?\\nLOCAL: Go straight on and turn left at the bank.\\nTOURIST: Is it far?\\nLOCAL: No, it's about five minutes."
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The station"
+            },
+            {
+              "id": "B",
+              "text": "The museum"
+            },
+            {
+              "id": "C",
+              "text": "The bank"
+            }
+          ],
+          "correct_answer": "The station",
+          "explanation": "Quiere ir a la estación.",
+          "mastery_tag": "a1-u8-l03",
+          "transcript": "TOURIST: Excuse me, how do I get to the station?\\nLOCAL: Go straight on and turn left at the bank.\\nTOURIST: Is it far?\\nLOCAL: No, it's about five minutes."
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "By underground"
+            },
+            {
+              "id": "B",
+              "text": "By bus"
+            },
+            {
+              "id": "C",
+              "text": "On foot"
+            }
+          ],
+          "correct_answer": "By underground",
+          "explanation": "Va en metro.",
+          "mastery_tag": "a1-u8-l04",
+          "transcript": "LUCY: How do you go to work, Peter?\\nPETER: I take the underground.\\nLUCY: How long does it take?\\nPETER: About twenty minutes."
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "By underground"
+            },
+            {
+              "id": "B",
+              "text": "By bus"
+            },
+            {
+              "id": "C",
+              "text": "On foot"
+            }
+          ],
+          "correct_answer": "By underground",
+          "explanation": "Va en metro.",
+          "mastery_tag": "a1-u8-l05",
+          "transcript": "LUCY: How do you go to work, Peter?\\nPETER: I take the underground.\\nLUCY: How long does it take?\\nPETER: About twenty minutes."
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "By underground"
+            },
+            {
+              "id": "B",
+              "text": "By bus"
+            },
+            {
+              "id": "C",
+              "text": "On foot"
+            }
+          ],
+          "correct_answer": "By underground",
+          "explanation": "Va en metro.",
+          "mastery_tag": "a1-u8-l06",
+          "transcript": "LUCY: How do you go to work, Peter?\\nPETER: I take the underground.\\nLUCY: How long does it take?\\nPETER: About twenty minutes."
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Opposite the supermarket"
+            },
+            {
+              "id": "B",
+              "text": "Behind the bank"
+            },
+            {
+              "id": "C",
+              "text": "Next to the station"
+            }
+          ],
+          "correct_answer": "Opposite the supermarket",
+          "explanation": "Está enfrente del supermercado.",
+          "mastery_tag": "a1-u8-l07",
+          "transcript": "MAN: Is there a bus stop near here?\\nWOMAN: Yes, it's opposite the supermarket.\\nMAN: Thank you.\\nWOMAN: You're welcome."
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Opposite the supermarket"
+            },
+            {
+              "id": "B",
+              "text": "Behind the bank"
+            },
+            {
+              "id": "C",
+              "text": "Next to the station"
+            }
+          ],
+          "correct_answer": "Opposite the supermarket",
+          "explanation": "Está enfrente del supermercado.",
+          "mastery_tag": "a1-u8-l08",
+          "transcript": "MAN: Is there a bus stop near here?\\nWOMAN: Yes, it's opposite the supermarket.\\nMAN: Thank you.\\nWOMAN: You're welcome."
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Opposite the supermarket"
+            },
+            {
+              "id": "B",
+              "text": "Behind the bank"
+            },
+            {
+              "id": "C",
+              "text": "Next to the station"
+            }
+          ],
+          "correct_answer": "Opposite the supermarket",
+          "explanation": "Está enfrente del supermercado.",
+          "mastery_tag": "a1-u8-l09",
+          "transcript": "MAN: Is there a bus stop near here?\\nWOMAN: Yes, it's opposite the supermarket.\\nMAN: Thank you.\\nWOMAN: You're welcome."
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "10:20"
+            },
+            {
+              "id": "B",
+              "text": "10:30"
+            },
+            {
+              "id": "C",
+              "text": "12:00"
+            }
+          ],
+          "correct_answer": "10:20",
+          "explanation": "El tren sale a las diez y veinte.",
+          "mastery_tag": "a1-u8-l10",
+          "transcript": "ANNA: What time is the next train to Oxford?\\nCLERK: At 10:20, from platform three.\\nANNA: One ticket, please.\\nCLERK: That's twelve pounds."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "10:20"
+            },
+            {
+              "id": "B",
+              "text": "10:30"
+            },
+            {
+              "id": "C",
+              "text": "12:00"
+            }
+          ],
+          "correct_answer": "10:20",
+          "explanation": "El tren sale a las diez y veinte.",
+          "mastery_tag": "a1-u8-l11",
+          "transcript": "ANNA: What time is the next train to Oxford?\\nCLERK: At 10:20, from platform three.\\nANNA: One ticket, please.\\nCLERK: That's twelve pounds."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "10:20"
+            },
+            {
+              "id": "B",
+              "text": "10:30"
+            },
+            {
+              "id": "C",
+              "text": "12:00"
+            }
+          ],
+          "correct_answer": "10:20",
+          "explanation": "El tren sale a las diez y veinte.",
+          "mastery_tag": "a1-u8-l12",
+          "transcript": "ANNA: What time is the next train to Oxford?\\nCLERK: At 10:20, from platform three.\\nANNA: One ticket, please.\\nCLERK: That's twelve pounds."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The bridge"
+            },
+            {
+              "id": "B",
+              "text": "The road at the lights"
+            },
+            {
+              "id": "C",
+              "text": "The station"
+            }
+          ],
+          "correct_answer": "The bridge",
+          "explanation": "Deben cruzar el puente.",
+          "mastery_tag": "a1-u8-l13",
+          "transcript": "JACK: Shall we walk to the museum?\\nMIA: Yes. Is it far?\\nJACK: No, go along this street and cross the bridge.\\nMIA: Great. Let's go!"
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The bridge"
+            },
+            {
+              "id": "B",
+              "text": "The road at the lights"
+            },
+            {
+              "id": "C",
+              "text": "The station"
+            }
+          ],
+          "correct_answer": "The bridge",
+          "explanation": "Deben cruzar el puente.",
+          "mastery_tag": "a1-u8-l14",
+          "transcript": "JACK: Shall we walk to the museum?\\nMIA: Yes. Is it far?\\nJACK: No, go along this street and cross the bridge.\\nMIA: Great. Let's go!"
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The bridge"
+            },
+            {
+              "id": "B",
+              "text": "The road at the lights"
+            },
+            {
+              "id": "C",
+              "text": "The station"
+            }
+          ],
+          "correct_answer": "The bridge",
+          "explanation": "Deben cruzar el puente.",
+          "mastery_tag": "a1-u8-l15",
+          "transcript": "JACK: Shall we walk to the museum?\\nMIA: Yes. Is it far?\\nJACK: No, go along this street and cross the bridge.\\nMIA: Great. Let's go!"
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On foot"
+            },
+            {
+              "id": "B",
+              "text": "By bus"
+            },
+            {
+              "id": "C",
+              "text": "By train"
+            }
+          ],
+          "correct_answer": "On foot",
+          "explanation": "Va andando.",
+          "mastery_tag": "a1-u8-r01",
+          "main_text": "MY JOURNEY TO SCHOOL\\nI live near my school, so I usually walk. It takes about ten minutes. My friend Ben lives far away and travels by bus. He gets on the bus at half past seven and arrives at school at eight."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On foot"
+            },
+            {
+              "id": "B",
+              "text": "By bus"
+            },
+            {
+              "id": "C",
+              "text": "By train"
+            }
+          ],
+          "correct_answer": "On foot",
+          "explanation": "Va andando.",
+          "mastery_tag": "a1-u8-r02",
+          "main_text": "MY JOURNEY TO SCHOOL\\nI live near my school, so I usually walk. It takes about ten minutes. My friend Ben lives far away and travels by bus. He gets on the bus at half past seven and arrives at school at eight."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 1.",
+          "options": [
+            {
+              "id": "A",
+              "text": "On foot"
+            },
+            {
+              "id": "B",
+              "text": "By bus"
+            },
+            {
+              "id": "C",
+              "text": "By train"
+            }
+          ],
+          "correct_answer": "On foot",
+          "explanation": "Va andando.",
+          "mastery_tag": "a1-u8-r03",
+          "main_text": "MY JOURNEY TO SCHOOL\\nI live near my school, so I usually walk. It takes about ten minutes. My friend Ben lives far away and travels by bus. He gets on the bus at half past seven and arrives at school at eight."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At the traffic lights"
+            },
+            {
+              "id": "B",
+              "text": "At the library"
+            },
+            {
+              "id": "C",
+              "text": "At the museum"
+            }
+          ],
+          "correct_answer": "At the traffic lights",
+          "explanation": "Hay que girar en los semáforos.",
+          "mastery_tag": "a1-u8-r04",
+          "main_text": "A VISIT TO THE CITY\\nFirst, take the number 5 bus to the town centre. Get off at the library. Walk along King Street and turn right at the traffic lights. The museum is opposite the park. You can't miss it!"
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At the traffic lights"
+            },
+            {
+              "id": "B",
+              "text": "At the library"
+            },
+            {
+              "id": "C",
+              "text": "At the museum"
+            }
+          ],
+          "correct_answer": "At the traffic lights",
+          "explanation": "Hay que girar en los semáforos.",
+          "mastery_tag": "a1-u8-r05",
+          "main_text": "A VISIT TO THE CITY\\nFirst, take the number 5 bus to the town centre. Get off at the library. Walk along King Street and turn right at the traffic lights. The museum is opposite the park. You can't miss it!"
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 2.",
+          "options": [
+            {
+              "id": "A",
+              "text": "At the traffic lights"
+            },
+            {
+              "id": "B",
+              "text": "At the library"
+            },
+            {
+              "id": "C",
+              "text": "At the museum"
+            }
+          ],
+          "correct_answer": "At the traffic lights",
+          "explanation": "Hay que girar en los semáforos.",
+          "mastery_tag": "a1-u8-r06",
+          "main_text": "A VISIT TO THE CITY\\nFirst, take the number 5 bus to the town centre. Get off at the library. Walk along King Street and turn right at the traffic lights. The museum is opposite the park. You can't miss it!"
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Platform two"
+            },
+            {
+              "id": "B",
+              "text": "Platform one"
+            },
+            {
+              "id": "C",
+              "text": "Platform three"
+            }
+          ],
+          "correct_answer": "Platform two",
+          "explanation": "Sale del andén dos.",
+          "mastery_tag": "a1-u8-r07",
+          "main_text": "AT THE TRAIN STATION\\nThe train to Bristol leaves at 9:45 from platform two. Passengers should arrive ten minutes before departure. You can buy tickets at the ticket office or online. There is a café next to platform one."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Platform two"
+            },
+            {
+              "id": "B",
+              "text": "Platform one"
+            },
+            {
+              "id": "C",
+              "text": "Platform three"
+            }
+          ],
+          "correct_answer": "Platform two",
+          "explanation": "Sale del andén dos.",
+          "mastery_tag": "a1-u8-r08",
+          "main_text": "AT THE TRAIN STATION\\nThe train to Bristol leaves at 9:45 from platform two. Passengers should arrive ten minutes before departure. You can buy tickets at the ticket office or online. There is a café next to platform one."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 3.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Platform two"
+            },
+            {
+              "id": "B",
+              "text": "Platform one"
+            },
+            {
+              "id": "C",
+              "text": "Platform three"
+            }
+          ],
+          "correct_answer": "Platform two",
+          "explanation": "Sale del andén dos.",
+          "mastery_tag": "a1-u8-r09",
+          "main_text": "AT THE TRAIN STATION\\nThe train to Bristol leaves at 9:45 from platform two. Passengers should arrive ten minutes before departure. You can buy tickets at the ticket office or online. There is a café next to platform one."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A helmet"
+            },
+            {
+              "id": "B",
+              "text": "A scarf"
+            },
+            {
+              "id": "C",
+              "text": "A uniform"
+            }
+          ],
+          "correct_answer": "A helmet",
+          "explanation": "Lleva casco.",
+          "mastery_tag": "a1-u8-r10",
+          "main_text": "CYCLING IN TOWN\\nCycling is a good way to travel around my town. There are cycle lanes on the main roads. I wear a helmet and use lights when it is dark. I never ride on the pavement because it is for people walking."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A helmet"
+            },
+            {
+              "id": "B",
+              "text": "A scarf"
+            },
+            {
+              "id": "C",
+              "text": "A uniform"
+            }
+          ],
+          "correct_answer": "A helmet",
+          "explanation": "Lleva casco.",
+          "mastery_tag": "a1-u8-r11",
+          "main_text": "CYCLING IN TOWN\\nCycling is a good way to travel around my town. There are cycle lanes on the main roads. I wear a helmet and use lights when it is dark. I never ride on the pavement because it is for people walking."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 4.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A helmet"
+            },
+            {
+              "id": "B",
+              "text": "A scarf"
+            },
+            {
+              "id": "C",
+              "text": "A uniform"
+            }
+          ],
+          "correct_answer": "A helmet",
+          "explanation": "Lleva casco.",
+          "mastery_tag": "a1-u8-r12",
+          "main_text": "CYCLING IN TOWN\\nCycling is a good way to travel around my town. There are cycle lanes on the main roads. I wear a helmet and use lights when it is dark. I never ride on the pavement because it is for people walking."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "By train"
+            },
+            {
+              "id": "B",
+              "text": "By car"
+            },
+            {
+              "id": "C",
+              "text": "By bus"
+            }
+          ],
+          "correct_answer": "By train",
+          "explanation": "Viajan en tren.",
+          "mastery_tag": "a1-u8-r13",
+          "main_text": "A DAY TRIP\\nOn Sunday, we are going to the seaside by train. The journey takes one hour. We are meeting at the station at nine o'clock. Mum is buying the tickets today. We want to walk along the beach and visit the small aquarium."
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "By train"
+            },
+            {
+              "id": "B",
+              "text": "By car"
+            },
+            {
+              "id": "C",
+              "text": "By bus"
+            }
+          ],
+          "correct_answer": "By train",
+          "explanation": "Viajan en tren.",
+          "mastery_tag": "a1-u8-r14",
+          "main_text": "A DAY TRIP\\nOn Sunday, we are going to the seaside by train. The journey takes one hour. We are meeting at the station at nine o'clock. Mum is buying the tickets today. We want to walk along the beach and visit the small aquarium."
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 5.",
+          "options": [
+            {
+              "id": "A",
+              "text": "By train"
+            },
+            {
+              "id": "B",
+              "text": "By car"
+            },
+            {
+              "id": "C",
+              "text": "By bus"
+            }
+          ],
+          "correct_answer": "By train",
+          "explanation": "Viajan en tren.",
+          "mastery_tag": "a1-u8-r15",
+          "main_text": "A DAY TRIP\\nOn Sunday, we are going to the seaside by train. The journey takes one hour. We are meeting at the station at nine o'clock. Mum is buying the tickets today. We want to walk along the beach and visit the small aquarium."
+        }
+      ]
+    }
+  ]
+}
