@@ -160,7 +160,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit1Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 2 && <section className="lesson-block" style={{marginTop:32}}>
@@ -173,7 +173,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit2Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 3 && <section className="lesson-block" style={{marginTop:32}}>
@@ -186,7 +186,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit3Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 4 && <section className="lesson-block" style={{marginTop:32}}>
@@ -199,7 +199,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit4Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 5 && <section className="lesson-block" style={{marginTop:32}}>
@@ -212,7 +212,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit5Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 6 && <section className="lesson-block" style={{marginTop:32}}>
@@ -225,7 +225,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit6Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 7 && <section className="lesson-block" style={{marginTop:32}}>
@@ -238,7 +238,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit7Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 8 && <section className="lesson-block" style={{marginTop:32}}>
@@ -251,7 +251,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit8Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 9 && <section className="lesson-block" style={{marginTop:32}}>
@@ -264,7 +264,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit9Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 10 && <section className="lesson-block" style={{marginTop:32}}>
@@ -277,7 +277,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit10Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 11 && <section className="lesson-block" style={{marginTop:32}}>
@@ -290,7 +290,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit11Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard"/>
+        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
 
@@ -301,7 +301,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["GRAMMAR",a2Unit12Exercises.grammar],["VOCABULARY",a2Unit12Exercises.vocabulary],
         ["LISTENING",a2Unit12Exercises.listening],["READING",a2Unit12Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
-        <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
 
@@ -312,7 +312,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["GRAMMAR",a2Unit13Exercises.grammar],["VOCABULARY",a2Unit13Exercises.vocabulary],
         ["LISTENING",a2Unit13Exercises.listening],["READING",a2Unit13Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
-        <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
 
@@ -323,92 +323,92 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["GRAMMAR",a2Unit14Exercises.grammar],["VOCABULARY",a2Unit14Exercises.vocabulary],
         ["LISTENING",a2Unit14Exercises.listening],["READING",a2Unit14Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
-        <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/>
+        <div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
 
     {number === 15 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 15 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo preguntar y entender precios, comparar ofertas, pagar en efectivo o con tarjeta y resolver problemas sencillos de pago. El listening utiliza voz sintética del navegador, no una grabación original.</p>
-      {([["GRAMMAR",a2Unit15Exercises.grammar],["VOCABULARY",a2Unit15Exercises.vocabulary],["LISTENING",a2Unit15Exercises.listening],["READING",a2Unit15Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit15Exercises.grammar],["VOCABULARY",a2Unit15Exercises.vocabulary],["LISTENING",a2Unit15Exercises.listening],["READING",a2Unit15Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
 
     {number === 16 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 16 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica el vocabulario de tiendas y servicios, cómo pedir ayuda, preguntar por horarios y citas, dar indicaciones y resolver necesidades cotidianas. El listening utiliza voz sintética del navegador, no una grabación original.</p>
-      {([["GRAMMAR",a2Unit16Exercises.grammar],["VOCABULARY",a2Unit16Exercises.vocabulary],["LISTENING",a2Unit16Exercises.listening],["READING",a2Unit16Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit16Exercises.grammar],["VOCABULARY",a2Unit16Exercises.vocabulary],["LISTENING",a2Unit16Exercises.listening],["READING",a2Unit16Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 17 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 17 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo explicar problemas con una compra, solicitar cambios y reembolsos, utilizar el pasado simple y comprender las políticas de devolución. El listening utiliza voz sintética del navegador, no una grabación original.</p>
-      {([["GRAMMAR",a2Unit17Exercises.grammar],["VOCABULARY",a2Unit17Exercises.vocabulary],["LISTENING",a2Unit17Exercises.listening],["READING",a2Unit17Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit17Exercises.grammar],["VOCABULARY",a2Unit17Exercises.vocabulary],["LISTENING",a2Unit17Exercises.listening],["READING",a2Unit17Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 18 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 18 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo hablar de una dieta equilibrada, identificar alimentos y nutrientes, utilizar cuantificadores y dar consejos para mantener hábitos saludables. El listening utiliza voz sintética del navegador, no una grabación original.</p>
-      {([["GRAMMAR",a2Unit18Exercises.grammar],["VOCABULARY",a2Unit18Exercises.vocabulary],["LISTENING",a2Unit18Exercises.listening],["READING",a2Unit18Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit18Exercises.grammar],["VOCABULARY",a2Unit18Exercises.vocabulary],["LISTENING",a2Unit18Exercises.listening],["READING",a2Unit18Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 19 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 19 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo comprar alimentos, preguntar por cantidades y precios, utilizar envases y medidas, y comprender conversaciones y textos en un mercado. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit19Exercises.grammar],["VOCABULARY",a2Unit19Exercises.vocabulary],["LISTENING",a2Unit19Exercises.listening],["READING",a2Unit19Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit19Exercises.grammar],["VOCABULARY",a2Unit19Exercises.vocabulary],["LISTENING",a2Unit19Exercises.listening],["READING",a2Unit19Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 20 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 20 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Consolida lo aprendido en situaciones reales: comprar alimentos, pedir en un restaurante, comparar productos, elegir ropa y resolver cambios o devoluciones. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit20Exercises.grammar],["VOCABULARY",a2Unit20Exercises.vocabulary],["LISTENING",a2Unit20Exercises.listening],["READING",a2Unit20Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit20Exercises.grammar],["VOCABULARY",a2Unit20Exercises.vocabulary],["LISTENING",a2Unit20Exercises.listening],["READING",a2Unit20Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
 
     {number === 21 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 21 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo orientarte por una ciudad, pedir indicaciones, utilizar autobuses y trenes, consultar horarios y explicar incidencias sencillas durante un viaje. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit21Exercises.grammar],["VOCABULARY",a2Unit21Exercises.vocabulary],["LISTENING",a2Unit21Exercises.listening],["READING",a2Unit21Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit21Exercises.grammar],["VOCABULARY",a2Unit21Exercises.vocabulary],["LISTENING",a2Unit21Exercises.listening],["READING",a2Unit21Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
 
     {number === 22 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 22 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo consultar horarios, comprar billetes, entender andenes y conexiones, hablar de planes de viaje y resolver retrasos. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit22Exercises.grammar],["VOCABULARY",a2Unit22Exercises.vocabulary],["LISTENING",a2Unit22Exercises.listening],["READING",a2Unit22Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit22Exercises.grammar],["VOCABULARY",a2Unit22Exercises.vocabulary],["LISTENING",a2Unit22Exercises.listening],["READING",a2Unit22Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 24 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 24 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo orientarte en estaciones y aeropuertos, seguir instrucciones, explicar incidencias de viaje y pedir ayuda con educación. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit24Exercises.grammar],["VOCABULARY",a2Unit24Exercises.vocabulary],["LISTENING",a2Unit24Exercises.listening],["READING",a2Unit24Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit24Exercises.grammar],["VOCABULARY",a2Unit24Exercises.vocabulary],["LISTENING",a2Unit24Exercises.listening],["READING",a2Unit24Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 23 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 23 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo organizar viajes, reservar alojamiento, facturar vuelos, comprender confirmaciones y modificar planes. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit23Exercises.grammar],["VOCABULARY",a2Unit23Exercises.vocabulary],["LISTENING",a2Unit23Exercises.listening],["READING",a2Unit23Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit23Exercises.grammar],["VOCABULARY",a2Unit23Exercises.vocabulary],["LISTENING",a2Unit23Exercises.listening],["READING",a2Unit23Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 25 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 25 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo registrarte en un hotel, pedir servicios, resolver problemas con la habitación y comprender normas y horarios. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit25Exercises.grammar],["VOCABULARY",a2Unit25Exercises.vocabulary],["LISTENING",a2Unit25Exercises.listening],["READING",a2Unit25Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit25Exercises.grammar],["VOCABULARY",a2Unit25Exercises.vocabulary],["LISTENING",a2Unit25Exercises.listening],["READING",a2Unit25Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 26 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 26 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo contar vacaciones y experiencias pasadas, describir destinos, actividades y recuerdos, y comprender conversaciones y relatos de viaje. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit26Exercises.grammar],["VOCABULARY",a2Unit26Exercises.vocabulary],["LISTENING",a2Unit26Exercises.listening],["READING",a2Unit26Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit26Exercises.grammar],["VOCABULARY",a2Unit26Exercises.vocabulary],["LISTENING",a2Unit26Exercises.listening],["READING",a2Unit26Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 27 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 27 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo explicar retrasos, cancelaciones, equipaje perdido y conexiones; pedir ayuda, comprender avisos y buscar soluciones. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit27Exercises.grammar],["VOCABULARY",a2Unit27Exercises.vocabulary],["LISTENING",a2Unit27Exercises.listening],["READING",a2Unit27Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit27Exercises.grammar],["VOCABULARY",a2Unit27Exercises.vocabulary],["LISTENING",a2Unit27Exercises.listening],["READING",a2Unit27Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 28 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 28 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo comparar ciudades, playas, islas y destinos rurales; hablar de precios, clima, transporte, ambiente y actividades para elegir el lugar ideal. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit28Exercises.grammar],["VOCABULARY",a2Unit28Exercises.vocabulary],["LISTENING",a2Unit28Exercises.listening],["READING",a2Unit28Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit28Exercises.grammar],["VOCABULARY",a2Unit28Exercises.vocabulary],["LISTENING",a2Unit28Exercises.listening],["READING",a2Unit28Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 29 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 29 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Practica cómo hablar del tiempo, consultar previsiones y tomar decisiones para un viaje según la lluvia, el viento, la niebla o las temperaturas. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit29Exercises.grammar],["VOCABULARY",a2Unit29Exercises.vocabulary],["LISTENING",a2Unit29Exercises.listening],["READING",a2Unit29Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit29Exercises.grammar],["VOCABULARY",a2Unit29Exercises.vocabulary],["LISTENING",a2Unit29Exercises.listening],["READING",a2Unit29Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     {number === 30 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 30 FINAL PROJECT DRAFT</div><h2>60 interactive exercises</h2>
       <p>Prepara un viaje por tu cuenta: compara opciones, reserva alojamiento y transporte, organiza un itinerario, pide información y resuelve imprevistos. El listening utiliza voz sintética del navegador, no grabaciones originales.</p>
-      {([["GRAMMAR",a2Unit30Exercises.grammar],["VOCABULARY",a2Unit30Exercises.vocabulary],["LISTENING",a2Unit30Exercises.listening],["READING",a2Unit30Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard"/></section>)}
+      {([["GRAMMAR",a2Unit30Exercises.grammar],["VOCABULARY",a2Unit30Exercises.vocabulary],["LISTENING",a2Unit30Exercises.listening],["READING",a2Unit30Exercises.reading]] as const).map(([heading,activities])=><section key={heading} style={{marginTop:28}}><div className="kicker">{heading} · 15 ACTIVITIES</div><ActivityContent activities={activities} mode="standard" level={level} unit={number}/></section>)}
     </section>}
     <div className="unit-next"><Link className="academy-button" href={`/academia/${level.toLowerCase()}`}>Volver al temario</Link></div>
   </main>;
@@ -427,5 +427,5 @@ export default async function AcademyUnitPage({ params }: { params: Promise<{ le
   const outcomes = Array.isArray(unit.content.learning_outcomes) ? unit.content.learning_outcomes as string[] : [];
   const blocks = Array.isArray(unit.content.blocks) ? unit.content.blocks as Block[] : [];
   const activityCount = blocks.reduce((sum, block) => sum + (block.content?.length ?? 0), 0);
-  return <main><section className="unit-hero"><Link href={`/academia/${level.toLowerCase()}`} className="back-link">← Volver a Inglés {level}</Link><div className="kicker">LINGUAFLY ACADEMY · {level} · UNIDAD {String(unitNumber).padStart(2,"0")}</div><h1>{unit.title}</h1><p>Una unidad práctica para avanzar en tu inglés, consolidar conocimientos y aplicar lo aprendido.</p><div className="academy-hero-meta"><span>{course.total_duration_minutes ?? "—"} min estimados</span><span>{blocks.length} bloques</span><span>{activityCount} actividades</span></div></section><section className="unit-learning">{outcomes.length>0&&<div className="outcomes-card"><div className="kicker">AL TERMINAR ESTA UNIDAD</div><h2>Lo que vas a aprender</h2><ul>{outcomes.map((x,i)=><li key={i}><span>✓</span>{x}</li>)}</ul></div>}<div className="lesson-heading"><div className="kicker">CONTENIDO DEL CURSO</div><h2>Tu recorrido de aprendizaje</h2><p>Explora cada bloque y trabaja las actividades a tu ritmo.</p></div><div className="lesson-blocks">{blocks.map((block,index)=><article className="lesson-block" key={block.block_id??index}><div className="lesson-block-head"><span className="lesson-block-number">BLOQUE {String(index+1).padStart(2,"0")}</span><span>{block.duration_minutes?block.duration_minutes+" min":(block.content?.length??0)+" actividades"}</span></div><h3>{block.title??`Bloque ${index+1}`}</h3><ActivityContent activities={block.content??[]} mode={["B1","B2"].includes(block.block_id??"")||/vocabulario|vocabulary/i.test(block.title??"")?"vocabulary":"standard"}/></article>)}</div><div className="unit-next"><Link className="academy-button" href={`/academia/${level.toLowerCase()}`}>Volver al temario</Link></div></section></main>;
+  return <main><section className="unit-hero"><Link href={`/academia/${level.toLowerCase()}`} className="back-link">← Volver a Inglés {level}</Link><div className="kicker">LINGUAFLY ACADEMY · {level} · UNIDAD {String(unitNumber).padStart(2,"0")}</div><h1>{unit.title}</h1><p>Una unidad práctica para avanzar en tu inglés, consolidar conocimientos y aplicar lo aprendido.</p><div className="academy-hero-meta"><span>{course.total_duration_minutes ?? "—"} min estimados</span><span>{blocks.length} bloques</span><span>{activityCount} actividades</span></div></section><section className="unit-learning">{outcomes.length>0&&<div className="outcomes-card"><div className="kicker">AL TERMINAR ESTA UNIDAD</div><h2>Lo que vas a aprender</h2><ul>{outcomes.map((x,i)=><li key={i}><span>✓</span>{x}</li>)}</ul></div>}<div className="lesson-heading"><div className="kicker">CONTENIDO DEL CURSO</div><h2>Tu recorrido de aprendizaje</h2><p>Explora cada bloque y trabaja las actividades a tu ritmo.</p></div><div className="lesson-blocks">{blocks.map((block,index)=><article className="lesson-block" key={block.block_id??index}><div className="lesson-block-head"><span className="lesson-block-number">BLOQUE {String(index+1).padStart(2,"0")}</span><span>{block.duration_minutes?block.duration_minutes+" min":(block.content?.length??0)+" actividades"}</span></div><h3>{block.title??`Bloque ${index+1}`}</h3><ActivityContent activities={block.content??[]} mode={["B1","B2"].includes(block.block_id??"")||/vocabulario|vocabulary/i.test(block.title??"")?"vocabulary":"standard"} level={level} unit={unitNumber}/></article>)}</div><div className="unit-next"><Link className="academy-button" href={`/academia/${level.toLowerCase()}`}>Volver al temario</Link></div></section></main>;
 }
