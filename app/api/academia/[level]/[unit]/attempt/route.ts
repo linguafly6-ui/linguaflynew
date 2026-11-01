@@ -1,155 +1,176 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "crypto";
 import { getStudent, hasCourseAccess } from "@/lib/student-auth";
-import { getAcademyUnit } from "@/lib/academy";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { a2Unit2Exercises } from "@/app/academia/[level]/[unit]/a2-unit-002-exercises";
 
 export const dynamic = "force-dynamic";
-type DBStatement = { bind(...values: (string|number)[]): DBStatement; run(): Promise<unknown>; first<T>(): Promise<T|null>; all<T>(): Promise<{results?:T[]}>; };
+
+type DBStatement = {
+  bind(...values: (string | number)[]): DBStatement;
+  run(): Promise<unknown>;
+  first<T>(): Promise<T | null>;
+};
 type DB = { prepare(sql: string): DBStatement };
-type Exercise = { interaction_id?: string; mastery_tag?: string; correct_answer?: string|string[]|boolean };
-const normalize = (value: string) => value.trim().toLocaleLowerCase().replace(/[.!?]+$/, "");
-function findExercise(content: Record<string, any>, interactionId: string): Exercise | undefined {
-  // Course JSON has used both block.content and nested content containers.
-  // Walk only plain JSON objects/arrays and match the exact interaction ID.
-  const pending: unknown[] = [content];
-  const visited = new Set<object>();
-  while (pending.length) {
-    const current = pending.pop();
-    if (!current || typeof current !== "object") continue;
-    if (visited.has(current as object)) continue;
-    visited.add(current as object);
-    if (Array.isArray(current)) {
-      for (const item of current) pending.push(item);
-      continue;
-    }
-    const item = current as Record<string, unknown>;
-    if (item.interaction_id === interactionId) {
-      if (typeof item.correct_answer === "string" || typeof item.correct_answer === "boolean" ||
-          (Array.isArray(item.correct_answer) && item.correct_answer.every(value => typeof value === "string"))) {
-        return item as Exercise;
-      }
-    }
-    for (const value of Object.values(item)) {
-      if (value && typeof value === "object") pending.push(value);
-    }
-  }
-  return undefined;
+type ExerciseRow = {
+  exercise_id: string;
+  exercise_type_id: string;
+  exercise_status: string;
+  unit_status: string;
+  section_status: string;
+  course_status: string;
+  course_id: string;
+  points: number;
+  registry_code: string;
+  grading_strategy: string;
+  supports_auto_grading: number;
+  answer_config_json: string;
+  correct_feedback: string | null;
+  incorrect_feedback: string | null;
+  content_json: string;
+};
+
+const normalize = (value: string) =>
+  value.trim().toLocaleLowerCase("en-GB").normalize("NFKC").replace(/[.!?]+$/u, "");
+
+async function getDatabase(): Promise<DB> {
+  const { env } = await getCloudflareContext({ async: true });
+  return (env as unknown as { COURSE_DB: DB }).COURSE_DB;
 }
-export async function POST(request: NextRequest, { params }: { params: Promise<{ level: string; unit: string }> }) {
+
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ level: string; unit: string }> }
+) {
   const { level: rawLevel, unit: rawUnit } = await params;
   const level = rawLevel.toUpperCase();
-  if (!/^(A1|A2|B1|B2|C1|C2)$/.test(level)) return NextResponse.json({ error: "Nivel no válido." }, { status: 400 });
+  if (!/^(A1|A2|B1|B2|C1|C2)$/.test(level)) {
+    return NextResponse.json({ error: "Nivel no válido." }, { status: 400 });
+  }
   const unitNumber = Number(rawUnit);
-  if (!Number.isInteger(unitNumber) || unitNumber < 1 || unitNumber > 100) return NextResponse.json({ error: "Unidad no válida." }, { status: 400 });
-
-  let payload: { interaction_id?: string; answer?: string };
-  try { payload = await request.json(); } catch { return NextResponse.json({ error: "Solicitud no válida." }, { status: 400 }); }
-  const interactionId = typeof payload.interaction_id === "string" ? payload.interaction_id.slice(0,160) : "";
-  const answer = typeof payload.answer === "string" ? payload.answer.trim().slice(0,2000) : "";
-  if (!interactionId || !answer) return NextResponse.json({ error: "Falta la respuesta." }, { status: 400 });
-
-  const unit = await getAcademyUnit(level, unitNumber);
-  if (!unit) return NextResponse.json({ error: "Unidad no encontrada." }, { status: 404 });
-  // A2 unit 2 is rendered from its authored TypeScript exercise bank,
-  // while getAcademyUnit returns only its lesson blueprint from D1.
-  // Resolve against the exact same bank used by the page.
-  let exercise: Exercise | undefined;
-  if (level === "A1" && unitNumber >= 1 && unitNumber <= 6) {
-    try {
-      const { env } = await getCloudflareContext({ async: true });
-      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
-      const rows = await db.prepare("SELECT o.option_key, o.content AS option_content, k.answer_config_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id JOIN exercise_options o ON o.exercise_id=e.id JOIN exercise_answer_keys k ON k.exercise_id=e.id WHERE e.id=? AND u.id=? AND e.status='published'").bind(interactionId, `a1-unit-${String(unitNumber).padStart(3, "0")}`).all<{option_key:string;option_content:string;answer_config_json:string}>();
-      const options = rows.results ?? [];
-      if (options.length) {
-        const config = JSON.parse(options[0].answer_config_json || "{}") as {correctOptionKeys?:string[]};
-        const correct = config.correctOptionKeys ?? [];
-        exercise = { interaction_id: interactionId, correct_answer: correct };
-      }
-    } catch (error) {
-      console.error("Unable to resolve relational A1 answer from D1:", error);
-    }
+  if (!Number.isInteger(unitNumber) || unitNumber < 1 || unitNumber > 100) {
+    return NextResponse.json({ error: "Unidad no válida." }, { status: 400 });
   }
-  if (level === "A2") {
-    try {
-      const { env } = await getCloudflareContext({ async: true });
-      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
-      const relational = await db.prepare(
-        "SELECT k.grading_strategy, k.answer_config_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id JOIN exercise_answer_keys k ON k.exercise_id=e.id WHERE e.id=? AND u.id=? AND e.status IN ('draft','review','approved') LIMIT 1"
-      ).bind(interactionId, `a2-unit-${String(unitNumber).padStart(3, "0")}`).first<{grading_strategy:string;answer_config_json:string}>();
-      if (relational) {
-        const config = JSON.parse(relational.answer_config_json || "{}") as {correctOptionKeys?:string[];acceptedAnswers?:string[]};
-        exercise = { interaction_id: interactionId, correct_answer: config.correctOptionKeys ?? config.acceptedAnswers ?? [] };
-      }
-    } catch (error) {
-      console.error("Unable to resolve relational A2 answer from D1:", error);
-    }
-    // Preserve the existing legacy answer sources for A2 units not yet authored relationally.
-    if (!exercise && unitNumber === 2) {
-      exercise = Object.values(a2Unit2Exercises).flat().find(item => item.interaction_id === interactionId);
-      const legacySets: Record<string, unknown> = {
-        a2ugrammar: unit.content.grammar_exercises,
-        a2uvocabulary: unit.content.vocabulary_exercises,
-        a2ureading: unit.content.reading?.questions,
-        a2ulistening: unit.content.listening?.questions,
-      };
-      const match = /^(a2u(?:grammar|vocabulary|reading|listening))_(\d{2})$/.exec(interactionId);
-      if (!exercise && match) {
-        const rows = legacySets[match[1]];
-        const item = Array.isArray(rows) ? rows[Number(match[2]) - 1] : undefined;
-        if (Array.isArray(item) && typeof item[1] === "string") exercise = { interaction_id: interactionId, correct_answer: item[1] };
-      }
-    }
-  }
-  // Other JSON-backed units resolve answers from their authoritative D1 row.
+
+  let payload: { interaction_id?: unknown; answer?: unknown };
   try {
-    if (!exercise) {
-    const { env } = await getCloudflareContext({ async: true });
-    const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
-    const row = await db.prepare(
-      "SELECT item.value AS exercise_json FROM learning_course_json_units unit, json_each(unit.content_json, '$.blocks') block, json_each(block.value, '$.content') item WHERE unit.level = ? AND unit.course_key = ? AND unit.unit_number = ? AND json_extract(item.value, '$.interaction_id') = ? LIMIT 1"
-    ).bind(level, `ingles-${level.toLowerCase()}`, unitNumber, interactionId).first<{ exercise_json: string }>();
-    if (row?.exercise_json) exercise = JSON.parse(row.exercise_json) as Exercise;
-    }
-  } catch (error) {
-    console.error("Unable to resolve academy exercise from D1:", error);
+    payload = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Solicitud no válida." }, { status: 400 });
   }
-  // Fallback supports legacy blueprint units and older content layouts.
-  exercise ??= findExercise(unit.content, interactionId);
-  if (!exercise || exercise.correct_answer === undefined) {
-    console.error("Academy exercise answer missing:", { level, unitNumber, interactionId });
-    return NextResponse.json({ error: "No encontramos la respuesta asociada a esta actividad. Recarga la unidad e inténtalo de nuevo." }, { status: 404 });
+  const interactionId = typeof payload.interaction_id === "string" ? payload.interaction_id.trim() : "";
+  const answer = typeof payload.answer === "string" ? payload.answer.trim().slice(0, 2000) : "";
+  if (!interactionId || interactionId.length > 160 || !answer) {
+    return NextResponse.json({ error: "Falta la respuesta o el identificador del ejercicio." }, { status: 400 });
   }
-  const expected = Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer];
-  const correct = expected.some(value => typeof value === "string" && normalize(answer) === normalize(value));
 
-  // Public preview units can be practised without an account. Persist spaced-repetition
-  // progress only when the visitor has an active student session and course enrolment.
-  try {
-    const student = await getStudent();
-    const courseKey = `ingles-${level.toLowerCase()}`;
-    if (student && await hasCourseAccess(student.learner_id, courseKey)) {
-      const { env } = await getCloudflareContext();
-      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
-      const now = new Date().toISOString().replace("T"," ").slice(0,19);
-      const id = randomUUID();
-      const masteryTag = (exercise.mastery_tag || `${unit.unit_id}:${interactionId}`).slice(0,160);
-      await db.prepare("INSERT INTO learner_activity_attempts (id,learner_id,course_key,unit_id,interaction_id,mastery_tag,answer_text,is_correct,attempted_at) VALUES (?,?,?,?,?,?,?,?,?)")
-        .bind(id,student.learner_id,courseKey,unit.unit_id,interactionId,masteryTag,answer,correct?1:0,now).run();
-      const existing = await db.prepare("SELECT failure_count,success_streak,interval_hours FROM learner_skill_reviews WHERE learner_id=? AND course_key=? AND mastery_tag=?")
-        .bind(student.learner_id,courseKey,masteryTag).first<{failure_count:number;success_streak:number;interval_hours:number}>();
-      const failures = correct ? (existing?.failure_count ?? 0) : (existing?.failure_count ?? 0) + 1;
-      const streak = correct ? (existing?.success_streak ?? 0) + 1 : 0;
-      const previousInterval = existing?.interval_hours ?? 24;
-      const interval = correct ? Math.min(24*30, Math.max(24, previousInterval * (streak >= 2 ? 2 : 1.5))) : Math.max(2, [24,12,6,3][Math.min(failures-1,3)]);
-      const due = new Date(Date.now() + interval*3600000).toISOString().replace("T"," ").slice(0,19);
-      await db.prepare("INSERT INTO learner_skill_reviews (learner_id,course_key,mastery_tag,failure_count,success_streak,interval_hours,due_at,last_attempt_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?) ON CONFLICT(learner_id,course_key,mastery_tag) DO UPDATE SET failure_count=excluded.failure_count,success_streak=excluded.success_streak,interval_hours=excluded.interval_hours,due_at=excluded.due_at,last_attempt_at=excluded.last_attempt_at,updated_at=excluded.updated_at")
-        .bind(student.learner_id,courseKey,masteryTag,failures,streak,interval,due,now,now).run();
-    }
-  } catch (error) {
-    console.error("Unable to persist academy attempt:", error);
-    // Answer checking remains available even if optional progress tracking is unavailable.
+  const db = await getDatabase();
+  const exercise = await db.prepare(
+    "SELECT e.id AS exercise_id, e.exercise_type_id, e.status AS exercise_status, e.points, u.status AS unit_status, s.status AS section_status, c.status AS course_status, c.id AS course_id, r.code AS registry_code, r.grading_strategy, r.supports_auto_grading, k.answer_config_json, k.correct_feedback, k.incorrect_feedback, e.content_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id JOIN courses c ON c.id=u.course_id JOIN exercise_type_registry r ON r.code=e.exercise_type_id AND r.status='active' LEFT JOIN exercise_answer_keys k ON k.exercise_id=e.id WHERE e.id=? AND c.cefr_level=? AND u.unit_number=? LIMIT 1"
+  ).bind(interactionId, level, unitNumber).first<ExerciseRow>();
+
+  if (!exercise) {
+    return NextResponse.json({ error: "Ejercicio no encontrado en esta unidad." }, { status: 404 });
   }
-  return NextResponse.json({ correct });
+  if (!exercise.supports_auto_grading) {
+    return NextResponse.json({ error: "Este tipo de actividad requiere evaluación no automática." }, { status: 422 });
+  }
+  if (!exercise.answer_config_json) {
+    console.error("Relational answer key missing", { exerciseId: interactionId });
+    return NextResponse.json({ error: "El ejercicio no tiene una clave de corrección válida." }, { status: 422 });
+  }
+
+  let student: Awaited<ReturnType<typeof getStudent>> = null;
+  try {
+    student = await getStudent();
+  } catch {
+    student = null;
+  }
+  const courseKey = `ingles-${level.toLowerCase()}`;
+  const hasAccess = Boolean(student && await hasCourseAccess(student.learner_id, courseKey));
+  const fullyPublished = exercise.course_status === "published"
+    && exercise.unit_status === "published"
+    && exercise.section_status === "published"
+    && exercise.exercise_status === "published";
+  if (!fullyPublished && !hasAccess) {
+    return NextResponse.json({ error: "Este contenido todavía no está publicado." }, { status: 403 });
+  }
+
+  let config: Record<string, unknown>;
+  try {
+    config = JSON.parse(exercise.answer_config_json || "{}") as Record<string, unknown>;
+  } catch {
+    console.error("Malformed relational answer config", { exerciseId: interactionId });
+    return NextResponse.json({ error: "La clave de corrección no tiene un formato válido." }, { status: 422 });
+  }
+
+  let correct = false;
+  const strategy = exercise.grading_strategy;
+  if (strategy === "single_choice") {
+    const selected = await db.prepare(
+      "SELECT option_key FROM exercise_options WHERE exercise_id=? AND (option_key=? OR id=?) LIMIT 1"
+    ).bind(interactionId, answer, answer).first<{ option_key: string }>();
+    if (!selected) {
+      return NextResponse.json({ error: "La opción seleccionada no pertenece a este ejercicio." }, { status: 400 });
+    }
+    const correctKeys = Array.isArray(config.correctOptionKeys)
+      ? config.correctOptionKeys.filter((value): value is string => typeof value === "string")
+      : [];
+    if (!correctKeys.length) {
+      return NextResponse.json({ error: "La clave de selección no contiene opciones correctas." }, { status: 422 });
+    }
+    correct = correctKeys.includes(selected.option_key);
+  } else if (strategy === "accepted_answers" || strategy === "accepted_variants" || strategy === "normalized_text") {
+    const rawAccepted = config.acceptedAnswers ?? config.acceptedVariants ?? config.accepted_answers;
+    const accepted = Array.isArray(rawAccepted)
+      ? rawAccepted.filter((value): value is string => typeof value === "string")
+      : [];
+    if (!accepted.length) {
+      return NextResponse.json({ error: "La clave no contiene respuestas admitidas para este tipo de ejercicio." }, { status: 422 });
+    }
+    correct = accepted.some(value => normalize(value) === normalize(answer));
+  } else if (strategy === "boolean") {
+    const expected = config.correctAnswer ?? config.answer;
+    const submitted = answer.toLowerCase();
+    if (typeof expected !== "boolean") {
+      return NextResponse.json({ error: "La clave booleana no tiene un valor válido." }, { status: 422 });
+    }
+    correct = (submitted === "true" || submitted === "verdadero") === expected;
+  } else {
+    console.error("Unsupported automatic grading strategy", { exerciseId: interactionId, strategy });
+    return NextResponse.json({ error: "La estrategia de corrección todavía no está implementada." }, { status: 422 });
+  }
+
+  let authored: Record<string, unknown> = {};
+  try {
+    authored = JSON.parse(exercise.content_json || "{}") as Record<string, unknown>;
+  } catch {
+    authored = {};
+  }
+  const explanation = typeof authored.explanation_es === "string" ? authored.explanation_es : "";
+  const feedback = correct
+    ? (exercise.correct_feedback || "¡Correcto!")
+    : (exercise.incorrect_feedback || "No es correcto. Revisa la explicación e inténtalo de nuevo.");
+
+  if (student && hasAccess) {
+    try {
+      await db.prepare(
+        "INSERT INTO learning_attempts (id, learner_id, exercise_id, idempotency_key, response_json, is_correct, score, max_score, feedback_json, grading_version) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+      ).bind(
+        randomUUID(),
+        student.learner_id,
+        interactionId,
+        randomUUID(),
+        JSON.stringify({ answer }),
+        correct ? 1 : 0,
+        correct ? exercise.points : 0,
+        exercise.points,
+        JSON.stringify({ feedback, explanation }),
+        `registry:${exercise.registry_code}:${strategy}`
+      ).run();
+    } catch (error) {
+      console.error("Unable to persist relational learning attempt:", error);
+    }
+  }
+
+  return NextResponse.json({ correct, feedback, ...(explanation ? { explanation } : {}) });
 }
