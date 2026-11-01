@@ -6,7 +6,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { a2Unit2Exercises } from "@/app/academia/[level]/[unit]/a2-unit-002-exercises";
 
 export const dynamic = "force-dynamic";
-type DBStatement = { bind(...values: (string|number)[]): DBStatement; run(): Promise<unknown>; first<T>(): Promise<T|null>; };
+type DBStatement = { bind(...values: (string|number)[]): DBStatement; run(): Promise<unknown>; first<T>(): Promise<T|null>; all<T>(): Promise<{results?:T[]}>; };
 type DB = { prepare(sql: string): DBStatement };
 type Exercise = { interaction_id?: string; mastery_tag?: string; correct_answer?: string|string[]|boolean };
 const normalize = (value: string) => value.trim().toLocaleLowerCase().replace(/[.!?]+$/, "");
