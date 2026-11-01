@@ -383,7 +383,7 @@
             },
             {
               "id": "C",
-              "text": "Hola"
+              "text": "Buenas tardes"
             }
           ],
           "correct_answer": "Hola (informal)",
@@ -494,7 +494,7 @@
             },
             {
               "id": "B",
-              "text": "Hasta luego"
+              "text": "Hasta mañana"
             },
             {
               "id": "C",
@@ -699,8 +699,7 @@
         {
           "interaction_id": "l01",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Cómo se llama la estudiante?",
+          "prompt_es": "Escucha el diálogo. ¿Cómo se llama la estudiante?",
           "options": [
             {
               "id": "A",
@@ -723,8 +722,7 @@
         {
           "interaction_id": "l02",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿De dónde es Mia?",
+          "prompt_es": "Escucha el diálogo. ¿De dónde es Mia?",
           "options": [
             {
               "id": "A",
@@ -747,8 +745,7 @@
         {
           "interaction_id": "l03",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Dónde está Mia?",
+          "prompt_es": "Escucha el diálogo. ¿Dónde está Mia?",
           "options": [
             {
               "id": "A",
@@ -771,8 +768,7 @@
         {
           "interaction_id": "l04",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Qué expresión utiliza la recepcionista para saludar?",
+          "prompt_es": "Escucha el diálogo. ¿Qué expresión utiliza la recepcionista para saludar?",
           "options": [
             {
               "id": "A",
@@ -795,8 +791,7 @@
         {
           "interaction_id": "l05",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Qué significa «Nice to meet you»?",
+          "prompt_es": "Escucha el diálogo. ¿Qué significa «Nice to meet you»?",
           "options": [
             {
               "id": "A",
@@ -819,8 +814,7 @@
         {
           "interaction_id": "l06",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Cómo se llama el chico?",
+          "prompt_es": "Escucha el diálogo. ¿Cómo se llama el chico?",
           "options": [
             {
               "id": "A",
@@ -843,8 +837,7 @@
         {
           "interaction_id": "l07",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Cómo se llama la chica?",
+          "prompt_es": "Escucha el diálogo. ¿Cómo se llama la chica?",
           "options": [
             {
               "id": "A",
@@ -867,8 +860,7 @@
         {
           "interaction_id": "l08",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Es Sara de España?",
+          "prompt_es": "Escucha el diálogo. ¿Es Sara de España?",
           "options": [
             {
               "id": "A",
@@ -891,8 +883,7 @@
         {
           "interaction_id": "l09",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿De qué ciudad es Sara?",
+          "prompt_es": "Escucha el diálogo. ¿De qué ciudad es Sara?",
           "options": [
             {
               "id": "A",
@@ -915,8 +906,7 @@
         {
           "interaction_id": "l10",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Qué dice Jack al final?",
+          "prompt_es": "Escucha el diálogo. ¿Qué dice Jack al final?",
           "options": [
             {
               "id": "A",
@@ -939,8 +929,7 @@
         {
           "interaction_id": "l11",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Qué saludo utiliza el profesor?",
+          "prompt_es": "Escucha el diálogo. ¿Qué saludo utiliza el profesor?",
           "options": [
             {
               "id": "A",
@@ -963,8 +952,7 @@
         {
           "interaction_id": "l12",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Cómo se llama el profesor?",
+          "prompt_es": "Escucha el diálogo. ¿Cómo se llama el profesor?",
           "options": [
             {
               "id": "A",
@@ -987,8 +975,7 @@
         {
           "interaction_id": "l13",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Cómo se llama el alumno?",
+          "prompt_es": "Escucha el diálogo. ¿Cómo se llama el alumno?",
           "options": [
             {
               "id": "A",
@@ -1011,8 +998,7 @@
         {
           "interaction_id": "l14",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Es Leo nuevo?",
+          "prompt_es": "Escucha el diálogo. ¿Es Leo nuevo?",
           "options": [
             {
               "id": "A",
@@ -1035,8 +1021,7 @@
         {
           "interaction_id": "l15",
           "type": "multiple_choice",
-          "prompt_es": "Escucha el diálogo y responde.",
-          "question_en": "¿Qué dice Leo para mostrar agradecimiento?",
+          "prompt_es": "Escucha el diálogo. ¿Qué dice Leo para mostrar agradecimiento?",
           "options": [
             {
               "id": "A",
@@ -1066,8 +1051,7 @@
         {
           "interaction_id": "r01",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "What is her first name?",
+          "prompt_es": "Lee el texto. What is her first name?",
           "options": [
             {
               "id": "A",
@@ -1090,8 +1074,7 @@
         {
           "interaction_id": "r02",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "What is her surname?",
+          "prompt_es": "Lee el texto. What is her surname?",
           "options": [
             {
               "id": "A",
@@ -1114,8 +1097,7 @@
         {
           "interaction_id": "r03",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "Where is Emma from?",
+          "prompt_es": "Lee el texto. Where is Emma from?",
           "options": [
             {
               "id": "A",
@@ -1138,8 +1120,7 @@
         {
           "interaction_id": "r04",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "How old is Emma?",
+          "prompt_es": "Lee el texto. How old is Emma?",
           "options": [
             {
               "id": "A",
@@ -1162,8 +1143,7 @@
         {
           "interaction_id": "r05",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "Is Emma a new student?",
+          "prompt_es": "Lee el texto. Is Emma a new student?",
           "options": [
             {
               "id": "A",
@@ -1186,8 +1166,7 @@
         {
           "interaction_id": "r06",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "Who is the teacher?",
+          "prompt_es": "Lee el texto. Who is the teacher?",
           "options": [
             {
               "id": "A",
@@ -1210,8 +1189,7 @@
         {
           "interaction_id": "r07",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "What day is the class?",
+          "prompt_es": "Lee el texto. What day is the class?",
           "options": [
             {
               "id": "A",
@@ -1234,8 +1212,7 @@
         {
           "interaction_id": "r08",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "What time is the class?",
+          "prompt_es": "Lee el texto. What time is the class?",
           "options": [
             {
               "id": "A",
@@ -1258,8 +1235,7 @@
         {
           "interaction_id": "r09",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "Where is the class?",
+          "prompt_es": "Lee el texto. Where is the class?",
           "options": [
             {
               "id": "A",
@@ -1282,8 +1258,7 @@
         {
           "interaction_id": "r10",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "What must students bring?",
+          "prompt_es": "Lee el texto. What must students bring?",
           "options": [
             {
               "id": "A",
@@ -1306,8 +1281,7 @@
         {
           "interaction_id": "r11",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "Who writes the message?",
+          "prompt_es": "Lee el texto. Who writes the message?",
           "options": [
             {
               "id": "A",
@@ -1330,8 +1304,7 @@
         {
           "interaction_id": "r12",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "Where is Tom from?",
+          "prompt_es": "Lee el texto. Where is Tom from?",
           "options": [
             {
               "id": "A",
@@ -1354,8 +1327,7 @@
         {
           "interaction_id": "r13",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "Where is Tom now?",
+          "prompt_es": "Lee el texto. Where is Tom now?",
           "options": [
             {
               "id": "A",
@@ -1378,8 +1350,7 @@
         {
           "interaction_id": "r14",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "Is Tom a new student?",
+          "prompt_es": "Lee el texto. Is Tom a new student?",
           "options": [
             {
               "id": "A",
@@ -1402,8 +1373,7 @@
         {
           "interaction_id": "r15",
           "type": "multiple_choice",
-          "prompt_es": "Lee el texto y responde a la pregunta.",
-          "question_en": "When will Tom see Ana?",
+          "prompt_es": "Lee el texto. When will Tom see Ana?",
           "options": [
             {
               "id": "A",
