@@ -1,4 +1,5 @@
 import { Fragment, type ReactNode } from "react";
+import BlogImage from "../BlogImage";
 
 function inlineMarkdown(value: string): ReactNode[] {
   const pattern = /(\*\*[^*]+\*\*|\*[^*\n]+\*|`[^`]+`|!?\[[^\]]+\]\([^)]+\))/g;
@@ -7,7 +8,7 @@ function inlineMarkdown(value: string): ReactNode[] {
     if (part.startsWith("*") && part.endsWith("*")) return <em key={index}>{part.slice(1, -1)}</em>;
     if (part.startsWith("`") && part.endsWith("`")) return <code key={index}>{part.slice(1, -1)}</code>;
     const image = part.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
-    if (image) return <img key={index} src={image[2]} alt={image[1]} loading="lazy" />;
+    if (image) return <BlogImage key={index} className="article-inline-image" src={image[2]} alt={image[1]} title={image[1] || "Imagen del artículo"} category="articulo" />;
     const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (link) {
       const href = link[2].trim();

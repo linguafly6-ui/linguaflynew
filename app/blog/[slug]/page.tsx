@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticle } from "@/lib/blog";
 import BlogMarkdown from "./BlogMarkdown";
+import BlogImage, { normalizeCategory } from "../BlogImage";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ slug: string }> };
@@ -29,6 +30,7 @@ export default async function ArticlePage({ params }: Props) {
   const article = await getArticle(slug);
   if (!article) notFound();
 
+  const minutes = String(article.read_time ?? "").match(/\\d+/)?.[0] || String(Math.max(1, Math.ceil((article.content || "").split(/\\s+/).filter(Boolean).length / 200)));
   const publishedDate = article.created_at
     ? new Date(article.created_at).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })
     : null;
@@ -41,21 +43,17 @@ export default async function ArticlePage({ params }: Props) {
       </div>
 
       <header className="article-header">
-        <div className="article-category-pill">{(article.category || "Aprender inglés").replace(/-/g, " ")}</div>
+        <div className="article-category-pill">{normalizeCategory(article.category)}</div>
         <h1>{article.title}</h1>
         {article.excerpt && <p className="article-deck">{article.excerpt}</p>}
         <div className="article-byline">
           {article.author && <span>Por {article.author}</span>}
           {publishedDate && <time dateTime={article.created_at}>{publishedDate}</time>}
-          {article.read_time ? <span>{article.read_time} min de lectura</span> : null}
+          <span>{minutes} min de lectura</span>
         </div>
       </header>
 
-      {article.image && (
-        <figure className="article-cover">
-          <img src={article.image} alt={article.alt || article.title} fetchPriority="high" />
-        </figure>
-      )}
+      <BlogImage className="article-cover" src={article.image} alt={article.alt} category={article.category} title={article.title} />
 
       <div className="article-reading-layout">
         <BlogMarkdown content={article.content || ""} />
