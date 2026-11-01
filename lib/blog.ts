@@ -13,7 +13,7 @@ export type Article = {
   updated_at: string | null;
   views: number | null;
   author: string | null;
-  read_time: number | null;
+  read_time: number | string | null;
   featured: number | null;
   image: string | null;
   alt: string | null;
