@@ -10,9 +10,29 @@ type DB = { prepare(sql: string): DBStatement };
 type Exercise = { interaction_id?: string; mastery_tag?: string; correct_answer?: string|string[]|boolean };
 const normalize = (value: string) => value.trim().toLocaleLowerCase().replace(/[.!?]+$/, "");
 function findExercise(content: Record<string, any>, interactionId: string): Exercise | undefined {
-  for (const block of Array.isArray(content.blocks) ? content.blocks : []) {
-    const found = (Array.isArray(block.content) ? block.content : []).find((item: Exercise) => item.interaction_id === interactionId);
-    if (found) return found;
+  // Course JSON has used both block.content and nested content containers.
+  // Walk only plain JSON objects/arrays and match the exact interaction ID.
+  const pending: unknown[] = [content];
+  const visited = new Set<object>();
+  while (pending.length) {
+    const current = pending.pop();
+    if (!current || typeof current !== "object") continue;
+    if (visited.has(current as object)) continue;
+    visited.add(current as object);
+    if (Array.isArray(current)) {
+      for (const item of current) pending.push(item);
+      continue;
+    }
+    const item = current as Record<string, unknown>;
+    if (item.interaction_id === interactionId) {
+      if (typeof item.correct_answer === "string" || typeof item.correct_answer === "boolean" ||
+          (Array.isArray(item.correct_answer) && item.correct_answer.every(value => typeof value === "string"))) {
+        return item as Exercise;
+      }
+    }
+    for (const value of Object.values(item)) {
+      if (value && typeof value === "object") pending.push(value);
+    }
   }
   return undefined;
 }
