@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticle } from "@/lib/blog";
 import BlogMarkdown from "./BlogMarkdown";
-import BlogImage, { normalizeCategory } from "../BlogImage";
+import BlogImage from "../BlogImage";
+import { normalizeCategory } from "@/lib/blog-category";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ slug: string }> };
