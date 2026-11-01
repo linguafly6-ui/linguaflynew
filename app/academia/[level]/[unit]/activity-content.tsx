@@ -30,7 +30,8 @@ function SpeakButton({ text, label }: { text: string; label: string }) {
 function ActivityCard({ activity, index, level, unit }: { activity: Activity; index: number; level: string; unit: number }) {
   const [answer, setAnswer] = useState("");
   const id = activity.interaction_id ?? `activity-${index}`;
-  const [feedback, setFeedback] = useState<"correct" | "incorrect" | "error" | "saving" | null>(null);\n  const [errorMessage, setErrorMessage] = useState("");
+  const [feedback, setFeedback] = useState<"correct" | "incorrect" | "error" | "saving" | null>(null);
+  const [errorMessage, setErrorMessage] = useState("");
   const isChoice = activity.type === "multiple_choice" || activity.type === "true_false";
   async function checkAnswer() {
     if (!answer.trim() || feedback === "saving") return;
@@ -42,7 +43,8 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
         body: JSON.stringify({ interaction_id: activity.interaction_id, answer }),
       });
       const data = await response.json();
-      setFeedback(response.ok ? (data.correct ? "correct" : "incorrect") : "error");\n      setErrorMessage(response.ok ? "" : (typeof data.error === "string" ? data.error : `Error al comprobar la respuesta (HTTP ${response.status}).`));
+      setFeedback(response.ok ? (data.correct ? "correct" : "incorrect") : "error");
+      setErrorMessage(response.ok ? "" : (typeof data.error === "string" ? data.error : `Error al comprobar la respuesta (HTTP ${response.status}).`));
     } catch {
       setFeedback("error");
     }
@@ -74,13 +76,17 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
 
 function Passage({ text, kind }: { text: string; kind: "reading" | "listening" }) {
   if (kind === "reading") {
-    // Support both real line breaks and legacy data containing the literal "\\n" sequence.
-    const parts = text.split(/\\r?\\n|\\\\n/);
+    // Support both real line breaks and legacy data containing the literal "\
+" sequence.
+    const parts = text.split(/\\r?\
+|\\\
+/);
     const hasHeading = parts.length > 1;
     return <section className="passage-card reading-card">
       <div className="passage-kicker">READING · COMPRENSIÓN LECTORA</div>
       <h4>{hasHeading ? parts[0] : "Texto de lectura"}</h4>
-      <div className="reading-passage" style={{whiteSpace:"pre-line"}}>{hasHeading ? parts.slice(1).join("\\n").trim() : text}</div>
+      <div className="reading-passage" style={{whiteSpace:"pre-line"}}>{hasHeading ? parts.slice(1).join("\
+").trim() : text}</div>
       <SpeakButton text={text} label="Escuchar lectura" />
     </section>;
   }
