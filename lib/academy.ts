@@ -57,12 +57,12 @@ export async function getAcademyUnits(levelValue: string): Promise<AcademyUnit[]
   if (!validLevel(levelValue)) return [];
   const db = await database();
   if (levelValue.toUpperCase() === "A1") {
-    const result = await db.prepare("SELECT 'ingles-a1' AS course_key, c.cefr_level AS level, u.unit_number, u.id AS unit_id, u.title FROM courses c JOIN units u ON u.course_id=c.id WHERE c.id='course-en-a1' AND u.status IN ('draft','review','approved') ORDER BY u.unit_number").all<AcademyUnit>();
+    const result = await db.prepare("SELECT 'ingles-a1' AS course_key, c.cefr_level AS level, u.unit_number, u.id AS unit_id, u.title FROM courses c JOIN units u ON u.course_id=c.id WHERE c.id='course-en-a1' AND u.status IN ('draft','review','approved','published') ORDER BY u.unit_number").all<AcademyUnit>();
     return result.results ?? [];
   }
   if (levelValue.toUpperCase() === "A2") {
     const result = await db.prepare(
-      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title FROM courses c JOIN units u ON u.course_id=c.id WHERE c.cefr_level='A2' AND c.language_code='en' AND u.status IN ('draft','review','approved') ORDER BY u.unit_number"
+      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title FROM courses c JOIN units u ON u.course_id=c.id WHERE c.cefr_level='A2' AND c.language_code='en' AND u.status IN ('draft','review','approved','published') ORDER BY u.unit_number"
     ).all<AcademyUnit>();
     return result.results ?? [];
   }
@@ -99,11 +99,11 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
   if (levelValue.toUpperCase() === "A2") {
     const unitId = `a2-unit-${String(unitNumber).padStart(3, "0")}`;
     const relationalUnit = await db.prepare(
-      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title, u.learning_objectives_json FROM courses c JOIN units u ON u.course_id=c.id WHERE c.cefr_level='A2' AND c.language_code='en' AND u.id=? AND u.status IN ('draft','review','approved') LIMIT 1"
-    ).bind(unitId).first<AcademyUnit & { learning_objectives_json?: string }>();
+      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title, u.learning_objectives_json, u.status AS status FROM courses c JOIN units u ON u.course_id=c.id WHERE c.cefr_level='A2' AND c.language_code='en' AND u.id=? AND u.status IN ('draft','review','approved','published') LIMIT 1"
+    ).bind(unitId).first<AcademyUnit & { learning_objectives_json?: string; status?: string }>();
     if (relationalUnit) {
       const rows = await db.prepare(
-        "SELECT s.id AS section_id, s.section_type, s.title AS section_title, s.position AS section_position, e.id AS exercise_id, e.title AS exercise_title, e.instructions, e.content_json, e.position AS exercise_position, o.id AS option_id, o.option_key, o.content AS option_content, o.position AS option_position FROM sections s JOIN exercises e ON e.section_id=s.id LEFT JOIN exercise_options o ON o.exercise_id=e.id WHERE s.unit_id=? AND s.status IN ('draft','review','approved') AND e.status IN ('draft','review','approved','published') ORDER BY s.position,e.position,o.position"
+        "SELECT s.id AS section_id, s.section_type, s.title AS section_title, s.position AS section_position, e.id AS exercise_id, e.title AS exercise_title, e.instructions, e.content_json, e.position AS exercise_position, o.id AS option_id, o.option_key, o.content AS option_content, o.position AS option_position FROM sections s JOIN exercises e ON e.section_id=s.id LEFT JOIN exercise_options o ON o.exercise_id=e.id WHERE s.unit_id=? AND s.status IN ('draft','review','approved','published') AND e.status IN ('draft','review','approved','published') ORDER BY s.position,e.position,o.position"
       ).bind(unitId).all<{section_id:string;section_type:string;section_title:string;section_position:number;exercise_id:string;exercise_title:string;instructions:string;content_json:string;exercise_position:number;option_id:string|null;option_key:string|null;option_content:string|null;option_position:number|null}>();
       const grouped = new Map<string, any>();
       for (const row of rows.results ?? []) {
