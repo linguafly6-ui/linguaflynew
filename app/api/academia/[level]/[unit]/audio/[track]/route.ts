@@ -4,15 +4,16 @@ export const dynamic = "force-dynamic";
 
 type StoredAudio = {
   body: ReadableStream<Uint8Array>;
+  size: number;
   httpEtag: string;
   writeHttpMetadata(headers: Headers): void;
 };
 type MediaBucket = {
-  get(key: string): Promise<StoredAudio | null>;
+  get(key: string, options?: { range?: { offset: number; length: number } }): Promise<StoredAudio | null>;
 };
 
 export async function GET(
-  _request: Request,
+  request: Request,
   { params }: { params: Promise<{ level: string; unit: string; track: string }> }
 ) {
   const { level: rawLevel, unit: rawUnit, track: rawTrack } = await params;
@@ -27,7 +28,23 @@ export async function GET(
   const { env } = await getCloudflareContext({ async: true });
   const bucket = (env as unknown as { LINGUAFLY_MEDIA: MediaBucket }).LINGUAFLY_MEDIA;
   const key = `a2/unit-${String(unit).padStart(3, "0")}/listening-${track}.mp3`;
-  const object = await bucket.get(key);
+  const rangeHeader = request.headers.get("Range");
+  let range: { offset: number; length: number } | undefined;
+  if (rangeHeader) {
+    const match = /^bytes=(\d*)-(\d*)$/.exec(rangeHeader.trim());
+    if (!match) return new Response(null, { status: 416, headers: { "Content-Range": "bytes */*" } });
+    // Read the object metadata first so suffix and open-ended ranges are bounded.
+    const metadata = await bucket.get(key);
+    if (!metadata) return new Response("Audio no encontrado.", { status: 404 });
+    const start = match[1] ? Number(match[1]) : Math.max(0, metadata.size - Number(match[2]));
+    const end = match[1] ? (match[2] ? Number(match[2]) : metadata.size - 1) : metadata.size - 1;
+    if (!Number.isSafeInteger(start) || !Number.isSafeInteger(end) || start < 0 || end < start || start >= metadata.size) {
+      return new Response(null, { status: 416, headers: { "Content-Range": `bytes */${metadata.size}` } });
+    }
+    range = { offset: start, length: Math.min(end, metadata.size - 1) - start + 1 };
+  }
+
+  const object = await bucket.get(key, range ? { range } : undefined);
   if (!object) return new Response("Audio no encontrado.", { status: 404 });
 
   const headers = new Headers();
@@ -36,5 +53,11 @@ export async function GET(
   headers.set("Cache-Control", "public, max-age=31536000, immutable");
   headers.set("ETag", object.httpEtag);
   headers.set("Accept-Ranges", "bytes");
+  if (range) {
+    headers.set("Content-Length", String(range.length));
+    headers.set("Content-Range", `bytes ${range.offset}-${range.offset + range.length - 1}/${object.size}`);
+    return new Response(object.body, { status: 206, headers });
+  }
+  headers.set("Content-Length", String(object.size));
   return new Response(object.body, { headers });
 }
