@@ -7,11 +7,6 @@ on:
         description: "SQL file inside migrations/course-db/"
         required: true
         type: string
-      publish:
-        description: "Publish the imported units after validation"
-        required: false
-        default: false
-        type: boolean
 
 permissions:
   contents: read
