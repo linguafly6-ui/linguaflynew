@@ -1,6 +1,4 @@
-"use client";
-
-import React, { Fragment, type ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 
 function inlineMarkdown(value: string): ReactNode[] {
   const pattern = /(\*\*[^*]+\*\*|\*[^*\n]+\*|`[^`]+`|!?\[[^\]]+\]\([^)]+\))/g;
