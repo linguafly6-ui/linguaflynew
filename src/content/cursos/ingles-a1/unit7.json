@@ -1,0 +1,1434 @@
+{
+  "course": {
+    "unit_id": "unit7",
+    "unit_title": "Free time and hobbies",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Hablar de aficiones y actividades de tiempo libre.",
+    "Expresar gustos con like, love, hate y enjoy.",
+    "Usar adverbios de frecuencia básicos.",
+    "Preguntar qué actividades hace otra persona.",
+    "Hablar de habilidades con can y can't."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I ___ playing the guitar.",
+          "options": [
+            {
+              "id": "A",
+              "text": "like"
+            },
+            {
+              "id": "B",
+              "text": "likes"
+            },
+            {
+              "id": "C",
+              "text": "liking"
+            }
+          ],
+          "correct_answer": "like",
+          "explanation": "Con I usamos like.",
+          "mastery_tag": "a1-u7-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She ___ swimming.",
+          "options": [
+            {
+              "id": "A",
+              "text": "loves"
+            },
+            {
+              "id": "B",
+              "text": "love"
+            },
+            {
+              "id": "C",
+              "text": "loving"
+            }
+          ],
+          "correct_answer": "loves",
+          "explanation": "Con she añadimos -s.",
+          "mastery_tag": "a1-u7-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "We ___ watch films on Fridays.",
+          "options": [
+            {
+              "id": "A",
+              "text": "often"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "does"
+            }
+          ],
+          "correct_answer": "often",
+          "explanation": "Often es un adverbio de frecuencia.",
+          "mastery_tag": "a1-u7-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He can ___ very well.",
+          "options": [
+            {
+              "id": "A",
+              "text": "dance"
+            },
+            {
+              "id": "B",
+              "text": "dances"
+            },
+            {
+              "id": "C",
+              "text": "dancing"
+            }
+          ],
+          "correct_answer": "dance",
+          "explanation": "Después de can usamos infinitivo sin to.",
+          "mastery_tag": "a1-u7-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ you play chess?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Can"
+            },
+            {
+              "id": "B",
+              "text": "Are"
+            },
+            {
+              "id": "C",
+              "text": "Do"
+            }
+          ],
+          "correct_answer": "Can",
+          "explanation": "Can pregunta por habilidades.",
+          "mastery_tag": "a1-u7-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "My brother ___ cook, but he can't bake.",
+          "options": [
+            {
+              "id": "A",
+              "text": "can"
+            },
+            {
+              "id": "B",
+              "text": "cans"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "can",
+          "explanation": "Can no cambia con la persona.",
+          "mastery_tag": "a1-u7-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I ___ go running. I don't like it.",
+          "options": [
+            {
+              "id": "A",
+              "text": "never"
+            },
+            {
+              "id": "B",
+              "text": "always"
+            },
+            {
+              "id": "C",
+              "text": "usually"
+            }
+          ],
+          "correct_answer": "never",
+          "explanation": "Never expresa nunca.",
+          "mastery_tag": "a1-u7-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "They ___ go to the cinema at weekends.",
+          "options": [
+            {
+              "id": "A",
+              "text": "sometimes"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "does"
+            }
+          ],
+          "correct_answer": "sometimes",
+          "explanation": "Sometimes expresa a veces.",
+          "mastery_tag": "a1-u7-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Does Anna like music? Yes, she ___.",
+          "options": [
+            {
+              "id": "A",
+              "text": "does"
+            },
+            {
+              "id": "B",
+              "text": "do"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "does",
+          "explanation": "Respuesta corta con does.",
+          "mastery_tag": "a1-u7-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What ___ your friends do after school?",
+          "options": [
+            {
+              "id": "A",
+              "text": "do"
+            },
+            {
+              "id": "B",
+              "text": "does"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "do",
+          "explanation": "Friends es plural: do.",
+          "mastery_tag": "a1-u7-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He doesn't ___ video games.",
+          "options": [
+            {
+              "id": "A",
+              "text": "play"
+            },
+            {
+              "id": "B",
+              "text": "plays"
+            },
+            {
+              "id": "C",
+              "text": "playing"
+            }
+          ],
+          "correct_answer": "play",
+          "explanation": "Después de doesn't va el verbo base.",
+          "mastery_tag": "a1-u7-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I enjoy ___ books.",
+          "options": [
+            {
+              "id": "A",
+              "text": "reading"
+            },
+            {
+              "id": "B",
+              "text": "read"
+            },
+            {
+              "id": "C",
+              "text": "reads"
+            }
+          ],
+          "correct_answer": "reading",
+          "explanation": "Enjoy va seguido de gerundio.",
+          "mastery_tag": "a1-u7-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She is good ___ drawing.",
+          "options": [
+            {
+              "id": "A",
+              "text": "at"
+            },
+            {
+              "id": "B",
+              "text": "in"
+            },
+            {
+              "id": "C",
+              "text": "on"
+            }
+          ],
+          "correct_answer": "at",
+          "explanation": "La expresión es good at.",
+          "mastery_tag": "a1-u7-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "We ___ listen to music every evening.",
+          "options": [
+            {
+              "id": "A",
+              "text": "usually"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "does"
+            }
+          ],
+          "correct_answer": "usually",
+          "explanation": "Usually indica hábito.",
+          "mastery_tag": "a1-u7-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Choose the correct sentence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Can you swim?"
+            },
+            {
+              "id": "B",
+              "text": "Do you can swim?"
+            },
+            {
+              "id": "C",
+              "text": "Can you swimming?"
+            }
+          ],
+          "correct_answer": "Can you swim?",
+          "explanation": "Can + sujeto + verbo base.",
+          "mastery_tag": "a1-u7-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "hobby",
+          "options": [
+            {
+              "id": "A",
+              "text": "afición"
+            },
+            {
+              "id": "B",
+              "text": "trabajo"
+            },
+            {
+              "id": "C",
+              "text": "asignatura"
+            }
+          ],
+          "correct_answer": "afición",
+          "explanation": "hobby significa «afición».",
+          "mastery_tag": "a1-u7-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "cycling",
+          "options": [
+            {
+              "id": "A",
+              "text": "ciclismo"
+            },
+            {
+              "id": "B",
+              "text": "cocinar"
+            },
+            {
+              "id": "C",
+              "text": "dibujar"
+            }
+          ],
+          "correct_answer": "ciclismo",
+          "explanation": "cycling significa «ciclismo».",
+          "mastery_tag": "a1-u7-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "painting",
+          "options": [
+            {
+              "id": "A",
+              "text": "pintura"
+            },
+            {
+              "id": "B",
+              "text": "natación"
+            },
+            {
+              "id": "C",
+              "text": "baile"
+            }
+          ],
+          "correct_answer": "pintura",
+          "explanation": "painting significa «pintura».",
+          "mastery_tag": "a1-u7-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "singing",
+          "options": [
+            {
+              "id": "A",
+              "text": "cantar"
+            },
+            {
+              "id": "B",
+              "text": "leer"
+            },
+            {
+              "id": "C",
+              "text": "correr"
+            }
+          ],
+          "correct_answer": "cantar",
+          "explanation": "singing significa «cantar».",
+          "mastery_tag": "a1-u7-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "dancing",
+          "options": [
+            {
+              "id": "A",
+              "text": "bailar"
+            },
+            {
+              "id": "B",
+              "text": "escribir"
+            },
+            {
+              "id": "C",
+              "text": "nadar"
+            }
+          ],
+          "correct_answer": "bailar",
+          "explanation": "dancing significa «bailar».",
+          "mastery_tag": "a1-u7-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "chess",
+          "options": [
+            {
+              "id": "A",
+              "text": "ajedrez"
+            },
+            {
+              "id": "B",
+              "text": "cartas"
+            },
+            {
+              "id": "C",
+              "text": "fútbol"
+            }
+          ],
+          "correct_answer": "ajedrez",
+          "explanation": "chess significa «ajedrez».",
+          "mastery_tag": "a1-u7-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "board games",
+          "options": [
+            {
+              "id": "A",
+              "text": "juegos de mesa"
+            },
+            {
+              "id": "B",
+              "text": "videojuegos"
+            },
+            {
+              "id": "C",
+              "text": "deportes"
+            }
+          ],
+          "correct_answer": "juegos de mesa",
+          "explanation": "board games significa «juegos de mesa».",
+          "mastery_tag": "a1-u7-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "reading",
+          "options": [
+            {
+              "id": "A",
+              "text": "leer"
+            },
+            {
+              "id": "B",
+              "text": "correr"
+            },
+            {
+              "id": "C",
+              "text": "cocinar"
+            }
+          ],
+          "correct_answer": "leer",
+          "explanation": "reading significa «leer».",
+          "mastery_tag": "a1-u7-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "photography",
+          "options": [
+            {
+              "id": "A",
+              "text": "fotografía"
+            },
+            {
+              "id": "B",
+              "text": "música"
+            },
+            {
+              "id": "C",
+              "text": "teatro"
+            }
+          ],
+          "correct_answer": "fotografía",
+          "explanation": "photography significa «fotografía».",
+          "mastery_tag": "a1-u7-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "often",
+          "options": [
+            {
+              "id": "A",
+              "text": "a menudo"
+            },
+            {
+              "id": "B",
+              "text": "nunca"
+            },
+            {
+              "id": "C",
+              "text": "rara vez"
+            }
+          ],
+          "correct_answer": "a menudo",
+          "explanation": "often significa «a menudo».",
+          "mastery_tag": "a1-u7-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "sometimes",
+          "options": [
+            {
+              "id": "A",
+              "text": "a veces"
+            },
+            {
+              "id": "B",
+              "text": "siempre"
+            },
+            {
+              "id": "C",
+              "text": "nunca"
+            }
+          ],
+          "correct_answer": "a veces",
+          "explanation": "sometimes significa «a veces».",
+          "mastery_tag": "a1-u7-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "never",
+          "options": [
+            {
+              "id": "A",
+              "text": "nunca"
+            },
+            {
+              "id": "B",
+              "text": "normalmente"
+            },
+            {
+              "id": "C",
+              "text": "a menudo"
+            }
+          ],
+          "correct_answer": "nunca",
+          "explanation": "never significa «nunca».",
+          "mastery_tag": "a1-u7-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "weekend",
+          "options": [
+            {
+              "id": "A",
+              "text": "fin de semana"
+            },
+            {
+              "id": "B",
+              "text": "día laborable"
+            },
+            {
+              "id": "C",
+              "text": "vacaciones"
+            }
+          ],
+          "correct_answer": "fin de semana",
+          "explanation": "weekend significa «fin de semana».",
+          "mastery_tag": "a1-u7-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "club",
+          "options": [
+            {
+              "id": "A",
+              "text": "club"
+            },
+            {
+              "id": "B",
+              "text": "biblioteca"
+            },
+            {
+              "id": "C",
+              "text": "tienda"
+            }
+          ],
+          "correct_answer": "club",
+          "explanation": "club significa «club».",
+          "mastery_tag": "a1-u7-v14"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Play basketball and read comics"
+            },
+            {
+              "id": "B",
+              "text": "Watch TV and cook"
+            },
+            {
+              "id": "C",
+              "text": "Swim and dance"
+            }
+          ],
+          "correct_answer": "Play basketball and read comics",
+          "explanation": "Max juega al baloncesto y lee cómics.",
+          "mastery_tag": "a1-u7-l01",
+          "transcript": "LILY: What do you do in your free time?\\nMAX: I play basketball and read comics.\\nLILY: Do you play every day?\\nMAX: No, I play twice a week."
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Play basketball and read comics"
+            },
+            {
+              "id": "B",
+              "text": "Watch TV and cook"
+            },
+            {
+              "id": "C",
+              "text": "Swim and dance"
+            }
+          ],
+          "correct_answer": "Play basketball and read comics",
+          "explanation": "Max juega al baloncesto y lee cómics.",
+          "mastery_tag": "a1-u7-l02",
+          "transcript": "LILY: What do you do in your free time?\\nMAX: I play basketball and read comics.\\nLILY: Do you play every day?\\nMAX: No, I play twice a week."
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Play basketball and read comics"
+            },
+            {
+              "id": "B",
+              "text": "Watch TV and cook"
+            },
+            {
+              "id": "C",
+              "text": "Swim and dance"
+            }
+          ],
+          "correct_answer": "Play basketball and read comics",
+          "explanation": "Max juega al baloncesto y lee cómics.",
+          "mastery_tag": "a1-u7-l03",
+          "transcript": "LILY: What do you do in your free time?\\nMAX: I play basketball and read comics.\\nLILY: Do you play every day?\\nMAX: No, I play twice a week."
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The piano"
+            },
+            {
+              "id": "B",
+              "text": "The guitar"
+            },
+            {
+              "id": "C",
+              "text": "The violin"
+            }
+          ],
+          "correct_answer": "The piano",
+          "explanation": "Eva sabe tocar el piano.",
+          "mastery_tag": "a1-u7-l04",
+          "transcript": "TEACHER: Can you play an instrument, Eva?\\nEVA: Yes, I can play the piano.\\nTEACHER: Can you play the guitar?\\nEVA: No, I can't."
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The piano"
+            },
+            {
+              "id": "B",
+              "text": "The guitar"
+            },
+            {
+              "id": "C",
+              "text": "The violin"
+            }
+          ],
+          "correct_answer": "The piano",
+          "explanation": "Eva sabe tocar el piano.",
+          "mastery_tag": "a1-u7-l05",
+          "transcript": "TEACHER: Can you play an instrument, Eva?\\nEVA: Yes, I can play the piano.\\nTEACHER: Can you play the guitar?\\nEVA: No, I can't."
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The piano"
+            },
+            {
+              "id": "B",
+              "text": "The guitar"
+            },
+            {
+              "id": "C",
+              "text": "The violin"
+            }
+          ],
+          "correct_answer": "The piano",
+          "explanation": "Eva sabe tocar el piano.",
+          "mastery_tag": "a1-u7-l06",
+          "transcript": "TEACHER: Can you play an instrument, Eva?\\nEVA: Yes, I can play the piano.\\nTEACHER: Can you play the guitar?\\nEVA: No, I can't."
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Every Sunday"
+            },
+            {
+              "id": "B",
+              "text": "Every Monday"
+            },
+            {
+              "id": "C",
+              "text": "Every Saturday"
+            }
+          ],
+          "correct_answer": "Every Sunday",
+          "explanation": "Va en bicicleta cada domingo.",
+          "mastery_tag": "a1-u7-l07",
+          "transcript": "JACK: Do you like cycling, Ben?\\nBEN: Yes, I love it. I go cycling every Sunday.\\nJACK: Where do you go?\\nBEN: In the park near my house."
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Every Sunday"
+            },
+            {
+              "id": "B",
+              "text": "Every Monday"
+            },
+            {
+              "id": "C",
+              "text": "Every Saturday"
+            }
+          ],
+          "correct_answer": "Every Sunday",
+          "explanation": "Va en bicicleta cada domingo.",
+          "mastery_tag": "a1-u7-l08",
+          "transcript": "JACK: Do you like cycling, Ben?\\nBEN: Yes, I love it. I go cycling every Sunday.\\nJACK: Where do you go?\\nBEN: In the park near my house."
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Every Sunday"
+            },
+            {
+              "id": "B",
+              "text": "Every Monday"
+            },
+            {
+              "id": "C",
+              "text": "Every Saturday"
+            }
+          ],
+          "correct_answer": "Every Sunday",
+          "explanation": "Va en bicicleta cada domingo.",
+          "mastery_tag": "a1-u7-l09",
+          "transcript": "JACK: Do you like cycling, Ben?\\nBEN: Yes, I love it. I go cycling every Sunday.\\nJACK: Where do you go?\\nBEN: In the park near my house."
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Goes to dance class"
+            },
+            {
+              "id": "B",
+              "text": "Plays chess"
+            },
+            {
+              "id": "C",
+              "text": "Reads books"
+            }
+          ],
+          "correct_answer": "Goes to dance class",
+          "explanation": "Va a clases de baile.",
+          "mastery_tag": "a1-u7-l10",
+          "transcript": "AMY: What does your sister do after school?\\nKATE: She usually goes to dance class.\\nAMY: Does she enjoy it?\\nKATE: Yes, she loves dancing."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Goes to dance class"
+            },
+            {
+              "id": "B",
+              "text": "Plays chess"
+            },
+            {
+              "id": "C",
+              "text": "Reads books"
+            }
+          ],
+          "correct_answer": "Goes to dance class",
+          "explanation": "Va a clases de baile.",
+          "mastery_tag": "a1-u7-l11",
+          "transcript": "AMY: What does your sister do after school?\\nKATE: She usually goes to dance class.\\nAMY: Does she enjoy it?\\nKATE: Yes, she loves dancing."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Goes to dance class"
+            },
+            {
+              "id": "B",
+              "text": "Plays chess"
+            },
+            {
+              "id": "C",
+              "text": "Reads books"
+            }
+          ],
+          "correct_answer": "Goes to dance class",
+          "explanation": "Va a clases de baile.",
+          "mastery_tag": "a1-u7-l12",
+          "transcript": "AMY: What does your sister do after school?\\nKATE: She usually goes to dance class.\\nAMY: Does she enjoy it?\\nKATE: Yes, she loves dancing."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She has a swimming lesson."
+            },
+            {
+              "id": "B",
+              "text": "She is at work."
+            },
+            {
+              "id": "C",
+              "text": "She is visiting family."
+            }
+          ],
+          "correct_answer": "She has a swimming lesson.",
+          "explanation": "Tiene clase de natación.",
+          "mastery_tag": "a1-u7-l13",
+          "transcript": "SAM: Shall we watch a film tonight?\\nJO: Sorry, I can't. I have a swimming lesson.\\nSAM: What about tomorrow?\\nJO: Great! I'm free tomorrow."
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She has a swimming lesson."
+            },
+            {
+              "id": "B",
+              "text": "She is at work."
+            },
+            {
+              "id": "C",
+              "text": "She is visiting family."
+            }
+          ],
+          "correct_answer": "She has a swimming lesson.",
+          "explanation": "Tiene clase de natación.",
+          "mastery_tag": "a1-u7-l14",
+          "transcript": "SAM: Shall we watch a film tonight?\\nJO: Sorry, I can't. I have a swimming lesson.\\nSAM: What about tomorrow?\\nJO: Great! I'm free tomorrow."
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She has a swimming lesson."
+            },
+            {
+              "id": "B",
+              "text": "She is at work."
+            },
+            {
+              "id": "C",
+              "text": "She is visiting family."
+            }
+          ],
+          "correct_answer": "She has a swimming lesson.",
+          "explanation": "Tiene clase de natación.",
+          "mastery_tag": "a1-u7-l15",
+          "transcript": "SAM: Shall we watch a film tonight?\\nJO: Sorry, I can't. I have a swimming lesson.\\nSAM: What about tomorrow?\\nJO: Great! I'm free tomorrow."
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On Tuesdays and Thursdays"
+            },
+            {
+              "id": "B",
+              "text": "Every day"
+            },
+            {
+              "id": "C",
+              "text": "At weekends"
+            }
+          ],
+          "correct_answer": "On Tuesdays and Thursdays",
+          "explanation": "Juega martes y jueves.",
+          "mastery_tag": "a1-u7-r01",
+          "main_text": "MY FREE TIME\\nMy name is Oliver and I have many hobbies. I play football on Tuesdays and Thursdays. At the weekend, I enjoy reading adventure stories. I sometimes go cycling with my cousin. I don't like computer games because I prefer being outside."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On Tuesdays and Thursdays"
+            },
+            {
+              "id": "B",
+              "text": "Every day"
+            },
+            {
+              "id": "C",
+              "text": "At weekends"
+            }
+          ],
+          "correct_answer": "On Tuesdays and Thursdays",
+          "explanation": "Juega martes y jueves.",
+          "mastery_tag": "a1-u7-r02",
+          "main_text": "MY FREE TIME\\nMy name is Oliver and I have many hobbies. I play football on Tuesdays and Thursdays. At the weekend, I enjoy reading adventure stories. I sometimes go cycling with my cousin. I don't like computer games because I prefer being outside."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 1.",
+          "options": [
+            {
+              "id": "A",
+              "text": "On Tuesdays and Thursdays"
+            },
+            {
+              "id": "B",
+              "text": "Every day"
+            },
+            {
+              "id": "C",
+              "text": "At weekends"
+            }
+          ],
+          "correct_answer": "On Tuesdays and Thursdays",
+          "explanation": "Juega martes y jueves.",
+          "mastery_tag": "a1-u7-r03",
+          "main_text": "MY FREE TIME\\nMy name is Oliver and I have many hobbies. I play football on Tuesdays and Thursdays. At the weekend, I enjoy reading adventure stories. I sometimes go cycling with my cousin. I don't like computer games because I prefer being outside."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sing and play the piano"
+            },
+            {
+              "id": "B",
+              "text": "Cook and dance"
+            },
+            {
+              "id": "C",
+              "text": "Speak French"
+            }
+          ],
+          "correct_answer": "Sing and play the piano",
+          "explanation": "Su madre canta y toca el piano.",
+          "mastery_tag": "a1-u7-r04",
+          "main_text": "A TALENTED FAMILY\\nMy mum can sing and play the piano. My dad can cook very well, but he can't dance. My older sister can speak French and Spanish. I can draw animals, but I can't paint landscapes."
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sing and play the piano"
+            },
+            {
+              "id": "B",
+              "text": "Cook and dance"
+            },
+            {
+              "id": "C",
+              "text": "Speak French"
+            }
+          ],
+          "correct_answer": "Sing and play the piano",
+          "explanation": "Su madre canta y toca el piano.",
+          "mastery_tag": "a1-u7-r05",
+          "main_text": "A TALENTED FAMILY\\nMy mum can sing and play the piano. My dad can cook very well, but he can't dance. My older sister can speak French and Spanish. I can draw animals, but I can't paint landscapes."
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 2.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sing and play the piano"
+            },
+            {
+              "id": "B",
+              "text": "Cook and dance"
+            },
+            {
+              "id": "C",
+              "text": "Speak French"
+            }
+          ],
+          "correct_answer": "Sing and play the piano",
+          "explanation": "Su madre canta y toca el piano.",
+          "mastery_tag": "a1-u7-r06",
+          "main_text": "A TALENTED FAMILY\\nMy mum can sing and play the piano. My dad can cook very well, but he can't dance. My older sister can speak French and Spanish. I can draw animals, but I can't paint landscapes."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At 5:30"
+            },
+            {
+              "id": "B",
+              "text": "At 4:00"
+            },
+            {
+              "id": "C",
+              "text": "At 5:00"
+            }
+          ],
+          "correct_answer": "At 5:30",
+          "explanation": "Termina a las cinco y media.",
+          "mastery_tag": "a1-u7-r07",
+          "main_text": "THE ART CLUB\\nOur school has an art club on Wednesday afternoons. Students draw, paint and make things with paper. The club starts at four and finishes at five thirty. You don't need to bring anything. The teacher gives you all the materials."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At 5:30"
+            },
+            {
+              "id": "B",
+              "text": "At 4:00"
+            },
+            {
+              "id": "C",
+              "text": "At 5:00"
+            }
+          ],
+          "correct_answer": "At 5:30",
+          "explanation": "Termina a las cinco y media.",
+          "mastery_tag": "a1-u7-r08",
+          "main_text": "THE ART CLUB\\nOur school has an art club on Wednesday afternoons. Students draw, paint and make things with paper. The club starts at four and finishes at five thirty. You don't need to bring anything. The teacher gives you all the materials."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 3.",
+          "options": [
+            {
+              "id": "A",
+              "text": "At 5:30"
+            },
+            {
+              "id": "B",
+              "text": "At 4:00"
+            },
+            {
+              "id": "C",
+              "text": "At 5:00"
+            }
+          ],
+          "correct_answer": "At 5:30",
+          "explanation": "Termina a las cinco y media.",
+          "mastery_tag": "a1-u7-r09",
+          "main_text": "THE ART CLUB\\nOur school has an art club on Wednesday afternoons. Students draw, paint and make things with paper. The club starts at four and finishes at five thirty. You don't need to bring anything. The teacher gives you all the materials."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Visits her grandparents"
+            },
+            {
+              "id": "B",
+              "text": "Goes swimming"
+            },
+            {
+              "id": "C",
+              "text": "Goes to the cinema"
+            }
+          ],
+          "correct_answer": "Visits her grandparents",
+          "explanation": "Visita a sus abuelos.",
+          "mastery_tag": "a1-u7-r10",
+          "main_text": "WEEKEND PLANS\\nOn Saturday morning, Mia goes swimming with her friend. In the afternoon, they sometimes go to the cinema. On Sunday, Mia visits her grandparents and has lunch with them. She never gets up early on Sundays."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Visits her grandparents"
+            },
+            {
+              "id": "B",
+              "text": "Goes swimming"
+            },
+            {
+              "id": "C",
+              "text": "Goes to the cinema"
+            }
+          ],
+          "correct_answer": "Visits her grandparents",
+          "explanation": "Visita a sus abuelos.",
+          "mastery_tag": "a1-u7-r11",
+          "main_text": "WEEKEND PLANS\\nOn Saturday morning, Mia goes swimming with her friend. In the afternoon, they sometimes go to the cinema. On Sunday, Mia visits her grandparents and has lunch with them. She never gets up early on Sundays."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 4.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Visits her grandparents"
+            },
+            {
+              "id": "B",
+              "text": "Goes swimming"
+            },
+            {
+              "id": "C",
+              "text": "Goes to the cinema"
+            }
+          ],
+          "correct_answer": "Visits her grandparents",
+          "explanation": "Visita a sus abuelos.",
+          "mastery_tag": "a1-u7-r12",
+          "main_text": "WEEKEND PLANS\\nOn Saturday morning, Mia goes swimming with her friend. In the afternoon, they sometimes go to the cinema. On Sunday, Mia visits her grandparents and has lunch with them. She never gets up early on Sundays."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Photography"
+            },
+            {
+              "id": "B",
+              "text": "Painting"
+            },
+            {
+              "id": "C",
+              "text": "Cycling"
+            }
+          ],
+          "correct_answer": "Photography",
+          "explanation": "Quiere aprender fotografía.",
+          "mastery_tag": "a1-u7-r13",
+          "main_text": "A NEW HOBBY\\nLeo wants to learn photography. His friend has a camera and takes him to the park. They take pictures of birds, trees and flowers. Leo enjoys it and wants to join a photography club next month."
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Photography"
+            },
+            {
+              "id": "B",
+              "text": "Painting"
+            },
+            {
+              "id": "C",
+              "text": "Cycling"
+            }
+          ],
+          "correct_answer": "Photography",
+          "explanation": "Quiere aprender fotografía.",
+          "mastery_tag": "a1-u7-r14",
+          "main_text": "A NEW HOBBY\\nLeo wants to learn photography. His friend has a camera and takes him to the park. They take pictures of birds, trees and flowers. Leo enjoys it and wants to join a photography club next month."
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 5.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Photography"
+            },
+            {
+              "id": "B",
+              "text": "Painting"
+            },
+            {
+              "id": "C",
+              "text": "Cycling"
+            }
+          ],
+          "correct_answer": "Photography",
+          "explanation": "Quiere aprender fotografía.",
+          "mastery_tag": "a1-u7-r15",
+          "main_text": "A NEW HOBBY\\nLeo wants to learn photography. His friend has a camera and takes him to the park. They take pictures of birds, trees and flowers. Leo enjoys it and wants to join a photography club next month."
+        }
+      ]
+    }
+  ]
+}
