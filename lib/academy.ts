@@ -75,8 +75,8 @@ export async function getAcademyUnits(levelValue: string): Promise<AcademyUnit[]
 export async function getAcademyUnit(levelValue: string, unitNumber: number): Promise<AcademyUnit & { content: Record<string, any> } | null> {
   if (!validLevel(levelValue) || !Number.isInteger(unitNumber) || unitNumber < 1 || unitNumber > 100) return null;
   const db = await database();
-  if (levelValue.toUpperCase() === "A1" && unitNumber === 1) {
-    const unit = await db.prepare("SELECT c.id AS course_key, c.cefr_level AS level, u.unit_number, u.id AS unit_id, u.title, u.learning_objectives_json FROM courses c JOIN units u ON u.course_id=c.id WHERE c.id='course-en-a1' AND u.id='a1-unit-001' AND u.status IN ('draft','review','approved') LIMIT 1").first<AcademyUnit & { learning_objectives_json?: string }>();
+  if (levelValue.toUpperCase() === "A1" && unitNumber >= 1 && unitNumber <= 6) {
+    const unit = await db.prepare("SELECT c.id AS course_key, c.cefr_level AS level, u.unit_number, u.id AS unit_id, u.title, u.learning_objectives_json FROM courses c JOIN units u ON u.course_id=c.id WHERE c.id='course-en-a1' AND u.unit_number=? AND u.status IN ('draft','review','approved') LIMIT 1").bind(unitNumber).first<AcademyUnit & { learning_objectives_json?: string }>();
     if (!unit) return null;
     const rows = await db.prepare("SELECT s.id AS section_id, s.section_type, s.title AS section_title, e.id AS exercise_id, e.title AS exercise_title, e.instructions, e.content_json, e.position, o.id AS option_id, o.option_key, o.content AS option_content FROM sections s JOIN exercises e ON e.section_id=s.id LEFT JOIN exercise_options o ON o.exercise_id=e.id WHERE s.unit_id=? AND s.status IN ('draft','review','approved') AND e.status='published' ORDER BY s.position,e.position,o.position").bind(unit.unit_id).all<{section_id:string;section_type:string;section_title:string;exercise_id:string;exercise_title:string;instructions:string;content_json:string;position:number;option_id:string|null;option_key:string|null;option_content:string|null}>();
     const grouped = new Map<string, any>();
