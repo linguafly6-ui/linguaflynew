@@ -121,6 +121,10 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
             question_en: authored.prompt || row.exercise_title,
             stimulus_en: "",
             transcript: section === "listening" ? (authored.stimulus || "") : undefined,
+            audio_group: section === "listening" && Number.isInteger(authored.audio_group) ? authored.audio_group : undefined,
+            audio_url: section === "listening" && typeof authored.audio_key === "string"
+              ? `/api/academia/a2/${unitNumber}/audio/${authored.audio_group}`
+              : undefined,
             main_text: section === "reading" ? (authored.stimulus || "") : undefined,
             explanation: authored.explanation_es || "",
             options: []
