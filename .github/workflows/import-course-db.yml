@@ -1,6 +1,10 @@
 name: Import course content into Cloudflare D1
 
 on:
+  push:
+    paths:
+      - 'migrations/course-db/a2_046_050.sql'
+      - '.github/workflows/import-course-db.yml'
   workflow_dispatch:
     inputs:
       sql_file:
