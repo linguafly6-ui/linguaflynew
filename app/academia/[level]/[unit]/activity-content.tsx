@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Option = { id: string; text: string };
+type Option = { id: string; text: string; value?: string };
 export type Activity = {
   interaction_id?: string; type?: string; prompt_es?: string; question_en?: string;
   stimulus_en?: string; stimulus_es?: string; main_text?: string; transcript?: string;
@@ -57,7 +57,7 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
     {isChoice && activity.options?.length ? <fieldset className="activity-options" style={{border:0,padding:0,margin:0}}>
       <legend className="sr-only">Selecciona una respuesta</legend>
       {activity.options.map(option => <label key={option.id} className="activity-option" style={{display:"flex",gap:10,alignItems:"center",padding:"9px 0",cursor:"pointer"}}>
-        <input type="radio" name={id} value={option.text} checked={answer===option.text} onChange={() => {setAnswer(option.text);setFeedback(null);setErrorMessage("");}} />
+        <input type="radio" name={id} value={option.value ?? option.text} checked={answer===(option.value ?? option.text)} onChange={() => {setAnswer(option.value ?? option.text);setFeedback(null);setErrorMessage("");}} />
         <span>{option.text}</span>
       </label>)}
     </fieldset> : <div className="answer-entry">
