@@ -76,7 +76,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       const { env } = await getCloudflareContext({ async: true });
       const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
       const relational = await db.prepare(
-        "SELECT k.grading_strategy, k.answer_config_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id JOIN exercise_answer_keys k ON k.exercise_id=e.id WHERE e.id=? AND u.id=? AND e.status IN ('draft','review','approved') LIMIT 1"
+        "SELECT k.grading_strategy, k.answer_config_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id JOIN exercise_answer_keys k ON k.exercise_id=e.id WHERE e.id=? AND u.id=? AND e.status IN ('draft','review','approved','published') LIMIT 1"
       ).bind(interactionId, `a2-unit-${String(unitNumber).padStart(3, "0")}`).first<{grading_strategy:string;answer_config_json:string}>();
       if (relational) {
         const config = JSON.parse(relational.answer_config_json || "{}") as {correctOptionKeys?:string[];acceptedAnswers?:string[]};
