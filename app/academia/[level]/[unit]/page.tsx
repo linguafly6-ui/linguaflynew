@@ -79,7 +79,7 @@ const spanishGrammarGuides: Record<number, { explanation: string; examples: stri
 function Questions({ items }: { items: string[][] }) {
   return <ol className="theory-question-list">{items.map((q,i)=><li key={i}><span className="question-number">{String(i+1).padStart(2,"0")}</span><div><p>{q[0]}</p>{q.length>1&&<small>Opciones: {q.slice(1,4).join(" · ")}</small>}{q[4]&&<p className="question-answer"><strong>Respuesta: {q[4]}</strong></p>}</div></li>)}</ol>;
 }
-function BlueprintPractice({ data }: { data: Blueprint }) {
+function BlueprintPractice({ data, level, number }: { data: Blueprint; level: string; number: number }) {
   // Same A2 tuple convention: [prompt, correct option, distractor 1, distractor 2, explanation].
   const toActivities = (kind: "reading" | "listening", items?: string[][], passages?: string[]): Activity[] =>
     (items ?? []).map((item, index) => ({
@@ -115,7 +115,7 @@ function BlueprintPractice({ data }: { data: Blueprint }) {
     <p>Las actividades siguen el mismo formato de las unidades A2 anteriores: tres opciones, una respuesta correcta y explicación. Reading y listening incluyen tres textos o diálogos diferentes, con cinco preguntas para cada uno.</p>
     {sections.filter(section => section.activities.length > 0).map(section => <section key={section.title} style={{marginTop:28}}>
       <div className="kicker">{section.title} · {section.activities.length} ACTIVITIES</div>
-      <ActivityContent activities={section.activities} mode="standard"/>
+      <ActivityContent activities={section.activities.map(({ correct_answer: _answer, ...activity }) => activity)} mode="standard" level={level} unit={number}/>
     </section>)}
   </section>;
 }
@@ -149,7 +149,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
       {!!data.review_checklist?.length&&<section className="theory-card review-theory"><div className="theory-section-label"><span className="theory-icon">✓</span><span>REPASO · AL FINAL DE LA UNIDAD</span></div><h2>¿Ya lo tienes?</h2><p className="theory-intro">Utiliza esta lista para comprobar qué sabes hacer antes de continuar.</p><ul>{data.review_checklist.map((x,i)=><li key={i}><span>{String(i+1).padStart(2,"0")}</span>{x}</li>)}</ul></section>}
       {!!data.editorial_notes?.length&&<section className="theory-card editorial-notes"><div className="theory-section-label"><span className="theory-icon">✦</span><span>NOTAS EDITORIALES · BORRADOR</span></div><ul>{data.editorial_notes.map((x,i)=><li key={i}>{x}</li>)}</ul></section>}
     </section>
-    <BlueprintPractice data={data}/>
+    <BlueprintPractice data={data} level={level} number={number}/>
     {number === 1 && <section className="lesson-block" style={{marginTop:32}}>
       <div className="kicker">PRACTICE · UNIT 1 REVIEW DRAFT</div><h2>60 interactive exercises</h2>
       <p>Completa las actividades y comprueba cada respuesta. El audio de listening se reproduce mediante voz sintética del navegador.</p>
@@ -160,7 +160,7 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
         ["READING",a2Unit1Exercises.reading],
       ] as const).map(([heading, activities]) => <section key={heading} style={{marginTop:28}}>
         <div className="kicker">{heading} · 15 ACTIVITIES</div>
-        <ActivityContent activities={activities} mode="standard" level={level} unit={number}/>
+        <ActivityContent activities={activities.map(({ correct_answer: _answer, ...activity }) => activity)} mode="standard" level={level} unit={number}/>
       </section>)}
     </section>}
     {number === 2 && <section className="lesson-block" style={{marginTop:32}}>
