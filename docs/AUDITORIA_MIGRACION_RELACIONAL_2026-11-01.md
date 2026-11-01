@@ -176,3 +176,17 @@ Antes de escribir datos:
 - No se ha creado PR, hecho merge ni desplegado.
 
 **Siguiente tarea técnica:** preparar un inventario verificable de contenido legado (incluidos hashes y relaciones) y después diseñar el importador de prueba para un lote de cinco unidades en una preview con esquema completo.
+
+
+## 10. Hallazgo adicional: A1 relacional no equivale al JSON editorial
+
+Una inspección de las filas relacionales A1 confirma que las seis unidades actuales contienen 360 ejercicios (90 por tipo de sección, 15 por sección y unidad). Los 360 están registrados como `single-choice` y con estado `published`, aunque el curso y las seis unidades están en estado `draft`.
+
+Los ejemplos consultados muestran contenido relacional de ejercicios genérico (campos como `prompt_es`, `stimulus_en`, `explanation_es`) y opciones en `exercise_options`. No se ha demostrado que esos 360 ejercicios sean equivalentes a las 600 actividades de los diez JSON A1. Deben tratarse como **dos conjuntos de origen distintos** hasta reconciliar ejercicio por ejercicio.
+
+Por tanto, no se debe reemplazar el conjunto relacional por el JSON ni viceversa. El manifiesto de importación tendrá que distinguir:
+- ejercicios A1 relacionales existentes (360);
+- actividades de los diez JSON A1 (600);
+- 50 filas adicionales A1 11–60 en `learning_course_json_units`.
+
+Tampoco se debe propagar el estado `published` de esos ejercicios a los cursos o unidades de destino. La publicación requiere revisión explícita del contenido completo y de las claves.
