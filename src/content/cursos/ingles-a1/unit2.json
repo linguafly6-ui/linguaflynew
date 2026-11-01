@@ -7,6 +7,1451 @@
     "language_ui": "es-ES",
     "target_language": "en-GB"
   },
-  "learning_outcomes": [],
-  "blocks": []
+  "learning_outcomes": [
+    "Presentar a familiares y describir relaciones sencillas.",
+    "Usar he, she, we y they con el verbo be.",
+    "Formar posesivos con his y her.",
+    "Preguntar y responder sobre edad y parentesco.",
+    "Reconocer vocabulario básico de la familia."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She ___ my sister.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "is",
+          "explanation": "She va con is.",
+          "mastery_tag": "a1-u2-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He ___ from Italy.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "is",
+          "explanation": "He va con is.",
+          "mastery_tag": "a1-u2-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "We ___ students.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "We va con are.",
+          "mastery_tag": "a1-u2-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She ___ 18 years old.",
+          "options": [
+            {
+              "id": "A",
+              "text": "'m"
+            },
+            {
+              "id": "B",
+              "text": "'s"
+            },
+            {
+              "id": "C",
+              "text": "'re"
+            }
+          ],
+          "correct_answer": "'s",
+          "explanation": "She is = she's.",
+          "mastery_tag": "a1-u2-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "They ___ at home.",
+          "options": [
+            {
+              "id": "A",
+              "text": "isn't"
+            },
+            {
+              "id": "B",
+              "text": "aren't"
+            },
+            {
+              "id": "C",
+              "text": "am not"
+            }
+          ],
+          "correct_answer": "aren't",
+          "explanation": "They are not = aren't.",
+          "mastery_tag": "a1-u2-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "My parents ___ here.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "am"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "Parents es plural.",
+          "mastery_tag": "a1-u2-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "My brother ___ a teacher.",
+          "options": [
+            {
+              "id": "A",
+              "text": "isn't"
+            },
+            {
+              "id": "B",
+              "text": "aren't"
+            },
+            {
+              "id": "C",
+              "text": "am not"
+            }
+          ],
+          "correct_answer": "isn't",
+          "explanation": "He isn't es la forma negativa.",
+          "mastery_tag": "a1-u2-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ your parents at home?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Is"
+            },
+            {
+              "id": "B",
+              "text": "Are"
+            },
+            {
+              "id": "C",
+              "text": "Am"
+            }
+          ],
+          "correct_answer": "Are",
+          "explanation": "Parents es plural.",
+          "mastery_tag": "a1-u2-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Is she your teacher?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, she is."
+            },
+            {
+              "id": "B",
+              "text": "Yes, she are."
+            },
+            {
+              "id": "C",
+              "text": "Yes, she do."
+            }
+          ],
+          "correct_answer": "Yes, she is.",
+          "explanation": "Respuesta corta con is.",
+          "mastery_tag": "a1-u2-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ name is Maria.",
+          "options": [
+            {
+              "id": "A",
+              "text": "His"
+            },
+            {
+              "id": "B",
+              "text": "Her"
+            },
+            {
+              "id": "C",
+              "text": "Their"
+            }
+          ],
+          "correct_answer": "Her",
+          "explanation": "Her corresponde a she.",
+          "mastery_tag": "a1-u2-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Tom has a brother. ___ brother is 10.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Her"
+            },
+            {
+              "id": "B",
+              "text": "His"
+            },
+            {
+              "id": "C",
+              "text": "Our"
+            }
+          ],
+          "correct_answer": "His",
+          "explanation": "His corresponde a he.",
+          "mastery_tag": "a1-u2-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I have ___ sister.",
+          "options": [
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "B",
+              "text": "an"
+            },
+            {
+              "id": "C",
+              "text": "the"
+            }
+          ],
+          "correct_answer": "a",
+          "explanation": "Sister empieza por sonido consonántico.",
+          "mastery_tag": "a1-u2-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "One child, two ___.",
+          "options": [
+            {
+              "id": "A",
+              "text": "childs"
+            },
+            {
+              "id": "B",
+              "text": "children"
+            },
+            {
+              "id": "C",
+              "text": "childes"
+            }
+          ],
+          "correct_answer": "children",
+          "explanation": "Children es plural irregular.",
+          "mastery_tag": "a1-u2-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ is your best friend?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Who"
+            },
+            {
+              "id": "B",
+              "text": "Where"
+            },
+            {
+              "id": "C",
+              "text": "How old"
+            }
+          ],
+          "correct_answer": "Who",
+          "explanation": "Who pregunta por personas.",
+          "mastery_tag": "a1-u2-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "How old is Ben?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He's 12."
+            },
+            {
+              "id": "B",
+              "text": "He's from Spain."
+            },
+            {
+              "id": "C",
+              "text": "He's my cousin."
+            }
+          ],
+          "correct_answer": "He's 12.",
+          "explanation": "How old pregunta por edad.",
+          "mastery_tag": "a1-u2-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "mother",
+          "options": [
+            {
+              "id": "A",
+              "text": "madre"
+            },
+            {
+              "id": "B",
+              "text": "hermana"
+            },
+            {
+              "id": "C",
+              "text": "abuela"
+            }
+          ],
+          "correct_answer": "madre",
+          "explanation": "mother significa madre.",
+          "mastery_tag": "a1-u2-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "father",
+          "options": [
+            {
+              "id": "A",
+              "text": "padre"
+            },
+            {
+              "id": "B",
+              "text": "tío"
+            },
+            {
+              "id": "C",
+              "text": "primo"
+            }
+          ],
+          "correct_answer": "padre",
+          "explanation": "father significa padre.",
+          "mastery_tag": "a1-u2-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "parents",
+          "options": [
+            {
+              "id": "A",
+              "text": "padres"
+            },
+            {
+              "id": "B",
+              "text": "hijos"
+            },
+            {
+              "id": "C",
+              "text": "amigos"
+            }
+          ],
+          "correct_answer": "padres",
+          "explanation": "parents significa padres.",
+          "mastery_tag": "a1-u2-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "sister",
+          "options": [
+            {
+              "id": "A",
+              "text": "hermana"
+            },
+            {
+              "id": "B",
+              "text": "madre"
+            },
+            {
+              "id": "C",
+              "text": "hija"
+            }
+          ],
+          "correct_answer": "hermana",
+          "explanation": "sister significa hermana.",
+          "mastery_tag": "a1-u2-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "brother",
+          "options": [
+            {
+              "id": "A",
+              "text": "hermano"
+            },
+            {
+              "id": "B",
+              "text": "abuelo"
+            },
+            {
+              "id": "C",
+              "text": "padre"
+            }
+          ],
+          "correct_answer": "hermano",
+          "explanation": "brother significa hermano.",
+          "mastery_tag": "a1-u2-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "grandmother",
+          "options": [
+            {
+              "id": "A",
+              "text": "abuela"
+            },
+            {
+              "id": "B",
+              "text": "tía"
+            },
+            {
+              "id": "C",
+              "text": "prima"
+            }
+          ],
+          "correct_answer": "abuela",
+          "explanation": "grandmother significa abuela.",
+          "mastery_tag": "a1-u2-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "grandfather",
+          "options": [
+            {
+              "id": "A",
+              "text": "abuelo"
+            },
+            {
+              "id": "B",
+              "text": "hermano"
+            },
+            {
+              "id": "C",
+              "text": "padre"
+            }
+          ],
+          "correct_answer": "abuelo",
+          "explanation": "grandfather significa abuelo.",
+          "mastery_tag": "a1-u2-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "daughter",
+          "options": [
+            {
+              "id": "A",
+              "text": "hija"
+            },
+            {
+              "id": "B",
+              "text": "madre"
+            },
+            {
+              "id": "C",
+              "text": "hermana"
+            }
+          ],
+          "correct_answer": "hija",
+          "explanation": "daughter significa hija.",
+          "mastery_tag": "a1-u2-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "son",
+          "options": [
+            {
+              "id": "A",
+              "text": "hijo"
+            },
+            {
+              "id": "B",
+              "text": "padre"
+            },
+            {
+              "id": "C",
+              "text": "primo"
+            }
+          ],
+          "correct_answer": "hijo",
+          "explanation": "son significa hijo.",
+          "mastery_tag": "a1-u2-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "aunt",
+          "options": [
+            {
+              "id": "A",
+              "text": "tía"
+            },
+            {
+              "id": "B",
+              "text": "abuela"
+            },
+            {
+              "id": "C",
+              "text": "sobrina"
+            }
+          ],
+          "correct_answer": "tía",
+          "explanation": "aunt significa tía.",
+          "mastery_tag": "a1-u2-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "uncle",
+          "options": [
+            {
+              "id": "A",
+              "text": "tío"
+            },
+            {
+              "id": "B",
+              "text": "abuelo"
+            },
+            {
+              "id": "C",
+              "text": "primo"
+            }
+          ],
+          "correct_answer": "tío",
+          "explanation": "uncle significa tío.",
+          "mastery_tag": "a1-u2-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "cousin",
+          "options": [
+            {
+              "id": "A",
+              "text": "primo o prima"
+            },
+            {
+              "id": "B",
+              "text": "hermano"
+            },
+            {
+              "id": "C",
+              "text": "sobrino"
+            }
+          ],
+          "correct_answer": "primo o prima",
+          "explanation": "cousin significa primo o prima.",
+          "mastery_tag": "a1-u2-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "family",
+          "options": [
+            {
+              "id": "A",
+              "text": "familia"
+            },
+            {
+              "id": "B",
+              "text": "amigos"
+            },
+            {
+              "id": "C",
+              "text": "vecinos"
+            }
+          ],
+          "correct_answer": "familia",
+          "explanation": "family significa familia.",
+          "mastery_tag": "a1-u2-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "young",
+          "options": [
+            {
+              "id": "A",
+              "text": "joven"
+            },
+            {
+              "id": "B",
+              "text": "alto"
+            },
+            {
+              "id": "C",
+              "text": "mayor"
+            }
+          ],
+          "correct_answer": "joven",
+          "explanation": "young significa joven.",
+          "mastery_tag": "a1-u2-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta.",
+          "question_en": "old",
+          "options": [
+            {
+              "id": "A",
+              "text": "mayor / viejo"
+            },
+            {
+              "id": "B",
+              "text": "joven"
+            },
+            {
+              "id": "C",
+              "text": "pequeño"
+            }
+          ],
+          "correct_answer": "mayor / viejo",
+          "explanation": "old significa mayor / viejo.",
+          "mastery_tag": "a1-u2-v15"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Who is Jack?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Emma's brother"
+            },
+            {
+              "id": "B",
+              "text": "Emma's father"
+            },
+            {
+              "id": "C",
+              "text": "Emma's uncle"
+            }
+          ],
+          "correct_answer": "Emma's brother",
+          "explanation": "Emma presenta a Jack como su hermano.",
+          "mastery_tag": "a1-u2-l01",
+          "transcript": "EMMA: This is my brother, Jack.\nLUCY: Hello, Jack. How old are you?\nJACK: I'm 14. And you?\nLUCY: I'm 13."
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is this information in the dialogue?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Emma presenta a Jack como su hermano.",
+          "mastery_tag": "a1-u2-l02",
+          "transcript": "EMMA: This is my brother, Jack.\nLUCY: Hello, Jack. How old are you?\nJACK: I'm 14. And you?\nLUCY: I'm 13."
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Choose the correct answer: Who is Jack?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Emma's brother"
+            },
+            {
+              "id": "B",
+              "text": "Emma's father"
+            },
+            {
+              "id": "C",
+              "text": "Emma's uncle"
+            }
+          ],
+          "correct_answer": "Emma's brother",
+          "explanation": "Emma presenta a Jack como su hermano.",
+          "mastery_tag": "a1-u2-l03",
+          "transcript": "EMMA: This is my brother, Jack.\nLUCY: Hello, Jack. How old are you?\nJACK: I'm 14. And you?\nLUCY: I'm 13."
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is Sophie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A doctor"
+            },
+            {
+              "id": "B",
+              "text": "A teacher"
+            },
+            {
+              "id": "C",
+              "text": "A student"
+            }
+          ],
+          "correct_answer": "A doctor",
+          "explanation": "Anna dice she's a doctor.",
+          "mastery_tag": "a1-u2-l04",
+          "transcript": "PAUL: Who is that woman?\nANNA: She's my aunt, Sophie.\nPAUL: Is she a teacher?\nANNA: No, she's a doctor."
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is this information in the dialogue?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Anna dice she's a doctor.",
+          "mastery_tag": "a1-u2-l05",
+          "transcript": "PAUL: Who is that woman?\nANNA: She's my aunt, Sophie.\nPAUL: Is she a teacher?\nANNA: No, she's a doctor."
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Choose the correct answer: What is Sophie?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A doctor"
+            },
+            {
+              "id": "B",
+              "text": "A teacher"
+            },
+            {
+              "id": "C",
+              "text": "A student"
+            }
+          ],
+          "correct_answer": "A doctor",
+          "explanation": "Anna dice she's a doctor.",
+          "mastery_tag": "a1-u2-l06",
+          "transcript": "PAUL: Who is that woman?\nANNA: She's my aunt, Sophie.\nPAUL: Is she a teacher?\nANNA: No, she's a doctor."
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "How many brothers has Sara got?",
+          "options": [
+            {
+              "id": "A",
+              "text": "One"
+            },
+            {
+              "id": "B",
+              "text": "Two"
+            },
+            {
+              "id": "C",
+              "text": "Three"
+            }
+          ],
+          "correct_answer": "Two",
+          "explanation": "Sara dice two brothers.",
+          "mastery_tag": "a1-u2-l07",
+          "transcript": "MIKE: Have you got a big family?\nSARA: Yes. I've got two brothers and one sister.\nMIKE: That's nice!"
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is this information in the dialogue?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Sara dice two brothers.",
+          "mastery_tag": "a1-u2-l08",
+          "transcript": "MIKE: Have you got a big family?\nSARA: Yes. I've got two brothers and one sister.\nMIKE: That's nice!"
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Choose the correct answer: How many brothers has Sara got?",
+          "options": [
+            {
+              "id": "A",
+              "text": "One"
+            },
+            {
+              "id": "B",
+              "text": "Two"
+            },
+            {
+              "id": "C",
+              "text": "Three"
+            }
+          ],
+          "correct_answer": "Two",
+          "explanation": "Sara dice two brothers.",
+          "mastery_tag": "a1-u2-l09",
+          "transcript": "MIKE: Have you got a big family?\nSARA: Yes. I've got two brothers and one sister.\nMIKE: That's nice!"
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "How old is Jane's grandmother?",
+          "options": [
+            {
+              "id": "A",
+              "text": "70"
+            },
+            {
+              "id": "B",
+              "text": "72"
+            },
+            {
+              "id": "C",
+              "text": "17"
+            }
+          ],
+          "correct_answer": "70",
+          "explanation": "Jane dice she's 70.",
+          "mastery_tag": "a1-u2-l10",
+          "transcript": "JANE: This is a photo of my grandparents.\nTOM: How old is your grandmother?\nJANE: She's 70. My grandfather is 72."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is this information in the dialogue?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Jane dice she's 70.",
+          "mastery_tag": "a1-u2-l11",
+          "transcript": "JANE: This is a photo of my grandparents.\nTOM: How old is your grandmother?\nJANE: She's 70. My grandfather is 72."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Choose the correct answer: How old is Jane's grandmother?",
+          "options": [
+            {
+              "id": "A",
+              "text": "70"
+            },
+            {
+              "id": "B",
+              "text": "72"
+            },
+            {
+              "id": "C",
+              "text": "17"
+            }
+          ],
+          "correct_answer": "70",
+          "explanation": "Jane dice she's 70.",
+          "mastery_tag": "a1-u2-l12",
+          "transcript": "JANE: This is a photo of my grandparents.\nTOM: How old is your grandmother?\nJANE: She's 70. My grandfather is 72."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Where is Leo from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "London"
+            },
+            {
+              "id": "B",
+              "text": "Leeds"
+            },
+            {
+              "id": "C",
+              "text": "Liverpool"
+            }
+          ],
+          "correct_answer": "Leeds",
+          "explanation": "El alumno dice he's from Leeds.",
+          "mastery_tag": "a1-u2-l13",
+          "transcript": "TEACHER: Who is he?\nSTUDENT: He's my cousin, Leo.\nTEACHER: Is he from London?\nSTUDENT: No, he's from Leeds."
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Is this information in the dialogue?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "El alumno dice he's from Leeds.",
+          "mastery_tag": "a1-u2-l14",
+          "transcript": "TEACHER: Who is he?\nSTUDENT: He's my cousin, Leo.\nTEACHER: Is he from London?\nSTUDENT: No, he's from Leeds."
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Choose the correct answer: Where is Leo from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "London"
+            },
+            {
+              "id": "B",
+              "text": "Leeds"
+            },
+            {
+              "id": "C",
+              "text": "Liverpool"
+            }
+          ],
+          "correct_answer": "Leeds",
+          "explanation": "El alumno dice he's from Leeds.",
+          "mastery_tag": "a1-u2-l15",
+          "transcript": "TEACHER: Who is he?\nSTUDENT: He's my cousin, Leo.\nTEACHER: Is he from London?\nSTUDENT: No, he's from Leeds."
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "How old is Daniel?",
+          "options": [
+            {
+              "id": "A",
+              "text": "12"
+            },
+            {
+              "id": "B",
+              "text": "9"
+            },
+            {
+              "id": "C",
+              "text": "15"
+            }
+          ],
+          "correct_answer": "12",
+          "explanation": "Daniel dice I'm 12.",
+          "mastery_tag": "a1-u2-r01",
+          "main_text": "MY FAMILY\nHello! I'm Daniel and I'm 12. I live with my mother, father and sister. My sister's name is Eva. She's 9. My grandparents live near our house."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Is this detail in the text?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "The text doesn't say"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Daniel dice I'm 12.",
+          "mastery_tag": "a1-u2-r02",
+          "main_text": "MY FAMILY\nHello! I'm Daniel and I'm 12. I live with my mother, father and sister. My sister's name is Eva. She's 9. My grandparents live near our house."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer: How old is Daniel?",
+          "options": [
+            {
+              "id": "A",
+              "text": "12"
+            },
+            {
+              "id": "B",
+              "text": "9"
+            },
+            {
+              "id": "C",
+              "text": "15"
+            }
+          ],
+          "correct_answer": "12",
+          "explanation": "Daniel dice I'm 12.",
+          "mastery_tag": "a1-u2-r03",
+          "main_text": "MY FAMILY\nHello! I'm Daniel and I'm 12. I live with my mother, father and sister. My sister's name is Eva. She's 9. My grandparents live near our house."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the father's name?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mark"
+            },
+            {
+              "id": "B",
+              "text": "Sam"
+            },
+            {
+              "id": "C",
+              "text": "Ben"
+            }
+          ],
+          "correct_answer": "Mark",
+          "explanation": "El padre se llama Mark.",
+          "mastery_tag": "a1-u2-r04",
+          "main_text": "A FAMILY PHOTO\nThis is my family. The man is my father, Mark. The woman is my mother, Helen. The two children are my brother Sam and me. My aunt is next to my mother."
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Is this detail in the text?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "The text doesn't say"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "El padre se llama Mark.",
+          "mastery_tag": "a1-u2-r05",
+          "main_text": "A FAMILY PHOTO\nThis is my family. The man is my father, Mark. The woman is my mother, Helen. The two children are my brother Sam and me. My aunt is next to my mother."
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer: What is the father's name?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mark"
+            },
+            {
+              "id": "B",
+              "text": "Sam"
+            },
+            {
+              "id": "C",
+              "text": "Ben"
+            }
+          ],
+          "correct_answer": "Mark",
+          "explanation": "El padre se llama Mark.",
+          "mastery_tag": "a1-u2-r06",
+          "main_text": "A FAMILY PHOTO\nThis is my family. The man is my father, Mark. The woman is my mother, Helen. The two children are my brother Sam and me. My aunt is next to my mother."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "How old is Olivia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "15"
+            },
+            {
+              "id": "B",
+              "text": "12"
+            },
+            {
+              "id": "C",
+              "text": "16"
+            }
+          ],
+          "correct_answer": "15",
+          "explanation": "Olivia tiene 15 años.",
+          "mastery_tag": "a1-u2-r07",
+          "main_text": "MEET MY COUSIN\nMy cousin's name is Olivia. She's 15 years old and she's from Bristol. Her father is my uncle Ben. Olivia has one brother. His name is Max."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Is this detail in the text?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "The text doesn't say"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Olivia tiene 15 años.",
+          "mastery_tag": "a1-u2-r08",
+          "main_text": "MEET MY COUSIN\nMy cousin's name is Olivia. She's 15 years old and she's from Bristol. Her father is my uncle Ben. Olivia has one brother. His name is Max."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer: How old is Olivia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "15"
+            },
+            {
+              "id": "B",
+              "text": "12"
+            },
+            {
+              "id": "C",
+              "text": "16"
+            }
+          ],
+          "correct_answer": "15",
+          "explanation": "Olivia tiene 15 años.",
+          "mastery_tag": "a1-u2-r09",
+          "main_text": "MEET MY COUSIN\nMy cousin's name is Olivia. She's 15 years old and she's from Bristol. Her father is my uncle Ben. Olivia has one brother. His name is Max."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where is George from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wales"
+            },
+            {
+              "id": "B",
+              "text": "Bristol"
+            },
+            {
+              "id": "C",
+              "text": "London"
+            }
+          ],
+          "correct_answer": "Wales",
+          "explanation": "George es de Wales.",
+          "mastery_tag": "a1-u2-r10",
+          "main_text": "ABOUT MY GRANDFATHER\nMy grandfather is called George. He's 68 years old. He's from Wales. He has two daughters and three grandchildren. He's very friendly."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Is this detail in the text?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "The text doesn't say"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "George es de Wales.",
+          "mastery_tag": "a1-u2-r11",
+          "main_text": "ABOUT MY GRANDFATHER\nMy grandfather is called George. He's 68 years old. He's from Wales. He has two daughters and three grandchildren. He's very friendly."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer: Where is George from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wales"
+            },
+            {
+              "id": "B",
+              "text": "Bristol"
+            },
+            {
+              "id": "C",
+              "text": "London"
+            }
+          ],
+          "correct_answer": "Wales",
+          "explanation": "George es de Wales.",
+          "mastery_tag": "a1-u2-r12",
+          "main_text": "ABOUT MY GRANDFATHER\nMy grandfather is called George. He's 68 years old. He's from Wales. He has two daughters and three grandchildren. He's very friendly."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is Lily's brother's name?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Alex"
+            },
+            {
+              "id": "B",
+              "text": "George"
+            },
+            {
+              "id": "C",
+              "text": "Mark"
+            }
+          ],
+          "correct_answer": "Alex",
+          "explanation": "El hermano de Lily se llama Alex.",
+          "mastery_tag": "a1-u2-r13",
+          "main_text": "OUR FAMILY\nHi, I'm Lily. I've got a small family. I've got one brother, Alex. He's 16. My mother is a nurse and my father is a bus driver. We are happy together."
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Is this detail in the text?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "The text doesn't say"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "El hermano de Lily se llama Alex.",
+          "mastery_tag": "a1-u2-r14",
+          "main_text": "OUR FAMILY\nHi, I'm Lily. I've got a small family. I've got one brother, Alex. He's 16. My mother is a nurse and my father is a bus driver. We are happy together."
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer: What is Lily's brother's name?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Alex"
+            },
+            {
+              "id": "B",
+              "text": "George"
+            },
+            {
+              "id": "C",
+              "text": "Mark"
+            }
+          ],
+          "correct_answer": "Alex",
+          "explanation": "El hermano de Lily se llama Alex.",
+          "mastery_tag": "a1-u2-r15",
+          "main_text": "OUR FAMILY\nHi, I'm Lily. I've got a small family. I've got one brother, Alex. He's 16. My mother is a nurse and my father is a bus driver. We are happy together."
+        }
+      ]
+    }
+  ]
 }
