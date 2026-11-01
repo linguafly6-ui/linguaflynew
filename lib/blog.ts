@@ -28,8 +28,11 @@ type D1StatementLike = {
 type D1DatabaseLike = { prepare(sql: string): D1StatementLike };
 
 async function database(): Promise<D1DatabaseLike> {
-  const { env } = await getCloudflareContext();
-  return (env as unknown as { DB: D1DatabaseLike }).DB;
+  // Use the async context accessor in request-time server components.
+  const { env } = await getCloudflareContext({ async: true });
+  const db = (env as unknown as { DB?: D1DatabaseLike }).DB;
+  if (!db) throw new Error("Cloudflare D1 binding DB is unavailable in this request");
+  return db;
 }
 
 export async function getArticles(limit = 18): Promise<Article[]> {
