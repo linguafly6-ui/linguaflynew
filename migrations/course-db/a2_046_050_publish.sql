@@ -26,7 +26,7 @@ WHERE section_id IN (
 UPDATE sections SET status='published'
 WHERE unit_id IN ('a2-unit-046','a2-unit-047','a2-unit-048','a2-unit-049','a2-unit-050');
 
-UPDATE units SET status='published', updated_at=CURRENT_TIMESTAMP
+UPDATE units SET status='published'
 WHERE id IN ('a2-unit-046','a2-unit-047','a2-unit-048','a2-unit-049','a2-unit-050');
 
 -- Verification: expected 60 exercises, 60 answer keys and 180 options per unit.
