@@ -24,6 +24,19 @@ const descriptions: Record<CefrLevel, string> = {
   C2: "Perfecciona la precisión, la naturalidad y los matices propios de un dominio avanzado."
 };
 const validLevel = (value: string): value is CefrLevel => LEVELS.includes(value.toUpperCase() as CefrLevel);
+
+function spanishExerciseInstruction(value: string | null | undefined): string {
+  const instruction = (value ?? "").trim();
+  const translations: Record<string, string> = {
+    "Choose the correct answer.": "Elige la respuesta correcta.",
+    "Listen and choose the correct answer.": "Escucha y elige la respuesta correcta.",
+    "Read the text and choose the correct answer.": "Lee el texto y elige la respuesta correcta.",
+    "Complete the sentence.": "Completa la frase.",
+    "Complete the affirmative sentence.": "Completa la frase afirmativa.",
+    "Choose the expression that best completes this A2 topic sentence.": "Elige la expresión que mejor completa la frase."
+  };
+  return translations[instruction] ?? instruction;
+}
 async function database(): Promise<Database> {
   const { env } = await getCloudflareContext();
   return (env as unknown as { COURSE_DB: Database }).COURSE_DB;
@@ -127,7 +140,7 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
           activity = {
             interaction_id: row.exercise_id,
             type: "multiple_choice",
-            prompt_es: row.instructions,
+            prompt_es: spanishExerciseInstruction(row.instructions),
             question_en: authored.prompt || row.exercise_title,
             stimulus_en: "",
             transcript: section === "listening" ? (authored.stimulus || "") : undefined,

@@ -3,6 +3,17 @@
 import { useState } from "react";
 
 type Option = { id: string; text: string; value?: string };
+
+// Authored bilingual strings use [[English|Spanish]]. Render only the
+// requested language so internal localisation markers never reach students.
+function LocalizedText({ text, language = "en" }: { text: string; language?: "en" | "es" }) {
+  const parts = text.split(/(\[\[[^\]]+\]\])/g);
+  return <>{parts.map((part, index) => {
+    const match = /^\[\[([^|\]]+)\|([^\]]+)\]\]$/.exec(part);
+    if (!match) return part;
+    return <span key={index}>{language === "es" ? match[2] : match[1]}</span>;
+  })}</>;
+}
 export type Activity = {
   interaction_id?: string; type?: string; prompt_es?: string; question_en?: string;
   stimulus_en?: string; stimulus_es?: string; main_text?: string; transcript?: string;
@@ -10,6 +21,23 @@ export type Activity = {
   options?: Option[]; correct_answer?: string | string[] | boolean;
   example?: string; explanation?: string; mastery_tag?: string;
 };
+
+function activityTypeLabel(type: string | undefined): string {
+  const key = (type ?? "ACTIVIDAD").toLowerCase().replaceAll("-", "_");
+  const labels: Record<string, string> = {
+    fill_blank: "COMPLETA EL ESPACIO",
+    gap_fill: "COMPLETA EL ESPACIO",
+    sentence_building: "ORDENA LA FRASE",
+    multiple_choice: "OPCIÓN MÚLTIPLE",
+    single_choice: "OPCIÓN MÚLTIPLE",
+    true_false: "VERDADERO O FALSO",
+    translation: "TRADUCCIÓN",
+    matching: "RELACIONA",
+    listening: "COMPRENSIÓN ORAL",
+    reading: "COMPRENSIÓN LECTORA"
+  };
+  return labels[key] ?? key.replaceAll("_", " ").toUpperCase();
+}
 
 function SpeakButton({ text, label }: { text: string; label: string }) {
   const [playing, setPlaying] = useState(false);
@@ -51,15 +79,15 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
     }
   }
   return <article className="activity-card">
-    <div className="activity-type">{(activity.type ?? "ACTIVIDAD").replaceAll("_"," ").replaceAll("-"," ").toUpperCase()}</div>
-    <p className="activity-prompt">{activity.prompt_es ?? "Practica este contenido."}</p>
-    {activity.question_en && <p className="activity-stimulus" lang="en">{activity.question_en}</p>}
-    {activity.stimulus_en && <div className="activity-stimulus" lang="en">{activity.stimulus_en}</div>}
+    <div className="activity-type">{activityTypeLabel(activity.type)}</div>
+    <p className="activity-prompt">{activity.prompt_es ? <LocalizedText text={activity.prompt_es} language="es" /> : "Practica este contenido."}</p>
+    {activity.question_en && <p className="activity-stimulus" lang="en"><LocalizedText text={activity.question_en} /></p>}
+    {activity.stimulus_en && <div className="activity-stimulus" lang="en"><LocalizedText text={activity.stimulus_en} /></div>}
     {isChoice && activity.options?.length ? <fieldset className="activity-options" style={{border:0,padding:0,margin:0}}>
       <legend className="sr-only">Selecciona una respuesta</legend>
       {activity.options.map(option => <label key={option.id} className="activity-option" style={{display:"flex",gap:10,alignItems:"center",padding:"9px 0",cursor:"pointer"}}>
         <input type="radio" name={id} value={option.value ?? option.text} checked={answer===(option.value ?? option.text)} onChange={() => {setAnswer(option.value ?? option.text);setFeedback(null);setErrorMessage("");}} />
-        <span>{option.text}</span>
+        <span><LocalizedText text={option.text} /></span>
       </label>)}
     </fieldset> : <div className="answer-entry">
       <label htmlFor={id}>Tu respuesta</label>
@@ -71,7 +99,7 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
     {feedback === "correct" && <p className="answer-feedback correct">¡Correcto! Muy bien.</p>}
     {feedback === "incorrect" && <p className="answer-feedback incorrect">No es correcto. Inténtalo de nuevo.</p>}
     {feedback === "error" && <p className="answer-feedback incorrect">{errorMessage || "No se pudo comprobar la respuesta. Inténtalo de nuevo."}</p>}
-    {feedback === "correct" && activity.explanation && <p className="activity-hint">{activity.explanation}</p>}
+    {feedback === "correct" && activity.explanation && <p className="activity-hint"><LocalizedText text={activity.explanation} language="es" /></p>}
   </article>;
 }
 
@@ -82,8 +110,8 @@ function Passage({ text, kind, audioUrl }: { text: string; kind: "reading" | "li
     const hasHeading = parts.length > 1;
     return <section className="passage-card reading-card">
       <div className="passage-kicker">READING · COMPRENSIÓN LECTORA</div>
-      <h4>{hasHeading ? parts[0] : "Texto de lectura"}</h4>
-      <div className="reading-passage" style={{whiteSpace:"pre-line"}}>{hasHeading ? parts.slice(1).join("\\n").trim() : text}</div>
+      <h4>{hasHeading ? <LocalizedText text={parts[0]} /> : "Texto de lectura"}</h4>
+      <div className="reading-passage" style={{whiteSpace:"pre-line"}}><LocalizedText text={hasHeading ? parts.slice(1).join("\\n").trim() : text} /></div>
     </section>;
   }
   return <section className="passage-card listening-card">
@@ -94,7 +122,7 @@ function Passage({ text, kind, audioUrl }: { text: string; kind: "reading" | "li
           Tu navegador no puede reproducir este archivo de audio.
         </audio>
       : <><p>Este material todavía no tiene una grabación asociada.</p><SpeakButton text={text} label="Reproducción provisional" /></>}
-    <details className="transcript-details"><summary>Ver transcripción</summary><p style={{whiteSpace:"pre-line"}}>{text}</p></details>
+    <details className="transcript-details"><summary>Ver transcripción</summary><p style={{whiteSpace:"pre-line"}}><LocalizedText text={text} /></p></details>
   </section>;
 }
 
