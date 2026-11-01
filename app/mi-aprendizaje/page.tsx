@@ -4,6 +4,7 @@ import { getStudent } from "@/lib/student-auth";
 import { getAcademyLevels } from "@/lib/academy";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { BillingPortalButton, CheckoutButton } from "./BillingActions";
+import SupportTickets from "./SupportTickets";
 
 type DB = { prepare(sql: string): { bind(...values: string[]): { all<T>(): Promise<{ results?: T[] }> } } };
 export const dynamic = "force-dynamic";
@@ -23,6 +24,7 @@ export default async function StudentDashboard() {
     {pendingCourses.length > 0 && <><h2>Completa tu suscripción</h2><div className="student-course-grid">{pendingCourses.map((course) => <div className="student-course" key={course.level}><strong>{course.level}</strong><span>Pago pendiente</span><CheckoutButton course={course.course_key}/></div>)}</div></>}
     {activeCourses.length === 0 && pendingCourses.length === 0 && <p>Aún no tienes cursos. <Link href="/suscripcion">Explorar cursos</Link></p>}
     {activeCourses.length > 0 && <BillingPortalButton/>}
+    <SupportTickets/>
     <form action="/api/student/logout" method="post"><button className="student-logout" type="submit">Cerrar sesión</button></form>
   </section></main>;
 }
