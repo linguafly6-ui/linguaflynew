@@ -114,6 +114,16 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
           let authored: Record<string, any> = {};
           try { authored = JSON.parse(row.content_json || "{}"); } catch {}
           const section = row.section_type;
+          const audioGroupValue = authored.audio_group;
+          const audioGroupMatch = typeof audioGroupValue === "string"
+            ? /^listening-(\\d+)$/.exec(audioGroupValue)
+            : null;
+          const audioTrack = Number.isInteger(audioGroupValue)
+            ? Number(audioGroupValue)
+            : audioGroupMatch ? Number(audioGroupMatch[1]) : NaN;
+          const hasAudio = section === "listening" &&
+            typeof authored.audio_key === "string" &&
+            Number.isInteger(audioTrack) && audioTrack >= 1 && audioTrack <= 3;
           activity = {
             interaction_id: row.exercise_id,
             type: "multiple_choice",
@@ -121,10 +131,8 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
             question_en: authored.prompt || row.exercise_title,
             stimulus_en: "",
             transcript: section === "listening" ? (authored.stimulus || "") : undefined,
-            audio_group: section === "listening" && Number.isInteger(authored.audio_group) ? authored.audio_group : undefined,
-            audio_url: section === "listening" && typeof authored.audio_key === "string"
-              ? `/api/academia/a2/${unitNumber}/audio/${authored.audio_group}`
-              : undefined,
+            audio_group: hasAudio ? audioTrack : undefined,
+            audio_url: hasAudio ? `/api/academia/a2/${unitNumber}/audio/${audioTrack}` : undefined,
             main_text: section === "reading" ? (authored.stimulus || "") : undefined,
             explanation: authored.explanation_es || "",
             options: []
