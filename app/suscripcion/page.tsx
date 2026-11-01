@@ -1,4 +1,5 @@
 import {CheckoutStart} from "./CheckoutStart";
+// Stripe Checkout precedes all learner-account creation.
 const levels=[["A1","Principiante","ingles-a1"],["A2","Elemental","ingles-a2"],["B1","Intermedio","ingles-b1"],["B2","Intermedio alto","ingles-b2"],["C1","Avanzado","ingles-c1"],["C2","Maestría","ingles-c2"]];
 export const metadata={title:"Suscríbete a un curso de inglés",description:"Elige tu nivel y paga tu suscripción a Linguafly Academy."};
 export default async function SubscriptionPage({searchParams}:{searchParams:Promise<{cancelado?:string}>}){
