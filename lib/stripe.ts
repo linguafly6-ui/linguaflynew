@@ -1,10 +1,15 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-type StripeEnv = { STRIPE_SECRET_KEY?: string; STRIPE_WEBHOOK_SECRET?: string; STRIPE_PRICE_INGLES_A1?: string; STRIPE_PRICE_INGLES_A2?: string; STRIPE_PRICE_INGLES_B1?: string; STRIPE_PRICE_INGLES_B2?: string; STRIPE_PRICE_INGLES_C1?: string; STRIPE_PRICE_INGLES_C2?: string; NEXT_PUBLIC_SITE_URL?: string; };
+type StripeEnv = { STRIPE_SECRET_KEY?: string; STRIPE_WEBHOOK_SECRET?: string; STRIPE_PRICE_MONTHLY?: string; STRIPE_PRICE_ANUAL?: string; STRIPE_PRICE_INGLES_A1?: string; STRIPE_PRICE_INGLES_A2?: string; STRIPE_PRICE_INGLES_B1?: string; STRIPE_PRICE_INGLES_B2?: string; STRIPE_PRICE_INGLES_C1?: string; STRIPE_PRICE_INGLES_C2?: string; NEXT_PUBLIC_SITE_URL?: string; };
 export type StripeContext = { env: StripeEnv };
 export async function getStripeContext(): Promise<StripeContext> { const { env } = await getCloudflareContext(); return { env: env as unknown as StripeEnv }; }
 export function getPriceId(env: StripeEnv, course: string): string {
  const keys: Record<string,keyof StripeEnv>={"ingles-a1":"STRIPE_PRICE_INGLES_A1","ingles-a2":"STRIPE_PRICE_INGLES_A2","ingles-b1":"STRIPE_PRICE_INGLES_B1","ingles-b2":"STRIPE_PRICE_INGLES_B2","ingles-c1":"STRIPE_PRICE_INGLES_C1","ingles-c2":"STRIPE_PRICE_INGLES_C2"};
- const key=keys[course]; if(!key||!env[key]) throw new Error("El precio recurrente de Stripe no está configurado para este curso."); return env[key] as string;
+ const key=keys[course];
+ if(!key) throw new Error("Curso no válido.");
+ // A course-specific Stripe Price takes precedence; otherwise all levels may share the configured monthly Price.
+ const priceId=(key && env[key]) || env.STRIPE_PRICE_MONTHLY;
+ if(!priceId) throw new Error("Falta configurar STRIPE_PRICE_MONTHLY en las variables de Cloudflare.");
+ return priceId;
 }
 export function siteUrl(env:StripeEnv){return (env.NEXT_PUBLIC_SITE_URL||"https://linguafly.app").replace(/\/$/,"");}
 export async function stripeRequest<T>(secret:string,path:string,params:URLSearchParams):Promise<T>{
