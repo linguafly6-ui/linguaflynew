@@ -5,12 +5,14 @@ type Statement = { bind(...values: (string|number)[]): Statement; first<T>(): Pr
 type DB = { prepare(sql:string):Statement };
 const COOKIE = "lf_student_session";
 const SESSION_SECONDS = 60 * 60 * 24 * 30;
+// Cloudflare Workers WebCrypto supports PBKDF2 iteration counts up to 100,000.
+const PBKDF2_ITERATIONS = 100000;
 async function db():Promise<DB>{const {env}=await getCloudflareContext();return (env as unknown as {COURSE_DB:DB}).COURSE_DB;}
 function hex(bytes:Uint8Array){return Array.from(bytes).map(v=>v.toString(16).padStart(2,"0")).join("");}
 async function digest(value:string){return hex(new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(value))));}
 export async function hashPassword(password:string,saltHex:string){
  const key=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveBits"]);
- const bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:Uint8Array.from(saltHex.match(/.{2}/g)!.map(v=>parseInt(v,16))),iterations:120000,hash:"SHA-256"},key,256);
+ const bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:Uint8Array.from(saltHex.match(/.{2}/g)!.map(v=>parseInt(v,16))),iterations:PBKDF2_ITERATIONS,hash:"SHA-256"},key,256);
  return hex(new Uint8Array(bits));
 }
 export async function createSession(learnerId:string){
