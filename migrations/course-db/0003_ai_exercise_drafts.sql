@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS unit_generated_exercise_drafts (
   status TEXT NOT NULL DEFAULT 'review' CHECK(status IN ('review','approved','rejected')),
   generated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
   reviewed_at TEXT,
-  UNIQUE(unit_id)
+  UNIQUE(course_id, unit_id)
 );
 CREATE INDEX IF NOT EXISTS idx_generated_exercises_course_status
   ON unit_generated_exercise_drafts(course_id, status, generated_at DESC);
