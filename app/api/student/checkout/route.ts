@@ -11,6 +11,7 @@ export async function POST(request: Request) {
     if (!student) return NextResponse.json({ error: "Inicia sesión para continuar." }, { status: 401 });
     const body = await request.json() as { course?: string };
     const course = body.course || "";
+    if (!["ingles-a1", "ingles-a2", "ingles-b1", "ingles-b2", "ingles-c1", "ingles-c2"].includes(course)) return NextResponse.json({ error: "Curso no válido." }, { status: 400 });
     const { env } = await getStripeContext();
     const { env: cfEnv } = await getCloudflareContext();
     const db = (cfEnv as unknown as { COURSE_DB: DB }).COURSE_DB;
