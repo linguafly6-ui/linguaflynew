@@ -22,6 +22,23 @@ export type Activity = {
   example?: string; explanation?: string; mastery_tag?: string;
 };
 
+function activityTypeLabel(type: string | undefined): string {
+  const key = (type ?? "ACTIVIDAD").toLowerCase().replaceAll("-", "_");
+  const labels: Record<string, string> = {
+    fill_blank: "COMPLETA EL ESPACIO",
+    gap_fill: "COMPLETA EL ESPACIO",
+    sentence_building: "ORDENA LA FRASE",
+    multiple_choice: "OPCIÓN MÚLTIPLE",
+    single_choice: "OPCIÓN MÚLTIPLE",
+    true_false: "VERDADERO O FALSO",
+    translation: "TRADUCCIÓN",
+    matching: "RELACIONA",
+    listening: "COMPRENSIÓN ORAL",
+    reading: "COMPRENSIÓN LECTORA"
+  };
+  return labels[key] ?? key.replaceAll("_", " ").toUpperCase();
+}
+
 function SpeakButton({ text, label }: { text: string; label: string }) {
   const [playing, setPlaying] = useState(false);
   function speak() {
@@ -62,7 +79,7 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
     }
   }
   return <article className="activity-card">
-    <div className="activity-type">{(activity.type ?? "ACTIVIDAD").replaceAll("_"," ").replaceAll("-"," ").toUpperCase()}</div>
+    <div className="activity-type">{activityTypeLabel(activity.type)}</div>
     <p className="activity-prompt">{activity.prompt_es ? <LocalizedText text={activity.prompt_es} language="es" /> : "Practica este contenido."}</p>
     {activity.question_en && <p className="activity-stimulus" lang="en"><LocalizedText text={activity.question_en} /></p>}
     {activity.stimulus_en && <div className="activity-stimulus" lang="en"><LocalizedText text={activity.stimulus_en} /></div>}
