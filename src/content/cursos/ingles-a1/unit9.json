@@ -693,6 +693,29 @@
           "correct_answer": "trabajo",
           "explanation": "job significa «trabajo».",
           "mastery_tag": "a1-u9-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "mechanic",
+          "options": [
+            {
+              "id": "A",
+              "text": "mecánico/a"
+            },
+            {
+              "id": "B",
+              "text": "piloto"
+            },
+            {
+              "id": "C",
+              "text": "camarero/a"
+            }
+          ],
+          "correct_answer": "mecánico/a",
+          "explanation": "mechanic significa «mecánico/a».",
+          "mastery_tag": "a1-u9-v15"
         }
       ]
     },
