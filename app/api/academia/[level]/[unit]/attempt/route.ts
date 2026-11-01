@@ -64,7 +64,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       const options = rows.results ?? [];
       if (options.length) {
         const config = JSON.parse(options[0].answer_config_json || "{}") as {correctOptionKeys?:string[]};
-        const correct = options.filter(option => (config.correctOptionKeys ?? []).includes(option.option_key)).map(option => option.option_content);
+        const correct = config.correctOptionKeys ?? [];
         exercise = { interaction_id: interactionId, correct_answer: correct };
       }
     } catch (error) {
