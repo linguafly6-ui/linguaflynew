@@ -38,9 +38,10 @@ type Block = { block_id?: string; title?: string; duration_minutes?: number; con
 type Blueprint = {
   estimated_minutes?: number; language?: string; lesson_sequence?: string[];
   grammar_lesson?: { title?: string; explanation?: string; patterns?: string[]; commonErrors?: string[] };
+  grammar_exercises?: string[][]; vocabulary_exercises?: string[][];
   vocabulary?: { term: string; translation_es?: string; part_of_speech?: string; example?: string }[];
-  reading?: { title?: string; text?: string; questions?: string[][] };
-  listening?: { title?: string; transcript?: string; questions?: string[][]; audio_asset_status?: string };
+  reading?: { title?: string; text?: string; questions?: string[][]; passages?: string[] };
+  listening?: { title?: string; transcript?: string; questions?: string[][]; dialogues?: string[]; audio_asset_status?: string };
   speaking_task?: string; writing_task?: string; review_checklist?: string[]; editorial_notes?: string[];
 };
 const spanishGrammarGuides: Record<number, { explanation: string; examples: string[] }> = {
@@ -77,59 +78,39 @@ function Questions({ items }: { items: string[][] }) {
   return <ol className="theory-question-list">{items.map((q,i)=><li key={i}><span className="question-number">{String(i+1).padStart(2,"0")}</span><div><p>{q[0]}</p>{q.length>1&&<small>Opciones: {q.slice(1,4).join(" · ")}</small>}{q[4]&&<p className="question-answer"><strong>Respuesta: {q[4]}</strong></p>}</div></li>)}</ol>;
 }
 function BlueprintPractice({ data }: { data: Blueprint }) {
-  // Keep the same Activity shape and ActivityContent renderer used by A2 units 1–30.
-  const toActivities = (kind: "reading" | "listening", items?: string[][], passage?: string): Activity[] =>
+  // Same A2 tuple convention: [prompt, correct option, distractor 1, distractor 2, explanation].
+  const toActivities = (kind: "reading" | "listening", items?: string[][], passages?: string[]): Activity[] =>
     (items ?? []).map((item, index) => ({
-      interaction_id: `a2u${kind}-${index + 1}`,
+      interaction_id: `a2u${kind}_${String(index + 1).padStart(2, "0")}`,
       type: "multiple_choice",
       prompt_es: item[0] ?? "Elige la respuesta correcta.",
       question_en: "",
-      options: item.slice(1, 4).map((text, optionIndex) => ({ id: String.fromCharCode(65 + optionIndex), text })),
-      correct_answer: item[4] ?? item[1] ?? "",
-      explanation: "Vuelve al texto o escucha el diálogo para localizar la información.",
-      ...(kind === "reading" && passage ? { main_text: passage } : {}),
-      ...(kind === "listening" && passage ? { transcript: passage } : {})
+      options: [item[1], item[2], item[3]].filter((v): v is string => Boolean(v)).map((text, optionIndex) => ({ id: String.fromCharCode(65 + optionIndex), text })),
+      correct_answer: item[1] ?? "",
+      explanation: item[4] ?? "Vuelve al texto o escucha el diálogo para localizar la información.",
+      ...(kind === "reading" && passages?.length ? { main_text: passages[Math.floor(index / 5)] ?? passages[0] } : {}),
+      ...(kind === "listening" && passages?.length ? { transcript: passages[Math.floor(index / 5)] ?? passages[0] } : {})
     }));
-  const vocabulary = (data.vocabulary ?? []).filter(item => item.term && item.translation_es);
-  const vocabularyActivities: Activity[] = vocabulary.map((item, index) => {
-    const others = vocabulary.filter(other => other.term !== item.term);
-    const distractors = [0, 1].map(offset => others[(index * 2 + offset) % Math.max(1, others.length)]).filter(Boolean);
-    const choices = [item, ...distractors].map(other => other.translation_es ?? "");
-    return {
-      interaction_id: `a2uvocab-${index + 1}`,
+  const toStandardActivities = (prefix: string, rows?: string[][]): Activity[] =>
+    (rows ?? []).map((item, index) => ({
+      interaction_id: `a2u${prefix}_${String(index + 1).padStart(2, "0")}`,
       type: "multiple_choice",
-      prompt_es: "Selecciona la traducción correcta.",
-      question_en: item.term,
-      options: choices.map((text, optionIndex) => ({ id: String.fromCharCode(65 + optionIndex), text })),
-      correct_answer: item.translation_es,
-      explanation: item.example ? `Ejemplo: ${item.example}` : "Repasa la lista de vocabulario."
-    };
-  });
-  const grammarActivities: Activity[] = (data.grammar_lesson?.commonErrors ?? []).flatMap((error, index): Activity[] => {
-    const parts = error.split("→");
-    const incorrect = parts[0]?.trim() ?? "";
-    const correction = parts[1]?.split(":")[0]?.trim() ?? "";
-    if (!correction || !incorrect) return [];
-    return [{
-      interaction_id: `a2ugrammar-${index + 1}`,
-      type: "multiple_choice",
-      prompt_es: "Elige la frase correcta en inglés.",
-      question_en: "Which sentence is correct?",
-      options: [{ id: "A", text: correction }, { id: "B", text: incorrect }],
-      correct_answer: correction,
-      explanation: error.split(":").slice(1).join(":").trim() || "La opción correcta aplica la regla gramatical de esta unidad."
-    }];
-  });
+      prompt_es: item[0] ?? "Elige la respuesta correcta.",
+      question_en: "",
+      options: [item[1], item[2], item[3]].filter((v): v is string => Boolean(v)).map((text, optionIndex) => ({ id: String.fromCharCode(65 + optionIndex), text })),
+      correct_answer: item[1] ?? "",
+      explanation: item[4] ?? "Repasa la regla y vuelve a intentarlo."
+    }));
   const sections = [
-    { title: "GRAMMAR · GRAMÁTICA", activities: grammarActivities },
-    { title: "VOCABULARY · VOCABULARIO", activities: vocabularyActivities },
-    { title: "READING · COMPRENSIÓN LECTORA", activities: toActivities("reading", data.reading?.questions, data.reading?.text) },
-    { title: "LISTENING · COMPRENSIÓN ORAL", activities: toActivities("listening", data.listening?.questions, data.listening?.transcript) }
+    { title: "GRAMMAR · GRAMÁTICA", activities: toStandardActivities("grammar", data.grammar_exercises) },
+    { title: "VOCABULARY · VOCABULARIO", activities: toStandardActivities("vocabulary", data.vocabulary_exercises) },
+    { title: "READING · COMPRENSIÓN LECTORA", activities: toActivities("reading", data.reading?.questions, data.reading?.passages ?? (data.reading?.text ? [data.reading.text] : [])) },
+    { title: "LISTENING · COMPRENSIÓN ORAL", activities: toActivities("listening", data.listening?.questions, data.listening?.dialogues ?? (data.listening?.transcript ? [data.listening.transcript] : [])) }
   ];
   return <section className="lesson-block" style={{marginTop:32}}>
     <div className="kicker">PRACTICE · ACTIVIDADES INTERACTIVAS</div>
     <h2>Practica y comprueba tus respuestas</h2>
-    <p>Practica con el mismo formato de actividades de las unidades A2 anteriores: gramática, vocabulario, listening y reading. El audio se reproduce con la voz sintética del navegador.</p>
+    <p>Las actividades siguen el mismo formato de las unidades A2 anteriores: tres opciones, una respuesta correcta y explicación. Reading y listening incluyen tres textos o diálogos diferentes, con cinco preguntas para cada uno.</p>
     {sections.filter(section => section.activities.length > 0).map(section => <section key={section.title} style={{marginTop:28}}>
       <div className="kicker">{section.title} · {section.activities.length} ACTIVITIES</div>
       <ActivityContent activities={section.activities} mode="standard"/>
