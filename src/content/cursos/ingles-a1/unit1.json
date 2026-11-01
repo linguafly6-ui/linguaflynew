@@ -1,0 +1,1429 @@
+{
+  "course": {
+    "unit_id": "unit1",
+    "unit_title": "Hello! Saying hello",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Saludar y despedirse en situaciones cotidianas.",
+    "Decir tu nombre y preguntar el nombre de otra persona.",
+    "Decir de dónde eres y preguntar la procedencia.",
+    "Utilizar am y are en frases y preguntas sencillas.",
+    "Usar my y your para dar información personal."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el saludo correcto para cualquier momento del día.",
+          "question_en": "Hello!",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hola"
+            },
+            {
+              "id": "B",
+              "text": "Adiós"
+            },
+            {
+              "id": "C",
+              "text": "Buenas noches"
+            }
+          ],
+          "correct_answer": "Hola",
+          "explanation": "Hello significa «hola».",
+          "mastery_tag": "a1-u1-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Completa con la forma correcta de be.",
+          "question_en": "I ___ Anna.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "am",
+          "explanation": "Con I utilizamos am.",
+          "mastery_tag": "a1-u1-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Completa la frase.",
+          "question_en": "You ___ my new friend.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "Con you utilizamos are.",
+          "mastery_tag": "a1-u1-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la contracción correcta de I am.",
+          "question_en": "I ___ from Spain.",
+          "options": [
+            {
+              "id": "A",
+              "text": "I'm"
+            },
+            {
+              "id": "B",
+              "text": "I'm not"
+            },
+            {
+              "id": "C",
+              "text": "you're"
+            }
+          ],
+          "correct_answer": "I'm",
+          "explanation": "I am se contrae como I'm.",
+          "mastery_tag": "a1-u1-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la contracción correcta de you are.",
+          "question_en": "___ welcome.",
+          "options": [
+            {
+              "id": "A",
+              "text": "You're"
+            },
+            {
+              "id": "B",
+              "text": "We're"
+            },
+            {
+              "id": "C",
+              "text": "They're"
+            }
+          ],
+          "correct_answer": "You're",
+          "explanation": "You are se contrae como you're.",
+          "mastery_tag": "a1-u1-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "fill_blank",
+          "prompt_es": "Completa con am.",
+          "stimulus_en": "I ___ Peter.",
+          "correct_answer": "am",
+          "explanation": "I va seguido de am.",
+          "mastery_tag": "a1-u1-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "fill_blank",
+          "prompt_es": "Completa con are.",
+          "stimulus_en": "You ___ in my class.",
+          "correct_answer": "are",
+          "explanation": "You va seguido de are.",
+          "mastery_tag": "a1-u1-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la pregunta correcta para pedir el nombre.",
+          "question_en": "___?",
+          "options": [
+            {
+              "id": "A",
+              "text": "What's your name?"
+            },
+            {
+              "id": "B",
+              "text": "Where your name?"
+            },
+            {
+              "id": "C",
+              "text": "How your name?"
+            }
+          ],
+          "correct_answer": "What's your name?",
+          "explanation": "What's your name? significa «¿Cómo te llamas?».",
+          "mastery_tag": "a1-u1-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la respuesta correcta a «What's your name?».",
+          "question_en": "What's your name?",
+          "options": [
+            {
+              "id": "A",
+              "text": "I'm Lucy."
+            },
+            {
+              "id": "B",
+              "text": "I'm fine, thanks."
+            },
+            {
+              "id": "C",
+              "text": "Goodbye."
+            }
+          ],
+          "correct_answer": "I'm Lucy.",
+          "explanation": "Para decir tu nombre puedes responder I'm + nombre.",
+          "mastery_tag": "a1-u1-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Completa la pregunta con be.",
+          "question_en": "Where ___ you from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "La estructura es Where are you from?",
+          "mastery_tag": "a1-u1-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la respuesta correcta.",
+          "question_en": "Where are you from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "I'm from Madrid."
+            },
+            {
+              "id": "B",
+              "text": "I'm 20."
+            },
+            {
+              "id": "C",
+              "text": "I'm fine."
+            }
+          ],
+          "correct_answer": "I'm from Madrid.",
+          "explanation": "I'm from + lugar indica procedencia.",
+          "mastery_tag": "a1-u1-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la forma negativa correcta.",
+          "question_en": "I'm not from London. I ___ from Bristol.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "am",
+          "explanation": "La forma completa es I am from Bristol.",
+          "mastery_tag": "a1-u1-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Selecciona la respuesta corta correcta.",
+          "question_en": "Are you new here?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, I am."
+            },
+            {
+              "id": "B",
+              "text": "Yes, I is."
+            },
+            {
+              "id": "C",
+              "text": "Yes, I do."
+            }
+          ],
+          "correct_answer": "Yes, I am.",
+          "explanation": "Las respuestas cortas con be repiten am/are/is.",
+          "mastery_tag": "a1-u1-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el posesivo correcto.",
+          "question_en": "This is ___ name: Alex.",
+          "options": [
+            {
+              "id": "A",
+              "text": "my"
+            },
+            {
+              "id": "B",
+              "text": "your"
+            },
+            {
+              "id": "C",
+              "text": "you"
+            }
+          ],
+          "correct_answer": "my",
+          "explanation": "My significa «mi» y acompaña a un nombre.",
+          "mastery_tag": "a1-u1-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el posesivo correcto.",
+          "question_en": "What is ___ name?",
+          "options": [
+            {
+              "id": "A",
+              "text": "I"
+            },
+            {
+              "id": "B",
+              "text": "my"
+            },
+            {
+              "id": "C",
+              "text": "your"
+            }
+          ],
+          "correct_answer": "your",
+          "explanation": "Your significa «tu» y acompaña a name.",
+          "mastery_tag": "a1-u1-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Hello",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hola"
+            },
+            {
+              "id": "B",
+              "text": "Hasta luego"
+            },
+            {
+              "id": "C",
+              "text": "De nada"
+            }
+          ],
+          "correct_answer": "Hola",
+          "explanation": "Hello significa «Hola».",
+          "mastery_tag": "a1-u1-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Hi",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hola (informal)"
+            },
+            {
+              "id": "B",
+              "text": "Por favor"
+            },
+            {
+              "id": "C",
+              "text": "Hola"
+            }
+          ],
+          "correct_answer": "Hola (informal)",
+          "explanation": "Hi significa «Hola (informal)».",
+          "mastery_tag": "a1-u1-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Good morning",
+          "options": [
+            {
+              "id": "A",
+              "text": "Buenos días"
+            },
+            {
+              "id": "B",
+              "text": "Buenas tardes"
+            },
+            {
+              "id": "C",
+              "text": "Gracias"
+            }
+          ],
+          "correct_answer": "Buenos días",
+          "explanation": "Good morning significa «Buenos días».",
+          "mastery_tag": "a1-u1-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Good afternoon",
+          "options": [
+            {
+              "id": "A",
+              "text": "Buenas tardes"
+            },
+            {
+              "id": "B",
+              "text": "Hasta luego"
+            },
+            {
+              "id": "C",
+              "text": "De nada"
+            }
+          ],
+          "correct_answer": "Buenas tardes",
+          "explanation": "Good afternoon significa «Buenas tardes».",
+          "mastery_tag": "a1-u1-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Good evening",
+          "options": [
+            {
+              "id": "A",
+              "text": "Buenas noches (saludo)"
+            },
+            {
+              "id": "B",
+              "text": "Por favor"
+            },
+            {
+              "id": "C",
+              "text": "Hola"
+            }
+          ],
+          "correct_answer": "Buenas noches (saludo)",
+          "explanation": "Good evening significa «Buenas noches (saludo)».",
+          "mastery_tag": "a1-u1-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Good night",
+          "options": [
+            {
+              "id": "A",
+              "text": "Buenas noches (despedida)"
+            },
+            {
+              "id": "B",
+              "text": "Buenas tardes"
+            },
+            {
+              "id": "C",
+              "text": "Gracias"
+            }
+          ],
+          "correct_answer": "Buenas noches (despedida)",
+          "explanation": "Good night significa «Buenas noches (despedida)».",
+          "mastery_tag": "a1-u1-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Goodbye",
+          "options": [
+            {
+              "id": "A",
+              "text": "Adiós"
+            },
+            {
+              "id": "B",
+              "text": "Hasta luego"
+            },
+            {
+              "id": "C",
+              "text": "De nada"
+            }
+          ],
+          "correct_answer": "Adiós",
+          "explanation": "Goodbye significa «Adiós».",
+          "mastery_tag": "a1-u1-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Bye",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chao / Adiós (informal)"
+            },
+            {
+              "id": "B",
+              "text": "Por favor"
+            },
+            {
+              "id": "C",
+              "text": "Hola"
+            }
+          ],
+          "correct_answer": "Chao / Adiós (informal)",
+          "explanation": "Bye significa «Chao / Adiós (informal)».",
+          "mastery_tag": "a1-u1-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Please",
+          "options": [
+            {
+              "id": "A",
+              "text": "Por favor"
+            },
+            {
+              "id": "B",
+              "text": "Buenas tardes"
+            },
+            {
+              "id": "C",
+              "text": "Gracias"
+            }
+          ],
+          "correct_answer": "Por favor",
+          "explanation": "Please significa «Por favor».",
+          "mastery_tag": "a1-u1-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Thank you",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gracias"
+            },
+            {
+              "id": "B",
+              "text": "Hasta luego"
+            },
+            {
+              "id": "C",
+              "text": "De nada"
+            }
+          ],
+          "correct_answer": "Gracias",
+          "explanation": "Thank you significa «Gracias».",
+          "mastery_tag": "a1-u1-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "You're welcome",
+          "options": [
+            {
+              "id": "A",
+              "text": "De nada"
+            },
+            {
+              "id": "B",
+              "text": "Por favor"
+            },
+            {
+              "id": "C",
+              "text": "Hola"
+            }
+          ],
+          "correct_answer": "De nada",
+          "explanation": "You're welcome significa «De nada».",
+          "mastery_tag": "a1-u1-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "What's your name?",
+          "options": [
+            {
+              "id": "A",
+              "text": "¿Cómo te llamas?"
+            },
+            {
+              "id": "B",
+              "text": "Buenas tardes"
+            },
+            {
+              "id": "C",
+              "text": "Gracias"
+            }
+          ],
+          "correct_answer": "¿Cómo te llamas?",
+          "explanation": "What's your name? significa «¿Cómo te llamas?».",
+          "mastery_tag": "a1-u1-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "My name is…",
+          "options": [
+            {
+              "id": "A",
+              "text": "Me llamo…"
+            },
+            {
+              "id": "B",
+              "text": "Hasta luego"
+            },
+            {
+              "id": "C",
+              "text": "De nada"
+            }
+          ],
+          "correct_answer": "Me llamo…",
+          "explanation": "My name is… significa «Me llamo…».",
+          "mastery_tag": "a1-u1-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Where are you from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "¿De dónde eres?"
+            },
+            {
+              "id": "B",
+              "text": "Por favor"
+            },
+            {
+              "id": "C",
+              "text": "Hola"
+            }
+          ],
+          "correct_answer": "¿De dónde eres?",
+          "explanation": "Where are you from? significa «¿De dónde eres?».",
+          "mastery_tag": "a1-u1-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la traducción correcta al castellano.",
+          "question_en": "Nice to meet you",
+          "options": [
+            {
+              "id": "A",
+              "text": "Encantado/a de conocerte"
+            },
+            {
+              "id": "B",
+              "text": "Buenas tardes"
+            },
+            {
+              "id": "C",
+              "text": "Gracias"
+            }
+          ],
+          "correct_answer": "Encantado/a de conocerte",
+          "explanation": "Nice to meet you significa «Encantado/a de conocerte».",
+          "mastery_tag": "a1-u1-v15"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN ORAL",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Cómo se llama la estudiante?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mia Carter"
+            },
+            {
+              "id": "B",
+              "text": "Anna Carter"
+            },
+            {
+              "id": "C",
+              "text": "Mia Brown"
+            }
+          ],
+          "correct_answer": "Mia Carter",
+          "explanation": "Mia se presenta como Mia Carter.",
+          "mastery_tag": "a1-u1-l01",
+          "transcript": "RECEPTION: Hello! What's your name?\nMIA: My name is Mia Carter.\nRECEPTION: Nice to meet you, Mia. Where are you from?\nMIA: I'm from Bristol.\nRECEPTION: Welcome to the class!"
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿De dónde es Mia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bristol"
+            },
+            {
+              "id": "B",
+              "text": "London"
+            },
+            {
+              "id": "C",
+              "text": "Oxford"
+            }
+          ],
+          "correct_answer": "Bristol",
+          "explanation": "Mia dice I'm from Bristol.",
+          "mastery_tag": "a1-u1-l02",
+          "transcript": "RECEPTION: Hello! What's your name?\nMIA: My name is Mia Carter.\nRECEPTION: Nice to meet you, Mia. Where are you from?\nMIA: I'm from Bristol.\nRECEPTION: Welcome to the class!"
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Dónde está Mia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "En una clase"
+            },
+            {
+              "id": "B",
+              "text": "En un restaurante"
+            },
+            {
+              "id": "C",
+              "text": "En una estación"
+            }
+          ],
+          "correct_answer": "En una clase",
+          "explanation": "La recepción le da la bienvenida a la clase.",
+          "mastery_tag": "a1-u1-l03",
+          "transcript": "RECEPTION: Hello! What's your name?\nMIA: My name is Mia Carter.\nRECEPTION: Nice to meet you, Mia. Where are you from?\nMIA: I'm from Bristol.\nRECEPTION: Welcome to the class!"
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Qué expresión utiliza la recepcionista para saludar?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hello!"
+            },
+            {
+              "id": "B",
+              "text": "Good night!"
+            },
+            {
+              "id": "C",
+              "text": "Goodbye!"
+            }
+          ],
+          "correct_answer": "Hello!",
+          "explanation": "La conversación empieza con Hello!.",
+          "mastery_tag": "a1-u1-l04",
+          "transcript": "RECEPTION: Hello! What's your name?\nMIA: My name is Mia Carter.\nRECEPTION: Nice to meet you, Mia. Where are you from?\nMIA: I'm from Bristol.\nRECEPTION: Welcome to the class!"
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Qué significa «Nice to meet you»?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Encantado/a de conocerte"
+            },
+            {
+              "id": "B",
+              "text": "¿De dónde eres?"
+            },
+            {
+              "id": "C",
+              "text": "Hasta mañana"
+            }
+          ],
+          "correct_answer": "Encantado/a de conocerte",
+          "explanation": "Es una expresión para conocer a alguien.",
+          "mastery_tag": "a1-u1-l05",
+          "transcript": "RECEPTION: Hello! What's your name?\nMIA: My name is Mia Carter.\nRECEPTION: Nice to meet you, Mia. Where are you from?\nMIA: I'm from Bristol.\nRECEPTION: Welcome to the class!"
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Cómo se llama el chico?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Jack"
+            },
+            {
+              "id": "B",
+              "text": "James"
+            },
+            {
+              "id": "C",
+              "text": "John"
+            }
+          ],
+          "correct_answer": "Jack",
+          "explanation": "Se presenta diciendo I'm Jack.",
+          "mastery_tag": "a1-u1-l06",
+          "transcript": "JACK: Hi! I'm Jack. What's your name?\nSARA: I'm Sara. Nice to meet you.\nJACK: Nice to meet you too. Are you from Spain?\nSARA: Yes, I am. I'm from Seville.\nJACK: Great! Welcome, Sara."
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Cómo se llama la chica?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sara"
+            },
+            {
+              "id": "B",
+              "text": "Sofia"
+            },
+            {
+              "id": "C",
+              "text": "Sarah"
+            }
+          ],
+          "correct_answer": "Sara",
+          "explanation": "Responde I'm Sara.",
+          "mastery_tag": "a1-u1-l07",
+          "transcript": "JACK: Hi! I'm Jack. What's your name?\nSARA: I'm Sara. Nice to meet you.\nJACK: Nice to meet you too. Are you from Spain?\nSARA: Yes, I am. I'm from Seville.\nJACK: Great! Welcome, Sara."
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Es Sara de España?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sí"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "No lo dice"
+            }
+          ],
+          "correct_answer": "Sí",
+          "explanation": "Responde Yes, I am.",
+          "mastery_tag": "a1-u1-l08",
+          "transcript": "JACK: Hi! I'm Jack. What's your name?\nSARA: I'm Sara. Nice to meet you.\nJACK: Nice to meet you too. Are you from Spain?\nSARA: Yes, I am. I'm from Seville.\nJACK: Great! Welcome, Sara."
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿De qué ciudad es Sara?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Seville"
+            },
+            {
+              "id": "B",
+              "text": "Madrid"
+            },
+            {
+              "id": "C",
+              "text": "Bristol"
+            }
+          ],
+          "correct_answer": "Seville",
+          "explanation": "Dice I'm from Seville.",
+          "mastery_tag": "a1-u1-l09",
+          "transcript": "JACK: Hi! I'm Jack. What's your name?\nSARA: I'm Sara. Nice to meet you.\nJACK: Nice to meet you too. Are you from Spain?\nSARA: Yes, I am. I'm from Seville.\nJACK: Great! Welcome, Sara."
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Qué dice Jack al final?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Welcome, Sara."
+            },
+            {
+              "id": "B",
+              "text": "Good night, Sara."
+            },
+            {
+              "id": "C",
+              "text": "See you, Sara."
+            }
+          ],
+          "correct_answer": "Welcome, Sara.",
+          "explanation": "Jack le da la bienvenida.",
+          "mastery_tag": "a1-u1-l10",
+          "transcript": "JACK: Hi! I'm Jack. What's your name?\nSARA: I'm Sara. Nice to meet you.\nJACK: Nice to meet you too. Are you from Spain?\nSARA: Yes, I am. I'm from Seville.\nJACK: Great! Welcome, Sara."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Qué saludo utiliza el profesor?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Good morning"
+            },
+            {
+              "id": "B",
+              "text": "Good night"
+            },
+            {
+              "id": "C",
+              "text": "Goodbye"
+            }
+          ],
+          "correct_answer": "Good morning",
+          "explanation": "La conversación empieza por la mañana.",
+          "mastery_tag": "a1-u1-l11",
+          "transcript": "TEACHER: Good morning. I'm Mr Green.\nSTUDENT: Good morning. My name is Leo.\nTEACHER: Hello, Leo. Are you new?\nLEO: Yes, I am.\nTEACHER: Welcome to the English class.\nLEO: Thank you."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Cómo se llama el profesor?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mr Green"
+            },
+            {
+              "id": "B",
+              "text": "Mr Brown"
+            },
+            {
+              "id": "C",
+              "text": "Mr White"
+            }
+          ],
+          "correct_answer": "Mr Green",
+          "explanation": "El profesor dice I'm Mr Green.",
+          "mastery_tag": "a1-u1-l12",
+          "transcript": "TEACHER: Good morning. I'm Mr Green.\nSTUDENT: Good morning. My name is Leo.\nTEACHER: Hello, Leo. Are you new?\nLEO: Yes, I am.\nTEACHER: Welcome to the English class.\nLEO: Thank you."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Cómo se llama el alumno?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Leo"
+            },
+            {
+              "id": "B",
+              "text": "Jack"
+            },
+            {
+              "id": "C",
+              "text": "Mia"
+            }
+          ],
+          "correct_answer": "Leo",
+          "explanation": "El alumno dice My name is Leo.",
+          "mastery_tag": "a1-u1-l13",
+          "transcript": "TEACHER: Good morning. I'm Mr Green.\nSTUDENT: Good morning. My name is Leo.\nTEACHER: Hello, Leo. Are you new?\nLEO: Yes, I am.\nTEACHER: Welcome to the English class.\nLEO: Thank you."
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Es Leo nuevo?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sí"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "No lo sabemos"
+            }
+          ],
+          "correct_answer": "Sí",
+          "explanation": "Leo responde Yes, I am.",
+          "mastery_tag": "a1-u1-l14",
+          "transcript": "TEACHER: Good morning. I'm Mr Green.\nSTUDENT: Good morning. My name is Leo.\nTEACHER: Hello, Leo. Are you new?\nLEO: Yes, I am.\nTEACHER: Welcome to the English class.\nLEO: Thank you."
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "¿Qué dice Leo para mostrar agradecimiento?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thank you"
+            },
+            {
+              "id": "B",
+              "text": "Please"
+            },
+            {
+              "id": "C",
+              "text": "Goodbye"
+            }
+          ],
+          "correct_answer": "Thank you",
+          "explanation": "Thank you significa «gracias».",
+          "mastery_tag": "a1-u1-l15",
+          "transcript": "TEACHER: Good morning. I'm Mr Green.\nSTUDENT: Good morning. My name is Leo.\nTEACHER: Hello, Leo. Are you new?\nLEO: Yes, I am.\nTEACHER: Welcome to the English class.\nLEO: Thank you."
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "What is her first name?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Emma"
+            },
+            {
+              "id": "B",
+              "text": "Emily"
+            },
+            {
+              "id": "C",
+              "text": "Anna"
+            }
+          ],
+          "correct_answer": "Emma",
+          "explanation": "El texto dice My name is Emma.",
+          "mastery_tag": "a1-u1-r01",
+          "main_text": "MEET EMMA\nHello! My name is Emma Wilson. I'm from Cardiff, in Wales. I'm 19 years old. I'm a new student. Nice to meet you!"
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "What is her surname?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wilson"
+            },
+            {
+              "id": "B",
+              "text": "Williams"
+            },
+            {
+              "id": "C",
+              "text": "Brown"
+            }
+          ],
+          "correct_answer": "Wilson",
+          "explanation": "Su apellido es Wilson.",
+          "mastery_tag": "a1-u1-r02",
+          "main_text": "MEET EMMA\nHello! My name is Emma Wilson. I'm from Cardiff, in Wales. I'm 19 years old. I'm a new student. Nice to meet you!"
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "Where is Emma from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cardiff"
+            },
+            {
+              "id": "B",
+              "text": "London"
+            },
+            {
+              "id": "C",
+              "text": "Bristol"
+            }
+          ],
+          "correct_answer": "Cardiff",
+          "explanation": "Emma es de Cardiff.",
+          "mastery_tag": "a1-u1-r03",
+          "main_text": "MEET EMMA\nHello! My name is Emma Wilson. I'm from Cardiff, in Wales. I'm 19 years old. I'm a new student. Nice to meet you!"
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "How old is Emma?",
+          "options": [
+            {
+              "id": "A",
+              "text": "19"
+            },
+            {
+              "id": "B",
+              "text": "20"
+            },
+            {
+              "id": "C",
+              "text": "18"
+            }
+          ],
+          "correct_answer": "19",
+          "explanation": "El texto indica 19 years old.",
+          "mastery_tag": "a1-u1-r04",
+          "main_text": "MEET EMMA\nHello! My name is Emma Wilson. I'm from Cardiff, in Wales. I'm 19 years old. I'm a new student. Nice to meet you!"
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "Is Emma a new student?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "The text doesn't say"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "El texto dice I'm a new student.",
+          "mastery_tag": "a1-u1-r05",
+          "main_text": "MEET EMMA\nHello! My name is Emma Wilson. I'm from Cardiff, in Wales. I'm 19 years old. I'm a new student. Nice to meet you!"
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "Who is the teacher?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ms Taylor"
+            },
+            {
+              "id": "B",
+              "text": "Mr Green"
+            },
+            {
+              "id": "C",
+              "text": "Ms Wilson"
+            }
+          ],
+          "correct_answer": "Ms Taylor",
+          "explanation": "El aviso indica Teacher: Ms Taylor.",
+          "mastery_tag": "a1-u1-r06",
+          "main_text": "ENGLISH CLASS NOTICE\nWELCOME!\nEnglish class for beginners\nTeacher: Ms Taylor\nDay: Monday\nTime: 9:00 a.m.\nRoom: 4\nPlease bring a pen and a notebook."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "What day is the class?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Monday"
+            },
+            {
+              "id": "B",
+              "text": "Tuesday"
+            },
+            {
+              "id": "C",
+              "text": "Friday"
+            }
+          ],
+          "correct_answer": "Monday",
+          "explanation": "La clase es el lunes.",
+          "mastery_tag": "a1-u1-r07",
+          "main_text": "ENGLISH CLASS NOTICE\nWELCOME!\nEnglish class for beginners\nTeacher: Ms Taylor\nDay: Monday\nTime: 9:00 a.m.\nRoom: 4\nPlease bring a pen and a notebook."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "What time is the class?",
+          "options": [
+            {
+              "id": "A",
+              "text": "9:00 a.m."
+            },
+            {
+              "id": "B",
+              "text": "10:00 a.m."
+            },
+            {
+              "id": "C",
+              "text": "9:00 p.m."
+            }
+          ],
+          "correct_answer": "9:00 a.m.",
+          "explanation": "El horario indica 9:00 a.m.",
+          "mastery_tag": "a1-u1-r08",
+          "main_text": "ENGLISH CLASS NOTICE\nWELCOME!\nEnglish class for beginners\nTeacher: Ms Taylor\nDay: Monday\nTime: 9:00 a.m.\nRoom: 4\nPlease bring a pen and a notebook."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "Where is the class?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Room 4"
+            },
+            {
+              "id": "B",
+              "text": "Room 9"
+            },
+            {
+              "id": "C",
+              "text": "Room 1"
+            }
+          ],
+          "correct_answer": "Room 4",
+          "explanation": "El aula es la número 4.",
+          "mastery_tag": "a1-u1-r09",
+          "main_text": "ENGLISH CLASS NOTICE\nWELCOME!\nEnglish class for beginners\nTeacher: Ms Taylor\nDay: Monday\nTime: 9:00 a.m.\nRoom: 4\nPlease bring a pen and a notebook."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "What must students bring?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A pen and a notebook"
+            },
+            {
+              "id": "B",
+              "text": "A phone and a bag"
+            },
+            {
+              "id": "C",
+              "text": "A book and a laptop"
+            }
+          ],
+          "correct_answer": "A pen and a notebook",
+          "explanation": "El aviso pide un bolígrafo y un cuaderno.",
+          "mastery_tag": "a1-u1-r10",
+          "main_text": "ENGLISH CLASS NOTICE\nWELCOME!\nEnglish class for beginners\nTeacher: Ms Taylor\nDay: Monday\nTime: 9:00 a.m.\nRoom: 4\nPlease bring a pen and a notebook."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "Who writes the message?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tom"
+            },
+            {
+              "id": "B",
+              "text": "Ana"
+            },
+            {
+              "id": "C",
+              "text": "Jack"
+            }
+          ],
+          "correct_answer": "Tom",
+          "explanation": "El mensaje está firmado por Tom.",
+          "mastery_tag": "a1-u1-r11",
+          "main_text": "A MESSAGE FROM TOM\nHi, Ana!\nI'm Tom. I'm from Manchester, but I'm in London now. I'm a new student in your English class. My phone number is 07700 900123.\nSee you on Monday!\nTom"
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "Where is Tom from?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Manchester"
+            },
+            {
+              "id": "B",
+              "text": "London"
+            },
+            {
+              "id": "C",
+              "text": "Cardiff"
+            }
+          ],
+          "correct_answer": "Manchester",
+          "explanation": "Tom dice I'm from Manchester.",
+          "mastery_tag": "a1-u1-r12",
+          "main_text": "A MESSAGE FROM TOM\nHi, Ana!\nI'm Tom. I'm from Manchester, but I'm in London now. I'm a new student in your English class. My phone number is 07700 900123.\nSee you on Monday!\nTom"
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "Where is Tom now?",
+          "options": [
+            {
+              "id": "A",
+              "text": "London"
+            },
+            {
+              "id": "B",
+              "text": "Manchester"
+            },
+            {
+              "id": "C",
+              "text": "Bristol"
+            }
+          ],
+          "correct_answer": "London",
+          "explanation": "Dice I'm in London now.",
+          "mastery_tag": "a1-u1-r13",
+          "main_text": "A MESSAGE FROM TOM\nHi, Ana!\nI'm Tom. I'm from Manchester, but I'm in London now. I'm a new student in your English class. My phone number is 07700 900123.\nSee you on Monday!\nTom"
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "Is Tom a new student?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "The message doesn't say"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Se describe como a new student.",
+          "mastery_tag": "a1-u1-r14",
+          "main_text": "A MESSAGE FROM TOM\nHi, Ana!\nI'm Tom. I'm from Manchester, but I'm in London now. I'm a new student in your English class. My phone number is 07700 900123.\nSee you on Monday!\nTom"
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde a la pregunta.",
+          "question_en": "When will Tom see Ana?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On Monday"
+            },
+            {
+              "id": "B",
+              "text": "On Friday"
+            },
+            {
+              "id": "C",
+              "text": "On Sunday"
+            }
+          ],
+          "correct_answer": "On Monday",
+          "explanation": "El mensaje termina See you on Monday.",
+          "mastery_tag": "a1-u1-r15",
+          "main_text": "A MESSAGE FROM TOM\nHi, Ana!\nI'm Tom. I'm from Manchester, but I'm in London now. I'm a new student in your English class. My phone number is 07700 900123.\nSee you on Monday!\nTom"
+        }
+      ]
+    }
+  ]
+}
