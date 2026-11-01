@@ -1,0 +1,1457 @@
+{
+  "course": {
+    "unit_id": "unit4",
+    "unit_title": "Food and drink",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Hablar de alimentos y bebidas habituales.",
+    "Usar there is y there are para describir lo que hay.",
+    "Utilizar some y any en afirmaciones, preguntas y negativas.",
+    "Preguntar y responder sobre cantidades con much y many.",
+    "Pedir comida y bebida de forma sencilla usando I'd like y Would you like."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "There ___ some milk in the fridge.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "am"
+            }
+          ],
+          "correct_answer": "is",
+          "explanation": "Milk es incontable; usamos is.",
+          "mastery_tag": "a1-u4-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "There ___ two apples on the table.",
+          "options": [
+            {
+              "id": "A",
+              "text": "is"
+            },
+            {
+              "id": "B",
+              "text": "are"
+            },
+            {
+              "id": "C",
+              "text": "be"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "Apples es plural; usamos are.",
+          "mastery_tag": "a1-u4-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I haven't got ___ bread.",
+          "options": [
+            {
+              "id": "A",
+              "text": "some"
+            },
+            {
+              "id": "B",
+              "text": "any"
+            },
+            {
+              "id": "C",
+              "text": "a"
+            }
+          ],
+          "correct_answer": "any",
+          "explanation": "En negativas suele usarse any.",
+          "mastery_tag": "a1-u4-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Would you like ___ water?",
+          "options": [
+            {
+              "id": "A",
+              "text": "some"
+            },
+            {
+              "id": "B",
+              "text": "any"
+            },
+            {
+              "id": "C",
+              "text": "an"
+            }
+          ],
+          "correct_answer": "some",
+          "explanation": "En ofrecimientos es habitual some.",
+          "mastery_tag": "a1-u4-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "How ___ oranges do we need?",
+          "options": [
+            {
+              "id": "A",
+              "text": "much"
+            },
+            {
+              "id": "B",
+              "text": "many"
+            },
+            {
+              "id": "C",
+              "text": "some"
+            }
+          ],
+          "correct_answer": "many",
+          "explanation": "Many acompaña nombres contables en plural.",
+          "mastery_tag": "a1-u4-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "How ___ cheese is there?",
+          "options": [
+            {
+              "id": "A",
+              "text": "many"
+            },
+            {
+              "id": "B",
+              "text": "much"
+            },
+            {
+              "id": "C",
+              "text": "a"
+            }
+          ],
+          "correct_answer": "much",
+          "explanation": "Much acompaña nombres incontables.",
+          "mastery_tag": "a1-u4-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I'd like ___ sandwich, please.",
+          "options": [
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "B",
+              "text": "some"
+            },
+            {
+              "id": "C",
+              "text": "any"
+            }
+          ],
+          "correct_answer": "a",
+          "explanation": "Sandwich es contable singular.",
+          "mastery_tag": "a1-u4-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She doesn't eat ___ meat.",
+          "options": [
+            {
+              "id": "A",
+              "text": "some"
+            },
+            {
+              "id": "B",
+              "text": "any"
+            },
+            {
+              "id": "C",
+              "text": "a"
+            }
+          ],
+          "correct_answer": "any",
+          "explanation": "Any se usa en negativas.",
+          "mastery_tag": "a1-u4-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "We need ___ eggs for breakfast.",
+          "options": [
+            {
+              "id": "A",
+              "text": "some"
+            },
+            {
+              "id": "B",
+              "text": "any"
+            },
+            {
+              "id": "C",
+              "text": "an"
+            }
+          ],
+          "correct_answer": "some",
+          "explanation": "Some con plurales contables en afirmativa.",
+          "mastery_tag": "a1-u4-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "There isn't ___ juice left.",
+          "options": [
+            {
+              "id": "A",
+              "text": "some"
+            },
+            {
+              "id": "B",
+              "text": "any"
+            },
+            {
+              "id": "C",
+              "text": "many"
+            }
+          ],
+          "correct_answer": "any",
+          "explanation": "Any en oraciones negativas.",
+          "mastery_tag": "a1-u4-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He ___ fish but he doesn't like prawns.",
+          "options": [
+            {
+              "id": "A",
+              "text": "like"
+            },
+            {
+              "id": "B",
+              "text": "likes"
+            },
+            {
+              "id": "C",
+              "text": "liking"
+            }
+          ],
+          "correct_answer": "likes",
+          "explanation": "Con he, el verbo lleva -s.",
+          "mastery_tag": "a1-u4-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ you like coffee?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Do"
+            },
+            {
+              "id": "B",
+              "text": "Does"
+            },
+            {
+              "id": "C",
+              "text": "Are"
+            }
+          ],
+          "correct_answer": "Do",
+          "explanation": "Con you preguntamos con Do.",
+          "mastery_tag": "a1-u4-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Does Anna like tea? Yes, she ___.",
+          "options": [
+            {
+              "id": "A",
+              "text": "do"
+            },
+            {
+              "id": "B",
+              "text": "does"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "does",
+          "explanation": "Respuesta corta: Yes, she does.",
+          "mastery_tag": "a1-u4-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I'd like ___ orange, please.",
+          "options": [
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "B",
+              "text": "an"
+            },
+            {
+              "id": "C",
+              "text": "some"
+            }
+          ],
+          "correct_answer": "an",
+          "explanation": "Orange empieza por sonido vocálico.",
+          "mastery_tag": "a1-u4-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Choose the correct sentence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "There are some bananas."
+            },
+            {
+              "id": "B",
+              "text": "There is some bananas."
+            },
+            {
+              "id": "C",
+              "text": "There are any bananas."
+            }
+          ],
+          "correct_answer": "There are some bananas.",
+          "explanation": "Bananas es plural: there are some.",
+          "mastery_tag": "a1-u4-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "apple",
+          "options": [
+            {
+              "id": "A",
+              "text": "manzana"
+            },
+            {
+              "id": "B",
+              "text": "pera"
+            },
+            {
+              "id": "C",
+              "text": "uva"
+            }
+          ],
+          "correct_answer": "manzana",
+          "explanation": "apple significa «manzana».",
+          "mastery_tag": "a1-u4-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "bread",
+          "options": [
+            {
+              "id": "A",
+              "text": "arroz"
+            },
+            {
+              "id": "B",
+              "text": "pan"
+            },
+            {
+              "id": "C",
+              "text": "queso"
+            }
+          ],
+          "correct_answer": "pan",
+          "explanation": "bread significa «pan».",
+          "mastery_tag": "a1-u4-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "cheese",
+          "options": [
+            {
+              "id": "A",
+              "text": "queso"
+            },
+            {
+              "id": "B",
+              "text": "pollo"
+            },
+            {
+              "id": "C",
+              "text": "pescado"
+            }
+          ],
+          "correct_answer": "queso",
+          "explanation": "cheese significa «queso».",
+          "mastery_tag": "a1-u4-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "chicken",
+          "options": [
+            {
+              "id": "A",
+              "text": "pollo"
+            },
+            {
+              "id": "B",
+              "text": "ternera"
+            },
+            {
+              "id": "C",
+              "text": "huevo"
+            }
+          ],
+          "correct_answer": "pollo",
+          "explanation": "chicken significa «pollo».",
+          "mastery_tag": "a1-u4-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "fish",
+          "options": [
+            {
+              "id": "A",
+              "text": "pescado"
+            },
+            {
+              "id": "B",
+              "text": "fruta"
+            },
+            {
+              "id": "C",
+              "text": "verdura"
+            }
+          ],
+          "correct_answer": "pescado",
+          "explanation": "fish significa «pescado».",
+          "mastery_tag": "a1-u4-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "rice",
+          "options": [
+            {
+              "id": "A",
+              "text": "pasta"
+            },
+            {
+              "id": "B",
+              "text": "arroz"
+            },
+            {
+              "id": "C",
+              "text": "pan"
+            }
+          ],
+          "correct_answer": "arroz",
+          "explanation": "rice significa «arroz».",
+          "mastery_tag": "a1-u4-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "milk",
+          "options": [
+            {
+              "id": "A",
+              "text": "agua"
+            },
+            {
+              "id": "B",
+              "text": "zumo"
+            },
+            {
+              "id": "C",
+              "text": "leche"
+            }
+          ],
+          "correct_answer": "leche",
+          "explanation": "milk significa «leche».",
+          "mastery_tag": "a1-u4-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "water",
+          "options": [
+            {
+              "id": "A",
+              "text": "agua"
+            },
+            {
+              "id": "B",
+              "text": "café"
+            },
+            {
+              "id": "C",
+              "text": "té"
+            }
+          ],
+          "correct_answer": "agua",
+          "explanation": "water significa «agua».",
+          "mastery_tag": "a1-u4-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "orange juice",
+          "options": [
+            {
+              "id": "A",
+              "text": "zumo de naranja"
+            },
+            {
+              "id": "B",
+              "text": "limonada"
+            },
+            {
+              "id": "C",
+              "text": "leche"
+            }
+          ],
+          "correct_answer": "zumo de naranja",
+          "explanation": "orange juice significa «zumo de naranja».",
+          "mastery_tag": "a1-u4-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "eggs",
+          "options": [
+            {
+              "id": "A",
+              "text": "huevos"
+            },
+            {
+              "id": "B",
+              "text": "patatas"
+            },
+            {
+              "id": "C",
+              "text": "tomates"
+            }
+          ],
+          "correct_answer": "huevos",
+          "explanation": "eggs significa «huevos».",
+          "mastery_tag": "a1-u4-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "potatoes",
+          "options": [
+            {
+              "id": "A",
+              "text": "patatas"
+            },
+            {
+              "id": "B",
+              "text": "zanahorias"
+            },
+            {
+              "id": "C",
+              "text": "cebollas"
+            }
+          ],
+          "correct_answer": "patatas",
+          "explanation": "potatoes significa «patatas».",
+          "mastery_tag": "a1-u4-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "tomatoes",
+          "options": [
+            {
+              "id": "A",
+              "text": "tomates"
+            },
+            {
+              "id": "B",
+              "text": "manzanas"
+            },
+            {
+              "id": "C",
+              "text": "naranjas"
+            }
+          ],
+          "correct_answer": "tomates",
+          "explanation": "tomatoes significa «tomates».",
+          "mastery_tag": "a1-u4-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "breakfast",
+          "options": [
+            {
+              "id": "A",
+              "text": "desayuno"
+            },
+            {
+              "id": "B",
+              "text": "comida"
+            },
+            {
+              "id": "C",
+              "text": "cena"
+            }
+          ],
+          "correct_answer": "desayuno",
+          "explanation": "breakfast significa «desayuno».",
+          "mastery_tag": "a1-u4-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "lunch",
+          "options": [
+            {
+              "id": "A",
+              "text": "desayuno"
+            },
+            {
+              "id": "B",
+              "text": "comida/almuerzo"
+            },
+            {
+              "id": "C",
+              "text": "cena"
+            }
+          ],
+          "correct_answer": "comida/almuerzo",
+          "explanation": "lunch significa «comida/almuerzo».",
+          "mastery_tag": "a1-u4-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "I'd like...",
+          "options": [
+            {
+              "id": "A",
+              "text": "Me gustaría..."
+            },
+            {
+              "id": "B",
+              "text": "No quiero..."
+            },
+            {
+              "id": "C",
+              "text": "Tengo hambre..."
+            }
+          ],
+          "correct_answer": "Me gustaría...",
+          "explanation": "I'd like... significa «Me gustaría...».",
+          "mastery_tag": "a1-u4-v15"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What does Jack order?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A cheese sandwich and water"
+            },
+            {
+              "id": "B",
+              "text": "Chicken and juice"
+            },
+            {
+              "id": "C",
+              "text": "An apple and tea"
+            }
+          ],
+          "correct_answer": "A cheese sandwich and water",
+          "explanation": "A cheese sandwich and water",
+          "mastery_tag": "a1-u4-l01",
+          "transcript": "MIA: What would you like?\\nJACK: I'd like a cheese sandwich and water, please.\\nMIA: Anything else?\\nJACK: No, thank you."
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What does he drink?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Water"
+            },
+            {
+              "id": "B",
+              "text": "Milk"
+            },
+            {
+              "id": "C",
+              "text": "Tea"
+            }
+          ],
+          "correct_answer": "Water",
+          "explanation": "A cheese sandwich and water",
+          "mastery_tag": "a1-u4-l02",
+          "transcript": "MIA: What would you like?\\nJACK: I'd like a cheese sandwich and water, please.\\nMIA: Anything else?\\nJACK: No, thank you."
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Does he want anything else?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "No",
+          "explanation": "A cheese sandwich and water",
+          "mastery_tag": "a1-u4-l03",
+          "transcript": "MIA: What would you like?\\nJACK: I'd like a cheese sandwich and water, please.\\nMIA: Anything else?\\nJACK: No, thank you."
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "How many eggs does Lucy buy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Four"
+            },
+            {
+              "id": "B",
+              "text": "Six"
+            },
+            {
+              "id": "C",
+              "text": "Eight"
+            }
+          ],
+          "correct_answer": "Six",
+          "explanation": "Six",
+          "mastery_tag": "a1-u4-l04",
+          "transcript": "SHOP ASSISTANT: Can I help you?\\nLUCY: Yes, I'd like six eggs and some milk.\\nSHOP ASSISTANT: Anything else?\\nLUCY: Two apples, please."
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What else does she buy?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Milk and two apples"
+            },
+            {
+              "id": "B",
+              "text": "Bread and cheese"
+            },
+            {
+              "id": "C",
+              "text": "Tea and bananas"
+            }
+          ],
+          "correct_answer": "Milk and two apples",
+          "explanation": "Six",
+          "mastery_tag": "a1-u4-l05",
+          "transcript": "SHOP ASSISTANT: Can I help you?\\nLUCY: Yes, I'd like six eggs and some milk.\\nSHOP ASSISTANT: Anything else?\\nLUCY: Two apples, please."
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Does she buy any apples?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Six",
+          "mastery_tag": "a1-u4-l06",
+          "transcript": "SHOP ASSISTANT: Can I help you?\\nLUCY: Yes, I'd like six eggs and some milk.\\nSHOP ASSISTANT: Anything else?\\nLUCY: Two apples, please."
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What does Sam prefer?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Coffee"
+            },
+            {
+              "id": "B",
+              "text": "Tea"
+            },
+            {
+              "id": "C",
+              "text": "Juice"
+            }
+          ],
+          "correct_answer": "Tea",
+          "explanation": "Tea",
+          "mastery_tag": "a1-u4-l07",
+          "transcript": "BEN: Do you like coffee, Sam?\\nSAM: No, I don't. I prefer tea.\\nBEN: With milk?\\nSAM: Yes, please."
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Does Sam like coffee?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, he does."
+            },
+            {
+              "id": "B",
+              "text": "No, he doesn't."
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "No, he doesn't.",
+          "explanation": "Tea",
+          "mastery_tag": "a1-u4-l08",
+          "transcript": "BEN: Do you like coffee, Sam?\\nSAM: No, I don't. I prefer tea.\\nBEN: With milk?\\nSAM: Yes, please."
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Does Sam have tea with milk?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "Tea",
+          "mastery_tag": "a1-u4-l09",
+          "transcript": "BEN: Do you like coffee, Sam?\\nSAM: No, I don't. I prefer tea.\\nBEN: With milk?\\nSAM: Yes, please."
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is for dinner?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Fish and potatoes"
+            },
+            {
+              "id": "B",
+              "text": "Chicken and rice"
+            },
+            {
+              "id": "C",
+              "text": "Pasta and cheese"
+            }
+          ],
+          "correct_answer": "Chicken and rice",
+          "explanation": "Chicken and rice",
+          "mastery_tag": "a1-u4-l10",
+          "transcript": "MUM: What's for dinner?\\nDAN: Chicken and rice.\\nMUM: Are there any vegetables?\\nDAN: Yes, there are some carrots."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Are there any vegetables?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, there are."
+            },
+            {
+              "id": "B",
+              "text": "No, there aren't."
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes, there are.",
+          "explanation": "Chicken and rice",
+          "mastery_tag": "a1-u4-l11",
+          "transcript": "MUM: What's for dinner?\\nDAN: Chicken and rice.\\nMUM: Are there any vegetables?\\nDAN: Yes, there are some carrots."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which vegetables are mentioned?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Carrots"
+            },
+            {
+              "id": "B",
+              "text": "Peas"
+            },
+            {
+              "id": "C",
+              "text": "Onions"
+            }
+          ],
+          "correct_answer": "Carrots",
+          "explanation": "Chicken and rice",
+          "mastery_tag": "a1-u4-l12",
+          "transcript": "MUM: What's for dinner?\\nDAN: Chicken and rice.\\nMUM: Are there any vegetables?\\nDAN: Yes, there are some carrots."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which fruit does Leo want?",
+          "options": [
+            {
+              "id": "A",
+              "text": "An orange"
+            },
+            {
+              "id": "B",
+              "text": "A banana"
+            },
+            {
+              "id": "C",
+              "text": "An apple"
+            }
+          ],
+          "correct_answer": "A banana",
+          "explanation": "A banana",
+          "mastery_tag": "a1-u4-l13",
+          "transcript": "EMMA: Would you like an orange?\\nLEO: No, thanks. Have you got a banana?\\nEMMA: Yes, here you are.\\nLEO: Thanks!"
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Does Emma offer an orange?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes",
+          "explanation": "A banana",
+          "mastery_tag": "a1-u4-l14",
+          "transcript": "EMMA: Would you like an orange?\\nLEO: No, thanks. Have you got a banana?\\nEMMA: Yes, here you are.\\nLEO: Thanks!"
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What does Leo say after Emma gives him the banana?",
+          "options": [
+            {
+              "id": "A",
+              "text": "You're welcome."
+            },
+            {
+              "id": "B",
+              "text": "Thanks!"
+            },
+            {
+              "id": "C",
+              "text": "Good morning."
+            }
+          ],
+          "correct_answer": "Thanks!",
+          "explanation": "A banana",
+          "mastery_tag": "a1-u4-l15",
+          "transcript": "EMMA: Would you like an orange?\\nLEO: No, thanks. Have you got a banana?\\nEMMA: Yes, here you are.\\nLEO: Thanks!"
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does Olivia usually drink?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tea"
+            },
+            {
+              "id": "B",
+              "text": "Coffee"
+            },
+            {
+              "id": "C",
+              "text": "Milk"
+            }
+          ],
+          "correct_answer": "Tea",
+          "explanation": "Tea",
+          "mastery_tag": "a1-u4-r01",
+          "main_text": "AT THE CAFÉ\\nHello! My name is Olivia. I go to a small café with my brother on Saturdays. I usually have tea and toast. My brother likes eggs and orange juice. We share an apple cake. The café is near our house."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does her brother like?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Eggs and orange juice"
+            },
+            {
+              "id": "B",
+              "text": "Fish and rice"
+            },
+            {
+              "id": "C",
+              "text": "Toast and tea"
+            }
+          ],
+          "correct_answer": "Eggs and orange juice",
+          "explanation": "Tea",
+          "mastery_tag": "a1-u4-r02",
+          "main_text": "AT THE CAFÉ\\nHello! My name is Olivia. I go to a small café with my brother on Saturdays. I usually have tea and toast. My brother likes eggs and orange juice. We share an apple cake. The café is near our house."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What cake do they share?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Apple cake"
+            },
+            {
+              "id": "B",
+              "text": "Chocolate cake"
+            },
+            {
+              "id": "C",
+              "text": "Carrot cake"
+            }
+          ],
+          "correct_answer": "Apple cake",
+          "explanation": "Tea",
+          "mastery_tag": "a1-u4-r03",
+          "main_text": "AT THE CAFÉ\\nHello! My name is Olivia. I go to a small café with my brother on Saturdays. I usually have tea and toast. My brother likes eggs and orange juice. We share an apple cake. The café is near our house."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "How many apples does Dad need?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Two"
+            },
+            {
+              "id": "B",
+              "text": "Three"
+            },
+            {
+              "id": "C",
+              "text": "Six"
+            }
+          ],
+          "correct_answer": "Three",
+          "explanation": "Three",
+          "mastery_tag": "a1-u4-r04",
+          "main_text": "SHOPPING LIST\\nToday, Dad is at the supermarket. He needs some bread, a bottle of milk, six eggs and three apples. He doesn't need rice or cheese. He is making breakfast for the family tomorrow."
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does he need to drink?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Water"
+            },
+            {
+              "id": "B",
+              "text": "Milk"
+            },
+            {
+              "id": "C",
+              "text": "Orange juice"
+            }
+          ],
+          "correct_answer": "Milk",
+          "explanation": "Three",
+          "mastery_tag": "a1-u4-r05",
+          "main_text": "SHOPPING LIST\\nToday, Dad is at the supermarket. He needs some bread, a bottle of milk, six eggs and three apples. He doesn't need rice or cheese. He is making breakfast for the family tomorrow."
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Does he need any cheese?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "No",
+          "explanation": "Three",
+          "mastery_tag": "a1-u4-r06",
+          "main_text": "SHOPPING LIST\\nToday, Dad is at the supermarket. He needs some bread, a bottle of milk, six eggs and three apples. He doesn't need rice or cheese. He is making breakfast for the family tomorrow."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is Amir's favourite food?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pasta"
+            },
+            {
+              "id": "B",
+              "text": "Fish"
+            },
+            {
+              "id": "C",
+              "text": "Rice"
+            }
+          ],
+          "correct_answer": "Pasta",
+          "explanation": "Pasta",
+          "mastery_tag": "a1-u4-r07",
+          "main_text": "MY FAVOURITE FOOD\\nMy name is Amir. My favourite food is pasta. I eat it with tomato sauce and cheese. I like vegetables, too, especially carrots. I don't eat fish, but my sister loves it. She often has fish and rice for lunch."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which vegetable does he especially like?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Carrots"
+            },
+            {
+              "id": "B",
+              "text": "Tomatoes"
+            },
+            {
+              "id": "C",
+              "text": "Potatoes"
+            }
+          ],
+          "correct_answer": "Carrots",
+          "explanation": "Pasta",
+          "mastery_tag": "a1-u4-r08",
+          "main_text": "MY FAVOURITE FOOD\\nMy name is Amir. My favourite food is pasta. I eat it with tomato sauce and cheese. I like vegetables, too, especially carrots. I don't eat fish, but my sister loves it. She often has fish and rice for lunch."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Who loves fish?",
+          "options": [
+            {
+              "id": "A",
+              "text": "His brother"
+            },
+            {
+              "id": "B",
+              "text": "His sister"
+            },
+            {
+              "id": "C",
+              "text": "His mother"
+            }
+          ],
+          "correct_answer": "His sister",
+          "explanation": "Pasta",
+          "mastery_tag": "a1-u4-r09",
+          "main_text": "MY FAVOURITE FOOD\\nMy name is Amir. My favourite food is pasta. I eat it with tomato sauce and cheese. I like vegetables, too, especially carrots. I don't eat fish, but my sister loves it. She often has fish and rice for lunch."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What time is lunch?",
+          "options": [
+            {
+              "id": "A",
+              "text": "12:00"
+            },
+            {
+              "id": "B",
+              "text": "12:30"
+            },
+            {
+              "id": "C",
+              "text": "1:00"
+            }
+          ],
+          "correct_answer": "12:30",
+          "explanation": "12:30",
+          "mastery_tag": "a1-u4-r10",
+          "main_text": "LUNCH AT SCHOOL\\nAt my school, lunch is at half past twelve. On Mondays, we have chicken and potatoes. On Tuesdays, there is pasta. I usually drink water. My friend Ella likes apple juice, but she doesn't drink milk."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What do they have on Mondays?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chicken and potatoes"
+            },
+            {
+              "id": "B",
+              "text": "Fish and rice"
+            },
+            {
+              "id": "C",
+              "text": "Sandwiches"
+            }
+          ],
+          "correct_answer": "Chicken and potatoes",
+          "explanation": "12:30",
+          "mastery_tag": "a1-u4-r11",
+          "main_text": "LUNCH AT SCHOOL\\nAt my school, lunch is at half past twelve. On Mondays, we have chicken and potatoes. On Tuesdays, there is pasta. I usually drink water. My friend Ella likes apple juice, but she doesn't drink milk."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does Ella like to drink?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Apple juice"
+            },
+            {
+              "id": "B",
+              "text": "Milk"
+            },
+            {
+              "id": "C",
+              "text": "Water"
+            }
+          ],
+          "correct_answer": "Apple juice",
+          "explanation": "12:30",
+          "mastery_tag": "a1-u4-r12",
+          "main_text": "LUNCH AT SCHOOL\\nAt my school, lunch is at half past twelve. On Mondays, we have chicken and potatoes. On Tuesdays, there is pasta. I usually drink water. My friend Ella likes apple juice, but she doesn't drink milk."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where does the family have a picnic?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At the beach"
+            },
+            {
+              "id": "B",
+              "text": "In the park"
+            },
+            {
+              "id": "C",
+              "text": "At home"
+            }
+          ],
+          "correct_answer": "In the park",
+          "explanation": "In the park",
+          "mastery_tag": "a1-u4-r13",
+          "main_text": "A FAMILY PICNIC\\nOn Sunday, we have a picnic in the park. Mum makes sandwiches with cheese and tomatoes. I bring some bananas and oranges. Dad brings water. We don't buy any food because we have everything we need."
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does Mum put in the sandwiches?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cheese and tomatoes"
+            },
+            {
+              "id": "B",
+              "text": "Chicken and rice"
+            },
+            {
+              "id": "C",
+              "text": "Eggs and potatoes"
+            }
+          ],
+          "correct_answer": "Cheese and tomatoes",
+          "explanation": "In the park",
+          "mastery_tag": "a1-u4-r14",
+          "main_text": "A FAMILY PICNIC\\nOn Sunday, we have a picnic in the park. Mum makes sandwiches with cheese and tomatoes. I bring some bananas and oranges. Dad brings water. We don't buy any food because we have everything we need."
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Why don't they buy food?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They have everything they need."
+            },
+            {
+              "id": "B",
+              "text": "The shop is closed."
+            },
+            {
+              "id": "C",
+              "text": "They don't like food."
+            }
+          ],
+          "correct_answer": "They have everything they need.",
+          "explanation": "In the park",
+          "mastery_tag": "a1-u4-r15",
+          "main_text": "A FAMILY PICNIC\\nOn Sunday, we have a picnic in the park. Mum makes sandwiches with cheese and tomatoes. I bring some bananas and oranges. Dad brings water. We don't buy any food because we have everything we need."
+        }
+      ]
+    }
+  ]
+}
