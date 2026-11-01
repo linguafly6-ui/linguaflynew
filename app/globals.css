@@ -341,3 +341,16 @@
   .site-nav{display:flex}
   .mobile-menu-toggle{display:none}
 }
+
+/* Subscription promotion shown on every blog article */
+.article-course-promo{position:relative;display:flex;align-items:center;justify-content:space-between;gap:25px;overflow:hidden;margin:58px 0 18px;padding:clamp(25px,5vw,42px);border:1px solid #dce9d4;border-radius:22px;background:linear-gradient(120deg,#edf6e8 0%,#f7faf4 58%,#e3f0da 100%)}
+.article-course-promo-copy{position:relative;z-index:1;max-width:560px}
+.article-course-promo-kicker{color:#638e43;font-size:10px;font-weight:800;letter-spacing:1.6px}
+.article-course-promo h2{margin:13px 0 12px;color:#183b2e;font:800 clamp(24px,3.5vw,34px)/1.13 Manrope,sans-serif;letter-spacing:-1.1px}
+.article-course-promo p{margin:0;color:#617166;font-size:14px;line-height:1.75}
+.article-course-levels{display:flex;gap:7px;flex-wrap:wrap;margin:19px 0}
+.article-course-levels span{display:grid;place-items:center;width:35px;height:35px;border:1px solid #d8e5d0;border-radius:10px;background:#fff;color:#31563b;font:800 11px Manrope}
+.article-course-promo-link{display:inline-flex;align-items:center;gap:10px;margin-top:3px;padding:13px 18px;border-radius:999px;background:#173d32;color:#fff!important;font-size:12px;font-weight:800;text-decoration:none!important}
+.article-course-promo-link span{color:#b8f36b;font-size:16px}
+.article-course-promo-mark{flex:0 0 auto;display:grid;place-items:center;width:118px;height:118px;border-radius:32px;background:#d9edca;color:#315c37;font:800 54px Manrope;letter-spacing:-4px;transform:rotate(7deg)}
+@media(max-width:600px){.article-course-promo{margin:42px 0 12px;padding:23px 19px;border-radius:17px}.article-course-promo-mark{position:absolute;right:-23px;top:-24px;width:82px;height:82px;border-radius:24px;font-size:36px;opacity:.35}.article-course-promo-copy{max-width:100%}.article-course-promo h2{max-width:90%;font-size:25px}.article-course-promo p{font-size:13px}.article-course-promo-link{font-size:11px;padding:12px 15px}}
