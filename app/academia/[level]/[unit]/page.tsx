@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAcademyUnit, isCefrLevel } from "@/lib/academy";
-import { redirect } from "next/navigation";
-import { getStudent, hasCourseAccess } from "@/lib/student-auth";
 import ActivityContent, { type Activity } from "./activity-content";
 import { a2Unit1Exercises } from "./a2-unit-001-exercises";
 import { a2Unit2Exercises } from "./a2-unit-002-exercises";
@@ -400,11 +398,8 @@ function BlueprintView({ data, title, level, number }: { data: Blueprint; title:
 }
 export default async function AcademyUnitPage({ params }: { params: Promise<{ level: string; unit: string }> }) {
   const { level: rawLevel, unit: rawUnit } = await params;
-  const student = await getStudent();
-  if (!student) redirect("/acceso");
   const level = rawLevel.toUpperCase(), unitNumber = Number(rawUnit);
   if (!isCefrLevel(level)) notFound();
-  if (!(await hasCourseAccess(student.learner_id, `ingles-${level.toLowerCase()}`))) redirect("/suscripcion");
   const unit = await getAcademyUnit(level, unitNumber);
   if (!unit) notFound();
   if (level === "A2" && unit.content.lesson_sequence) return <BlueprintView data={unit.content as Blueprint} title={unit.title} level={level} number={unitNumber}/>;
