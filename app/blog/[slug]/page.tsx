@@ -58,6 +58,16 @@ export default async function ArticlePage({ params }: Props) {
 
       <div className="article-reading-layout">
         <BlogMarkdown content={article.content || ""} />
+        <aside className="article-course-promo" aria-label="Cursos de inglés Linguafly Academy">
+          <div className="article-course-promo-copy">
+            <span className="article-course-promo-kicker">LINGUAFLY ACADEMY · A1–C2</span>
+            <h2>Convierte lo que lees en inglés que sabes utilizar.</h2>
+            <p>Elige tu nivel y accede a un curso estructurado con prácticas ilimitadas mediante tu suscripción. Aprende, repasa y vuelve a practicar a tu ritmo.</p>
+            <div className="article-course-levels" aria-label="Niveles disponibles"><span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span></div>
+            <Link href="/suscripcion" className="article-course-promo-link">Descubre los cursos y suscripciones <span aria-hidden="true">↗</span></Link>
+          </div>
+          <div className="article-course-promo-mark" aria-hidden="true">Aa</div>
+        </aside>
         <div className="article-end">
           <span>LINGUAFLY JOURNAL</span>
           <p>Aprende. Practica. Avanza.</p>
