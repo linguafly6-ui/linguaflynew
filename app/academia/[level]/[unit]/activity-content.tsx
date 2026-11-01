@@ -6,7 +6,7 @@ type Option = { id: string; text: string };
 export type Activity = {
   interaction_id?: string; type?: string; prompt_es?: string; question_en?: string;
   stimulus_en?: string; stimulus_es?: string; main_text?: string; transcript?: string;
-  options?: Option[]; correct_answer?: string | string[] | boolean;
+  options?: Option[];
   example?: string; explanation?: string; mastery_tag?: string;
 };
 
@@ -29,11 +29,25 @@ function SpeakButton({ text, label }: { text: string; label: string }) {
 
 function ActivityCard({ activity, index, level, unit }: { activity: Activity; index: number; level: string; unit: number }) {
   const [answer, setAnswer] = useState("");
-  const [checked, setChecked] = useState(false);
   const id = activity.interaction_id ?? `activity-${index}`;
   const [feedback, setFeedback] = useState<"correct" | "incorrect" | "error" | "saving" | null>(null);
   const isChoice = activity.type === "multiple_choice" || activity.type === "true_false";
-  async function checkAnswer() {\n    if (!answer.trim() || feedback === "saving") return;\n    setFeedback("saving");\n    try {\n      const response = await fetch(`/api/academia/${level.toLowerCase()}/${unit}/attempt`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ interaction_id: activity.interaction_id, answer }) });\n      const data = await response.json();\n      setFeedback(response.ok ? (data.correct ? "correct" : "incorrect") : "error");\n    } catch { setFeedback("error"); }\n  }\n  return <article className="activity-card">
+  async function checkAnswer() {
+    if (!answer.trim() || feedback === "saving") return;
+    setFeedback("saving");
+    try {
+      const response = await fetch(`/api/academia/${level.toLowerCase()}/${unit}/attempt`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ interaction_id: activity.interaction_id, answer }),
+      });
+      const data = await response.json();
+      setFeedback(response.ok ? (data.correct ? "correct" : "incorrect") : "error");
+    } catch {
+      setFeedback("error");
+    }
+  }
+  return <article className="activity-card">
     <div className="activity-type">{(activity.type ?? "ACTIVIDAD").replaceAll("_"," ").replaceAll("-"," ").toUpperCase()}</div>
     <p className="activity-prompt">{activity.prompt_es ?? "Practica este contenido."}</p>
     {activity.question_en && <p className="activity-stimulus" lang="en">{activity.question_en}</p>}
@@ -41,20 +55,20 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
     {isChoice && activity.options?.length ? <fieldset className="activity-options" style={{border:0,padding:0,margin:0}}>
       <legend className="sr-only">Selecciona una respuesta</legend>
       {activity.options.map(option => <label key={option.id} className="activity-option" style={{display:"flex",gap:10,alignItems:"center",padding:"9px 0",cursor:"pointer"}}>
-        <input type="radio" name={id} value={option.text} checked={answer===option.text} onChange={() => {setAnswer(option.text);setChecked(false);}} />
+        <input type="radio" name={id} value={option.text} checked={answer===option.text} onChange={() => {setAnswer(option.text);setFeedback(null);}} />
         <span>{option.text}</span>
       </label>)}
     </fieldset> : <div className="answer-entry">
       <label htmlFor={id}>Tu respuesta</label>
-      <input id={id} value={answer} onChange={event => {setAnswer(event.target.value);setChecked(false);}}
-        onKeyDown={event => {if(event.key==="Enter" && answer.trim()) setChecked(true);}}
+      <input id={id} value={answer} onChange={event => {setAnswer(event.target.value);setFeedback(null);}}
+        onKeyDown={event => {if(event.key==="Enter" && answer.trim()) checkAnswer();}}
         placeholder="Escribe tu respuesta" />
     </div>}
-    <button type="button" className="check-answer" onClick={() => setChecked(true)} disabled={!answer.trim()}>Comprobar</button>
-    {checked && <p className={isCorrect ? "answer-feedback correct" : "answer-feedback incorrect"}>
-      {isCorrect ? "¡Correcto! Muy bien." : <>No es correcto. Respuesta: <strong>{expected.filter((x): x is string => typeof x==="string").join(" / ") || "—"}</strong>.</>}
-    </p>}
-    {checked && activity.explanation && <p className="activity-hint">{activity.explanation}</p>}
+    <button type="button" className="check-answer" onClick={checkAnswer} disabled={!answer.trim() || feedback === "saving"}>{feedback === "saving" ? "Comprobando…" : "Comprobar"}</button>
+    {feedback === "correct" && <p className="answer-feedback correct">¡Correcto! Muy bien.</p>}
+    {feedback === "incorrect" && <p className="answer-feedback incorrect">No es correcto. Inténtalo de nuevo.</p>}
+    {feedback === "error" && <p className="answer-feedback incorrect">No se pudo comprobar la respuesta. Inténtalo de nuevo.</p>}
+    {feedback === "correct" && activity.explanation && <p className="activity-hint">{activity.explanation}</p>}
   </article>;
 }
 
