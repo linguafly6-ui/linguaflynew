@@ -58,6 +58,24 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
   let exercise: Exercise | undefined;
   if (level === "A2" && unitNumber === 2) {
     exercise = Object.values(a2Unit2Exercises).flat().find(item => item.interaction_id === interactionId);
+    // BlueprintPractice also renders a legacy generated set before the 60
+    // authored activities. Its IDs are derived from the blueprint arrays.
+    if (!exercise) {
+      const legacySets: Record<string, unknown> = {
+        a2ugrammar: unit.content.grammar_exercises,
+        a2uvocabulary: unit.content.vocabulary_exercises,
+        a2ureading: unit.content.reading?.questions,
+        a2ulistening: unit.content.listening?.questions,
+      };
+      const match = /^(a2u(?:grammar|vocabulary|reading|listening))_(\\d{2})$/.exec(interactionId);
+      if (match) {
+        const rows = legacySets[match[1]];
+        const item = Array.isArray(rows) ? rows[Number(match[2]) - 1] : undefined;
+        if (Array.isArray(item) && typeof item[1] === "string") {
+          exercise = { interaction_id: interactionId, correct_answer: item[1] };
+        }
+      }
+    }
   }
   // Other JSON-backed units resolve answers from their authoritative D1 row.
   try {
