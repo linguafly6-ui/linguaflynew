@@ -1,0 +1,1457 @@
+{
+  "course": {
+    "unit_id": "unit10",
+    "unit_title": "Making plans and special days",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Hablar de planes sencillos y actividades futuras con going to.",
+    "Invitar a alguien y responder a invitaciones.",
+    "Decir fechas, días y horas de eventos.",
+    "Usar expresiones básicas para hablar de cumpleaños y celebraciones.",
+    "Organizar un plan sencillo con amigos."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I ___ going to visit my aunt on Saturday.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "am",
+          "explanation": "Con I usamos am going to.",
+          "mastery_tag": "a1-u10-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She is ___ to have a party.",
+          "options": [
+            {
+              "id": "A",
+              "text": "going"
+            },
+            {
+              "id": "B",
+              "text": "go"
+            },
+            {
+              "id": "C",
+              "text": "goes"
+            }
+          ],
+          "correct_answer": "going",
+          "explanation": "La estructura es be going to + verbo.",
+          "mastery_tag": "a1-u10-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "They ___ going to play football tomorrow.",
+          "options": [
+            {
+              "id": "A",
+              "text": "are"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "am"
+            }
+          ],
+          "correct_answer": "are",
+          "explanation": "They usa are.",
+          "mastery_tag": "a1-u10-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What are you going to ___ tonight?",
+          "options": [
+            {
+              "id": "A",
+              "text": "do"
+            },
+            {
+              "id": "B",
+              "text": "doing"
+            },
+            {
+              "id": "C",
+              "text": "does"
+            }
+          ],
+          "correct_answer": "do",
+          "explanation": "Después de going to va el verbo base.",
+          "mastery_tag": "a1-u10-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He isn't going to ___ the party.",
+          "options": [
+            {
+              "id": "A",
+              "text": "come to"
+            },
+            {
+              "id": "B",
+              "text": "comes to"
+            },
+            {
+              "id": "C",
+              "text": "coming"
+            }
+          ],
+          "correct_answer": "come to",
+          "explanation": "En negativa: isn't going to + verbo.",
+          "mastery_tag": "a1-u10-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ you going to invite Mia?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Are"
+            },
+            {
+              "id": "B",
+              "text": "Do"
+            },
+            {
+              "id": "C",
+              "text": "Is"
+            }
+          ],
+          "correct_answer": "Are",
+          "explanation": "Con you usamos Are.",
+          "mastery_tag": "a1-u10-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "My birthday is ___ 12th May.",
+          "options": [
+            {
+              "id": "A",
+              "text": "on"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "in"
+            }
+          ],
+          "correct_answer": "on",
+          "explanation": "On se usa con fechas completas.",
+          "mastery_tag": "a1-u10-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "The party starts ___ six o'clock.",
+          "options": [
+            {
+              "id": "A",
+              "text": "at"
+            },
+            {
+              "id": "B",
+              "text": "on"
+            },
+            {
+              "id": "C",
+              "text": "in"
+            }
+          ],
+          "correct_answer": "at",
+          "explanation": "At se usa con horas.",
+          "mastery_tag": "a1-u10-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "We are meeting ___ Friday evening.",
+          "options": [
+            {
+              "id": "A",
+              "text": "on"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "in"
+            }
+          ],
+          "correct_answer": "on",
+          "explanation": "On con días.",
+          "mastery_tag": "a1-u10-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Would you ___ to come to my party?",
+          "options": [
+            {
+              "id": "A",
+              "text": "like"
+            },
+            {
+              "id": "B",
+              "text": "likes"
+            },
+            {
+              "id": "C",
+              "text": "liking"
+            }
+          ],
+          "correct_answer": "like",
+          "explanation": "Would you like...?",
+          "mastery_tag": "a1-u10-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Yes, I'd ___.",
+          "options": [
+            {
+              "id": "A",
+              "text": "love to"
+            },
+            {
+              "id": "B",
+              "text": "love"
+            },
+            {
+              "id": "C",
+              "text": "loving"
+            }
+          ],
+          "correct_answer": "love to",
+          "explanation": "Respuesta: I'd love to.",
+          "mastery_tag": "a1-u10-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Sorry, I can't. I ___ busy.",
+          "options": [
+            {
+              "id": "A",
+              "text": "am"
+            },
+            {
+              "id": "B",
+              "text": "is"
+            },
+            {
+              "id": "C",
+              "text": "are"
+            }
+          ],
+          "correct_answer": "am",
+          "explanation": "Con I usamos am.",
+          "mastery_tag": "a1-u10-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Let's ___ a picnic.",
+          "options": [
+            {
+              "id": "A",
+              "text": "have"
+            },
+            {
+              "id": "B",
+              "text": "has"
+            },
+            {
+              "id": "C",
+              "text": "having"
+            }
+          ],
+          "correct_answer": "have",
+          "explanation": "Let's + verbo base.",
+          "mastery_tag": "a1-u10-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What time ___ the film start?",
+          "options": [
+            {
+              "id": "A",
+              "text": "does"
+            },
+            {
+              "id": "B",
+              "text": "do"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "does",
+          "explanation": "The film es singular.",
+          "mastery_tag": "a1-u10-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Choose the correct sentence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We're going to visit Grandma."
+            },
+            {
+              "id": "B",
+              "text": "We going to visit Grandma."
+            },
+            {
+              "id": "C",
+              "text": "We are going visit Grandma."
+            }
+          ],
+          "correct_answer": "We're going to visit Grandma.",
+          "explanation": "Be + going to + verbo base.",
+          "mastery_tag": "a1-u10-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "birthday",
+          "options": [
+            {
+              "id": "A",
+              "text": "cumpleaños"
+            },
+            {
+              "id": "B",
+              "text": "boda"
+            },
+            {
+              "id": "C",
+              "text": "vacaciones"
+            }
+          ],
+          "correct_answer": "cumpleaños",
+          "explanation": "birthday significa «cumpleaños».",
+          "mastery_tag": "a1-u10-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "party",
+          "options": [
+            {
+              "id": "A",
+              "text": "fiesta"
+            },
+            {
+              "id": "B",
+              "text": "regalo"
+            },
+            {
+              "id": "C",
+              "text": "invitación"
+            }
+          ],
+          "correct_answer": "fiesta",
+          "explanation": "party significa «fiesta».",
+          "mastery_tag": "a1-u10-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "invitation",
+          "options": [
+            {
+              "id": "A",
+              "text": "invitación"
+            },
+            {
+              "id": "B",
+              "text": "celebración"
+            },
+            {
+              "id": "C",
+              "text": "tarjeta"
+            }
+          ],
+          "correct_answer": "invitación",
+          "explanation": "invitation significa «invitación».",
+          "mastery_tag": "a1-u10-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "present",
+          "options": [
+            {
+              "id": "A",
+              "text": "regalo"
+            },
+            {
+              "id": "B",
+              "text": "pastel"
+            },
+            {
+              "id": "C",
+              "text": "globo"
+            }
+          ],
+          "correct_answer": "regalo",
+          "explanation": "present significa «regalo».",
+          "mastery_tag": "a1-u10-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "celebration",
+          "options": [
+            {
+              "id": "A",
+              "text": "celebración"
+            },
+            {
+              "id": "B",
+              "text": "reunión"
+            },
+            {
+              "id": "C",
+              "text": "viaje"
+            }
+          ],
+          "correct_answer": "celebración",
+          "explanation": "celebration significa «celebración».",
+          "mastery_tag": "a1-u10-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "weekend",
+          "options": [
+            {
+              "id": "A",
+              "text": "fin de semana"
+            },
+            {
+              "id": "B",
+              "text": "entre semana"
+            },
+            {
+              "id": "C",
+              "text": "mediodía"
+            }
+          ],
+          "correct_answer": "fin de semana",
+          "explanation": "weekend significa «fin de semana».",
+          "mastery_tag": "a1-u10-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "tomorrow",
+          "options": [
+            {
+              "id": "A",
+              "text": "mañana"
+            },
+            {
+              "id": "B",
+              "text": "ayer"
+            },
+            {
+              "id": "C",
+              "text": "hoy"
+            }
+          ],
+          "correct_answer": "mañana",
+          "explanation": "tomorrow significa «mañana».",
+          "mastery_tag": "a1-u10-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "next week",
+          "options": [
+            {
+              "id": "A",
+              "text": "la semana que viene"
+            },
+            {
+              "id": "B",
+              "text": "la semana pasada"
+            },
+            {
+              "id": "C",
+              "text": "esta mañana"
+            }
+          ],
+          "correct_answer": "la semana que viene",
+          "explanation": "next week significa «la semana que viene».",
+          "mastery_tag": "a1-u10-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "date",
+          "options": [
+            {
+              "id": "A",
+              "text": "fecha"
+            },
+            {
+              "id": "B",
+              "text": "hora"
+            },
+            {
+              "id": "C",
+              "text": "lugar"
+            }
+          ],
+          "correct_answer": "fecha",
+          "explanation": "date significa «fecha».",
+          "mastery_tag": "a1-u10-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "picnic",
+          "options": [
+            {
+              "id": "A",
+              "text": "pícnic"
+            },
+            {
+              "id": "B",
+              "text": "concierto"
+            },
+            {
+              "id": "C",
+              "text": "partido"
+            }
+          ],
+          "correct_answer": "pícnic",
+          "explanation": "picnic significa «pícnic».",
+          "mastery_tag": "a1-u10-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "cake",
+          "options": [
+            {
+              "id": "A",
+              "text": "pastel/tarta"
+            },
+            {
+              "id": "B",
+              "text": "vela"
+            },
+            {
+              "id": "C",
+              "text": "regalo"
+            }
+          ],
+          "correct_answer": "pastel/tarta",
+          "explanation": "cake significa «pastel/tarta».",
+          "mastery_tag": "a1-u10-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "invite",
+          "options": [
+            {
+              "id": "A",
+              "text": "invitar"
+            },
+            {
+              "id": "B",
+              "text": "llegar"
+            },
+            {
+              "id": "C",
+              "text": "salir"
+            }
+          ],
+          "correct_answer": "invitar",
+          "explanation": "invite significa «invitar».",
+          "mastery_tag": "a1-u10-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "meet",
+          "options": [
+            {
+              "id": "A",
+              "text": "quedar/encontrarse"
+            },
+            {
+              "id": "B",
+              "text": "comprar"
+            },
+            {
+              "id": "C",
+              "text": "celebrar"
+            }
+          ],
+          "correct_answer": "quedar/encontrarse",
+          "explanation": "meet significa «quedar/encontrarse».",
+          "mastery_tag": "a1-u10-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "tomorrow evening",
+          "options": [
+            {
+              "id": "A",
+              "text": "mañana por la tarde-noche"
+            },
+            {
+              "id": "B",
+              "text": "esta noche"
+            },
+            {
+              "id": "C",
+              "text": "mañana por la mañana"
+            }
+          ],
+          "correct_answer": "mañana por la tarde-noche",
+          "explanation": "tomorrow evening significa «mañana por la tarde-noche».",
+          "mastery_tag": "a1-u10-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "calendar",
+          "options": [
+            {
+              "id": "A",
+              "text": "calendario"
+            },
+            {
+              "id": "B",
+              "text": "reloj"
+            },
+            {
+              "id": "C",
+              "text": "mapa"
+            }
+          ],
+          "correct_answer": "calendario",
+          "explanation": "calendar significa «calendario».",
+          "mastery_tag": "a1-u10-v15"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Saturday at four"
+            },
+            {
+              "id": "B",
+              "text": "Friday at six"
+            },
+            {
+              "id": "C",
+              "text": "Sunday at three"
+            }
+          ],
+          "correct_answer": "Saturday at four",
+          "explanation": "La fiesta es el sábado a las cuatro.",
+          "mastery_tag": "a1-u10-l01",
+          "transcript": "LUCY: Would you like to come to my birthday party?\\nBEN: I'd love to! When is it?\\nLUCY: On Saturday at four.\\nBEN: Great. See you there!"
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Saturday at four"
+            },
+            {
+              "id": "B",
+              "text": "Friday at six"
+            },
+            {
+              "id": "C",
+              "text": "Sunday at three"
+            }
+          ],
+          "correct_answer": "Saturday at four",
+          "explanation": "La fiesta es el sábado a las cuatro.",
+          "mastery_tag": "a1-u10-l02",
+          "transcript": "LUCY: Would you like to come to my birthday party?\\nBEN: I'd love to! When is it?\\nLUCY: On Saturday at four.\\nBEN: Great. See you there!"
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 1?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Saturday at four"
+            },
+            {
+              "id": "B",
+              "text": "Friday at six"
+            },
+            {
+              "id": "C",
+              "text": "Sunday at three"
+            }
+          ],
+          "correct_answer": "Saturday at four",
+          "explanation": "La fiesta es el sábado a las cuatro.",
+          "mastery_tag": "a1-u10-l03",
+          "transcript": "LUCY: Would you like to come to my birthday party?\\nBEN: I'd love to! When is it?\\nLUCY: On Saturday at four.\\nBEN: Great. See you there!"
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "His grandparents"
+            },
+            {
+              "id": "B",
+              "text": "His friends"
+            },
+            {
+              "id": "C",
+              "text": "His cousins"
+            }
+          ],
+          "correct_answer": "His grandparents",
+          "explanation": "Va a visitar a sus abuelos.",
+          "mastery_tag": "a1-u10-l04",
+          "transcript": "MIA: What are you going to do tomorrow?\\nJACK: I'm going to visit my grandparents.\\nMIA: Are you going by car?\\nJACK: No, we're going by train."
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "His grandparents"
+            },
+            {
+              "id": "B",
+              "text": "His friends"
+            },
+            {
+              "id": "C",
+              "text": "His cousins"
+            }
+          ],
+          "correct_answer": "His grandparents",
+          "explanation": "Va a visitar a sus abuelos.",
+          "mastery_tag": "a1-u10-l05",
+          "transcript": "MIA: What are you going to do tomorrow?\\nJACK: I'm going to visit my grandparents.\\nMIA: Are you going by car?\\nJACK: No, we're going by train."
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 2?",
+          "options": [
+            {
+              "id": "A",
+              "text": "His grandparents"
+            },
+            {
+              "id": "B",
+              "text": "His friends"
+            },
+            {
+              "id": "C",
+              "text": "His cousins"
+            }
+          ],
+          "correct_answer": "His grandparents",
+          "explanation": "Va a visitar a sus abuelos.",
+          "mastery_tag": "a1-u10-l06",
+          "transcript": "MIA: What are you going to do tomorrow?\\nJACK: I'm going to visit my grandparents.\\nMIA: Are you going by car?\\nJACK: No, we're going by train."
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the park"
+            },
+            {
+              "id": "B",
+              "text": "At the beach"
+            },
+            {
+              "id": "C",
+              "text": "At Tom's house"
+            }
+          ],
+          "correct_answer": "In the park",
+          "explanation": "El pícnic es en el parque.",
+          "mastery_tag": "a1-u10-l07",
+          "transcript": "TOM: Let's have a picnic on Sunday.\\nANA: Good idea! What time?\\nTOM: At twelve in the park.\\nANA: I'll bring some sandwiches."
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the park"
+            },
+            {
+              "id": "B",
+              "text": "At the beach"
+            },
+            {
+              "id": "C",
+              "text": "At Tom's house"
+            }
+          ],
+          "correct_answer": "In the park",
+          "explanation": "El pícnic es en el parque.",
+          "mastery_tag": "a1-u10-l08",
+          "transcript": "TOM: Let's have a picnic on Sunday.\\nANA: Good idea! What time?\\nTOM: At twelve in the park.\\nANA: I'll bring some sandwiches."
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 3?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the park"
+            },
+            {
+              "id": "B",
+              "text": "At the beach"
+            },
+            {
+              "id": "C",
+              "text": "At Tom's house"
+            }
+          ],
+          "correct_answer": "In the park",
+          "explanation": "El pícnic es en el parque.",
+          "mastery_tag": "a1-u10-l09",
+          "transcript": "TOM: Let's have a picnic on Sunday.\\nANA: Good idea! What time?\\nTOM: At twelve in the park.\\nANA: I'll bring some sandwiches."
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She is going to study."
+            },
+            {
+              "id": "B",
+              "text": "She is working."
+            },
+            {
+              "id": "C",
+              "text": "She is ill."
+            }
+          ],
+          "correct_answer": "She is going to study.",
+          "explanation": "Va a estudiar.",
+          "mastery_tag": "a1-u10-l10",
+          "transcript": "SAM: Can you come to the cinema tonight?\\nJO: Sorry, I can't. I'm going to study.\\nSAM: What about tomorrow?\\nJO: Yes, tomorrow is fine."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She is going to study."
+            },
+            {
+              "id": "B",
+              "text": "She is working."
+            },
+            {
+              "id": "C",
+              "text": "She is ill."
+            }
+          ],
+          "correct_answer": "She is going to study.",
+          "explanation": "Va a estudiar.",
+          "mastery_tag": "a1-u10-l11",
+          "transcript": "SAM: Can you come to the cinema tonight?\\nJO: Sorry, I can't. I'm going to study.\\nSAM: What about tomorrow?\\nJO: Yes, tomorrow is fine."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 4?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She is going to study."
+            },
+            {
+              "id": "B",
+              "text": "She is working."
+            },
+            {
+              "id": "C",
+              "text": "She is ill."
+            }
+          ],
+          "correct_answer": "She is going to study.",
+          "explanation": "Va a estudiar.",
+          "mastery_tag": "a1-u10-l12",
+          "transcript": "SAM: Can you come to the cinema tonight?\\nJO: Sorry, I can't. I'm going to study.\\nSAM: What about tomorrow?\\nJO: Yes, tomorrow is fine."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What is the main topic of dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A book"
+            },
+            {
+              "id": "B",
+              "text": "A shirt"
+            },
+            {
+              "id": "C",
+              "text": "A cake"
+            }
+          ],
+          "correct_answer": "A book",
+          "explanation": "Va a comprar un libro.",
+          "mastery_tag": "a1-u10-l13",
+          "transcript": "EMMA: What are you going to buy for Dad?\\nLEO: I'm going to get him a book.\\nEMMA: Good idea. His birthday is next week.\\nLEO: I know. Let's write a card, too."
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What detail does the speaker mention in dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A book"
+            },
+            {
+              "id": "B",
+              "text": "A shirt"
+            },
+            {
+              "id": "C",
+              "text": "A cake"
+            }
+          ],
+          "correct_answer": "A book",
+          "explanation": "Va a comprar un libro.",
+          "mastery_tag": "a1-u10-l14",
+          "transcript": "EMMA: What are you going to buy for Dad?\\nLEO: I'm going to get him a book.\\nEMMA: Good idea. His birthday is next week.\\nLEO: I know. Let's write a card, too."
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Which answer is correct according to dialogue 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A book"
+            },
+            {
+              "id": "B",
+              "text": "A shirt"
+            },
+            {
+              "id": "C",
+              "text": "A cake"
+            }
+          ],
+          "correct_answer": "A book",
+          "explanation": "Va a comprar un libro.",
+          "mastery_tag": "a1-u10-l15",
+          "transcript": "EMMA: What are you going to buy for Dad?\\nLEO: I'm going to get him a book.\\nEMMA: Good idea. His birthday is next week.\\nLEO: I know. Let's write a card, too."
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "18th June"
+            },
+            {
+              "id": "B",
+              "text": "8th June"
+            },
+            {
+              "id": "C",
+              "text": "18th July"
+            }
+          ],
+          "correct_answer": "18th June",
+          "explanation": "Su cumpleaños es el 18 de junio.",
+          "mastery_tag": "a1-u10-r01",
+          "main_text": "MY BIRTHDAY PLAN\\nMy birthday is on 18th June. This year, I'm going to have a party at home. I'm going to invite ten friends. The party starts at three o'clock. My mum is going to make a chocolate cake and my dad is going to prepare some food."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (1)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "18th June"
+            },
+            {
+              "id": "B",
+              "text": "8th June"
+            },
+            {
+              "id": "C",
+              "text": "18th July"
+            }
+          ],
+          "correct_answer": "18th June",
+          "explanation": "Su cumpleaños es el 18 de junio.",
+          "mastery_tag": "a1-u10-r02",
+          "main_text": "MY BIRTHDAY PLAN\\nMy birthday is on 18th June. This year, I'm going to have a party at home. I'm going to invite ten friends. The party starts at three o'clock. My mum is going to make a chocolate cake and my dad is going to prepare some food."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 1.",
+          "options": [
+            {
+              "id": "A",
+              "text": "18th June"
+            },
+            {
+              "id": "B",
+              "text": "8th June"
+            },
+            {
+              "id": "C",
+              "text": "18th July"
+            }
+          ],
+          "correct_answer": "18th June",
+          "explanation": "Su cumpleaños es el 18 de junio.",
+          "mastery_tag": "a1-u10-r03",
+          "main_text": "MY BIRTHDAY PLAN\\nMy birthday is on 18th June. This year, I'm going to have a party at home. I'm going to invite ten friends. The party starts at three o'clock. My mum is going to make a chocolate cake and my dad is going to prepare some food."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The zoo"
+            },
+            {
+              "id": "B",
+              "text": "The museum"
+            },
+            {
+              "id": "C",
+              "text": "The cinema"
+            }
+          ],
+          "correct_answer": "The zoo",
+          "explanation": "Van al zoo.",
+          "mastery_tag": "a1-u10-r04",
+          "main_text": "A SATURDAY OUT\\nNext Saturday, my friends and I are going to visit the zoo. We're meeting at the bus station at nine in the morning. We're going to take a bus. I want to see the elephants and the monkeys. We are going to have lunch at the zoo café."
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (2)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The zoo"
+            },
+            {
+              "id": "B",
+              "text": "The museum"
+            },
+            {
+              "id": "C",
+              "text": "The cinema"
+            }
+          ],
+          "correct_answer": "The zoo",
+          "explanation": "Van al zoo.",
+          "mastery_tag": "a1-u10-r05",
+          "main_text": "A SATURDAY OUT\\nNext Saturday, my friends and I are going to visit the zoo. We're meeting at the bus station at nine in the morning. We're going to take a bus. I want to see the elephants and the monkeys. We are going to have lunch at the zoo café."
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 2.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The zoo"
+            },
+            {
+              "id": "B",
+              "text": "The museum"
+            },
+            {
+              "id": "C",
+              "text": "The cinema"
+            }
+          ],
+          "correct_answer": "The zoo",
+          "explanation": "Van al zoo.",
+          "mastery_tag": "a1-u10-r06",
+          "main_text": "A SATURDAY OUT\\nNext Saturday, my friends and I are going to visit the zoo. We're meeting at the bus station at nine in the morning. We're going to take a bus. I want to see the elephants and the monkeys. We are going to have lunch at the zoo café."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Friday"
+            },
+            {
+              "id": "B",
+              "text": "Saturday"
+            },
+            {
+              "id": "C",
+              "text": "Sunday"
+            }
+          ],
+          "correct_answer": "Friday",
+          "explanation": "La fiesta es el viernes.",
+          "mastery_tag": "a1-u10-r07",
+          "main_text": "A SPECIAL INVITATION\\nDear Alex, I'm having a small party on Friday 24th September. It starts at seven in the evening at my house. Please bring your favourite music. Let me know if you can come. I hope to see you! From, Chris."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (3)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Friday"
+            },
+            {
+              "id": "B",
+              "text": "Saturday"
+            },
+            {
+              "id": "C",
+              "text": "Sunday"
+            }
+          ],
+          "correct_answer": "Friday",
+          "explanation": "La fiesta es el viernes.",
+          "mastery_tag": "a1-u10-r08",
+          "main_text": "A SPECIAL INVITATION\\nDear Alex, I'm having a small party on Friday 24th September. It starts at seven in the evening at my house. Please bring your favourite music. Let me know if you can come. I hope to see you! From, Chris."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 3.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Friday"
+            },
+            {
+              "id": "B",
+              "text": "Saturday"
+            },
+            {
+              "id": "C",
+              "text": "Sunday"
+            }
+          ],
+          "correct_answer": "Friday",
+          "explanation": "La fiesta es el viernes.",
+          "mastery_tag": "a1-u10-r09",
+          "main_text": "A SPECIAL INVITATION\\nDear Alex, I'm having a small party on Friday 24th September. It starts at seven in the evening at my house. Please bring your favourite music. Let me know if you can come. I hope to see you! From, Chris."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sunday evening"
+            },
+            {
+              "id": "B",
+              "text": "Saturday morning"
+            },
+            {
+              "id": "C",
+              "text": "Monday morning"
+            }
+          ],
+          "correct_answer": "Sunday evening",
+          "explanation": "Vuelven el domingo por la tarde-noche.",
+          "mastery_tag": "a1-u10-r10",
+          "main_text": "FAMILY WEEKEND\\nThis weekend, we're going to visit our cousins in Leeds. We're leaving on Saturday morning and coming home on Sunday evening. My sister is going to take her camera. We are all excited because we haven't seen our cousins for a long time."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (4)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sunday evening"
+            },
+            {
+              "id": "B",
+              "text": "Saturday morning"
+            },
+            {
+              "id": "C",
+              "text": "Monday morning"
+            }
+          ],
+          "correct_answer": "Sunday evening",
+          "explanation": "Vuelven el domingo por la tarde-noche.",
+          "mastery_tag": "a1-u10-r11",
+          "main_text": "FAMILY WEEKEND\\nThis weekend, we're going to visit our cousins in Leeds. We're leaving on Saturday morning and coming home on Sunday evening. My sister is going to take her camera. We are all excited because we haven't seen our cousins for a long time."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 4.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Sunday evening"
+            },
+            {
+              "id": "B",
+              "text": "Saturday morning"
+            },
+            {
+              "id": "C",
+              "text": "Monday morning"
+            }
+          ],
+          "correct_answer": "Sunday evening",
+          "explanation": "Vuelven el domingo por la tarde-noche.",
+          "mastery_tag": "a1-u10-r12",
+          "main_text": "FAMILY WEEKEND\\nThis weekend, we're going to visit our cousins in Leeds. We're leaving on Saturday morning and coming home on Sunday evening. My sister is going to take her camera. We are all excited because we haven't seen our cousins for a long time."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is the text mainly about (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the school garden"
+            },
+            {
+              "id": "B",
+              "text": "In the sports hall"
+            },
+            {
+              "id": "C",
+              "text": "At the beach"
+            }
+          ],
+          "correct_answer": "In the school garden",
+          "explanation": "El pícnic es en el jardín del colegio.",
+          "mastery_tag": "a1-u10-r13",
+          "main_text": "PLANNING A CLASS EVENT\\nOur English class is going to have an end-of-term picnic. It is on Thursday 10th July in the school garden. Everyone is going to bring something to eat or drink. Our teacher is going to bring games. We hope the weather is sunny!"
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Which detail is mentioned in the text (5)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the school garden"
+            },
+            {
+              "id": "B",
+              "text": "In the sports hall"
+            },
+            {
+              "id": "C",
+              "text": "At the beach"
+            }
+          ],
+          "correct_answer": "In the school garden",
+          "explanation": "El pícnic es en el jardín del colegio.",
+          "mastery_tag": "a1-u10-r14",
+          "main_text": "PLANNING A CLASS EVENT\\nOur English class is going to have an end-of-term picnic. It is on Thursday 10th July in the school garden. Everyone is going to bring something to eat or drink. Our teacher is going to bring games. We hope the weather is sunny!"
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Choose the correct answer about text 5.",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the school garden"
+            },
+            {
+              "id": "B",
+              "text": "In the sports hall"
+            },
+            {
+              "id": "C",
+              "text": "At the beach"
+            }
+          ],
+          "correct_answer": "In the school garden",
+          "explanation": "El pícnic es en el jardín del colegio.",
+          "mastery_tag": "a1-u10-r15",
+          "main_text": "PLANNING A CLASS EVENT\\nOur English class is going to have an end-of-term picnic. It is on Thursday 10th July in the school garden. Everyone is going to bring something to eat or drink. Our teacher is going to bring games. We hope the weather is sunny!"
+        }
+      ]
+    }
+  ]
+}
