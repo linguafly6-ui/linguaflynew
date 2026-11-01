@@ -30,7 +30,7 @@ export default async function ArticlePage({ params }: Props) {
   const article = await getArticle(slug);
   if (!article) notFound();
 
-  const minutes = String(article.read_time ?? "").match(/\\d+/)?.[0] || String(Math.max(1, Math.ceil((article.content || "").split(/\\s+/).filter(Boolean).length / 200)));
+  const minutes = String(article.read_time ?? "").match(/\d+/)?.[0] || String(Math.max(1, Math.ceil((article.content || "").split(/\s+/).filter(Boolean).length / 200)));
   const publishedDate = article.created_at
     ? new Date(article.created_at).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })
     : null;
