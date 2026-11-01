@@ -27,35 +27,32 @@ type D1StatementLike = {
 };
 type D1DatabaseLike = { prepare(sql: string): D1StatementLike };
 
+const ARTICLE_COLUMNS =
+  "id, slug, title, description, excerpt, content, category, level, created_at, updated_at, views, author, read_time, featured, image, alt, canonical";
+
 async function database(): Promise<D1DatabaseLike> {
-  // Use the async context accessor in request-time server components.
-  const { env } = await getCloudflareContext({ async: true });
-  const db = (env as unknown as { DB?: D1DatabaseLike }).DB;
-  if (!db) throw new Error("Cloudflare D1 binding DB is unavailable in this request");
+  // OpenNext request context must be resolved asynchronously in a Worker request.
+  const context = await getCloudflareContext({ async: true });
+  const db = (context.env as unknown as { DB?: D1DatabaseLike }).DB;
+  if (!db) {
+    throw new Error("Cloudflare D1 binding DB is missing from the active Worker environment");
+  }
   return db;
 }
 
 export async function getArticles(limit = 18): Promise<Article[]> {
-  try {
-    const db = await database();
-    const result = await db.prepare(
-      "SELECT id, slug, title, description, excerpt, content, category, level, created_at, updated_at, views, author, read_time, featured, image, alt, canonical FROM articles WHERE is_published = 1 ORDER BY featured DESC, created_at DESC LIMIT ?"
-    ).bind(limit).all<Article>();
-    return result.results ?? [];
-  } catch (error) {
-    console.error("Unable to load blog articles from D1", error);
-    return [];
-  }
+  const db = await database();
+  const result = await db
+    .prepare(`SELECT ${ARTICLE_COLUMNS} FROM articles WHERE is_published = 1 ORDER BY featured DESC, created_at DESC LIMIT ?`)
+    .bind(limit)
+    .all<Article>();
+  return result.results ?? [];
 }
 
 export async function getArticle(slug: string): Promise<Article | null> {
-  try {
-    const db = await database();
-    return await db.prepare(
-      "SELECT id, slug, title, description, excerpt, content, category, level, created_at, updated_at, views, author, read_time, featured, image, alt, canonical FROM articles WHERE slug = ? AND is_published = 1 LIMIT 1"
-    ).bind(slug).first<Article>();
-  } catch (error) {
-    console.error("Unable to load blog article from D1", error);
-    return null;
-  }
+  const db = await database();
+  return db
+    .prepare(`SELECT ${ARTICLE_COLUMNS} FROM articles WHERE slug = ? AND is_published = 1 LIMIT 1`)
+    .bind(slug)
+    .first<Article>();
 }
