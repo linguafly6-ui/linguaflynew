@@ -51,8 +51,25 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
 
   const unit = await getAcademyUnit(level, unitNumber);
   if (!unit) return NextResponse.json({ error: "Unidad no encontrada." }, { status: 404 });
-  const exercise = findExercise(unit.content, interactionId);
-  if (!exercise || exercise.correct_answer === undefined) return NextResponse.json({ error: "Actividad no disponible para corrección segura." }, { status: 404 });
+  // Resolve the answer directly from the authoritative D1 row. This avoids
+  // relying on the page's serialized copy or assumptions about JSON nesting.
+  let exercise: Exercise | undefined;
+  try {
+    const { env } = await getCloudflareContext({ async: true });
+    const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
+    const row = await db.prepare(
+      "SELECT item.value AS exercise_json FROM learning_course_json_units unit, json_each(unit.content_json, '$.blocks') block, json_each(block.value, '$.content') item WHERE unit.level = ? AND unit.course_key = ? AND unit.unit_number = ? AND json_extract(item.value, '$.interaction_id') = ? LIMIT 1"
+    ).bind(level, `ingles-${level.toLowerCase()}`, unitNumber, interactionId).first<{ exercise_json: string }>();
+    if (row?.exercise_json) exercise = JSON.parse(row.exercise_json) as Exercise;
+  } catch (error) {
+    console.error("Unable to resolve academy exercise from D1:", error);
+  }
+  // Fallback supports legacy blueprint units and older content layouts.
+  exercise ??= findExercise(unit.content, interactionId);
+  if (!exercise || exercise.correct_answer === undefined) {
+    console.error("Academy exercise answer missing:", { level, unitNumber, interactionId });
+    return NextResponse.json({ error: "No encontramos la respuesta asociada a esta actividad. Recarga la unidad e inténtalo de nuevo." }, { status: 404 });
+  }
   const expected = Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer];
   const correct = expected.some(value => typeof value === "string" && normalize(answer) === normalize(value));
 
