@@ -120,7 +120,7 @@ export async function POST(_request: Request, { params }: { params: Promise<{ co
       reading: editorial.reading || null,
       listening: editorial.listening || null
     }).slice(0, 14000);
-    const existing = await runtime.COURSE_DB.prepare("SELECT id FROM unit_generated_exercise_drafts WHERE unit_id=?").bind(unitId).first<{id:string}>();
+    const existing = await runtime.COURSE_DB.prepare("SELECT id FROM unit_generated_exercise_drafts WHERE course_id=? AND unit_id=?").bind(unitId).first<{id:string}>();
     if (existing) return NextResponse.json({ error:"Esta unidad ya tiene una generación guardada. No se sobrescribirá; revisa o elimina el borrador antes de volver a generar." }, { status:409 });
     const generated: Record<string, unknown> = {};
     for (const category of CATEGORIES) generated[category] = await generateCategory(runtime.AI!, category, course.cefr_level, title, editorialText);
