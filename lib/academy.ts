@@ -135,7 +135,7 @@ export async function getAcademyUnit(
         interaction_id: row.exercise_id,
         type: "multiple_choice",
         prompt_es: authored.prompt_es || row.instructions || "",
-        question_en: authored.prompt || authored.stimulus_en || row.exercise_title || "",
+        question_en: authored.prompt || row.exercise_title || "",
         stimulus_en: row.section_type === "grammar" || row.section_type === "vocabulary"
           ? (authored.stimulus_en || authored.prompt || "")
           : "",
