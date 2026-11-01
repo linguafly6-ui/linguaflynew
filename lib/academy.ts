@@ -119,7 +119,7 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
             type: "multiple_choice",
             prompt_es: row.instructions,
             question_en: authored.prompt || row.exercise_title,
-            stimulus_en: section === "grammar" || section === "vocabulary" ? (authored.prompt || "") : "",
+            stimulus_en: "",
             transcript: section === "listening" ? (authored.stimulus || "") : undefined,
             main_text: section === "reading" ? (authored.stimulus || "") : undefined,
             explanation: authored.explanation_es || "",
