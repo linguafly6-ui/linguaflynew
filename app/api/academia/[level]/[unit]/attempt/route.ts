@@ -3,6 +3,7 @@ import { randomUUID } from "crypto";
 import { getStudent, hasCourseAccess } from "@/lib/student-auth";
 import { getAcademyUnit } from "@/lib/academy";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { a2Unit2Exercises } from "@/app/academia/[level]/[unit]/a2-unit-002-exercises";
 
 export const dynamic = "force-dynamic";
 type DBStatement = { bind(...values: (string|number)[]): DBStatement; run(): Promise<unknown>; first<T>(): Promise<T|null>; };
@@ -51,16 +52,23 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
 
   const unit = await getAcademyUnit(level, unitNumber);
   if (!unit) return NextResponse.json({ error: "Unidad no encontrada." }, { status: 404 });
-  // Resolve the answer directly from the authoritative D1 row. This avoids
-  // relying on the page's serialized copy or assumptions about JSON nesting.
+  // A2 unit 2 is rendered from its authored TypeScript exercise bank,
+  // while getAcademyUnit returns only its lesson blueprint from D1.
+  // Resolve against the exact same bank used by the page.
   let exercise: Exercise | undefined;
+  if (level === "A2" && unitNumber === 2) {
+    exercise = Object.values(a2Unit2Exercises).flat().find(item => item.interaction_id === interactionId);
+  }
+  // Other JSON-backed units resolve answers from their authoritative D1 row.
   try {
+    if (!exercise) {
     const { env } = await getCloudflareContext({ async: true });
     const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
     const row = await db.prepare(
       "SELECT item.value AS exercise_json FROM learning_course_json_units unit, json_each(unit.content_json, '$.blocks') block, json_each(block.value, '$.content') item WHERE unit.level = ? AND unit.course_key = ? AND unit.unit_number = ? AND json_extract(item.value, '$.interaction_id') = ? LIMIT 1"
     ).bind(level, `ingles-${level.toLowerCase()}`, unitNumber, interactionId).first<{ exercise_json: string }>();
     if (row?.exercise_json) exercise = JSON.parse(row.exercise_json) as Exercise;
+    }
   } catch (error) {
     console.error("Unable to resolve academy exercise from D1:", error);
   }
