@@ -34,7 +34,7 @@ export async function GET(
   const rangeHeader = request.headers.get("Range");
   let range: { offset: number; length: number } | undefined;
   if (rangeHeader) {
-    const match = /^bytes=(\\d*)-(\\d*)$/.exec(rangeHeader.trim());
+    const match = /^bytes=(\d*)-(\d*)$/.exec(rangeHeader.trim());
     if (!match) return new Response(null, { status: 416, headers: { "Content-Range": "bytes */*" } });
     const metadata = await bucket.head(key);
     if (!metadata) return new Response("Audio no encontrado.", { status: 404 });
