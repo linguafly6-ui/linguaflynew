@@ -131,8 +131,20 @@ export async function getAcademyUnit(
       } catch {
         authored = {};
       }
+      const audioGroupValue = authored.audio_group;
+      const audioGroupMatch = typeof audioGroupValue === "string"
+        ? /^listening-(\d+)$/.exec(audioGroupValue)
+        : null;
+      const audioTrack = Number.isInteger(audioGroupValue)
+        ? Number(audioGroupValue)
+        : audioGroupMatch ? Number(audioGroupMatch[1]) : NaN;
+      const hasAudio = row.section_type === "listening" &&
+        typeof authored.audio_key === "string" &&
+        Number.isInteger(audioTrack) && audioTrack >= 1 && audioTrack <= 3;
       activity = {
         interaction_id: row.exercise_id,
+        audio_group: hasAudio ? audioTrack : undefined,
+        audio_url: hasAudio ? `/api/academia/a2/${unitNumber}/audio/${audioTrack}` : undefined,
         type: "multiple_choice",
         prompt_es: authored.prompt_es || row.instructions || "",
         question_en: authored.prompt || row.exercise_title || "",
