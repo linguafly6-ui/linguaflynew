@@ -84,7 +84,6 @@ function Passage({ text, kind, audioUrl }: { text: string; kind: "reading" | "li
       <div className="passage-kicker">READING · COMPRENSIÓN LECTORA</div>
       <h4>{hasHeading ? parts[0] : "Texto de lectura"}</h4>
       <div className="reading-passage" style={{whiteSpace:"pre-line"}}>{hasHeading ? parts.slice(1).join("\\n").trim() : text}</div>
-      <SpeakButton text={text} label="Escuchar lectura" />
     </section>;
   }
   return <section className="passage-card listening-card">
