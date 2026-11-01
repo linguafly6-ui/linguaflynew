@@ -67,7 +67,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         a2ureading: unit.content.reading?.questions,
         a2ulistening: unit.content.listening?.questions,
       };
-      const match = /^(a2u(?:grammar|vocabulary|reading|listening))_(\\d{2})$/.exec(interactionId);
+      const match = /^(a2u(?:grammar|vocabulary|reading|listening))_(\d{2})$/.exec(interactionId);
       if (match) {
         const rows = legacySets[match[1]];
         const item = Array.isArray(rows) ? rows[Number(match[2]) - 1] : undefined;
