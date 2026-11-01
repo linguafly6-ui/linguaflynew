@@ -693,6 +693,29 @@
           "correct_answer": "mapa",
           "explanation": "map significa «mapa».",
           "mastery_tag": "a1-u8-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "roundabout",
+          "options": [
+            {
+              "id": "A",
+              "text": "rotonda"
+            },
+            {
+              "id": "B",
+              "text": "puente"
+            },
+            {
+              "id": "C",
+              "text": "acera"
+            }
+          ],
+          "correct_answer": "rotonda",
+          "explanation": "roundabout significa «rotonda».",
+          "mastery_tag": "a1-u8-v15"
         }
       ]
     },
