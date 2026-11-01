@@ -27,15 +27,13 @@ function SpeakButton({ text, label }: { text: string; label: string }) {
   </button>;
 }
 
-function ActivityCard({ activity, index }: { activity: Activity; index: number }) {
+function ActivityCard({ activity, index, level, unit }: { activity: Activity; index: number; level: string; unit: number }) {
   const [answer, setAnswer] = useState("");
   const [checked, setChecked] = useState(false);
   const id = activity.interaction_id ?? `activity-${index}`;
-  const expected = Array.isArray(activity.correct_answer) ? activity.correct_answer : [activity.correct_answer];
-  const normalize = (value: string) => value.trim().toLocaleLowerCase().replace(/[.!?]+$/, "");
-  const isCorrect = expected.some(value => typeof value === "string" && normalize(answer) === normalize(value));
+  const [feedback, setFeedback] = useState<"correct" | "incorrect" | "error" | "saving" | null>(null);
   const isChoice = activity.type === "multiple_choice" || activity.type === "true_false";
-  return <article className="activity-card">
+  async function checkAnswer() {\n    if (!answer.trim() || feedback === "saving") return;\n    setFeedback("saving");\n    try {\n      const response = await fetch(`/api/academia/${level.toLowerCase()}/${unit}/attempt`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ interaction_id: activity.interaction_id, answer }) });\n      const data = await response.json();\n      setFeedback(response.ok ? (data.correct ? "correct" : "incorrect") : "error");\n    } catch { setFeedback("error"); }\n  }\n  return <article className="activity-card">
     <div className="activity-type">{(activity.type ?? "ACTIVIDAD").replaceAll("_"," ").replaceAll("-"," ").toUpperCase()}</div>
     <p className="activity-prompt">{activity.prompt_es ?? "Practica este contenido."}</p>
     {activity.question_en && <p className="activity-stimulus" lang="en">{activity.question_en}</p>}
@@ -81,7 +79,7 @@ function Passage({ text, kind }: { text: string; kind: "reading" | "listening" }
   </section>;
 }
 
-export default function ActivityContent({ activities, mode: _mode }: { activities: Activity[]; mode?: "vocabulary" | "standard" }) {
+export default function ActivityContent({ activities, mode: _mode, level, unit }: { activities: Activity[]; mode?: "vocabulary" | "standard"; level: string; unit: number }) {
   // Older unit data repeats the same passage on every question in a reading set.
   // Render each distinct passage once per activity section, while keeping every question.
   const seenReadings = new Set<string>();
@@ -94,7 +92,7 @@ export default function ActivityContent({ activities, mode: _mode }: { activitie
     return <div key={activity.interaction_id ?? index}>
       {listeningIsNew && activity.transcript && <Passage text={activity.transcript} kind="listening" />}
       {readingIsNew && activity.main_text && <Passage text={activity.main_text} kind="reading" />}
-      <ActivityCard activity={activity} index={index}/>
+      <ActivityCard activity={activity} index={index} level={level} unit={unit}/>
     </div>;
   })}</div>;
 }
