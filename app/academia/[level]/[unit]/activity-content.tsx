@@ -30,7 +30,7 @@ function SpeakButton({ text, label }: { text: string; label: string }) {
 function ActivityCard({ activity, index, level, unit }: { activity: Activity; index: number; level: string; unit: number }) {
   const [answer, setAnswer] = useState("");
   const id = activity.interaction_id ?? `activity-${index}`;
-  const [feedback, setFeedback] = useState<"correct" | "incorrect" | "error" | "saving" | null>(null);
+  const [feedback, setFeedback] = useState<"correct" | "incorrect" | "error" | "saving" | null>(null);\n  const [errorMessage, setErrorMessage] = useState("");
   const isChoice = activity.type === "multiple_choice" || activity.type === "true_false";
   async function checkAnswer() {
     if (!answer.trim() || feedback === "saving") return;
@@ -42,7 +42,7 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
         body: JSON.stringify({ interaction_id: activity.interaction_id, answer }),
       });
       const data = await response.json();
-      setFeedback(response.ok ? (data.correct ? "correct" : "incorrect") : "error");
+      setFeedback(response.ok ? (data.correct ? "correct" : "incorrect") : "error");\n      setErrorMessage(response.ok ? "" : (typeof data.error === "string" ? data.error : `Error al comprobar la respuesta (HTTP ${response.status}).`));
     } catch {
       setFeedback("error");
     }
@@ -55,19 +55,19 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
     {isChoice && activity.options?.length ? <fieldset className="activity-options" style={{border:0,padding:0,margin:0}}>
       <legend className="sr-only">Selecciona una respuesta</legend>
       {activity.options.map(option => <label key={option.id} className="activity-option" style={{display:"flex",gap:10,alignItems:"center",padding:"9px 0",cursor:"pointer"}}>
-        <input type="radio" name={id} value={option.text} checked={answer===option.text} onChange={() => {setAnswer(option.text);setFeedback(null);}} />
+        <input type="radio" name={id} value={option.text} checked={answer===option.text} onChange={() => {setAnswer(option.text);setFeedback(null);setErrorMessage("");}} />
         <span>{option.text}</span>
       </label>)}
     </fieldset> : <div className="answer-entry">
       <label htmlFor={id}>Tu respuesta</label>
-      <input id={id} value={answer} onChange={event => {setAnswer(event.target.value);setFeedback(null);}}
+      <input id={id} value={answer} onChange={event => {setAnswer(event.target.value);setFeedback(null);setErrorMessage("");}}
         onKeyDown={event => {if(event.key==="Enter" && answer.trim()) checkAnswer();}}
         placeholder="Escribe tu respuesta" />
     </div>}
     <button type="button" className="check-answer" onClick={checkAnswer} disabled={!answer.trim() || feedback === "saving"}>{feedback === "saving" ? "Comprobando…" : "Comprobar"}</button>
     {feedback === "correct" && <p className="answer-feedback correct">¡Correcto! Muy bien.</p>}
     {feedback === "incorrect" && <p className="answer-feedback incorrect">No es correcto. Inténtalo de nuevo.</p>}
-    {feedback === "error" && <p className="answer-feedback incorrect">No se pudo comprobar la respuesta. Inténtalo de nuevo.</p>}
+    {feedback === "error" && <p className="answer-feedback incorrect">{errorMessage || "No se pudo comprobar la respuesta. Inténtalo de nuevo."}</p>}
     {feedback === "correct" && activity.explanation && <p className="activity-hint">{activity.explanation}</p>}
   </article>;
 }
