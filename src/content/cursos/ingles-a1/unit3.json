@@ -1,0 +1,1457 @@
+{
+  "course": {
+    "unit_id": "unit3",
+    "unit_title": "My day and daily routines",
+    "level": "A1",
+    "total_duration_minutes": 75,
+    "language_ui": "es-ES",
+    "target_language": "en-GB"
+  },
+  "learning_outcomes": [
+    "Describir rutinas cotidianas con verbos frecuentes.",
+    "Usar el presente simple en afirmativa y negativa.",
+    "Formar preguntas con do y does y responder brevemente.",
+    "Decir la hora y hablar de horarios.",
+    "Utilizar expresiones de tiempo como in the morning, at night y on Mondays."
+  ],
+  "blocks": [
+    {
+      "block_id": "B1",
+      "title": "GRAMMAR · GRAMÁTICA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "g01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I ___ up at seven.",
+          "options": [
+            {
+              "id": "A",
+              "text": "get"
+            },
+            {
+              "id": "B",
+              "text": "gets"
+            },
+            {
+              "id": "C",
+              "text": "getting"
+            }
+          ],
+          "correct_answer": "get",
+          "explanation": "Con I usamos get.",
+          "mastery_tag": "a1-u3-g01"
+        },
+        {
+          "interaction_id": "g02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She ___ breakfast at eight.",
+          "options": [
+            {
+              "id": "A",
+              "text": "have"
+            },
+            {
+              "id": "B",
+              "text": "has"
+            },
+            {
+              "id": "C",
+              "text": "having"
+            }
+          ],
+          "correct_answer": "has",
+          "explanation": "Con she añadimos -s: has.",
+          "mastery_tag": "a1-u3-g02"
+        },
+        {
+          "interaction_id": "g03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "They ___ to school by bus.",
+          "options": [
+            {
+              "id": "A",
+              "text": "go"
+            },
+            {
+              "id": "B",
+              "text": "goes"
+            },
+            {
+              "id": "C",
+              "text": "going"
+            }
+          ],
+          "correct_answer": "go",
+          "explanation": "Con they usamos go.",
+          "mastery_tag": "a1-u3-g03"
+        },
+        {
+          "interaction_id": "g04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He ___ TV in the evening.",
+          "options": [
+            {
+              "id": "A",
+              "text": "watch"
+            },
+            {
+              "id": "B",
+              "text": "watchs"
+            },
+            {
+              "id": "C",
+              "text": "watches"
+            }
+          ],
+          "correct_answer": "watches",
+          "explanation": "Watch termina en -ch: watches.",
+          "mastery_tag": "a1-u3-g04"
+        },
+        {
+          "interaction_id": "g05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I ___ coffee in the morning.",
+          "options": [
+            {
+              "id": "A",
+              "text": "don't drink"
+            },
+            {
+              "id": "B",
+              "text": "doesn't drink"
+            },
+            {
+              "id": "C",
+              "text": "not drink"
+            }
+          ],
+          "correct_answer": "don't drink",
+          "explanation": "Con I usamos don't + verbo base.",
+          "mastery_tag": "a1-u3-g05"
+        },
+        {
+          "interaction_id": "g06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Tom ___ work on Sundays.",
+          "options": [
+            {
+              "id": "A",
+              "text": "don't"
+            },
+            {
+              "id": "B",
+              "text": "doesn't"
+            },
+            {
+              "id": "C",
+              "text": "isn't"
+            }
+          ],
+          "correct_answer": "doesn't",
+          "explanation": "Con he usamos doesn't.",
+          "mastery_tag": "a1-u3-g06"
+        },
+        {
+          "interaction_id": "g07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ you have lunch at home?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Do"
+            },
+            {
+              "id": "B",
+              "text": "Does"
+            },
+            {
+              "id": "C",
+              "text": "Are"
+            }
+          ],
+          "correct_answer": "Do",
+          "explanation": "Las preguntas con you usan Do.",
+          "mastery_tag": "a1-u3-g07"
+        },
+        {
+          "interaction_id": "g08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "___ your sister get up early?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Do"
+            },
+            {
+              "id": "B",
+              "text": "Does"
+            },
+            {
+              "id": "C",
+              "text": "Is"
+            }
+          ],
+          "correct_answer": "Does",
+          "explanation": "Con your sister usamos Does.",
+          "mastery_tag": "a1-u3-g08"
+        },
+        {
+          "interaction_id": "g09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What time ___ he start work?",
+          "options": [
+            {
+              "id": "A",
+              "text": "do"
+            },
+            {
+              "id": "B",
+              "text": "does"
+            },
+            {
+              "id": "C",
+              "text": "is"
+            }
+          ],
+          "correct_answer": "does",
+          "explanation": "He usa does en preguntas.",
+          "mastery_tag": "a1-u3-g09"
+        },
+        {
+          "interaction_id": "g10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "She ___ go to bed late.",
+          "options": [
+            {
+              "id": "A",
+              "text": "don't"
+            },
+            {
+              "id": "B",
+              "text": "doesn't"
+            },
+            {
+              "id": "C",
+              "text": "isn't"
+            }
+          ],
+          "correct_answer": "doesn't",
+          "explanation": "La negativa de she es doesn't.",
+          "mastery_tag": "a1-u3-g10"
+        },
+        {
+          "interaction_id": "g11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "I have breakfast ___ seven o'clock.",
+          "options": [
+            {
+              "id": "A",
+              "text": "in"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "on"
+            }
+          ],
+          "correct_answer": "at",
+          "explanation": "At se usa con horas.",
+          "mastery_tag": "a1-u3-g11"
+        },
+        {
+          "interaction_id": "g12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "We go to school ___ the morning.",
+          "options": [
+            {
+              "id": "A",
+              "text": "in"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "on"
+            }
+          ],
+          "correct_answer": "in",
+          "explanation": "In the morning.",
+          "mastery_tag": "a1-u3-g12"
+        },
+        {
+          "interaction_id": "g13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "He plays football ___ Saturdays.",
+          "options": [
+            {
+              "id": "A",
+              "text": "in"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "on"
+            }
+          ],
+          "correct_answer": "on",
+          "explanation": "On se usa con días.",
+          "mastery_tag": "a1-u3-g13"
+        },
+        {
+          "interaction_id": "g14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "Choose the correct sentence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "She gets up at six."
+            },
+            {
+              "id": "B",
+              "text": "She get up at six."
+            },
+            {
+              "id": "C",
+              "text": "She getting up at six."
+            }
+          ],
+          "correct_answer": "She gets up at six.",
+          "explanation": "La tercera persona singular lleva -s.",
+          "mastery_tag": "a1-u3-g14"
+        },
+        {
+          "interaction_id": "g15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige la opción correcta.",
+          "question_en": "What time is 7:30?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Half past seven."
+            },
+            {
+              "id": "B",
+              "text": "Quarter past seven."
+            },
+            {
+              "id": "C",
+              "text": "Quarter to seven."
+            }
+          ],
+          "correct_answer": "Half past seven.",
+          "explanation": "7:30 es half past seven.",
+          "mastery_tag": "a1-u3-g15"
+        }
+      ]
+    },
+    {
+      "block_id": "B2",
+      "title": "VOCABULARY · VOCABULARIO",
+      "duration_minutes": 15,
+      "content": [
+        {
+          "interaction_id": "v01",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "get up",
+          "options": [
+            {
+              "id": "A",
+              "text": "levantarse"
+            },
+            {
+              "id": "B",
+              "text": "acostarse"
+            },
+            {
+              "id": "C",
+              "text": "ducharse"
+            }
+          ],
+          "correct_answer": "levantarse",
+          "explanation": "get up significa «levantarse».",
+          "mastery_tag": "a1-u3-v01"
+        },
+        {
+          "interaction_id": "v02",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "wake up",
+          "options": [
+            {
+              "id": "A",
+              "text": "despertarse"
+            },
+            {
+              "id": "B",
+              "text": "desayunar"
+            },
+            {
+              "id": "C",
+              "text": "trabajar"
+            }
+          ],
+          "correct_answer": "despertarse",
+          "explanation": "wake up significa «despertarse».",
+          "mastery_tag": "a1-u3-v02"
+        },
+        {
+          "interaction_id": "v03",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "have a shower",
+          "options": [
+            {
+              "id": "A",
+              "text": "ducharse"
+            },
+            {
+              "id": "B",
+              "text": "vestirse"
+            },
+            {
+              "id": "C",
+              "text": "cenar"
+            }
+          ],
+          "correct_answer": "ducharse",
+          "explanation": "have a shower significa «ducharse».",
+          "mastery_tag": "a1-u3-v03"
+        },
+        {
+          "interaction_id": "v04",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "get dressed",
+          "options": [
+            {
+              "id": "A",
+              "text": "vestirse"
+            },
+            {
+              "id": "B",
+              "text": "levantarse"
+            },
+            {
+              "id": "C",
+              "text": "lavarse"
+            }
+          ],
+          "correct_answer": "vestirse",
+          "explanation": "get dressed significa «vestirse».",
+          "mastery_tag": "a1-u3-v04"
+        },
+        {
+          "interaction_id": "v05",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "have breakfast",
+          "options": [
+            {
+              "id": "A",
+              "text": "desayunar"
+            },
+            {
+              "id": "B",
+              "text": "almorzar"
+            },
+            {
+              "id": "C",
+              "text": "cenar"
+            }
+          ],
+          "correct_answer": "desayunar",
+          "explanation": "have breakfast significa «desayunar».",
+          "mastery_tag": "a1-u3-v05"
+        },
+        {
+          "interaction_id": "v06",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "go to school",
+          "options": [
+            {
+              "id": "A",
+              "text": "ir al colegio"
+            },
+            {
+              "id": "B",
+              "text": "volver a casa"
+            },
+            {
+              "id": "C",
+              "text": "ir a dormir"
+            }
+          ],
+          "correct_answer": "ir al colegio",
+          "explanation": "go to school significa «ir al colegio».",
+          "mastery_tag": "a1-u3-v06"
+        },
+        {
+          "interaction_id": "v07",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "start work",
+          "options": [
+            {
+              "id": "A",
+              "text": "empezar a trabajar"
+            },
+            {
+              "id": "B",
+              "text": "terminar de trabajar"
+            },
+            {
+              "id": "C",
+              "text": "hacer deporte"
+            }
+          ],
+          "correct_answer": "empezar a trabajar",
+          "explanation": "start work significa «empezar a trabajar».",
+          "mastery_tag": "a1-u3-v07"
+        },
+        {
+          "interaction_id": "v08",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "have lunch",
+          "options": [
+            {
+              "id": "A",
+              "text": "almorzar"
+            },
+            {
+              "id": "B",
+              "text": "desayunar"
+            },
+            {
+              "id": "C",
+              "text": "cenar"
+            }
+          ],
+          "correct_answer": "almorzar",
+          "explanation": "have lunch significa «almorzar».",
+          "mastery_tag": "a1-u3-v08"
+        },
+        {
+          "interaction_id": "v09",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "go home",
+          "options": [
+            {
+              "id": "A",
+              "text": "ir a casa"
+            },
+            {
+              "id": "B",
+              "text": "ir al trabajo"
+            },
+            {
+              "id": "C",
+              "text": "salir de casa"
+            }
+          ],
+          "correct_answer": "ir a casa",
+          "explanation": "go home significa «ir a casa».",
+          "mastery_tag": "a1-u3-v09"
+        },
+        {
+          "interaction_id": "v10",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "do homework",
+          "options": [
+            {
+              "id": "A",
+              "text": "hacer los deberes"
+            },
+            {
+              "id": "B",
+              "text": "hacer la compra"
+            },
+            {
+              "id": "C",
+              "text": "hacer la cama"
+            }
+          ],
+          "correct_answer": "hacer los deberes",
+          "explanation": "do homework significa «hacer los deberes».",
+          "mastery_tag": "a1-u3-v10"
+        },
+        {
+          "interaction_id": "v11",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "have dinner",
+          "options": [
+            {
+              "id": "A",
+              "text": "cenar"
+            },
+            {
+              "id": "B",
+              "text": "almorzar"
+            },
+            {
+              "id": "C",
+              "text": "desayunar"
+            }
+          ],
+          "correct_answer": "cenar",
+          "explanation": "have dinner significa «cenar».",
+          "mastery_tag": "a1-u3-v11"
+        },
+        {
+          "interaction_id": "v12",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "watch TV",
+          "options": [
+            {
+              "id": "A",
+              "text": "ver la televisión"
+            },
+            {
+              "id": "B",
+              "text": "leer un libro"
+            },
+            {
+              "id": "C",
+              "text": "escuchar música"
+            }
+          ],
+          "correct_answer": "ver la televisión",
+          "explanation": "watch TV significa «ver la televisión».",
+          "mastery_tag": "a1-u3-v12"
+        },
+        {
+          "interaction_id": "v13",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "go to bed",
+          "options": [
+            {
+              "id": "A",
+              "text": "acostarse"
+            },
+            {
+              "id": "B",
+              "text": "levantarse"
+            },
+            {
+              "id": "C",
+              "text": "salir"
+            }
+          ],
+          "correct_answer": "acostarse",
+          "explanation": "go to bed significa «acostarse».",
+          "mastery_tag": "a1-u3-v13"
+        },
+        {
+          "interaction_id": "v14",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "every day",
+          "options": [
+            {
+              "id": "A",
+              "text": "todos los días"
+            },
+            {
+              "id": "B",
+              "text": "a veces"
+            },
+            {
+              "id": "C",
+              "text": "nunca"
+            }
+          ],
+          "correct_answer": "todos los días",
+          "explanation": "every day significa «todos los días».",
+          "mastery_tag": "a1-u3-v14"
+        },
+        {
+          "interaction_id": "v15",
+          "type": "multiple_choice",
+          "prompt_es": "Elige el significado correcto.",
+          "question_en": "at night",
+          "options": [
+            {
+              "id": "A",
+              "text": "por la noche"
+            },
+            {
+              "id": "B",
+              "text": "por la mañana"
+            },
+            {
+              "id": "C",
+              "text": "al mediodía"
+            }
+          ],
+          "correct_answer": "por la noche",
+          "explanation": "at night significa «por la noche».",
+          "mastery_tag": "a1-u3-v15"
+        }
+      ]
+    },
+    {
+      "block_id": "B3",
+      "title": "LISTENING · COMPRENSIÓN AUDITIVA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "l01",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What time does Ben get up?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At six"
+            },
+            {
+              "id": "B",
+              "text": "At seven"
+            },
+            {
+              "id": "C",
+              "text": "At eight"
+            }
+          ],
+          "correct_answer": "At seven",
+          "explanation": "Ben dice I get up at seven.",
+          "mastery_tag": "a1-u3-l01",
+          "transcript": "MIA: What time do you get up, Ben?\nBEN: I get up at seven.\nMIA: Do you have breakfast at home?\nBEN: Yes, I do. I have toast and tea."
+        },
+        {
+          "interaction_id": "l02",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Does Ben have breakfast at home?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, he does."
+            },
+            {
+              "id": "B",
+              "text": "No, he doesn't."
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "Yes, he does.",
+          "explanation": "Ben responde Yes, I do.",
+          "mastery_tag": "a1-u3-l02",
+          "transcript": "MIA: What time do you get up, Ben?\nBEN: I get up at seven.\nMIA: Do you have breakfast at home?\nBEN: Yes, I do. I have toast and tea."
+        },
+        {
+          "interaction_id": "l03",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What does Ben have for breakfast?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Toast and tea"
+            },
+            {
+              "id": "B",
+              "text": "Eggs and juice"
+            },
+            {
+              "id": "C",
+              "text": "Cereal and milk"
+            }
+          ],
+          "correct_answer": "Toast and tea",
+          "explanation": "Ben toma toast and tea.",
+          "mastery_tag": "a1-u3-l03",
+          "transcript": "MIA: What time do you get up, Ben?\nBEN: I get up at seven.\nMIA: Do you have breakfast at home?\nBEN: Yes, I do. I have toast and tea."
+        },
+        {
+          "interaction_id": "l04",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What time does Jack start work?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At eight"
+            },
+            {
+              "id": "B",
+              "text": "At nine"
+            },
+            {
+              "id": "C",
+              "text": "At ten"
+            }
+          ],
+          "correct_answer": "At nine",
+          "explanation": "Jack dice I start work at nine.",
+          "mastery_tag": "a1-u3-l04",
+          "transcript": "JACK: I start work at nine.\nLUCY: How do you go to work?\nJACK: I go by bus. It takes twenty minutes.\nLUCY: That's quick!"
+        },
+        {
+          "interaction_id": "l05",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "How does Jack go to work?",
+          "options": [
+            {
+              "id": "A",
+              "text": "By car"
+            },
+            {
+              "id": "B",
+              "text": "By train"
+            },
+            {
+              "id": "C",
+              "text": "By bus"
+            }
+          ],
+          "correct_answer": "By bus",
+          "explanation": "Jack va en autobús.",
+          "mastery_tag": "a1-u3-l05",
+          "transcript": "JACK: I start work at nine.\nLUCY: How do you go to work?\nJACK: I go by bus. It takes twenty minutes.\nLUCY: That's quick!"
+        },
+        {
+          "interaction_id": "l06",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "How long does the journey take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ten minutes"
+            },
+            {
+              "id": "B",
+              "text": "Twenty minutes"
+            },
+            {
+              "id": "C",
+              "text": "Thirty minutes"
+            }
+          ],
+          "correct_answer": "Twenty minutes",
+          "explanation": "Dice twenty minutes.",
+          "mastery_tag": "a1-u3-l06",
+          "transcript": "JACK: I start work at nine.\nLUCY: How do you go to work?\nJACK: I go by bus. It takes twenty minutes.\nLUCY: That's quick!"
+        },
+        {
+          "interaction_id": "l07",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "When does Sara finish school?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At two"
+            },
+            {
+              "id": "B",
+              "text": "At three"
+            },
+            {
+              "id": "C",
+              "text": "At four"
+            }
+          ],
+          "correct_answer": "At three",
+          "explanation": "Sara dice at three.",
+          "mastery_tag": "a1-u3-l07",
+          "transcript": "SARA: I finish school at three.\nTOM: What do you do after school?\nSARA: I go home and do my homework.\nTOM: Do you play sport?\nSARA: Yes, I play tennis on Tuesdays."
+        },
+        {
+          "interaction_id": "l08",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What does Sara do after school?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She does homework."
+            },
+            {
+              "id": "B",
+              "text": "She watches TV."
+            },
+            {
+              "id": "C",
+              "text": "She goes shopping."
+            }
+          ],
+          "correct_answer": "She does homework.",
+          "explanation": "Va a casa y hace los deberes.",
+          "mastery_tag": "a1-u3-l08",
+          "transcript": "SARA: I finish school at three.\nTOM: What do you do after school?\nSARA: I go home and do my homework.\nTOM: Do you play sport?\nSARA: Yes, I play tennis on Tuesdays."
+        },
+        {
+          "interaction_id": "l09",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What sport does Sara play?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Football"
+            },
+            {
+              "id": "B",
+              "text": "Tennis"
+            },
+            {
+              "id": "C",
+              "text": "Basketball"
+            }
+          ],
+          "correct_answer": "Tennis",
+          "explanation": "Sara juega al tenis.",
+          "mastery_tag": "a1-u3-l09",
+          "transcript": "SARA: I finish school at three.\nTOM: What do you do after school?\nSARA: I go home and do my homework.\nTOM: Do you play sport?\nSARA: Yes, I play tennis on Tuesdays."
+        },
+        {
+          "interaction_id": "l10",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What time does Emma have dinner?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Seven o'clock"
+            },
+            {
+              "id": "B",
+              "text": "Half past seven"
+            },
+            {
+              "id": "C",
+              "text": "Eight o'clock"
+            }
+          ],
+          "correct_answer": "Half past seven",
+          "explanation": "Emma cena a las siete y media.",
+          "mastery_tag": "a1-u3-l10",
+          "transcript": "OLIVER: What time do you have dinner?\nEMMA: At half past seven.\nOLIVER: Do you watch TV after dinner?\nEMMA: Sometimes. I usually read a book."
+        },
+        {
+          "interaction_id": "l11",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Does Emma always watch TV?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes, always."
+            },
+            {
+              "id": "B",
+              "text": "No, never."
+            },
+            {
+              "id": "C",
+              "text": "No, sometimes."
+            }
+          ],
+          "correct_answer": "No, sometimes.",
+          "explanation": "Dice sometimes.",
+          "mastery_tag": "a1-u3-l11",
+          "transcript": "OLIVER: What time do you have dinner?\nEMMA: At half past seven.\nOLIVER: Do you watch TV after dinner?\nEMMA: Sometimes. I usually read a book."
+        },
+        {
+          "interaction_id": "l12",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What does Emma usually do?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Reads a book"
+            },
+            {
+              "id": "B",
+              "text": "Plays tennis"
+            },
+            {
+              "id": "C",
+              "text": "Listens to the radio"
+            }
+          ],
+          "correct_answer": "Reads a book",
+          "explanation": "Emma suele leer un libro.",
+          "mastery_tag": "a1-u3-l12",
+          "transcript": "OLIVER: What time do you have dinner?\nEMMA: At half past seven.\nOLIVER: Do you watch TV after dinner?\nEMMA: Sometimes. I usually read a book."
+        },
+        {
+          "interaction_id": "l13",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What time does Alex go to bed on weekdays?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At nine"
+            },
+            {
+              "id": "B",
+              "text": "At ten"
+            },
+            {
+              "id": "C",
+              "text": "At eleven"
+            }
+          ],
+          "correct_answer": "At ten",
+          "explanation": "Alex dice at ten.",
+          "mastery_tag": "a1-u3-l13",
+          "transcript": "TEACHER: When do you go to bed, Alex?\nALEX: I go to bed at ten on weekdays.\nTEACHER: And at weekends?\nALEX: At eleven."
+        },
+        {
+          "interaction_id": "l14",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "What time does he go to bed at weekends?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At ten"
+            },
+            {
+              "id": "B",
+              "text": "At eleven"
+            },
+            {
+              "id": "C",
+              "text": "At twelve"
+            }
+          ],
+          "correct_answer": "At eleven",
+          "explanation": "At weekends se acuesta a las once.",
+          "mastery_tag": "a1-u3-l14",
+          "transcript": "TEACHER: When do you go to bed, Alex?\nALEX: I go to bed at ten on weekdays.\nTEACHER: And at weekends?\nALEX: At eleven."
+        },
+        {
+          "interaction_id": "l15",
+          "type": "multiple_choice",
+          "prompt_es": "Escucha el diálogo y responde.",
+          "question_en": "Does Alex go to bed at the same time every day?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Yes"
+            },
+            {
+              "id": "B",
+              "text": "No"
+            },
+            {
+              "id": "C",
+              "text": "Not mentioned"
+            }
+          ],
+          "correct_answer": "No",
+          "explanation": "Los horarios cambian entre semana y fines de semana.",
+          "mastery_tag": "a1-u3-l15",
+          "transcript": "TEACHER: When do you go to bed, Alex?\nALEX: I go to bed at ten on weekdays.\nTEACHER: And at weekends?\nALEX: At eleven."
+        }
+      ]
+    },
+    {
+      "block_id": "B4",
+      "title": "READING · COMPRENSIÓN LECTORA",
+      "duration_minutes": 20,
+      "content": [
+        {
+          "interaction_id": "r01",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What time does Chloe get up?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At 6:30"
+            },
+            {
+              "id": "B",
+              "text": "At 7:30"
+            },
+            {
+              "id": "C",
+              "text": "At 8:30"
+            }
+          ],
+          "correct_answer": "At 6:30",
+          "explanation": "Chloe se levanta a las seis y media.",
+          "mastery_tag": "a1-u3-r01",
+          "main_text": "MY SCHOOL DAY\nHi, I'm Chloe. I get up at half past six. I have breakfast with my family and walk to school. Lessons start at eight thirty. I go home at half past three. In the evening, I do my homework and read. I go to bed at nine."
+        },
+        {
+          "interaction_id": "r02",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "How does Chloe go to school?",
+          "options": [
+            {
+              "id": "A",
+              "text": "By bus"
+            },
+            {
+              "id": "B",
+              "text": "On foot"
+            },
+            {
+              "id": "C",
+              "text": "By car"
+            }
+          ],
+          "correct_answer": "On foot",
+          "explanation": "El texto dice walk to school.",
+          "mastery_tag": "a1-u3-r02",
+          "main_text": "MY SCHOOL DAY\nHi, I'm Chloe. I get up at half past six. I have breakfast with my family and walk to school. Lessons start at eight thirty. I go home at half past three. In the evening, I do my homework and read. I go to bed at nine."
+        },
+        {
+          "interaction_id": "r03",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does she do in the evening?",
+          "options": [
+            {
+              "id": "A",
+              "text": "She does homework and reads."
+            },
+            {
+              "id": "B",
+              "text": "She plays football."
+            },
+            {
+              "id": "C",
+              "text": "She watches films."
+            }
+          ],
+          "correct_answer": "She does homework and reads.",
+          "explanation": "Hace los deberes y lee.",
+          "mastery_tag": "a1-u3-r03",
+          "main_text": "MY SCHOOL DAY\nHi, I'm Chloe. I get up at half past six. I have breakfast with my family and walk to school. Lessons start at eight thirty. I go home at half past three. In the evening, I do my homework and read. I go to bed at nine."
+        },
+        {
+          "interaction_id": "r04",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What is Daniel's job?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Teacher"
+            },
+            {
+              "id": "B",
+              "text": "Doctor"
+            },
+            {
+              "id": "C",
+              "text": "Driver"
+            }
+          ],
+          "correct_answer": "Doctor",
+          "explanation": "Daniel es doctor.",
+          "mastery_tag": "a1-u3-r04",
+          "main_text": "A BUSY MORNING\nDaniel is a doctor. He wakes up at six o'clock. He has a shower, gets dressed and has coffee. He leaves home at seven fifteen. He starts work at eight. He has lunch at the hospital."
+        },
+        {
+          "interaction_id": "r05",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "When does he leave home?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At 6:00"
+            },
+            {
+              "id": "B",
+              "text": "At 7:15"
+            },
+            {
+              "id": "C",
+              "text": "At 8:00"
+            }
+          ],
+          "correct_answer": "At 7:15",
+          "explanation": "Sale de casa a las siete y cuarto.",
+          "mastery_tag": "a1-u3-r05",
+          "main_text": "A BUSY MORNING\nDaniel is a doctor. He wakes up at six o'clock. He has a shower, gets dressed and has coffee. He leaves home at seven fifteen. He starts work at eight. He has lunch at the hospital."
+        },
+        {
+          "interaction_id": "r06",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Where does he have lunch?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At home"
+            },
+            {
+              "id": "B",
+              "text": "At school"
+            },
+            {
+              "id": "C",
+              "text": "At the hospital"
+            }
+          ],
+          "correct_answer": "At the hospital",
+          "explanation": "Almuerza en el hospital.",
+          "mastery_tag": "a1-u3-r06",
+          "main_text": "A BUSY MORNING\nDaniel is a doctor. He wakes up at six o'clock. He has a shower, gets dressed and has coffee. He leaves home at seven fifteen. He starts work at eight. He has lunch at the hospital."
+        },
+        {
+          "interaction_id": "r07",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What time does Ella finish school?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At three"
+            },
+            {
+              "id": "B",
+              "text": "At four"
+            },
+            {
+              "id": "C",
+              "text": "At five"
+            }
+          ],
+          "correct_answer": "At four",
+          "explanation": "Termina a las cuatro.",
+          "mastery_tag": "a1-u3-r07",
+          "main_text": "AFTER SCHOOL\nElla finishes school at four. On Mondays, she has a music lesson. On Tuesdays and Thursdays, she plays basketball. She does her homework before dinner. She goes to bed at half past nine."
+        },
+        {
+          "interaction_id": "r08",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does she do on Tuesdays?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Music"
+            },
+            {
+              "id": "B",
+              "text": "Basketball"
+            },
+            {
+              "id": "C",
+              "text": "Swimming"
+            }
+          ],
+          "correct_answer": "Basketball",
+          "explanation": "Juega al baloncesto los martes.",
+          "mastery_tag": "a1-u3-r08",
+          "main_text": "AFTER SCHOOL\nElla finishes school at four. On Mondays, she has a music lesson. On Tuesdays and Thursdays, she plays basketball. She does her homework before dinner. She goes to bed at half past nine."
+        },
+        {
+          "interaction_id": "r09",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "When does she do her homework?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Before dinner"
+            },
+            {
+              "id": "B",
+              "text": "After dinner"
+            },
+            {
+              "id": "C",
+              "text": "In the morning"
+            }
+          ],
+          "correct_answer": "Before dinner",
+          "explanation": "Hace los deberes antes de cenar.",
+          "mastery_tag": "a1-u3-r09",
+          "main_text": "AFTER SCHOOL\nElla finishes school at four. On Mondays, she has a music lesson. On Tuesdays and Thursdays, she plays basketball. She does her homework before dinner. She goes to bed at half past nine."
+        },
+        {
+          "interaction_id": "r10",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What time does the writer get up on Saturdays?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At eight"
+            },
+            {
+              "id": "B",
+              "text": "At nine"
+            },
+            {
+              "id": "C",
+              "text": "At ten"
+            }
+          ],
+          "correct_answer": "At nine",
+          "explanation": "Se levanta a las nueve.",
+          "mastery_tag": "a1-u3-r10",
+          "main_text": "WEEKEND ROUTINE\nOn Saturdays, I get up at nine. I have a big breakfast and go cycling with my friend. In the afternoon, we sometimes watch a film. On Sundays, I visit my grandparents."
+        },
+        {
+          "interaction_id": "r11",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does the writer do with a friend?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Goes cycling"
+            },
+            {
+              "id": "B",
+              "text": "Plays tennis"
+            },
+            {
+              "id": "C",
+              "text": "Goes shopping"
+            }
+          ],
+          "correct_answer": "Goes cycling",
+          "explanation": "Sale en bicicleta.",
+          "mastery_tag": "a1-u3-r11",
+          "main_text": "WEEKEND ROUTINE\nOn Saturdays, I get up at nine. I have a big breakfast and go cycling with my friend. In the afternoon, we sometimes watch a film. On Sundays, I visit my grandparents."
+        },
+        {
+          "interaction_id": "r12",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Who does the writer visit on Sundays?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Friends"
+            },
+            {
+              "id": "B",
+              "text": "Grandparents"
+            },
+            {
+              "id": "C",
+              "text": "Cousins"
+            }
+          ],
+          "correct_answer": "Grandparents",
+          "explanation": "Visita a sus abuelos.",
+          "mastery_tag": "a1-u3-r12",
+          "main_text": "WEEKEND ROUTINE\nOn Saturdays, I get up at nine. I have a big breakfast and go cycling with my friend. In the afternoon, we sometimes watch a film. On Sundays, I visit my grandparents."
+        },
+        {
+          "interaction_id": "r13",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What time does Leo have dinner?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Six"
+            },
+            {
+              "id": "B",
+              "text": "Seven"
+            },
+            {
+              "id": "C",
+              "text": "Eight"
+            }
+          ],
+          "correct_answer": "Seven",
+          "explanation": "Cena a las siete.",
+          "mastery_tag": "a1-u3-r13",
+          "main_text": "NIGHT ROUTINE\nMy name is Leo. I have dinner at seven. After dinner, I help my parents and prepare my school bag. I sometimes listen to music. I never go to bed after ten because I get up early."
+        },
+        {
+          "interaction_id": "r14",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "What does he prepare?",
+          "options": [
+            {
+              "id": "A",
+              "text": "His school bag"
+            },
+            {
+              "id": "B",
+              "text": "His breakfast"
+            },
+            {
+              "id": "C",
+              "text": "His clothes"
+            }
+          ],
+          "correct_answer": "His school bag",
+          "explanation": "Prepara la mochila.",
+          "mastery_tag": "a1-u3-r14",
+          "main_text": "NIGHT ROUTINE\nMy name is Leo. I have dinner at seven. After dinner, I help my parents and prepare my school bag. I sometimes listen to music. I never go to bed after ten because I get up early."
+        },
+        {
+          "interaction_id": "r15",
+          "type": "multiple_choice",
+          "prompt_es": "Lee el texto y responde.",
+          "question_en": "Why does he go to bed before ten?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He gets up early."
+            },
+            {
+              "id": "B",
+              "text": "He starts work late."
+            },
+            {
+              "id": "C",
+              "text": "He is tired after sport."
+            }
+          ],
+          "correct_answer": "He gets up early.",
+          "explanation": "Se acuesta pronto porque se levanta temprano.",
+          "mastery_tag": "a1-u3-r15",
+          "main_text": "NIGHT ROUTINE\nMy name is Leo. I have dinner at seven. After dinner, I help my parents and prepare my school bag. I sometimes listen to music. I never go to bed after ten because I get up early."
+        }
+      ]
+    }
+  ]
+}
