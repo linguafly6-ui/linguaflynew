@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAcademyUnits, isCefrLevel } from "@/lib/academy";
-import { redirect } from "next/navigation";
-import { getStudent, hasCourseAccess } from "@/lib/student-auth";
 
 export const dynamic = "force-dynamic";
 const names: Record<string,string> = { A1:"Principiante", A2:"Elemental", B1:"Intermedio", B2:"Intermedio alto", C1:"Avanzado", C2:"Maestría" };
@@ -11,9 +9,6 @@ export default async function AcademyLevelPage({ params }: { params: Promise<{ l
   const { level: rawLevel } = await params;
   const level = rawLevel.toUpperCase();
   if (!isCefrLevel(level)) notFound();
-  const student = await getStudent();
-  if (!student) redirect("/acceso");
-  if (!(await hasCourseAccess(student.learner_id, `ingles-${level.toLowerCase()}`))) redirect("/suscripcion");
   const units = await getAcademyUnits(level);
   return <main>
     <section className="level-hero">
