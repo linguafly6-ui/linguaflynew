@@ -7,9 +7,9 @@ type Option = { id: string; text: string; value?: string };
 // Authored bilingual strings use [[English|Spanish]]. Render only the
 // requested language so internal localisation markers never reach students.
 function LocalizedText({ text, language = "en" }: { text: string; language?: "en" | "es" }) {
-  const parts = text.split(/(\\[\\[[^\\]]+\\]\\])/g);
+  const parts = text.split(/(\[\[[^\]]+\]\])/g);
   return <>{parts.map((part, index) => {
-    const match = /^\\[\\[([^|\\]]+)\\|([^\\]]+)\\]\\]$/.exec(part);
+    const match = /^\[\[([^|\]]+)\|([^\]]+)\]\]$/.exec(part);
     if (!match) return part;
     return <span key={index}>{language === "es" ? match[2] : match[1]}</span>;
   })}</>;
