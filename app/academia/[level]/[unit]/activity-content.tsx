@@ -6,6 +6,7 @@ type Option = { id: string; text: string; value?: string };
 export type Activity = {
   interaction_id?: string; type?: string; prompt_es?: string; question_en?: string;
   stimulus_en?: string; stimulus_es?: string; main_text?: string; transcript?: string;
+  audio_group?: number; audio_url?: string;
   options?: Option[]; correct_answer?: string | string[] | boolean;
   example?: string; explanation?: string; mastery_tag?: string;
 };
@@ -74,7 +75,7 @@ function ActivityCard({ activity, index, level, unit }: { activity: Activity; in
   </article>;
 }
 
-function Passage({ text, kind }: { text: string; kind: "reading" | "listening" }) {
+function Passage({ text, kind, audioUrl }: { text: string; kind: "reading" | "listening"; audioUrl?: string }) {
   if (kind === "reading") {
     // Support both real line breaks and legacy data containing the literal "\\n" sequence.
     const parts = text.split(/\\r?\\n|\\\\n/);
@@ -88,9 +89,12 @@ function Passage({ text, kind }: { text: string; kind: "reading" | "listening" }
   }
   return <section className="passage-card listening-card">
     <div className="passage-kicker">LISTENING · COMPRENSIÓN ORAL</div>
-    <h4>Escucha el diálogo</h4>
-    <p>Escucha el diálogo y responde a las preguntas. La voz se genera en tu navegador; no es una grabación de hablante nativo.</p>
-    <SpeakButton text={text} label="Reproducir audio en inglés" />
+    <h4>Escucha el audio</h4>
+    {audioUrl
+      ? <audio controls preload="none" src={audioUrl} aria-label="Audio de comprensión oral en inglés británico">
+          Tu navegador no puede reproducir este archivo de audio.
+        </audio>
+      : <><p>Este material todavía no tiene una grabación asociada.</p><SpeakButton text={text} label="Reproducción provisional" /></>}
     <details className="transcript-details"><summary>Ver transcripción</summary><p style={{whiteSpace:"pre-line"}}>{text}</p></details>
   </section>;
 }
@@ -101,14 +105,26 @@ export default function ActivityContent({ activities, mode: _mode, level, unit }
   // Older unit data repeats the same passage on every question in a reading set.
   // Render each distinct passage once per activity section, while keeping every question.
   const seenReadings = new Set<string>();
-  const seenTranscripts = new Set<string>();
+  const listeningGroups = new Map<string, { transcripts: string[]; audioUrl?: string }>();
+  for (const activity of activities) {
+    if (!activity.transcript) continue;
+    const groupKey = activity.audio_group ? String(activity.audio_group) : activity.transcript.trim();
+    const group = listeningGroups.get(groupKey) ?? { transcripts: [] };
+    const transcript = activity.transcript.trim();
+    if (!group.transcripts.includes(transcript)) group.transcripts.push(transcript);
+    if (activity.audio_url) group.audioUrl = activity.audio_url;
+    listeningGroups.set(groupKey, group);
+  }
+  const seenListeningGroups = new Set<string>();
   return <div className="activity-list">{activities.map((activity,index)=>{
     const readingIsNew = !!activity.main_text && !seenReadings.has(activity.main_text.trim());
-    const listeningIsNew = !!activity.transcript && !seenTranscripts.has(activity.transcript.trim());
+    const groupKey = activity.audio_group ? String(activity.audio_group) : activity.transcript?.trim() ?? "";
+    const listeningIsNew = !!groupKey && !seenListeningGroups.has(groupKey);
     if (activity.main_text) seenReadings.add(activity.main_text.trim());
-    if (activity.transcript) seenTranscripts.add(activity.transcript.trim());
+    if (listeningIsNew) seenListeningGroups.add(groupKey);
+    const listeningGroup = groupKey ? listeningGroups.get(groupKey) : undefined;
     return <div key={activity.interaction_id ?? index}>
-      {listeningIsNew && activity.transcript && <Passage text={activity.transcript} kind="listening" />}
+      {listeningIsNew && listeningGroup && <Passage text={listeningGroup.transcripts.join("\n\n")} kind="listening" audioUrl={listeningGroup.audioUrl} />}
       {readingIsNew && activity.main_text && <Passage text={activity.main_text} kind="reading" />}
       <ActivityCard activity={activity} index={index} level={level} unit={unit}/>
     </div>;
