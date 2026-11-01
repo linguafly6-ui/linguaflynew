@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticle } from "@/lib/blog";
 import BlogMarkdown from "./BlogMarkdown";
-import BlogImage from "../BlogImage";
+import BlogImage, { normalizeCategory } from "../BlogImage";
 
 export const dynamic = "force-dynamic";
 type Props = { params: Promise<{ slug: string }> };
@@ -42,7 +42,7 @@ export default async function ArticlePage({ params }: Props) {
       </div>
 
       <header className="article-header">
-        <div className="article-category-pill">{(article.category || "Aprender inglés").replace(/-/g, " ")}</div>
+        <div className="article-category-pill">{normalizeCategory(article.category)}</div>
         <h1>{article.title}</h1>
         {article.excerpt && <p className="article-deck">{article.excerpt}</p>}
         <div className="article-byline">
