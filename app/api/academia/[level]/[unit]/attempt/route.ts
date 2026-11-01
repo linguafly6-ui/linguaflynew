@@ -71,11 +71,23 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       console.error("Unable to resolve relational A1 answer from D1:", error);
     }
   }
-  if (level === "A2" && unitNumber === 2) {
-    exercise = Object.values(a2Unit2Exercises).flat().find(item => item.interaction_id === interactionId);
-    // BlueprintPractice also renders a legacy generated set before the 60
-    // authored activities. Its IDs are derived from the blueprint arrays.
-    if (!exercise) {
+  if (level === "A2") {
+    try {
+      const { env } = await getCloudflareContext({ async: true });
+      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
+      const relational = await db.prepare(
+        "SELECT k.grading_strategy, k.answer_config_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id JOIN exercise_answer_keys k ON k.exercise_id=e.id WHERE e.id=? AND u.id=? AND e.status IN ('draft','review','approved') LIMIT 1"
+      ).bind(interactionId, `a2-unit-${String(unitNumber).padStart(3, "0")}`).first<{grading_strategy:string;answer_config_json:string}>();
+      if (relational) {
+        const config = JSON.parse(relational.answer_config_json || "{}") as {correctOptionKeys?:string[];acceptedAnswers?:string[]};
+        exercise = { interaction_id: interactionId, correct_answer: config.correctOptionKeys ?? config.acceptedAnswers ?? [] };
+      }
+    } catch (error) {
+      console.error("Unable to resolve relational A2 answer from D1:", error);
+    }
+    // Preserve the existing legacy answer sources for A2 units not yet authored relationally.
+    if (!exercise && unitNumber === 2) {
+      exercise = Object.values(a2Unit2Exercises).flat().find(item => item.interaction_id === interactionId);
       const legacySets: Record<string, unknown> = {
         a2ugrammar: unit.content.grammar_exercises,
         a2uvocabulary: unit.content.vocabulary_exercises,
@@ -83,12 +95,10 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         a2ulistening: unit.content.listening?.questions,
       };
       const match = /^(a2u(?:grammar|vocabulary|reading|listening))_(\d{2})$/.exec(interactionId);
-      if (match) {
+      if (!exercise && match) {
         const rows = legacySets[match[1]];
         const item = Array.isArray(rows) ? rows[Number(match[2]) - 1] : undefined;
-        if (Array.isArray(item) && typeof item[1] === "string") {
-          exercise = { interaction_id: interactionId, correct_answer: item[1] };
-        }
+        if (Array.isArray(item) && typeof item[1] === "string") exercise = { interaction_id: interactionId, correct_answer: item[1] };
       }
     }
   }
