@@ -116,7 +116,7 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
           const section = row.section_type;
           const audioGroupValue = authored.audio_group;
           const audioGroupMatch = typeof audioGroupValue === "string"
-            ? /^listening-(\\d+)$/.exec(audioGroupValue)
+            ? /^listening-(\d+)$/.exec(audioGroupValue)
             : null;
           const audioTrack = Number.isInteger(audioGroupValue)
             ? Number(audioGroupValue)
