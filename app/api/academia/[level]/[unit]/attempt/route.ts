@@ -169,4 +169,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     console.error("Academy exercise answer missing:", { level, unitNumber, interactionId });
     return NextResponse.json({ error: "No encontramos la respuesta asociada a esta actividad. Recarga la unidad e inténtalo de nuevo." }, { status: 404 });
   }
-  const correct = level === "B2"\n    ? gradeB2Answer(exercise, answer)\n    : (Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer])\n        .some(value => typeof value === "string" && normalize(answer) === normalize(value));
+  const correct = level === "B2"
+    ? gradeB2Answer(exercise, answer)
+    : (Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer])
+        .some(value => typeof value === "string" && normalize(answer) === normalize(value));
