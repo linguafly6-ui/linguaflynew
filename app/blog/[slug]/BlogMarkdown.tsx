@@ -21,7 +21,8 @@ function inlineMarkdown(value: string): ReactNode[] {
 
 const isTableDivider = (line: string) => /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(line);
 
-export default function BlogMarkdown({ content }: { content: string }) {
+export default function BlogMarkdown({ content, diagnostic = false }: { content: string; diagnostic?: boolean }) {
+  if (diagnostic) console.info("[BLOG_DIAG] Markdown parser started", { contentLength: content.length });
   const lines = content.replace(/\r\n?/g, "\n").trim().split("\n");
   const blocks: ReactNode[] = [];
   let i = 0;
@@ -76,5 +77,6 @@ export default function BlogMarkdown({ content }: { content: string }) {
     }
     blocks.push(<p key={blocks.length}>{paragraph.map((part, n) => <Fragment key={n}>{n > 0 && <br />}{inlineMarkdown(part)}</Fragment>)}</p>);
   }
+  if (diagnostic) console.info("[BLOG_DIAG] Markdown parser completed", { lineCount: lines.length, blockCount: blocks.length });
   return <div className="article-content">{blocks}</div>;
 }
