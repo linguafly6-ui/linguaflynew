@@ -72,6 +72,8 @@ export default async function ArticlePageContent({ slug }: { slug: string }) {
     ? new Date(article.created_at).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })
     : null;
 
+  if (diagnostic) console.info("[BLOG_DIAG] ArticlePageContent returning JSX", { slug, minutes, hasImage: Boolean(article.image), hasExcerpt: Boolean(article.excerpt) });
+
   return (
     <main className="article-shell">
       <div className="article-topbar">
@@ -90,7 +92,7 @@ export default async function ArticlePageContent({ slug }: { slug: string }) {
       </header>
       <BlogImage className="article-cover" src={article.image} alt={article.alt} category={article.category} title={article.title} />
       <div className="article-reading-layout">
-        <BlogMarkdown content={article.content || ""} />
+        <BlogMarkdown content={article.content || ""} diagnostic={diagnostic} />
         <aside className="article-course-promo" aria-label="Cursos de inglés Linguafly Academy">
           <div className="article-course-promo-copy">
             <span className="article-course-promo-kicker">LINGUAFLY ACADEMY · A1–C2</span>
