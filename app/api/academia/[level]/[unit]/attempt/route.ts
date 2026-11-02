@@ -8,36 +8,8 @@ import { a2Unit2Exercises } from "@/app/academia/[level]/[unit]/a2-unit-002-exer
 export const dynamic = "force-dynamic";
 type DBStatement = { bind(...values: (string|number)[]): DBStatement; run(): Promise<unknown>; first<T>(): Promise<T|null>; all<T>(): Promise<{results?:T[]}>; };
 type DB = { prepare(sql: string): DBStatement };
-type Exercise = { interaction_id?: string; mastery_tag?: string; exercise_type?: string; type?: string; correct_answer?: any };
+type Exercise = { interaction_id?: string; mastery_tag?: string; correct_answer?: string|string[]|boolean };
 const normalize = (value: string) => value.trim().toLocaleLowerCase().replace(/[.!?]+$/, "");
-function canonicalAnswer(value: any): string {
-  if (typeof value === "string") return normalize(value);
-  if (typeof value === "boolean") return String(value);
-  if (Array.isArray(value)) return JSON.stringify(value.map(canonicalAnswer));
-  if (value && typeof value === "object") return JSON.stringify(Object.keys(value).sort().map(key => [key, canonicalAnswer(value[key])]));
-  return String(value ?? "");
-}
-function gradeB2Answer(exercise: Exercise, submitted: string): boolean {
-  const kind = String(exercise.exercise_type ?? exercise.type ?? "").toLowerCase().replace(/[_ ]/g, "-");
-  const expected = exercise.correct_answer;
-  if (expected === undefined) return false;
-  if (kind.includes("matching")) {
-    try {
-      const parsed = JSON.parse(submitted);
-      return (Array.isArray(expected) ? expected : [expected]).some(value => canonicalAnswer(parsed) === canonicalAnswer(value));
-    } catch { return false; }
-  }
-  if (kind.includes("true-false") || kind.includes("truefalse")) {
-    const actual = /^(true|false)$/i.test(submitted) ? submitted.toLowerCase() === "true" : null;
-    return (Array.isArray(expected) ? expected : [expected]).some(value => {
-      const wanted = typeof value === "boolean" ? value : typeof value === "string" && /^(true|false)$/i.test(value) ? value.toLowerCase() === "true" : null;
-      return actual !== null && wanted !== null ? actual === wanted : typeof value === "string" && normalize(submitted) === normalize(value);
-    });
-  }
-  // single-choice, gap-fill and error-correction: accept authored string variants.
-  return (Array.isArray(expected) ? expected : [expected]).some(value => typeof value === "string" && normalize(submitted) === normalize(value));
-}
-
 function findExercise(content: Record<string, any>, interactionId: string): Exercise | undefined {
   // Course JSON has used both block.content and nested content containers.
   // Walk only plain JSON objects/arrays and match the exact interaction ID.
@@ -84,26 +56,6 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
   // while getAcademyUnit returns only its lesson blueprint from D1.
   // Resolve against the exact same bank used by the page.
   let exercise: Exercise | undefined;
-  if (level === "B2") {
-    try {
-      const { env } = await getCloudflareContext({ async: true });
-      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
-      const row = await db.prepare(
-        "SELECT e.content_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id WHERE e.id=? AND u.id=? AND u.course_id='course-en-b2' AND u.status='published' AND s.status='published' AND e.status='published' LIMIT 1"
-      ).bind(interactionId, `b2-unit-${String(unitNumber).padStart(3, "0")}`).first<{content_json:string}>();
-      if (row?.content_json) {
-        const authored = JSON.parse(row.content_json) as Record<string, any>;
-        if (authored.correct_answer !== undefined) exercise = {
-          interaction_id: interactionId,
-          mastery_tag: typeof authored.mastery_tag === "string" ? authored.mastery_tag : undefined,
-          exercise_type: typeof authored.exercise_type === "string" ? authored.exercise_type : typeof authored.type === "string" ? authored.type : undefined,
-          correct_answer: authored.correct_answer,
-        };
-      }
-    } catch (error) {
-      console.error("Unable to resolve relational B2 answer from D1:", error);
-    }
-  }
   if (level === "A1" && unitNumber >= 1 && unitNumber <= 6) {
     try {
       const { env } = await getCloudflareContext({ async: true });
@@ -169,10 +121,8 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     console.error("Academy exercise answer missing:", { level, unitNumber, interactionId });
     return NextResponse.json({ error: "No encontramos la respuesta asociada a esta actividad. Recarga la unidad e inténtalo de nuevo." }, { status: 404 });
   }
-  const correct = level === "B2"
-    ? gradeB2Answer(exercise, answer)
-    : (Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer])
-        .some(value => typeof value === "string" && normalize(answer) === normalize(value));
+  const expected = Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer];
+  const correct = expected.some(value => typeof value === "string" && normalize(answer) === normalize(value));
 
   // Public preview units can be practised without an account. Persist spaced-repetition
   // progress only when the visitor has an active student session and course enrolment.
