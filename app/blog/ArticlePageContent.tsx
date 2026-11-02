@@ -7,24 +7,65 @@ import BlogImage from "./BlogImage";
 import { normalizeCategory } from "@/lib/blog-category";
 
 export async function getArticleMetadata(slug: string): Promise<Metadata> {
-  const article = await getArticle(slug);
-  if (!article) return { title: "Artículo no encontrado" };
-  return {
-    title: article.title,
-    description: article.description || article.excerpt || undefined,
-    alternates: { canonical: article.canonical || `/blog/${slug}` },
-    openGraph: {
+  const diagnostic = slug === "mejores-apps-ingles-gratis";
+  if (diagnostic) console.info("[BLOG_DIAG] generateMetadata started", { slug });
+  try {
+    const article = await getArticle(slug);
+    if (!article) {
+      if (diagnostic) console.warn("[BLOG_DIAG] generateMetadata article not found", { slug });
+      return { title: "Artículo no encontrado" };
+    }
+    const metadata: Metadata = {
       title: article.title,
       description: article.description || article.excerpt || undefined,
-      images: article.image ? [article.image] : undefined,
-      type: "article",
-    },
-  };
+      alternates: { canonical: article.canonical || `/blog/${slug}` },
+      openGraph: {
+        title: article.title,
+        description: article.description || article.excerpt || undefined,
+        images: article.image ? [article.image] : undefined,
+        type: "article",
+      },
+    };
+    if (diagnostic) console.info("[BLOG_DIAG] generateMetadata completed", { slug });
+    return metadata;
+  } catch (error) {
+    if (diagnostic) {
+      console.error("[BLOG_DIAG] generateMetadata failed", {
+        slug,
+        error: error instanceof Error ? { name: error.name, message: error.message, stack: error.stack } : String(error),
+      });
+    }
+    throw error;
+  }
 }
 
 export default async function ArticlePageContent({ slug }: { slug: string }) {
-  const article = await getArticle(slug);
-  if (!article) notFound();
+  const diagnostic = slug === "mejores-apps-ingles-gratis";
+  if (diagnostic) console.info("[BLOG_DIAG] ArticlePageContent started", { slug });
+  let article;
+  try {
+    article = await getArticle(slug);
+  } catch (error) {
+    if (diagnostic) {
+      console.error("[BLOG_DIAG] ArticlePageContent lookup failed", {
+        slug,
+        error: error instanceof Error ? { name: error.name, message: error.message, stack: error.stack } : String(error),
+      });
+    }
+    throw error;
+  }
+  if (!article) {
+    if (diagnostic) console.warn("[BLOG_DIAG] ArticlePageContent article not found", { slug });
+    notFound();
+  }
+  if (diagnostic) {
+    console.info("[BLOG_DIAG] ArticlePageContent data ready", {
+      slug,
+      id: article.id,
+      contentLength: article.content?.length ?? 0,
+      category: article.category,
+    });
+  }
 
   const minutes = String(article.read_time ?? "").match(/\d+/)?.[0] || String(Math.max(1, Math.ceil((article.content || "").split(/\s+/).filter(Boolean).length / 200)));
   const publishedDate = article.created_at
