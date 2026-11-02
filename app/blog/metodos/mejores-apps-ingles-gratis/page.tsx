@@ -1,16 +1,11 @@
-// app/blog/metodos/mejores-apps-ingles-gratis/page.tsx
-// ✅ Static page — force-static, no D1, no getCloudflareContext, no SQLITE_BUSY
-// Content extracted from D1 articles table (id=765) on 2026-11-02
 import type { Metadata } from "next";
 
 export const dynamic = "force-static";
 
 const article = {
   title: "¿Cuáles Son las Mejores Apps para Aprender Inglés en 2026?",
-  description:
-    "Comparativa 2026 de las mejores apps para aprender inglés gratis: Duolingo, Anki, BBC Learning English y más. Descubre cuál se adapta mejor a tu nivel.",
-  excerpt:
-    "¿Buscas la mejor app para aprender inglés en 2026? Comparamos Duolingo, Anki, BBC Learning English y más para que elijas según tu nivel y objetivo.",
+  description: "Comparativa 2026 de las mejores apps para aprender inglés gratis: Duolingo, Anki, BBC Learning English y más.",
+  excerpt: "¿Buscas la mejor app para aprender inglés en 2026? Comparamos Duolingo, Anki, BBC Learning English y más para que elijas según tu nivel y objetivo.",
   author: "linguafly-team",
   readTime: "14 min",
   canonical: "https://linguafly.app/blog/temas/mejores-apps-ingles-gratis",
@@ -19,200 +14,172 @@ const article = {
     { question: "¿Cuánto tiempo al día debo practicar con una app de inglés?", answer: "Una sesión breve y frecuente puede ayudarte a mantener el hábito, pero el progreso depende del nivel inicial, la dificultad, la calidad de la práctica y el tiempo acumulado. Prueba una rutina sostenible y revisa periódicamente qué puedes comprender o hacer mejor." },
     { question: "¿Duolingo es bueno para aprender inglés desde cero?", answer: "Duolingo es una buena opción para comenzar desde cero por su interfaz gamificada y su curva de aprendizaje suave. Sin embargo, su enfoque en frases cortas y traducción directa puede crear malos hábitos. Úsalo para vocabulario y como motivación, pero complementa con otras fuentes desde el principio." },
   ],
-  content: \`
-> **[Estudia inglés con nuestros cursos gratuitos de inglés A1-C2](/idiomas#niveles).** Elige tu nivel y avanza con guías, vocabulario y ejercicios organizados por unidad.
-
-## Las Mejores Apps para Aprender Inglés Gratis: Guía 2026
-
-El mercado de apps para aprender inglés no para de crecer. En 2026 hay decenas de opciones, pero no todas son iguales. Esta guía analiza las **mejores apps gratuitas** con criterios reales: efectividad pedagógica, usabilidad y qué tipo de aprendiz se beneficia más de cada una.
-
-Las apps son el primer filtro de quien quiere **aprender ingles** antes de pagar un **curso ingles**.
-
----
-
-## 🏆 El Top 7 de Apps Gratuitas para Inglés
-
-### 1. BBC Learning English — La Más Completa
-
-**Nivel**: A2 a C2  
-**Ideal para**: Quienes quieren inglés auténtico y variedad de contenido
-
-BBC Learning English es una opción gratuita útil para practicar con explicaciones, audio y vocabulario en contexto. La mejor opción para cada persona depende de su nivel, sus objetivos y el tipo de práctica que necesita. Entre sus recursos se encuentran:
-
-- **6 Minute English**: podcasts cortos con transcripción y vocabulario
-- **Grammar in a minute**: explicaciones rápidas de gramática
-- **The English We Speak**: expresiones idiomáticas y slang real
-- Noticias adaptadas por niveles
-- Pronunciación con audio de hablantes nativos
-
-Es gratuita al 100%, sin anuncios agresivos y actualizada constantemente. Su único inconveniente es que no tiene un itinerario estructurado de aprendizaje, así que requiere autodisciplina.
-
-→ [Guía completa de BBC Learning English](/blog/metodos/bbc-learning-english-guia-completa)
-
----
-
-### 2. Anki — La Más Efectiva para Vocabulario
-
-**Nivel**: Todos los niveles  
-**Ideal para**: Memorizar vocabulario de forma duradera
-
-Anki utiliza la **repetición espaciada (SRS)** para distribuir los repasos a lo largo del tiempo. El algoritmo programa las tarjetas según tu historial de respuestas.
-
-**Cómo usarla bien**:
-1. Descarga un mazo de vocabulario inglés para tu nivel
-2. Haz tus propias tarjetas con palabras que encuentres en textos reales
-3. Practica mínimo 10 minutos al día
-4. Añade imagen, ejemplo en contexto y audio en cada tarjeta
-
-Anki es gratuita en Android y en ordenador. La versión iOS tiene coste, pero la web AnkiWeb es gratuita.
-
-→ [Anki para aprender inglés: guía completa](/blog/metodos/anki-para-aprender-ingles-guia)
-
----
-
-### 3. Duolingo — La Más Popular
-
-**Nivel**: A1 a B1  
-**Ideal para**: Principiantes y para mantener el hábito
-
-Duolingo utiliza elementos de gamificación que pueden ayudar a algunas personas a mantener el hábito.
-
-**Lo bueno**:
-- Curva de aprendizaje muy suave
-- Variedad de ejercicios (escuchar, escribir, hablar)
-- Funciona bien para los primeros niveles (A1-A2)
-
-**Lo que debes saber**:
-- Las traducciones literales pueden crear confusión
-- El vocabulario en contexto real es limitado
-- Para progresar en niveles intermedios, suele ser útil complementarla con materiales auténticos
-
-→ [Duolingo para inglés: review honesto 2026](/blog/metodos/duolingo-ingles-review)
-
----
-
-### 4. Elsa Speak — La Mejor para Pronunciación
-
-**Nivel**: A2 a C1  
-**Ideal para**: Mejorar el acento y la pronunciación
-
-ELSA usa inteligencia artificial para analizar tu pronunciación y darte feedback en tiempo real. Es gratuita con funciones limitadas, pero incluso la versión gratuita es útil.
-
-Te muestra qué fonemas pronuncias mal, con ejercicios específicos para corregirlos. Especialmente útil para hispanohablantes con dificultades con la /th/, la /v/, o las vocales cortas del inglés.
-
-→ [ELSA Speak review](/blog/metodos/elsa-speak-review-pronunciacion-ingles)
-
----
-
-### 5. Cake — Para Aprender con Vídeos
-
-**Nivel**: A2 a B2  
-**Ideal para**: Aprendizaje visual con contenido real
-
-Cake utiliza clips de vídeo de series, películas y YouTube para enseñar inglés en contexto. Puedes practicar repitiendo frases con reconocimiento de voz.
-
-→ [Cake app review](/blog/metodos/cake-app-ingles-review)
-
----
-
-### 6. Lingopie — Series en Versión Original con Subtítulos Interactivos
-
-**Nivel**: A2 a C1  
-**Ideal para**: Aprender con entretenimiento
-
-Lingopie te permite ver series en inglés con subtítulos interactivos: haz clic en cualquier palabra y obtienes la traducción, la pronunciación y la puedes añadir a tu mazo de Anki.
-
-→ [Lingopie review](/blog/metodos/lingopie-review-aprender-ingles-series)
-
----
-
-### 7. YouTube + Canales Específicos — El Recurso Infinito
-
-**Nivel**: Todos los niveles  
-**Ideal para**: Inmersión y gramática visual
-
-YouTube no es una app de inglés, pero es el recurso gratuito más potente que existe. Canales recomendados:
-
-- **EnglishwithLucy**: Pronunciación y vocabulario, muy visual
-- **JamieSharpe**: Inglés coloquial y slang
-- **mmmEnglish**: Gramática aplicada a situaciones reales
-- **Speak English with Vanessa**: Conversación y cultura
-- **TED Talks**: Inglés académico y presentaciones
-
-→ [Los mejores canales de YouTube para aprender inglés](/blog/metodos/mejores-canales-youtube-aprender-ingles)
-
----
-
-## 📊 Comparativa Rápida
-
-| App | Nivel | Coste | Mejor para |
-|-----|-------|-------|------------|
-| BBC Learning English | A2-C2 | Gratis | Contenido auténtico |
-| Anki | Todos | Gratis (Android/PC) | Vocabulario |
-| Duolingo | A1-B1 | Freemium | Hábito y principiantes |
-| ELSA Speak | A2-C1 | Freemium | Pronunciación |
-| Cake | A2-B2 | Freemium | Vídeos reales |
-| YouTube | Todos | Gratis | Inmersión |
-
----
-
-## 🎯 Cómo Combinar las Apps Según Tu Nivel
-
-### Si estás en A1-A2 (Principiante)
-1. **Duolingo** (hábito diario, 15 min)
-2. **Anki** con vocabulario básico (10 min)
-3. **BBC Learning English** — secciones para principiantes
-
-### Si estás en B1-B2 (Intermedio)
-1. **Anki** con vocabulario temático (15 min)
-2. **BBC Learning English** — 6 Minute English y noticias
-3. **ELSA Speak** para mejorar pronunciación
-4. **YouTube** con subtítulos en inglés
-
-### Si estás en C1-C2 (Avanzado)
-1. **Anki** con vocabulario avanzado y expresiones idiomáticas
-2. **BBC Learning English** — In the News, Business English
-3. **YouTube** sin subtítulos
-4. Podcasts nativos sin adaptación (NPR, The Guardian)
-
----
-
-## ✅ Conclusión: Nuestra Recomendación
-
-No existe una única app perfecta. La clave es **combinar herramientas**:
-
-- **BBC Learning English** para contenido auténtico y gramática
-- **Anki** para fijar el vocabulario a largo plazo
-- **Duolingo** solo si eres principiante y necesitas el hábito
-- **ELSA** si tu problema específico es la pronunciación
-
-Lo más importante es una rutina sostenible y variada. La frecuencia puede ayudar, pero el progreso también depende de la calidad de la práctica, el nivel inicial y las oportunidades de usar el idioma.
-
----
-
-## 📚 Profundiza más: Guías y Reviews en Detalle
-
-- [Anki para aprender inglés: guía completa](/blog/metodos/anki-para-aprender-ingles-guia)
-- [Repetición espaciada (SRS): la ciencia detrás de Anki](/blog/metodos/repeticion-espaciada-srs-ingles)
-- [Duolingo inglés: review honesto 2026](/blog/metodos/duolingo-ingles-review)
-- [ELSA Speak review](/blog/metodos/elsa-speak-review-pronunciacion-ingles)
-- [BBC Learning English: guía completa](/blog/metodos/bbc-learning-english-guia-completa)
-- [Lingopie review](/blog/metodos/lingopie-review-aprender-ingles-series)
-- [Cake app review](/blog/metodos/cake-app-ingles-review)
-- [Los mejores canales de YouTube para aprender inglés](/blog/metodos/mejores-canales-youtube-aprender-ingles)
-- [Apps para aprender inglés sin internet](/blog/metodos/apps-ingles-sin-internet-offline)
-- [Cómo combinar apps para aprender inglés](/blog/metodos/rutina-apps-ingles-como-combinarlas)
-
----
-
-Para una comparativa completa de apps, consulta [La Mejor App para Aprender Inglés en 2026](/blog/metodos/mejor-app-aprender-ingles).
-
-## Fuentes
-
-- Cambridge Dictionary: https://dictionary.cambridge.org/
-- British Council LearnEnglish: https://www.britishcouncil.org/learnenglish
-- CEFR/MCER (Council of Europe): https://www.coe.int/en/web/common-european-framework-reference-languages
-`,
+  content: [
+    "> **[Estudia inglés con nuestros cursos gratuitos de inglés A1-C2](/idiomas#niveles).** Elige tu nivel y avanza con guías, vocabulario y ejercicios organizados por unidad.",
+    "",
+    "## Las Mejores Apps para Aprender Inglés Gratis: Guía 2026",
+    "",
+    "El mercado de apps para aprender inglés no para de crecer. En 2026 hay decenas de opciones, pero no todas son iguales. Esta guía analiza las **mejores apps gratuitas** con criterios reales: efectividad pedagógica, usabilidad y qué tipo de aprendiz se beneficia más de cada una.",
+    "",
+    "Las apps son el primer filtro de quien quiere **aprender ingles** antes de pagar un **curso ingles**.",
+    "",
+    "---",
+    "",
+    "## El Top 7 de Apps Gratuitas para Inglés",
+    "",
+    "### 1. BBC Learning English — La Más Completa",
+    "",
+    "**Nivel**: A2 a C2  ",
+    "**Ideal para**: Quienes quieren inglés auténtico y variedad de contenido",
+    "",
+    "BBC Learning English es una opción gratuita útil para practicar con explicaciones, audio y vocabulario en contexto. Entre sus recursos se encuentran:",
+    "",
+    "- **6 Minute English**: podcasts cortos con transcripción y vocabulario",
+    "- **Grammar in a minute**: explicaciones rápidas de gramática",
+    "- **The English We Speak**: expresiones idiomáticas y slang real",
+    "- Noticias adaptadas por niveles",
+    "- Pronunciación con audio de hablantes nativos",
+    "",
+    "Es gratuita al 100%, sin anuncios agresivos y actualizada constantemente.",
+    "",
+    "### 2. Anki — La Más Efectiva para Vocabulario",
+    "",
+    "**Nivel**: Todos los niveles  ",
+    "**Ideal para**: Memorizar vocabulario de forma duradera",
+    "",
+    "Anki utiliza la **repetición espaciada (SRS)** para distribuir los repasos a lo largo del tiempo. El algoritmo programa las tarjetas según tu historial de respuestas.",
+    "",
+    "**Cómo usarla bien**:",
+    "1. Descarga un mazo de vocabulario inglés para tu nivel",
+    "2. Haz tus propias tarjetas con palabras que encuentres en textos reales",
+    "3. Practica mínimo 10 minutos al día",
+    "4. Añade imagen, ejemplo en contexto y audio en cada tarjeta",
+    "",
+    "Anki es gratuita en Android y en ordenador. La versión iOS tiene coste, pero la web AnkiWeb es gratuita.",
+    "",
+    "### 3. Duolingo — La Más Popular",
+    "",
+    "**Nivel**: A1 a B1  ",
+    "**Ideal para**: Principiantes y para mantener el hábito",
+    "",
+    "Duolingo utiliza elementos de gamificación que pueden ayudar a algunas personas a mantener el hábito.",
+    "",
+    "**Lo bueno**:",
+    "- Curva de aprendizaje muy suave",
+    "- Variedad de ejercicios (escuchar, escribir, hablar)",
+    "- Funciona bien para los primeros niveles (A1-A2)",
+    "",
+    "**Lo que debes saber**:",
+    "- Las traducciones literales pueden crear confusión",
+    "- El vocabulario en contexto real es limitado",
+    "- Para progresar en niveles intermedios, complementa con materiales auténticos",
+    "",
+    "### 4. Elsa Speak — La Mejor para Pronunciación",
+    "",
+    "**Nivel**: A2 a C1  ",
+    "**Ideal para**: Mejorar el acento y la pronunciación",
+    "",
+    "ELSA usa inteligencia artificial para analizar tu pronunciación y darte feedback en tiempo real. Es gratuita con funciones limitadas, pero incluso la versión gratuita es útil.",
+    "",
+    "Te muestra qué fonemas pronuncias mal, con ejercicios específicos para corregirlos. Especialmente útil para hispanohablantes con dificultades con la /th/, la /v/, o las vocales cortas del inglés.",
+    "",
+    "### 5. Cake — Para Aprender con Vídeos",
+    "",
+    "**Nivel**: A2 a B2  ",
+    "**Ideal para**: Aprendizaje visual con contenido real",
+    "",
+    "Cake utiliza clips de vídeo de series, películas y YouTube para enseñar inglés en contexto. Puedes practicar repitiendo frases con reconocimiento de voz.",
+    "",
+    "### 6. Lingopie — Series con Subtítulos Interactivos",
+    "",
+    "**Nivel**: A2 a C1  ",
+    "**Ideal para**: Aprender con entretenimiento",
+    "",
+    "Lingopie te permite ver series en inglés con subtítulos interactivos: haz clic en cualquier palabra y obtienes la traducción, la pronunciación y la puedes añadir a tu mazo de Anki.",
+    "",
+    "### 7. YouTube + Canales Específicos — El Recurso Infinito",
+    "",
+    "**Nivel**: Todos los niveles  ",
+    "**Ideal para**: Inmersión y gramática visual",
+    "",
+    "YouTube no es una app de inglés, pero es el recurso gratuito más potente que existe. Canales recomendados:",
+    "",
+    "- **EnglishwithLucy**: Pronunciación y vocabulario, muy visual",
+    "- **JamieSharpe**: Inglés coloquial y slang",
+    "- **mmmEnglish**: Gramática aplicada a situaciones reales",
+    "- **Speak English with Vanessa**: Conversación y cultura",
+    "- **TED Talks**: Inglés académico y presentaciones",
+    "",
+    "---",
+    "",
+    "## Comparativa Rápida",
+    "",
+    "| App | Nivel | Coste | Mejor para |",
+    "|-----|-------|-------|------------|",
+    "| BBC Learning English | A2-C2 | Gratis | Contenido auténtico |",
+    "| Anki | Todos | Gratis (Android/PC) | Vocabulario |",
+    "| Duolingo | A1-B1 | Freemium | Hábito y principiantes |",
+    "| ELSA Speak | A2-C1 | Freemium | Pronunciación |",
+    "| Cake | A2-B2 | Freemium | Vídeos reales |",
+    "| YouTube | Todos | Gratis | Inmersión |",
+    "",
+    "---",
+    "",
+    "## Cómo Combinar las Apps Según Tu Nivel",
+    "",
+    "### Si estás en A1-A2 (Principiante)",
+    "1. **Duolingo** (hábito diario, 15 min)",
+    "2. **Anki** con vocabulario básico (10 min)",
+    "3. **BBC Learning English** — secciones para principiantes",
+    "",
+    "### Si estás en B1-B2 (Intermedio)",
+    "1. **Anki** con vocabulario temático (15 min)",
+    "2. **BBC Learning English** — 6 Minute English y noticias",
+    "3. **ELSA Speak** para mejorar pronunciación",
+    "4. **YouTube** con subtítulos en inglés",
+    "",
+    "### Si estás en C1-C2 (Avanzado)",
+    "1. **Anki** con vocabulario avanzado y expresiones idiomáticas",
+    "2. **BBC Learning English** — In the News, Business English",
+    "3. **YouTube** sin subtítulos",
+    "4. Podcasts nativos sin adaptación (NPR, The Guardian)",
+    "",
+    "---",
+    "",
+    "## Conclusión: Nuestra Recomendación",
+    "",
+    "No existe una única app perfecta. La clave es **combinar herramientas**:",
+    "",
+    "- **BBC Learning English** para contenido auténtico y gramática",
+    "- **Anki** para fijar el vocabulario a largo plazo",
+    "- **Duolingo** solo si eres principiante y necesitas el hábito",
+    "- **ELSA** si tu problema específico es la pronunciación",
+    "",
+    "Lo más importante es una rutina sostenible y variada. La frecuencia puede ayudar, pero el progreso también depende de la calidad de la práctica, el nivel inicial y las oportunidades de usar el idioma.",
+    "",
+    "---",
+    "",
+    "## Profundiza más: Guías y Reviews en Detalle",
+    "",
+    "- [Anki para aprender inglés: guía completa](/blog/metodos/anki-para-aprender-ingles-guia)",
+    "- [Repetición espaciada (SRS): la ciencia detrás de Anki](/blog/metodos/repeticion-espaciada-srs-ingles)",
+    "- [Duolingo inglés: review honesto 2026](/blog/metodos/duolingo-ingles-review)",
+    "- [ELSA Speak review](/blog/metodos/elsa-speak-review-pronunciacion-ingles)",
+    "- [BBC Learning English: guía completa](/blog/metodos/bbc-learning-english-guia-completa)",
+    "- [Lingopie review](/blog/metodos/lingopie-review-aprender-ingles-series)",
+    "- [Cake app review](/blog/metodos/cake-app-ingles-review)",
+    "- [Los mejores canales de YouTube para aprender inglés](/blog/metodos/mejores-canales-youtube-aprender-ingles)",
+    "- [Apps para aprender inglés sin internet](/blog/metodos/apps-ingles-sin-internet-offline)",
+    "- [Cómo combinar apps para aprender inglés](/blog/metodos/rutina-apps-ingles-como-combinarlas)",
+    "",
+    "---",
+    "",
+    "## Fuentes",
+    "",
+    "- Cambridge Dictionary: https://dictionary.cambridge.org/",
+    "- British Council LearnEnglish: https://www.britishcouncil.org/learnenglish",
+    "- CEFR/MCER (Council of Europe): https://www.coe.int/en/web/common-european-framework-reference-languages",
+  ].join("\n"),
 };
 
 export const metadata: Metadata = {
