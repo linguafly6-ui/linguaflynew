@@ -8,8 +8,36 @@ import { a2Unit2Exercises } from "@/app/academia/[level]/[unit]/a2-unit-002-exer
 export const dynamic = "force-dynamic";
 type DBStatement = { bind(...values: (string|number)[]): DBStatement; run(): Promise<unknown>; first<T>(): Promise<T|null>; all<T>(): Promise<{results?:T[]}>; };
 type DB = { prepare(sql: string): DBStatement };
-type Exercise = { interaction_id?: string; mastery_tag?: string; correct_answer?: string|string[]|boolean };
+type Exercise = { interaction_id?: string; mastery_tag?: string; exercise_type?: string; type?: string; correct_answer?: any };
 const normalize = (value: string) => value.trim().toLocaleLowerCase().replace(/[.!?]+$/, "");
+function canonicalAnswer(value: any): string {
+  if (typeof value === "string") return normalize(value);
+  if (typeof value === "boolean") return String(value);
+  if (Array.isArray(value)) return JSON.stringify(value.map(canonicalAnswer));
+  if (value && typeof value === "object") return JSON.stringify(Object.keys(value).sort().map(key => [key, canonicalAnswer(value[key])]));
+  return String(value ?? "");
+}
+function gradeB2Answer(exercise: Exercise, submitted: string): boolean {
+  const kind = String(exercise.exercise_type ?? exercise.type ?? "").toLowerCase().replace(/[_ ]/g, "-");
+  const expected = exercise.correct_answer;
+  if (expected === undefined) return false;
+  if (kind.includes("matching")) {
+    try {
+      const parsed = JSON.parse(submitted);
+      return (Array.isArray(expected) ? expected : [expected]).some(value => canonicalAnswer(parsed) === canonicalAnswer(value));
+    } catch { return false; }
+  }
+  if (kind.includes("true-false") || kind.includes("truefalse")) {
+    const actual = /^(true|false)$/i.test(submitted) ? submitted.toLowerCase() === "true" : null;
+    return (Array.isArray(expected) ? expected : [expected]).some(value => {
+      const wanted = typeof value === "boolean" ? value : typeof value === "string" && /^(true|false)$/i.test(value) ? value.toLowerCase() === "true" : null;
+      return actual !== null && wanted !== null ? actual === wanted : typeof value === "string" && normalize(submitted) === normalize(value);
+    });
+  }
+  // single-choice, gap-fill and error-correction: accept authored string variants.
+  return (Array.isArray(expected) ? expected : [expected]).some(value => typeof value === "string" && normalize(submitted) === normalize(value));
+}
+
 function findExercise(content: Record<string, any>, interactionId: string): Exercise | undefined {
   // Course JSON has used both block.content and nested content containers.
   // Walk only plain JSON objects/arrays and match the exact interaction ID.
@@ -56,6 +84,26 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
   // while getAcademyUnit returns only its lesson blueprint from D1.
   // Resolve against the exact same bank used by the page.
   let exercise: Exercise | undefined;
+  if (level === "B2") {
+    try {
+      const { env } = await getCloudflareContext({ async: true });
+      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
+      const row = await db.prepare(
+        "SELECT e.content_json FROM exercises e JOIN sections s ON s.id=e.section_id JOIN units u ON u.id=s.unit_id WHERE e.id=? AND u.id=? AND u.course_id='course-en-b2' AND u.status='published' AND s.status='published' AND e.status='published' LIMIT 1"
+      ).bind(interactionId, `b2-unit-${String(unitNumber).padStart(3, "0")}`).first<{content_json:string}>();
+      if (row?.content_json) {
+        const authored = JSON.parse(row.content_json) as Record<string, any>;
+        if (authored.correct_answer !== undefined) exercise = {
+          interaction_id: interactionId,
+          mastery_tag: typeof authored.mastery_tag === "string" ? authored.mastery_tag : undefined,
+          exercise_type: typeof authored.exercise_type === "string" ? authored.exercise_type : typeof authored.type === "string" ? authored.type : undefined,
+          correct_answer: authored.correct_answer,
+        };
+      }
+    } catch (error) {
+      console.error("Unable to resolve relational B2 answer from D1:", error);
+    }
+  }
   if (level === "A1" && unitNumber >= 1 && unitNumber <= 6) {
     try {
       const { env } = await getCloudflareContext({ async: true });
@@ -121,35 +169,4 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     console.error("Academy exercise answer missing:", { level, unitNumber, interactionId });
     return NextResponse.json({ error: "No encontramos la respuesta asociada a esta actividad. Recarga la unidad e inténtalo de nuevo." }, { status: 404 });
   }
-  const expected = Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer];
-  const correct = expected.some(value => typeof value === "string" && normalize(answer) === normalize(value));
-
-  // Public preview units can be practised without an account. Persist spaced-repetition
-  // progress only when the visitor has an active student session and course enrolment.
-  try {
-    const student = await getStudent();
-    const courseKey = `ingles-${level.toLowerCase()}`;
-    if (student && await hasCourseAccess(student.learner_id, courseKey)) {
-      const { env } = await getCloudflareContext();
-      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
-      const now = new Date().toISOString().replace("T"," ").slice(0,19);
-      const id = randomUUID();
-      const masteryTag = (exercise.mastery_tag || `${unit.unit_id}:${interactionId}`).slice(0,160);
-      await db.prepare("INSERT INTO learner_activity_attempts (id,learner_id,course_key,unit_id,interaction_id,mastery_tag,answer_text,is_correct,attempted_at) VALUES (?,?,?,?,?,?,?,?,?)")
-        .bind(id,student.learner_id,courseKey,unit.unit_id,interactionId,masteryTag,answer,correct?1:0,now).run();
-      const existing = await db.prepare("SELECT failure_count,success_streak,interval_hours FROM learner_skill_reviews WHERE learner_id=? AND course_key=? AND mastery_tag=?")
-        .bind(student.learner_id,courseKey,masteryTag).first<{failure_count:number;success_streak:number;interval_hours:number}>();
-      const failures = correct ? (existing?.failure_count ?? 0) : (existing?.failure_count ?? 0) + 1;
-      const streak = correct ? (existing?.success_streak ?? 0) + 1 : 0;
-      const previousInterval = existing?.interval_hours ?? 24;
-      const interval = correct ? Math.min(24*30, Math.max(24, previousInterval * (streak >= 2 ? 2 : 1.5))) : Math.max(2, [24,12,6,3][Math.min(failures-1,3)]);
-      const due = new Date(Date.now() + interval*3600000).toISOString().replace("T"," ").slice(0,19);
-      await db.prepare("INSERT INTO learner_skill_reviews (learner_id,course_key,mastery_tag,failure_count,success_streak,interval_hours,due_at,last_attempt_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?) ON CONFLICT(learner_id,course_key,mastery_tag) DO UPDATE SET failure_count=excluded.failure_count,success_streak=excluded.success_streak,interval_hours=excluded.interval_hours,due_at=excluded.due_at,last_attempt_at=excluded.last_attempt_at,updated_at=excluded.updated_at")
-        .bind(student.learner_id,courseKey,masteryTag,failures,streak,interval,due,now,now).run();
-    }
-  } catch (error) {
-    console.error("Unable to persist academy attempt:", error);
-    // Answer checking remains available even if optional progress tracking is unavailable.
-  }
-  return NextResponse.json({ correct });
-}
+  const correct = level === "B2"\n    ? gradeB2Answer(exercise, answer)\n    : (Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer])\n        .some(value => typeof value === "string" && normalize(answer) === normalize(value));
