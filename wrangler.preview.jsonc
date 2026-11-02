@@ -53,6 +53,13 @@
     ],
     "images": {
       "binding": "IMAGES"
-    }
+    },
+    "services": [
+      {
+        "binding": "WORKER_SELF_REFERENCE",
+        "service": "linguaflyapp1",
+        "environment": "production"
+      }
+    ]
   }
 }
