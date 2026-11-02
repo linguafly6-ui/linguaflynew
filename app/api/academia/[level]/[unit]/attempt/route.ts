@@ -173,3 +173,33 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     ? gradeB2Answer(exercise, answer)
     : (Array.isArray(exercise.correct_answer) ? exercise.correct_answer : [exercise.correct_answer])
         .some(value => typeof value === "string" && normalize(answer) === normalize(value));
+
+  // Public preview units can be practised without an account. Persist spaced-repetition
+  // progress only when the visitor has an active student session and course enrolment.
+  try {
+    const student = await getStudent();
+    const courseKey = `ingles-${level.toLowerCase()}`;
+    if (student && await hasCourseAccess(student.learner_id, courseKey)) {
+      const { env } = await getCloudflareContext();
+      const db = (env as unknown as { COURSE_DB: DB }).COURSE_DB;
+      const now = new Date().toISOString().replace("T"," ").slice(0,19);
+      const id = randomUUID();
+      const masteryTag = (exercise.mastery_tag || `${unit.unit_id}:${interactionId}`).slice(0,160);
+      await db.prepare("INSERT INTO learner_activity_attempts (id,learner_id,course_key,unit_id,interaction_id,mastery_tag,answer_text,is_correct,attempted_at) VALUES (?,?,?,?,?,?,?,?,?)")
+        .bind(id,student.learner_id,courseKey,unit.unit_id,interactionId,masteryTag,answer,correct?1:0,now).run();
+      const existing = await db.prepare("SELECT failure_count,success_streak,interval_hours FROM learner_skill_reviews WHERE learner_id=? AND course_key=? AND mastery_tag=?")
+        .bind(student.learner_id,courseKey,masteryTag).first<{failure_count:number;success_streak:number;interval_hours:number}>();
+      const failures = correct ? (existing?.failure_count ?? 0) : (existing?.failure_count ?? 0) + 1;
+      const streak = correct ? (existing?.success_streak ?? 0) + 1 : 0;
+      const previousInterval = existing?.interval_hours ?? 24;
+      const interval = correct ? Math.min(24*30, Math.max(24, previousInterval * (streak >= 2 ? 2 : 1.5))) : Math.max(2, [24,12,6,3][Math.min(failures-1,3)]);
+      const due = new Date(Date.now() + interval*3600000).toISOString().replace("T"," ").slice(0,19);
+      await db.prepare("INSERT INTO learner_skill_reviews (learner_id,course_key,mastery_tag,failure_count,success_streak,interval_hours,due_at,last_attempt_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?) ON CONFLICT(learner_id,course_key,mastery_tag) DO UPDATE SET failure_count=excluded.failure_count,success_streak=excluded.success_streak,interval_hours=excluded.interval_hours,due_at=excluded.due_at,last_attempt_at=excluded.last_attempt_at,updated_at=excluded.updated_at")
+        .bind(student.learner_id,courseKey,masteryTag,failures,streak,interval,due,now,now).run();
+    }
+  } catch (error) {
+    console.error("Unable to persist academy attempt:", error);
+    // Answer checking remains available even if optional progress tracking is unavailable.
+  }
+  return NextResponse.json({ correct });
+}
