@@ -25,6 +25,15 @@ const descriptions: Record<CefrLevel, string> = {
 };
 const validLevel = (value: string): value is CefrLevel => LEVELS.includes(value.toUpperCase() as CefrLevel);
 
+function authoredOptionsFromJson(value: string | null | undefined): any[] | null {
+  try {
+    const parsed = JSON.parse(value || "{}");
+    return Array.isArray(parsed.options) ? parsed.options : null;
+  } catch {
+    return null;
+  }
+}
+
 function spanishExerciseInstruction(value: string | null | undefined): string {
   const instruction = (value ?? "").trim();
   const translations: Record<string, string> = {
@@ -73,10 +82,13 @@ export async function getAcademyUnits(levelValue: string): Promise<AcademyUnit[]
     const result = await db.prepare("SELECT 'ingles-a1' AS course_key, c.cefr_level AS level, u.unit_number, u.id AS unit_id, u.title FROM courses c JOIN units u ON u.course_id=c.id WHERE c.id='course-en-a1' AND u.status IN ('draft','review','approved','published') ORDER BY u.unit_number").all<AcademyUnit>();
     return result.results ?? [];
   }
-  if (levelValue.toUpperCase() === "A2") {
+  const upper = levelValue.toUpperCase();
+  if (upper === "A2" || upper === "B2") {
+    const courseKey = `ingles-${levelValue.toLowerCase()}`;
+    const unitStatusFilter = upper === "B2" ? "u.status='published'" : "u.status IN ('draft','review','approved','published')";
     const result = await db.prepare(
-      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title FROM courses c JOIN units u ON u.course_id=c.id WHERE c.cefr_level='A2' AND c.language_code='en' AND u.status IN ('draft','review','approved','published') ORDER BY u.unit_number"
-    ).all<AcademyUnit>();
+      `SELECT ? AS course_key, ? AS level, u.unit_number, u.id AS unit_id, u.title FROM courses c JOIN units u ON u.course_id=c.id WHERE c.cefr_level=? AND c.language_code='en' AND ${unitStatusFilter} ORDER BY u.unit_number`
+    ).bind(courseKey, upper, upper).all<AcademyUnit>();
     return result.results ?? [];
   }
   const result = await db.prepare(
@@ -109,14 +121,19 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
     try { objectives = JSON.parse(unit.learning_objectives_json || "[]"); } catch {}
     return { ...unit, course_key: "ingles-a1", content: { course: { total_duration_minutes: 75 }, learning_outcomes: objectives, blocks: Array.from(grouped.values()) } };
   }
-  if (levelValue.toUpperCase() === "A2") {
-    const unitId = `a2-unit-${String(unitNumber).padStart(3, "0")}`;
+  const upper = levelValue.toUpperCase();
+  if (upper === "A2" || upper === "B2") {
+    const courseKey = `ingles-${levelValue.toLowerCase()}`;
+    const unitId = `${levelValue.toLowerCase()}-unit-${String(unitNumber).padStart(3, "0")}`;
+    const unitStatusFilter = upper === "B2" ? "u.status='published'" : "u.status IN ('draft','review','approved','published')";
+    const sectionStatusFilter = upper === "B2" ? "s.status='published'" : "s.status IN ('draft','review','approved','published')";
+    const exerciseStatusFilter = upper === "B2" ? "e.status='published'" : "e.status IN ('draft','review','approved','published')";
     const relationalUnit = await db.prepare(
-      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title, u.learning_objectives_json, u.status AS status FROM courses c JOIN units u ON u.course_id=c.id WHERE c.cefr_level='A2' AND c.language_code='en' AND u.id=? AND u.status IN ('draft','review','approved','published') LIMIT 1"
-    ).bind(unitId).first<AcademyUnit & { learning_objectives_json?: string; status?: string }>();
+      `SELECT ? AS course_key, ? AS level, u.unit_number, u.id AS unit_id, u.title, u.learning_objectives_json, u.status AS status FROM courses c JOIN units u ON u.course_id=c.id WHERE c.cefr_level=? AND c.language_code='en' AND u.id=? AND ${unitStatusFilter} LIMIT 1`
+    ).bind(courseKey, upper, upper, unitId).first<AcademyUnit & { learning_objectives_json?: string; status?: string }>();
     if (relationalUnit) {
       const rows = await db.prepare(
-        "SELECT s.id AS section_id, s.section_type, s.title AS section_title, s.position AS section_position, e.id AS exercise_id, e.title AS exercise_title, e.instructions, e.content_json, e.position AS exercise_position, o.id AS option_id, o.option_key, o.content AS option_content, o.position AS option_position FROM sections s JOIN exercises e ON e.section_id=s.id LEFT JOIN exercise_options o ON o.exercise_id=e.id WHERE s.unit_id=? AND s.status IN ('draft','review','approved','published') AND e.status IN ('draft','review','approved','published') ORDER BY s.position,e.position,o.position"
+        `SELECT s.id AS section_id, s.section_type, s.title AS section_title, s.position AS section_position, e.id AS exercise_id, e.title AS exercise_title, e.instructions, e.content_json, e.position AS exercise_position, o.id AS option_id, o.option_key, o.content AS option_content, o.position AS option_position FROM sections s JOIN exercises e ON e.section_id=s.id LEFT JOIN exercise_options o ON o.exercise_id=e.id WHERE s.unit_id=? AND ${sectionStatusFilter} AND ${exerciseStatusFilter} ORDER BY s.position,e.position,o.position`
       ).bind(unitId).all<{section_id:string;section_type:string;section_title:string;section_position:number;exercise_id:string;exercise_title:string;instructions:string;content_json:string;exercise_position:number;option_id:string|null;option_key:string|null;option_content:string|null;option_position:number|null}>();
       const grouped = new Map<string, any>();
       for (const row of rows.results ?? []) {
@@ -134,7 +151,7 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
           const audioTrack = Number.isInteger(audioGroupValue)
             ? Number(audioGroupValue)
             : audioGroupMatch ? Number(audioGroupMatch[1]) : NaN;
-          const hasAudio = section === "listening" &&
+          const hasAudio = upper === "A2" && section === "listening" &&
             typeof authored.audio_key === "string" &&
             Number.isInteger(audioTrack) && audioTrack >= 1 && audioTrack <= 3;
           activity = {
@@ -152,7 +169,18 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
           };
           block.content.push(activity);
         }
-        if (row.option_id) activity.options.push({ id: row.option_id, value: row.option_key || row.option_id, text: row.option_content || row.option_key });
+        if (row.option_id) {
+          activity.options.push({ id: row.option_id, value: row.option_key || row.option_id, text: row.option_content || row.option_key });
+        } else {
+          const authoredOptions = authoredOptionsFromJson(row.content_json);
+          if (authoredOptions) {
+            activity.options = authoredOptions.map((option: any, index: number) => {
+              const text = typeof option === "string" ? option : String(option.text ?? option.label ?? option.value ?? "");
+              const value = typeof option === "string" ? option : String(option.value ?? option.text ?? option.label ?? text);
+              return { id: String(option.id ?? `${row.exercise_id}-option-${index + 1}`), value, text };
+            });
+          }
+        }
       }
       const blocks = Array.from(grouped.values());
       if (blocks.length) {
@@ -160,9 +188,9 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
         try { objectives = JSON.parse(relationalUnit.learning_objectives_json || "[]"); } catch {}
         return {
           ...relationalUnit,
-          course_key: "ingles-a2",
+          course_key: courseKey,
           content: {
-            course: { total_duration_minutes: 60 },
+            course: { total_duration_minutes: upper === "A2" ? 60 : 75 },
             learning_outcomes: objectives,
             ...(relationalUnit.status === "published" ? {} : { editorial_status: "BORRADOR EDITORIAL · NO PUBLICADO" }),
             blocks
@@ -170,12 +198,15 @@ export async function getAcademyUnit(levelValue: string, unitNumber: number): Pr
         };
       }
     }
-    const row = await db.prepare(
-      "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title, b.content_json FROM unit_content_blueprints b JOIN units u ON u.id = b.unit_id WHERE b.unit_id = ? AND b.status IN ('draft','review','approved') LIMIT 1"
-    ).bind(unitId).first<AcademyUnit>();
-    if (!row?.content_json) return null;
-    try { return { ...row, content: JSON.parse(row.content_json) as Record<string, any> }; }
-    catch { return null; }
+    if (upper === "A2") {
+      const row = await db.prepare(
+        "SELECT 'ingles-a2' AS course_key, 'A2' AS level, u.unit_number, u.id AS unit_id, u.title, b.content_json FROM unit_content_blueprints b JOIN units u ON u.id = b.unit_id WHERE b.unit_id = ? AND b.status IN ('draft','review','approved') LIMIT 1"
+      ).bind(unitId).first<AcademyUnit>();
+      if (!row?.content_json) return null;
+      try { return { ...row, content: JSON.parse(row.content_json) as Record<string, any> }; }
+      catch { return null; }
+    }
+    return null;
   }
   const row = await db.prepare(
     "SELECT course_key, level, unit_number, unit_id, title, content_json FROM learning_course_json_units WHERE level = ? AND course_key = ? AND unit_number = ? LIMIT 1"
