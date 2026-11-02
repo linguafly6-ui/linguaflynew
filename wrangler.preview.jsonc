@@ -1,0 +1,41 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "linguaflyapp1-preview",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-08-12",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "minify": true,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true,
+      "head_sampling_rate": 1
+    }
+  },
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "linguafly-preview",
+      "database_id": "b159641b-1910-49ec-b2ed-fbfae2440377",
+      "remote": true
+    },
+    {
+      "binding": "COURSE_DB",
+      "database_name": "linguafly-learning-preview",
+      "database_id": "7e4e332b-6b37-4b4c-905f-390e1ef0f79a",
+      "remote": true
+    }
+  ]
+}
