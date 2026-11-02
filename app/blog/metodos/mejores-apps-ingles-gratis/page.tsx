@@ -212,7 +212,7 @@ Para una comparativa completa de apps, consulta [La Mejor App para Aprender Ingl
 - Cambridge Dictionary: https://dictionary.cambridge.org/
 - British Council LearnEnglish: https://www.britishcouncil.org/learnenglish
 - CEFR/MCER (Council of Europe): https://www.coe.int/en/web/common-european-framework-reference-languages
-\`,
+`,
 };
 
 export const metadata: Metadata = {
