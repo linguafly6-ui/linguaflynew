@@ -18,6 +18,15 @@ export default async function AcademyPage() {
       <div className="academy-hero-meta"><span>6 niveles CEFR</span><span>{totalUnits} unidades disponibles</span><span>Inglés británico</span></div>
     </section>
     <section className="academy-content">
+      <div className="level-grid" style={{marginBottom:24}}>
+        <Link className="level-card level-a1" href="/academia/pre-a1">
+          <div className="level-card-top"><span className="level-index">00 / START</span><span className="level-status ready">Primeros pasos</span></div>
+          <div className="level-code">PRE-A1</div>
+          <h3>Empieza desde cero</h3>
+          <p>Misiones iniciales para aprender palabras e instrucciones cotidianas en inglés.</p>
+          <div className="level-card-bottom"><span>Ver misiones</span><span className="level-arrow">↗</span></div>
+        </Link>
+      </div>
       <div className="academy-heading"><div><div className="kicker">ENCUENTRA TU PUNTO DE PARTIDA</div><h2>Seis niveles. Un camino para avanzar.</h2></div><p>Elige tu nivel para descubrir el contenido, las unidades y las actividades disponibles.</p></div>
       <div className="level-grid">
         {levels.map((item, index) => <Link className={`level-card level-${item.level.toLowerCase()}`} href={`/academia/${item.level.toLowerCase()}`} key={item.level}>
